@@ -62,17 +62,16 @@ export default function Footer() {
         {/* Brand column */}
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3 mb-5">
-            <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold"
-              style={{ background: 'linear-gradient(135deg, #0057FF 0%, #00A878 100%)', fontFamily: 'Space Grotesk', fontSize: '13px' }}
-            >
-              SP
-            </div>
+            <img
+              src="/assets/img/logo.png"
+              alt="Sneha and Prahar Consultancy Services Logo"
+              style={{ width: '50px', height: 'auto', display: 'block' }}
+            />
             <div>
-              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: '14px', color: 'white' }}>
+              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: '16px', color: 'white' }}>
                 Sneha &amp; Prahar
               </p>
-              <p style={{ fontFamily: 'Space Grotesk', fontSize: '10px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>
+              <p style={{ fontFamily: 'Space Grotesk', fontSize: '11px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>
                 Consultancy Services
               </p>
             </div>
@@ -113,7 +112,7 @@ export default function Footer() {
             ))}
           </div>
           {/* Standards */}
-          <p style={{ fontFamily: 'Space Grotesk', fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px', marginTop: '16px' }}>
+          <p style={{ fontFamily: 'Space Grotesk', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px', marginTop: '16px' }}>
             Compliance Standards
           </p>
           <div className="flex flex-wrap gap-2">
@@ -126,7 +125,7 @@ export default function Footer() {
                   border: '1px solid rgba(0,168,120,0.25)',
                   background: 'rgba(0,168,120,0.07)',
                   fontFamily: 'Space Grotesk',
-                  fontSize: '10px',
+                  fontSize: '11px',
                   fontWeight: 500,
                   color: 'rgba(255,255,255,0.6)',
                   letterSpacing: '0.04em',
@@ -143,7 +142,7 @@ export default function Footer() {
           <h4
             style={{
               fontFamily: 'Space Grotesk',
-              fontSize: '11px',
+              fontSize: '12px',
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
@@ -160,7 +159,7 @@ export default function Footer() {
                   to="/services"
                   style={{
                     fontFamily: 'Inter',
-                    fontSize: '13px',
+                    fontSize: '14px',
                     color: 'rgba(255,255,255,0.55)',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
@@ -184,7 +183,7 @@ export default function Footer() {
           <h4
             style={{
               fontFamily: 'Space Grotesk',
-              fontSize: '11px',
+              fontSize: '12px',
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
@@ -201,7 +200,7 @@ export default function Footer() {
                   to={c.path}
                   style={{
                     fontFamily: 'Inter',
-                    fontSize: '13px',
+                    fontSize: '14px',
                     color: 'rgba(255,255,255,0.55)',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
@@ -225,7 +224,7 @@ export default function Footer() {
           <h4
             style={{
               fontFamily: 'Space Grotesk',
-              fontSize: '11px',
+              fontSize: '12px',
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
@@ -241,7 +240,7 @@ export default function Footer() {
                 <MapPin size={15} style={{ color: '#00A878' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
                   #8-80/80NP, Ramidi Malla Reddy Nagar,<br />
                   Almasguda, Badangpet,<br />
                   Hyderabad, Telangana — 500081,<br />
@@ -254,9 +253,9 @@ export default function Footer() {
                 <Phone size={15} style={{ color: '#0057FF' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.7)' }}>+91 90008 77499</p>
-                <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.7)' }}>+91 88014 11271</p>
-                <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.7)' }}>+91 82962 76148</p>
+                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>+91 90008 77499</p>
+                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>+91 88014 11271</p>
+                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>+91 82962 76148</p>
               </div>
             </div>
             <div className="flex gap-3 items-center">
@@ -264,7 +263,7 @@ export default function Footer() {
                 <Mail size={15} style={{ color: '#00A878' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.7)' }}>spconsultanancies@gmail.com</p>
+                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>spconsultanancies@gmail.com</p>
               </div>
             </div>
             <div
@@ -276,10 +275,10 @@ export default function Footer() {
                 marginTop: '4px',
               }}
             >
-              <p style={{ fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 600, color: '#00A878', letterSpacing: '0.06em', marginBottom: '4px' }}>
+              <p style={{ fontFamily: 'Space Grotesk', fontSize: '12px', fontWeight: 600, color: '#00A878', letterSpacing: '0.06em', marginBottom: '4px' }}>
                 WORKING HOURS
               </p>
-              <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.6)' }}>
+              <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
                 Monday – Saturday: 9:00 AM – 7:00 PM<br />
                 Sunday: Emergency Support Only
               </p>
@@ -291,10 +290,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '20px 0' }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.3)' }}>
+          <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.3)' }}>
             © 2024 Sneha and Prahar Consultancy Services. All rights reserved.
           </p>
-          <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.3)' }}>
+          <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.3)' }}>
             Founded 2022 · Hyderabad, India · Pharmaceutical Engineering Excellence
           </p>
         </div>
