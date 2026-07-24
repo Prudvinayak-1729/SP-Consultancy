@@ -44,7 +44,7 @@ const projects = [
   {
     title: 'Oral Solid Dosage Facility Upgrade',
     client: 'Pan-India Pharma Company',
-    location: 'Baddi, Himachal Pradesh',
+    location: 'Hyderabad, Telangana',
     duration: '12 months',
     category: 'HVAC',
     year: '2024',
@@ -68,7 +68,7 @@ const projects = [
   {
     title: 'Water System Qualification',
     client: 'Multinational Pharma',
-    location: 'Mumbai, Maharashtra',
+    location: 'Visakhapatnam, AP',
     duration: '6 months',
     category: 'Validation',
     year: '2024',
@@ -80,7 +80,7 @@ const projects = [
   {
     title: 'Building Management System Integration',
     client: 'Research Hospital Complex',
-    location: 'Chennai, Tamil Nadu',
+    location: 'Visakhapatnam, AP',
     duration: '9 months',
     category: 'Automation',
     year: '2023',
@@ -92,7 +92,7 @@ const projects = [
   {
     title: 'Planned Shutdown Management',
     client: 'Formulation Plant',
-    location: 'Ahmedabad, Gujarat',
+    location: 'Hyderabad Telangana',
     duration: '3 weeks',
     category: 'Industrial',
     year: '2024',
@@ -104,7 +104,7 @@ const projects = [
   {
     title: 'Medical Device Cleanroom',
     client: 'Orthopedic Device Manufacturer',
-    location: 'Coimbatore, Tamil Nadu',
+    location: 'Visakhapatnam, AP',
     duration: '14 months',
     category: 'Cleanroom',
     year: '2023',
