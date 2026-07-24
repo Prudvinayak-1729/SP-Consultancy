@@ -13,16 +13,52 @@ const stats = [
 ]
 
 const whyChooseUs = [
-  { icon: <Award size={22} style={{ color: '#0057FF' }} />, title: 'Engineering Excellence', desc: 'ISO-certified processes with rigorous quality checkpoints at every project phase, ensuring flawless delivery.' },
-  { icon: <Shield size={22} style={{ color: '#00A878' }} />, title: 'Regulatory Compliance', desc: 'Deep expertise in WHO GMP, US FDA 21 CFR, EU GMP Annex 1, and Schedule M compliance frameworks.' },
-  { icon: <Users size={22} style={{ color: '#0057FF' }} />, title: 'Experienced Team', desc: 'Senior engineers averaging 15+ years in pharmaceutical facility design, validation, and commissioning.' },
-  { icon: <Zap size={22} style={{ color: '#00A878' }} />, title: 'Fast Project Delivery', desc: 'Agile engineering methodology with parallel workstreams that compress timelines by up to 30%.' },
-  { icon: <CheckCircle size={22} style={{ color: '#0057FF' }} />, title: 'Cost-Effective Solutions', desc: 'Value engineering approach that optimizes capital expenditure without compromising quality or compliance.' },
-  { icon: <FlaskConical size={22} style={{ color: '#00A878' }} />, title: 'Innovative Design', desc: 'Cutting-edge BIM, 3D modeling, and digital twin technology for precision facility design.' },
-  { icon: <Building2 size={22} style={{ color: '#0057FF' }} />, title: 'Global Standards', desc: 'International best practices aligned with ISPE, ASHRAE, and WHO technical guidance documents.' },
-  { icon: <Award size={22} style={{ color: '#00A878' }} />, title: 'Quality Assurance', desc: 'Comprehensive documentation, risk assessment, and change control systems embedded in every project.' },
-  { icon: <Clock size={22} style={{ color: '#0057FF' }} />, title: 'Dedicated Support', desc: '24/7 technical support during critical commissioning phases, with ongoing operational excellence programs.' },
-]
+  {
+    icon: <Award size={22} style={{ color: '#0057FF' }} />,
+    title: 'Engineering Excellence',
+    desc: 'Comprehensive engineering solutions for pharmaceutical, biotechnology, and life science facilities with a strong focus on quality, safety, and operational excellence.',
+  },
+  {
+    icon: <Shield size={22} style={{ color: '#00A878' }} />,
+    title: 'CQV Specialists',
+    desc: 'Expert Commissioning, Qualification & Validation (CQV) services ensuring facilities, equipment, and utilities meet global GMP standards.',
+  },
+  {
+    icon: <FlaskConical size={22} style={{ color: '#0057FF' }} />,
+    title: 'Computer System Validation',
+    desc: 'Comprehensive CSV services aligned with GAMP 5, FDA 21 CFR Part 11, and international regulatory requirements.',
+  },
+  {
+    icon: <Building2 size={22} style={{ color: '#00A878' }} />,
+    title: 'Facility & Utility Engineering',
+    desc: 'Design, installation, qualification, and modernization of HVAC, cleanrooms, water systems, boilers, chillers, AHUs, and critical utilities.',
+  },
+  {
+    icon: <CheckCircle size={22} style={{ color: '#0057FF' }} />,
+    title: 'Regulatory Compliance',
+    desc: 'Strong expertise in WHO GMP, US FDA, EU GMP, Schedule M, and other global pharmaceutical compliance standards.',
+  },
+  {
+    icon: <Zap size={22} style={{ color: '#00A878' }} />,
+    title: 'Automation & PLC Solutions',
+    desc: 'PLC, SCADA, VFD, IoT integration, automation upgrades, and energy-efficient engineering solutions.',
+  },
+  {
+    icon: <Users size={22} style={{ color: '#0057FF' }} />,
+    title: 'Greenfield & Brownfield Projects',
+    desc: 'Complete project execution from concept and design to commissioning, qualification, validation, and handover.',
+  },
+  {
+    icon: <Clock size={22} style={{ color: '#00A878' }} />,
+    title: 'Fast Project Execution',
+    desc: 'Efficient planning and multidisciplinary teams delivering projects on time without compromising quality or safety.',
+  },
+  {
+    icon: <Award size={22} style={{ color: '#0057FF' }} />,
+    title: 'Dedicated Engineering Support',
+    desc: 'Continuous technical support, maintenance services, shutdown assistance, manpower deployment, and lifecycle engineering solutions.',
+  },
+];
 
 const services = [
   { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0057FF' },
@@ -37,6 +73,22 @@ const services = [
   { title: 'Energy Audits', desc: 'Energy efficiency assessment and decarbonization planning', color: '#00A878' },
   { title: 'Documentation', desc: 'GMP documentation, SOPs, and validation protocols', color: '#0057FF' },
   { title: 'Equipment Qualification', desc: 'Risk-based equipment qualification and requalification', color: '#00A878' },
+  { title: 'Process Engineering', desc: 'Process flow development, PFDs, P&IDs, equipment sizing, utility calculations, and process optimization.', color: '#0057FF' },
+  {
+  title: 'CQV Services',
+  desc: 'Commissioning, Qualification & Validation (CQV) for facilities, utilities, equipment, and manufacturing systems.',
+  color: '#00A878',
+},
+{
+  title: 'Project Management Consultancy',
+  desc: 'End-to-end project planning, coordination, execution, monitoring, and successful delivery of pharmaceutical engineering projects.',
+  color: '#0057FF',
+},
+{
+  title: 'Greenfield & Brownfield Projects',
+  desc: 'Complete engineering, expansion, modernization, commissioning, and validation of pharmaceutical manufacturing facilities.',
+  color: '#00A878',
+},
 ]
 
 const industries = [
@@ -244,9 +296,10 @@ export default function Home() {
                 opacity: 0,
               }}
             >
-              Sneha and Prahar Consultancy Services delivers world-class engineering, validation,
-              cleanroom, utility, compliance, and project execution solutions enabling pharmaceutical
-              and biotechnology companies to build facilities meeting the highest international standards.
+              Sneha and Prahar Consultancy Services delivers world-class engineering, Commissioning, Qualification & Validation (CQV), 
+              Computer System Validation (CSV), cleanroom, utility, compliance, and project execution solutions, enabling pharmaceutical 
+              and biotechnology companies to design, build, qualify, and operate facilities that meet the highest international quality, 
+              regulatory, and GMP standards.
             </p>
             <div
               className="flex flex-wrap gap-4 animate-fadeUp"
@@ -349,22 +402,33 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="section-label mb-5">Who We Are</div>
-              <h2 className="section-heading mb-6" style={{ fontSize: 'clamp(36px, 3.5vw, 52px)' }}>
-                Precision Engineering for
-                <br />
-                <span className="gradient-text">Regulated Industries</span>
-              </h2>
+              <h2 className="section-heading mb-6"
+                  style={{
+                    fontSize: 'clamp(30px, 3vw, 46px)',
+                    lineHeight: 1.15,
+                  }}
+                >
+                  Engineering, CQV & CSV
+                  <br />
+                  <span className="gradient-text">
+                    Excellence for Global Life Sciences
+                  </span>
+                </h2>
               <p className="body-text mb-5" style={{ fontSize: '17px' }}>
-                Sneha and Prahar Consultancy Services is a specialized engineering consultancy
-                focused exclusively on pharmaceutical, biotechnology, cleanroom, utilities,
-                validation, and industrial infrastructure solutions.
+                Sneha and Prahar Consultancy Services is a trusted engineering and
+                validation partner specializing in pharmaceutical, biotechnology,
+                healthcare, and other highly regulated industries. We provide
+                integrated Engineering, Commissioning, Qualification & Validation (CQV),
+                Computer System Validation (CSV), cleanroom engineering, utility
+                systems, GMP compliance, and turnkey project execution solutions.
               </p>
               <p className="body-text mb-8" style={{ fontSize: '17px' }}>
-                Our multidisciplinary engineering team delivers technically advanced and
-                regulatory-compliant solutions that improve manufacturing efficiency,
-                operational reliability, and project execution across highly regulated industries.
-                Founded in 2022, we have already delivered over 100 projects with a 99% client
-                satisfaction rate.
+                Our multidisciplinary team combines technical expertise with
+                international regulatory standards to deliver reliable, compliant,
+                and future-ready manufacturing facilities. From concept and design
+                to commissioning, qualification, validation, and operational support,
+                we help organizations achieve quality, regulatory compliance,
+                operational excellence, and sustainable business growth.
               </p>
               <div className="grid grid-cols-2 gap-5 mb-8">
                 {[
