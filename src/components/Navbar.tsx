@@ -141,7 +141,7 @@ export default function Navbar() {
               style={{
                 borderColor: 'rgba(255,255,255,0.07)',
                 fontFamily: 'Satoshi, sans-serif',
-                fontSize: '22px',
+                fontSize: 'clamp(18px, 3vw, 22px)',
                 fontWeight: '700',
                 color: pathname === link.path ? '#0057FF' : 'white',
                 textDecoration: 'none',
@@ -156,7 +156,7 @@ export default function Navbar() {
           <Link
             to="/contact"
             className="btn-primary mt-6 justify-center"
-            style={{ fontSize: '15px', padding: '16px 32px' }}
+            style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(24px, 4vw, 32px)' }}
           >
             Contact Us
           </Link>

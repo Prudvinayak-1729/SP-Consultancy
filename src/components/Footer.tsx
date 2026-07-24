@@ -50,7 +50,7 @@ export default function Footer() {
           <Link
             to="/contact"
             className="btn-primary flex-shrink-0"
-            style={{ padding: '16px 36px', fontSize: '15px' }}
+            style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}
           >
             Get In Touch <ArrowRight size={16} />
           </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
             technically advanced solutions since 2022.
           </p>
           {/* Standards */}
-          <p style={{ fontFamily: 'Space Grotesk', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px', marginTop: '16px' }}>
+          <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px', marginTop: '16px' }}>
             Compliance Standards
           </p>
           <div className="flex flex-wrap gap-2">
@@ -99,7 +99,7 @@ export default function Footer() {
                   border: '1px solid rgba(0,168,120,0.25)',
                   background: 'rgba(0,168,120,0.07)',
                   fontFamily: 'Space Grotesk',
-                  fontSize: '11px',
+                  fontSize: 'clamp(9px, 2vw, 11px)',
                   fontWeight: 500,
                   color: 'rgba(255,255,255,0.6)',
                   letterSpacing: '0.04em',
@@ -116,7 +116,7 @@ export default function Footer() {
           <h4
             style={{
               fontFamily: 'Space Grotesk',
-              fontSize: '12px',
+              fontSize: 'clamp(10px, 2vw, 12px)',
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
@@ -133,7 +133,7 @@ export default function Footer() {
                   to="/services"
                   style={{
                     fontFamily: 'Inter',
-                    fontSize: '14px',
+                    fontSize: 'clamp(12px, 2vw, 14px)',
                     color: 'rgba(255,255,255,0.55)',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
@@ -144,7 +144,7 @@ export default function Footer() {
                   onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = 'white')}
                   onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.55)')}
                 >
-                  <span style={{ color: 'rgba(0,87,255,0.5)', fontSize: '10px' }}>▸</span>
+                  <span style={{ color: 'rgba(0,87,255,0.5)', fontSize: 'clamp(9px, 2vw, 10px)' }}>▸</span>
                   {s}
                 </Link>
               </li>
@@ -157,7 +157,7 @@ export default function Footer() {
           <h4
             style={{
               fontFamily: 'Space Grotesk',
-              fontSize: '12px',
+              fontSize: 'clamp(10px, 2vw, 12px)',
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
@@ -174,7 +174,7 @@ export default function Footer() {
                   to={c.path}
                   style={{
                     fontFamily: 'Inter',
-                    fontSize: '14px',
+                    fontSize: 'clamp(12px, 2vw, 14px)',
                     color: 'rgba(255,255,255,0.55)',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
@@ -185,7 +185,7 @@ export default function Footer() {
                   onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = 'white')}
                   onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.55)')}
                 >
-                  <span style={{ color: 'rgba(0,168,120,0.5)', fontSize: '10px' }}>▸</span>
+                  <span style={{ color: 'rgba(0,168,120,0.5)', fontSize: 'clamp(9px, 2vw, 10px)' }}>▸</span>
                   {c.label}
                 </Link>
               </li>
@@ -198,7 +198,7 @@ export default function Footer() {
           <h4
             style={{
               fontFamily: 'Space Grotesk',
-              fontSize: '12px',
+              fontSize: 'clamp(10px, 2vw, 12px)',
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
@@ -214,7 +214,7 @@ export default function Footer() {
                 <MapPin size={15} style={{ color: '#00A878' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
                   #8-80/80NP, Ramidi Malla Reddy Nagar,<br />
                   Almasguda, Badangpet,<br />
                   Hyderabad, Telangana — 500081,<br />
@@ -227,9 +227,9 @@ export default function Footer() {
                 <Phone size={15} style={{ color: '#0057FF' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>+91 90008 77499</p>
-                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>+91 88014 11271</p>
-                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>+91 82962 76148</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>+91 90008 77499</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>+91 88014 11271</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>+91 82962 76148</p>
               </div>
             </div>
             <div className="flex gap-3 items-center">
@@ -237,7 +237,7 @@ export default function Footer() {
                 <Mail size={15} style={{ color: '#00A878' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>spconsultanancies@gmail.com</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>spconsultanancies@gmail.com</p>
               </div>
             </div>
             <div
@@ -249,10 +249,10 @@ export default function Footer() {
                 marginTop: '4px',
               }}
             >
-              <p style={{ fontFamily: 'Space Grotesk', fontSize: '12px', fontWeight: 600, color: '#00A878', letterSpacing: '0.06em', marginBottom: '4px' }}>
+              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', fontWeight: 600, color: '#00A878', letterSpacing: '0.06em', marginBottom: '4px' }}>
                 WORKING HOURS
               </p>
-              <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.6)' }}>
                 Monday – Saturday: 9:00 AM – 7:00 PM<br />
                 Sunday: Emergency Support Only
               </p>
@@ -264,10 +264,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '20px 0' }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.3)' }}>
+          <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.3)' }}>
             © 2024 Sneha and Prahar Consultancy Services. All rights reserved.
           </p>
-          <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.3)' }}>
+          <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.3)' }}>
             Founded 2022 · Hyderabad, India · Pharmaceutical Engineering Excellence
           </p>
         </div>

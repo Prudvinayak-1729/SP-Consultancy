@@ -78,7 +78,7 @@ export default function Contact() {
             <br />
             <span className="gradient-text">Exceptional Together.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: '18px', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
             Whether you have a fully scoped project or are exploring options for a new facility —
             our team is ready to discuss your pharmaceutical engineering requirements.
           </p>
@@ -102,12 +102,20 @@ export default function Contact() {
               >
                 <div className="icon-box">{c.icon}</div>
                 <div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '16px', color: 'white', marginBottom: '6px' }}>{c.title}</h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, marginBottom: '10px' }}>{c.desc}</p>
-                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '13px', color: 'white', marginBottom: '4px' }}>{c.value}</p>
-                  <p style={{ fontFamily: 'Inter', fontSize: '11px', color: 'rgba(255,255,255,0.35)' }}>{c.sub}</p>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 16px)', color: 'white', marginBottom: '6px' }}>{c.title}</h3>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, marginBottom: '10px' }}>{c.desc}</p>
+                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 13px)', color: 'white', marginBottom: '4px' }}>{c.value}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: 'rgba(255,255,255,0.35)' }}>{c.sub}</p>
                 </div>
-                <button
+                <a
+                  href={
+                    c.title === 'Phone' ? 'tel:+919000877499' :
+                    c.title === 'WhatsApp' ? 'https://wa.me/6593530873' :
+                    c.title === 'Email' ? 'mailto:spconsultanancies@gmail.com' :
+                    c.title === 'LinkedIn' ? 'https://www.linkedin.com/company/sneha-and-prahar-consultancy-services' : '#'
+                  }
+                  target={c.title === 'LinkedIn' ? '_blank' : undefined}
+                  rel={c.title === 'LinkedIn' ? 'noopener noreferrer' : undefined}
                   style={{
                     marginTop: 'auto',
                     padding: '10px 20px',
@@ -115,15 +123,18 @@ export default function Contact() {
                     background: i % 2 === 0 ? 'rgba(0,87,255,0.15)' : 'rgba(0,168,120,0.15)',
                     border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.3)' : 'rgba(0,168,120,0.3)'}`,
                     fontFamily: 'Inter',
-                    fontSize: '13px',
+                    fontSize: 'clamp(12px, 2vw, 13px)',
                     fontWeight: 600,
                     color: i % 2 === 0 ? '#3378FF' : '#00A878',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
+                    textDecoration: 'none',
+                    textAlign: 'center',
+                    display: 'inline-block',
                   }}
                 >
                   {c.action}
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -155,7 +166,7 @@ export default function Contact() {
                         borderRadius: '999px',
                         background: o.color === '#0057FF' ? 'rgba(0,87,255,0.85)' : 'rgba(0,168,120,0.85)',
                         fontFamily: 'Space Grotesk',
-                        fontSize: '11px',
+                        fontSize: 'clamp(9px, 2vw, 11px)',
                         fontWeight: 700,
                         color: 'white',
                         letterSpacing: '0.08em',
@@ -165,7 +176,7 @@ export default function Contact() {
                     </span>
                   </div>
                   <div style={{ position: 'absolute', bottom: 16, left: 20 }}>
-                    <h3 style={{ fontFamily: 'Satoshi', fontWeight: 900, fontSize: '28px', color: 'white' }}>{o.city}</h3>
+                    <h3 style={{ fontFamily: 'Satoshi', fontWeight: 900, fontSize: 'clamp(22px, 4vw, 28px)', color: 'white' }}>{o.city}</h3>
                   </div>
                 </div>
                 <div style={{ padding: '28px' }}>
@@ -174,7 +185,7 @@ export default function Contact() {
                       <div className="icon-box" style={{ width: 36, height: 36, borderRadius: '8px', flexShrink: 0 }}>
                         <MapPin size={15} style={{ color: o.color }} />
                       </div>
-                      <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.65 }}>
+                      <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.65 }}>
                         {o.address}
                       </p>
                     </div>
@@ -184,7 +195,7 @@ export default function Contact() {
                       </div>
                       <div>
                         {o.phone.map(p => (
-                          <p key={p} style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '14px', color: 'rgba(255,255,255,0.8)' }}>{p}</p>
+                          <p key={p} style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.8)' }}>{p}</p>
                         ))}
                       </div>
                     </div>
@@ -194,7 +205,7 @@ export default function Contact() {
                       </div>
                       <div>
                         {o.email.map(e => (
-                          <p key={e} style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)' }}>{e}</p>
+                          <p key={e} style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)' }}>{e}</p>
                         ))}
                       </div>
                     </div>
@@ -225,9 +236,9 @@ export default function Contact() {
                 >
                   <div className="flex items-center gap-3">
                     <Clock size={15} style={{ color: '#0057FF' }} />
-                    <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '14px', color: 'white' }}>{h.day}</span>
+                    <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: 'clamp(12px, 2vw, 14px)', color: 'white' }}>{h.day}</span>
                   </div>
-                  <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '14px', color: 'rgba(0,168,120,0.9)' }}>{h.time}</span>
+                  <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(0,168,120,0.9)' }}>{h.time}</span>
                 </div>
               ))}
             </div>
@@ -237,11 +248,11 @@ export default function Contact() {
             >
               <div className="flex items-center gap-2 mb-3">
                 <Phone size={15} style={{ color: '#0057FF' }} />
-                <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', color: '#0057FF', letterSpacing: '0.06em' }}>
+                <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(11px, 2vw, 13px)', color: '#0057FF', letterSpacing: '0.06em' }}>
                   EMERGENCY SUPPORT
                 </span>
               </div>
-              <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
                 For critical project emergencies during commissioning or validation phases, our
                 24/7 emergency support line is available to active project clients.
               </p>
@@ -289,7 +300,7 @@ export default function Contact() {
                       boxShadow: `0 0 8px ${i % 2 === 0 ? 'rgba(0,87,255,0.5)' : 'rgba(0,168,120,0.5)'}`,
                     }}
                   />
-                  <span style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.72)' }}>{s}</span>
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.72)' }}>{s}</span>
                 </div>
               ))}
             </div>
@@ -316,15 +327,15 @@ export default function Contact() {
             <br />
             <span className="gradient-text">Engineering Consultancy</span>
           </h2>
-          <p className="body-text mb-8" style={{ fontSize: '16px', maxWidth: '480px', margin: '0 auto 32px' }}>
+          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '480px', margin: '0 auto 32px' }}>
             From Hyderabad to Mumbai, from Baddi to Chennai — we bring world-class pharmaceutical
             engineering to every corner of India.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+919966000000" className="btn-primary" style={{ padding: '16px 36px', fontSize: '15px' }}>
+            <a href="tel:+919966000000" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
               <Phone size={16} /> Call Now
             </a>
-            <a href="mailto:info@snehaandprahar.com" className="btn-secondary" style={{ padding: '16px 36px', fontSize: '15px' }}>
+            <a href="mailto:info@snehaandprahar.com" className="btn-secondary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
               <Mail size={16} /> Send Email
             </a>
           </div>

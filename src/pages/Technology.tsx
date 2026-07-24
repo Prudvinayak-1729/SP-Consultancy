@@ -63,7 +63,7 @@ export default function Technology() {
             <br />
             <span className="gradient-text">at the Cutting Edge.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: '18px', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
             We invest in the most advanced engineering and digital tools available to deliver
             faster, more accurate, and better-documented pharmaceutical facility projects.
           </p>
@@ -86,16 +86,16 @@ export default function Technology() {
             >
               <div className="grid-overlay" style={{ position: 'absolute', inset: 0, borderRadius: '20px' }} />
               <div style={{ position: 'relative', zIndex: 1 }}>
-                <div className="stat-number gradient-text" style={{ fontSize: '64px', lineHeight: 1, marginBottom: '8px' }}>BIM</div>
-                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '24px', color: 'white', marginBottom: '14px' }}>3D Building Information Modelling</h3>
-                <p className="body-text" style={{ fontSize: '15px', marginBottom: '20px' }}>
+                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(48px, 6vw, 64px)', lineHeight: 1, marginBottom: '8px' }}>BIM</div>
+                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 24px)', color: 'white', marginBottom: '14px' }}>3D Building Information Modelling</h3>
+                <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', marginBottom: '20px' }}>
                   100% of our facility projects are designed in full 3D BIM, enabling clash
                   detection, spatial coordination, accurate quantity take-offs, and visual
                   communication with clients and contractors.
                 </p>
                 <div className="flex gap-3 flex-wrap">
                   {['Autodesk Revit', 'Navisworks', 'BIM 360'].map(t => (
-                    <span key={t} className="tag-pill" style={{ fontSize: '11px' }}>{t}</span>
+                    <span key={t} className="tag-pill" style={{ fontSize: 'clamp(9px, 2vw, 11px)' }}>{t}</span>
                   ))}
                 </div>
               </div>
@@ -112,16 +112,16 @@ export default function Technology() {
             >
               <div className="grid-overlay" style={{ position: 'absolute', inset: 0, borderRadius: '20px' }} />
               <div style={{ position: 'relative', zIndex: 1 }}>
-                <div className="stat-number gradient-text" style={{ fontSize: '64px', lineHeight: 1, marginBottom: '8px' }}>CFD</div>
-                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '24px', color: 'white', marginBottom: '14px' }}>Computational Fluid Dynamics</h3>
-                <p className="body-text" style={{ fontSize: '15px', marginBottom: '20px' }}>
+                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(48px, 6vw, 64px)', lineHeight: 1, marginBottom: '8px' }}>CFD</div>
+                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 24px)', color: 'white', marginBottom: '14px' }}>Computational Fluid Dynamics</h3>
+                <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', marginBottom: '20px' }}>
                   Advanced CFD simulation for cleanroom airflow validation before construction,
                   ensuring air change rates, velocity profiles, and contamination control meet
                   ISO 14644 and EU GMP requirements.
                 </p>
                 <div className="flex gap-3 flex-wrap">
                   {['ANSYS Fluent', 'Simcenter', 'CFD-ACE+'].map(t => (
-                    <span key={t} className="tag-pill" style={{ fontSize: '11px' }}>{t}</span>
+                    <span key={t} className="tag-pill" style={{ fontSize: 'clamp(9px, 2vw, 11px)' }}>{t}</span>
                   ))}
                 </div>
               </div>
@@ -158,14 +158,14 @@ export default function Technology() {
                   >
                     <Cpu size={16} style={{ color: cat.color }} />
                   </div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '16px', color: 'white' }}>{cat.category}</h3>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white' }}>{cat.category}</h3>
                 </div>
                 <div className="flex flex-col gap-5">
                   {cat.tools.map((tool, ti) => (
                     <div key={ti}>
                       <div className="flex justify-between items-center mb-2">
-                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '13px', color: 'white' }}>{tool.name}</span>
-                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', color: cat.color }}>{tool.level}%</span>
+                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white' }}>{tool.name}</span>
+                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: cat.color }}>{tool.level}%</span>
                       </div>
                       <div style={{ height: 4, borderRadius: '999px', background: 'rgba(255,255,255,0.08)', overflow: 'hidden' }}>
                         <div
@@ -177,7 +177,7 @@ export default function Technology() {
                           }}
                         />
                       </div>
-                      <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5, marginTop: '6px' }}>{tool.desc}</p>
+                      <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5, marginTop: '6px' }}>{tool.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -202,8 +202,8 @@ export default function Technology() {
               <div key={i} className="glass-card-hover" style={{ padding: '32px', display: 'flex', gap: '20px' }}>
                 <div className="icon-box" style={{ flexShrink: 0 }}>{c.icon}</div>
                 <div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '18px', color: 'white', marginBottom: '10px' }}>{c.title}</h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.62)', lineHeight: 1.7 }}>{c.desc}</p>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white', marginBottom: '10px' }}>{c.title}</h3>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.62)', lineHeight: 1.7 }}>{c.desc}</p>
                 </div>
               </div>
             ))}

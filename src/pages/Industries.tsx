@@ -71,7 +71,7 @@ export default function Industries() {
             <br />
             <span className="gradient-text">Life Sciences &amp; Beyond.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: '18px', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
             Deep vertical expertise across pharmaceutical, biotechnology, vaccine, API,
             and medical device industries — with specialized understanding of each
             sector&apos;s unique regulatory and engineering challenges.
@@ -114,27 +114,27 @@ export default function Industries() {
                 <h2 className="section-heading mb-4" style={{ fontSize: 'clamp(28px, 2.5vw, 40px)' }}>
                   {ind.title}
                 </h2>
-                <p className="body-text mb-6" style={{ fontSize: '16px' }}>{ind.desc}</p>
+                <p className="body-text mb-6" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>{ind.desc}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                   <div className="glass-card" style={{ padding: '20px' }}>
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>
                       Key Challenges
                     </p>
                     {ind.challenges.map((c, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
                         <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(255,87,87,0.7)', marginTop: '7px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{c}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{c}</p>
                       </div>
                     ))}
                   </div>
                   <div className="glass-card" style={{ padding: '20px' }}>
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>
                       Our Solutions
                     </p>
                     {ind.solutions.map((s, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
                         <CheckCircle size={12} style={{ color: ind.color, marginTop: '3px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{s}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{s}</p>
                       </div>
                     ))}
                   </div>

@@ -153,7 +153,7 @@ export default function Services() {
             <br />
             <span className="gradient-text">from Concept to Compliance.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: '18px', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
             Twelve specialized service lines covering every engineering, validation, and compliance
             need for pharmaceutical and biotechnology facility lifecycle management.
           </p>
@@ -179,31 +179,31 @@ export default function Services() {
                 <h2 className="section-heading mb-3" style={{ fontSize: 'clamp(28px, 2.5vw, 40px)' }}>
                   {s.title}
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontSize: '15px', fontStyle: 'italic', color: s.color, marginBottom: '16px', fontWeight: 500 }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', fontStyle: 'italic', color: s.color, marginBottom: '16px', fontWeight: 500 }}>
                   {s.tagline}
                 </p>
-                <p className="body-text mb-6" style={{ fontSize: '15px' }}>{s.desc}</p>
+                <p className="body-text mb-6" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>{s.desc}</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                   <div>
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '10px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '10px' }}>
                       Key Benefits
                     </p>
                     {s.benefits.map((b, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
                         <CheckCircle size={13} style={{ color: s.color, marginTop: '3px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.65)' }}>{b}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)' }}>{b}</p>
                       </div>
                     ))}
                   </div>
                   <div>
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '10px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '10px' }}>
                       Scope Includes
                     </p>
                     {s.scope.map((sc, j) => (
                       <div key={j} className="flex gap-2 items-center mb-2">
                         <div style={{ width: 5, height: 5, borderRadius: '50%', background: s.color, flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.65)' }}>{sc}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)' }}>{sc}</p>
                       </div>
                     ))}
                   </div>

@@ -132,7 +132,7 @@ export default function Projects() {
             <br />
             <span className="gradient-text">100% Delivered.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: '18px', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
             A curated selection from our portfolio of pharmaceutical, biotech, and industrial
             engineering projects delivered since 2022 — across India and beyond.
           </p>
@@ -150,8 +150,8 @@ export default function Projects() {
               { val: '0', label: 'Regulatory Failures' },
             ].map(s => (
               <div key={s.label}>
-                <div className="stat-number gradient-text" style={{ fontSize: '36px', marginBottom: '6px' }}>{s.val}</div>
-                <div style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.04em' }}>{s.label}</div>
+                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(28px, 4vw, 36px)', marginBottom: '6px' }}>{s.val}</div>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', letterSpacing: '0.04em' }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -172,7 +172,7 @@ export default function Projects() {
                   border: `1px solid ${active === c ? '#0057FF' : 'rgba(255,255,255,0.12)'}`,
                   background: active === c ? 'rgba(0,87,255,0.15)' : 'rgba(255,255,255,0.03)',
                   fontFamily: 'Space Grotesk',
-                  fontSize: '13px',
+                  fontSize: 'clamp(14px, 2.5vw, 18px)',
                   fontWeight: 600,
                   color: active === c ? 'white' : 'rgba(255,255,255,0.5)',
                   cursor: 'pointer',
@@ -213,43 +213,43 @@ export default function Projects() {
                     onMouseLeave={e => ((e.currentTarget as HTMLElement).style.transform = '')}
                   />
                   <div style={{ position: 'absolute', top: 14, left: 14 }}>
-                    <span style={{ padding: '4px 12px', borderRadius: '999px', background: 'rgba(7,27,59,0.85)', border: '1px solid rgba(255,255,255,0.15)', fontFamily: 'Space Grotesk', fontSize: '10px', fontWeight: 600, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.1em' }}>
+                    <span style={{ padding: '4px 12px', borderRadius: '999px', background: 'rgba(7,27,59,0.85)', border: '1px solid rgba(255,255,255,0.15)', fontFamily: 'Space Grotesk', fontSize: 'clamp(14px, 2.5vw, 18px)', fontWeight: 600, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.1em' }}>
                       {p.category}
                     </span>
                   </div>
                   <div style={{ position: 'absolute', top: 14, right: 14 }}>
-                    <span style={{ padding: '4px 10px', borderRadius: '999px', background: 'rgba(0,87,255,0.8)', fontFamily: 'Space Grotesk', fontSize: '10px', fontWeight: 700, color: 'white', letterSpacing: '0.06em' }}>
+                    <span style={{ padding: '4px 10px', borderRadius: '999px', background: 'rgba(0,87,255,0.8)', fontFamily: 'Space Grotesk', fontSize: 'clamp(14px, 2.5vw, 18px)', fontWeight: 700, color: 'white', letterSpacing: '0.06em' }}>
                       {p.year}
                     </span>
                   </div>
                 </div>
                 <div style={{ padding: '22px' }}>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '17px', color: 'white', marginBottom: '8px', lineHeight: 1.3 }}>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white', marginBottom: '8px', lineHeight: 1.3 }}>
                     {p.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '14px' }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '14px' }}>
                     {p.desc}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-14px">
                     {p.tech.slice(0, 3).map(t => (
-                      <span key={t} style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(0,87,255,0.1)', border: '1px solid rgba(0,87,255,0.2)', fontFamily: 'Space Grotesk', fontSize: '10px', fontWeight: 500, color: 'rgba(255,255,255,0.6)' }}>
+                      <span key={t} style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(0,87,255,0.1)', border: '1px solid rgba(0,87,255,0.2)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 500, color: 'rgba(255,255,255,0.6)' }}>
                         {t}
                       </span>
                     ))}
                     {p.tech.length > 3 && (
-                      <span style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(255,255,255,0.05)', fontFamily: 'Space Grotesk', fontSize: '10px', color: 'rgba(255,255,255,0.4)' }}>
+                      <span style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(255,255,255,0.05)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', color: 'rgba(255,255,255,0.4)' }}>
                         +{p.tech.length - 3}
                       </span>
                     )}
                   </div>
                   <div style={{ marginTop: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div className="flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '12px' }}>
+                    <div className="flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 'clamp(10px, 2vw, 12px)' }}>
                       <MapPin size={12} />
-                      <span style={{ fontFamily: 'Inter', fontSize: '12px' }}>{p.location}</span>
+                      <span style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 12px)' }}>{p.location}</span>
                     </div>
                     <div className="flex items-center gap-1" style={{ color: 'rgba(0,168,120,0.8)' }}>
                       <Clock size={12} />
-                      <span style={{ fontFamily: 'Space Grotesk', fontSize: '12px', fontWeight: 600 }}>{p.duration}</span>
+                      <span style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', fontWeight: 600 }}>{p.duration}</span>
                     </div>
                   </div>
                 </div>
@@ -265,11 +265,11 @@ export default function Projects() {
           <h2 className="section-heading mb-4" style={{ fontSize: 'clamp(32px, 3vw, 44px)' }}>
             Ready to add your project to this portfolio?
           </h2>
-          <p className="body-text mb-8" style={{ fontSize: '16px', maxWidth: '480px', margin: '0 auto 32px' }}>
+          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '480px', margin: '0 auto 32px' }}>
             Let&apos;s discuss your engineering requirements and how we can deliver results that
             exceed your regulatory and operational expectations.
           </p>
-          <Link to="/contact" className="btn-primary" style={{ padding: '16px 40px', fontSize: '15px' }}>
+          <Link to="/contact" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 40px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
             Start a Conversation <ArrowRight size={16} />
           </Link>
         </div>

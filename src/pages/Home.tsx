@@ -383,7 +383,7 @@ export default function Home() {
           <div
             style={{
               fontFamily: 'Space Grotesk',
-              fontSize: '9px',
+              fontSize: 'clamp(8px, 2vw, 9px)',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
               color: 'white',
@@ -420,7 +420,7 @@ export default function Home() {
                     Excellence for Global Life Sciences
                   </span>
                 </h2>
-              <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2vw, 17px)' }}>
+              <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
                 Sneha and Prahar Consultancy Services is a trusted engineering and
                 validation partner specializing in pharmaceutical, biotechnology,
                 healthcare, and other highly regulated industries. We provide
@@ -428,7 +428,7 @@ export default function Home() {
                 Computer System Validation (CSV), cleanroom engineering, utility
                 systems, GMP compliance, and turnkey project execution solutions.
               </p>
-              <p className="body-text mb-6 sm:mb-8" style={{ fontSize: 'clamp(14px, 2vw, 17px)' }}>
+              <p className="body-text mb-6 sm:mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
                 Our multidisciplinary team combines technical expertise with
                 international regulatory standards to deliver reliable, compliant,
                 and future-ready manufacturing facilities. From concept and design
@@ -449,7 +449,7 @@ export default function Home() {
                     style={{ padding: 'clamp(16px, 2vw, 20px) clamp(18px, 2vw, 22px)' }}
                   >
                     <div className="stat-number gradient-text" style={{ fontSize: 'clamp(24px, 4vw, 30px)', marginBottom: '4px' }}>{m.value}</div>
-                    <div style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.55)' }}>{m.label}</div>
+                    <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.55)' }}>{m.label}</div>
                   </div>
                 ))}
               </div>
@@ -491,7 +491,7 @@ export default function Home() {
                 }}
               >
                 <div className="stat-number gradient-text" style={{ fontSize: 'clamp(28px, 5vw, 36px)', lineHeight: 1 }}>99%</div>
-                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 12px)', color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>Client Satisfaction Rate</div>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>Client Satisfaction Rate</div>
               </div>
             </div>
           </div>
@@ -507,7 +507,7 @@ export default function Home() {
               The Engineering Partner You Can
               <span className="gradient-text"> Trust.</span>
             </h2>
-            <p className="body-text" style={{ fontSize: 'clamp(14px, 2vw, 17px)', maxWidth: '520px', margin: '0 auto' }}>
+            <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '520px', margin: '0 auto' }}>
               Nine pillars of excellence that make us the preferred engineering consultancy for
               India&apos;s top pharmaceutical companies.
             </p>
@@ -521,7 +521,7 @@ export default function Home() {
                 <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 18px)', color: 'white', marginBottom: '10px' }}>
                   {item.title}
                 </h3>
-                <p className="body-text" style={{ fontSize: 'clamp(13px, 2vw, 14px)', flex: 1 }}>{item.desc}</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, flex: 1 }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -564,7 +564,7 @@ export default function Home() {
                 <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(13px, 2vw, 15px)', color: 'white', marginBottom: '8px', lineHeight: 1.3 }}>
                   {s.title}
                 </h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, flex: 1 }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, flex: 1 }}>
                   {s.desc}
                 </p>
               </div>
@@ -600,7 +600,7 @@ export default function Home() {
               Engineering to Global
               <span className="gradient-text"> Regulatory Standards</span>
             </h2>
-            <p className="body-text mt-4" style={{ fontSize: 'clamp(14px, 2vw, 16px)', maxWidth: '500px', margin: '16px auto 0' }}>
+            <p className="body-text mt-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '500px', margin: '16px auto 0' }}>
               Every project is designed, executed, and documented to satisfy the world&apos;s
               most demanding pharmaceutical regulatory authorities.
             </p>
@@ -625,7 +625,7 @@ export default function Home() {
                 <div style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(11px, 2vw, 13px)', color: 'white' }}>
                   {s.name}
                 </div>
-                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>
                   {s.desc}
                 </div>
               </div>
@@ -668,7 +668,7 @@ export default function Home() {
                   <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 19px)', color: 'white', marginBottom: '10px' }}>
                     {p.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 13px)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '16px', flex: 1 }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: '16px', flex: 1 }}>
                     {p.scope}
                   </p>
                   <div className="flex items-center justify-between">
@@ -715,7 +715,7 @@ export default function Home() {
                   <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '10px' }}>
                     {p.title}
                   </h3>
-                  <p className="body-text" style={{ fontSize: 'clamp(12px, 2vw, 13px)' }}>{p.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -742,13 +742,13 @@ export default function Home() {
                   ))}
                 </div>
                 <Quote size={24} style={{ color: 'rgba(0,87,255,0.4)', marginBottom: '16px' }} />
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, marginBottom: '20px', fontStyle: 'italic' }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: '20px', fontStyle: 'italic' }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="divider-gradient" style={{ marginBottom: '16px' }} />
                 <div>
                   <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 15px)', color: 'white' }}>{t.name}</p>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.45)', marginTop: '3px' }}>{t.title}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.45)', marginTop: '3px' }}>{t.title}</p>
                 </div>
               </div>
             ))}
@@ -854,7 +854,7 @@ export default function Home() {
                   <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '6px' }}>
                     {m.title}
                   </h3>
-                  <p className="body-text" style={{ fontSize: 'clamp(12px, 2vw, 13px)' }}>{m.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{m.desc}</p>
                 </div>
               </div>
             ))}
@@ -889,7 +889,7 @@ export default function Home() {
             <br />
             <span className="gradient-text-animated">Future-Ready Facilities.</span>
           </h2>
-          <p className="body-text mb-8 sm:mb-10" style={{ fontSize: 'clamp(14px, 2vw, 17px)', maxWidth: '600px', margin: '0 auto clamp(24px, 4vw, 40px)' }}>
+          <p className="body-text mb-8 sm:mb-10" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '600px', margin: '0 auto clamp(24px, 4vw, 40px)' }}>
             We leverage BIM, digital twins, and Industry 4.0 technologies to design pharmaceutical
             facilities that are not just compliant today, but adaptable for the demands of tomorrow.
           </p>
@@ -901,7 +901,7 @@ export default function Home() {
             ].map(f => (
               <div key={f.label} className="gradient-border-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}>
                 <div className="stat-number gradient-text" style={{ fontSize: 'clamp(22px, 3vw, 28px)', marginBottom: '4px' }}>{f.value}</div>
-                <div style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(13px, 2vw, 14px)', color: 'white', marginBottom: '4px' }}>{f.label}</div>
+                <div style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white', marginBottom: '4px' }}>{f.label}</div>
                 <div style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.4)' }}>{f.note}</div>
               </div>
             ))}

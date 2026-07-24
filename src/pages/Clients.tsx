@@ -77,7 +77,7 @@ export default function Clients() {
             <br />
             <span className="gradient-text">Pharmaceutical Elite.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: '18px', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
             From India&apos;s largest generic manufacturers to innovative biotech startups —
             our clients trust us to deliver engineering excellence that protects their
             regulatory standing and competitive advantage.
@@ -115,17 +115,17 @@ export default function Clients() {
                     margin: '0 auto 14px',
                     fontFamily: 'Space Grotesk',
                     fontWeight: 700,
-                    fontSize: '14px',
+                    fontSize: 'clamp(12px, 2vw, 14px)',
                     color: i % 2 === 0 ? '#0057FF' : '#00A878',
                   }}
                 >
                   {c.name.charAt(0)}
                 </div>
-                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '14px', color: 'white', marginBottom: '5px', lineHeight: 1.3 }}>
+                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(12px, 2vw, 14px)', color: 'white', marginBottom: '5px', lineHeight: 1.3 }}>
                   {c.name}
                 </h3>
-                <p style={{ fontFamily: 'Inter', fontSize: '11px', color: 'rgba(255,255,255,0.45)', marginBottom: '3px' }}>{c.sector}</p>
-                <p style={{ fontFamily: 'Space Grotesk', fontSize: '10px', color: 'rgba(0,168,120,0.7)', fontWeight: 600, letterSpacing: '0.08em' }}>{c.city}</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.45)', marginBottom: '3px' }}>{c.sector}</p>
+                <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', color: 'rgba(0,168,120,0.7)', fontWeight: 600, letterSpacing: '0.08em' }}>{c.city}</p>
               </div>
             ))}
           </div>
@@ -151,18 +151,18 @@ export default function Clients() {
                       <Star key={j} size={13} style={{ fill: '#00A878', color: '#00A878' }} />
                     ))}
                   </div>
-                  <span style={{ fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 600, color: 'rgba(0,87,255,0.7)', letterSpacing: '0.08em' }}>
+                  <span style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, color: 'rgba(0,87,255,0.7)', letterSpacing: '0.08em' }}>
                     {t.company}
                   </span>
                 </div>
                 <Quote size={24} style={{ color: 'rgba(0,87,255,0.35)', marginBottom: '14px' }} />
-                <p style={{ fontFamily: 'Inter', fontSize: '15px', color: 'rgba(255,255,255,0.78)', lineHeight: 1.75, fontStyle: 'italic', marginBottom: '22px' }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.78)', lineHeight: 1.75, fontStyle: 'italic', marginBottom: '22px' }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="divider-gradient" style={{ marginBottom: '18px' }} />
                 <div>
-                  <p style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '15px', color: 'white' }}>{t.name}</p>
-                  <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.4)', marginTop: '3px' }}>{t.title}</p>
+                  <p style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white' }}>{t.name}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.4)', marginTop: '3px' }}>{t.title}</p>
                 </div>
               </div>
             ))}
@@ -193,22 +193,22 @@ export default function Clients() {
                 <div style={{ padding: '40px', order: i % 2 === 0 ? 2 : 1 }}>
                   <div className="section-label mb-4">{cs.client}</div>
                   <div className="mb-5">
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: '10px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,87,87,0.7)', marginBottom: '8px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,87,87,0.7)', marginBottom: '8px' }}>
                       Challenge
                     </p>
-                    <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{cs.challenge}</p>
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{cs.challenge}</p>
                   </div>
                   <div className="mb-5">
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: '10px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(0,87,255,0.8)', marginBottom: '8px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(0,87,255,0.8)', marginBottom: '8px' }}>
                       Our Approach
                     </p>
-                    <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{cs.solution}</p>
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{cs.solution}</p>
                   </div>
                   <div className="glass-card" style={{ padding: '16px 20px' }}>
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: '10px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#00A878', marginBottom: '8px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#00A878', marginBottom: '8px' }}>
                       Results
                     </p>
-                    <p style={{ fontFamily: 'Inter', fontSize: '14px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, fontWeight: 500 }}>{cs.result}</p>
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, fontWeight: 500 }}>{cs.result}</p>
                   </div>
                 </div>
               </div>

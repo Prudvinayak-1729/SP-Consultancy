@@ -86,7 +86,7 @@ export default function Quality() {
               <div key={s.label} className="gradient-border-card" style={{ padding: 'clamp(24px, 4vw, 36px)', textAlign: 'center' }}>
                 <div className="stat-number gradient-text" style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '8px' }}>{s.val}</div>
                 <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 16px)', color: 'white', marginBottom: '8px' }}>{s.label}</h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 13px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>{s.desc}</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -127,7 +127,7 @@ export default function Quality() {
                     <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: s.color, fontStyle: 'italic' }}>{s.fullName}</p>
                   </div>
                 </div>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(13px, 2vw, 14px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, marginBottom: '16px' }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, marginBottom: '16px' }}>
                   {s.desc}
                 </p>
                 <div className="divider-gradient" style={{ marginBottom: '16px' }} />
@@ -138,7 +138,7 @@ export default function Quality() {
                   {s.scope.map((sc, j) => (
                     <div key={j} className="flex gap-2 items-center">
                       <div style={{ width: 5, height: 5, borderRadius: '50%', background: s.color, flexShrink: 0 }} />
-                      <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 13px)', color: 'rgba(255,255,255,0.6)' }}>{sc}</p>
+                      <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)' }}>{sc}</p>
                     </div>
                   ))}
                 </div>
@@ -157,7 +157,7 @@ export default function Quality() {
               ISO 9001:2015 Certified
               <span className="gradient-text"> Quality System</span>
             </h2>
-            <p className="body-text mt-4" style={{ fontSize: 'clamp(14px, 2vw, 16px)', maxWidth: '500px', margin: '16px auto 0' }}>
+            <p className="body-text mt-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '500px', margin: '16px auto 0' }}>
               Our quality management system ensures every deliverable meets the same rigorous
               standard — whether it&apos;s a single protocol or a complete facility engineering package.
             </p>
@@ -167,7 +167,7 @@ export default function Quality() {
               <div key={i} className="glass-card-hover" style={{ padding: 'clamp(20px, 2vw, 24px)' }}>
                 <div className="icon-box" style={{ marginBottom: 'clamp(12px, 2vw, 14px)' }}>{q.icon}</div>
                 <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 16px)', color: 'white', marginBottom: '10px' }}>{q.title}</h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 13px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65 }}>{q.desc}</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65 }}>{q.desc}</p>
               </div>
             ))}
           </div>

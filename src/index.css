@@ -205,6 +205,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: rgba(255,255,255,0.62);
   line-height: 1.75;
+  font-size: clamp(14px, 2.5vw, 18px);
 }
 .number-text {
   font-family: 'Space Grotesk', sans-serif;
