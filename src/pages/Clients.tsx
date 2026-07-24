@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight, Star, Quote } from 'lucide-react'
+
+import { Star, Quote } from 'lucide-react'
 
 const clients = [
   { name: 'Hetero Drugs', sector: 'Generics Manufacturing', city: 'Hyderabad' },

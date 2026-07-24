@@ -44,7 +44,6 @@ const contactMethods = [
     value: 'Sneha & Prahar Consultancy',
     sub: 'Professional network',
     action: 'Connect',
-    icon2: <Link2 size={22} style={{ color: '#00A878' }} />,
   },
 ]
 
@@ -109,7 +108,7 @@ export default function Contact() {
                 </div>
                 <a
                   href={
-                    c.title === 'Phone' ? 'tel:+919000877499' :
+                    c.title === 'Call Us Directly' ? 'tel:+919000877499' :
                     c.title === 'WhatsApp' ? 'https://wa.me/6593530873' :
                     c.title === 'Email' ? 'mailto:spconsultanancies@gmail.com' :
                     c.title === 'LinkedIn' ? 'https://www.linkedin.com/company/sneha-and-prahar-consultancy-services' : '#'
@@ -141,7 +140,8 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Offices */}
+      {/* ─── OFFICES ────────────────────────────────────────────────────── */}
+      {/* ✅ Fixed: full‑width card – no empty column */}
       <section className="mesh-bg-alt" style={{ padding: '100px 0' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="section-label mb-5">Our Offices</div>
@@ -149,70 +149,80 @@ export default function Contact() {
             Find Us Across
             <span className="gradient-text"> India</span>
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {offices.map((o, i) => (
-              <div key={i} className="gradient-border-card" style={{ overflow: 'hidden' }}>
-                <div style={{ position: 'relative', overflow: 'hidden' }}>
-                  <img
-                    src={o.mapImg}
-                    alt={`${o.city} Office`}
-                    style={{ width: '100%', height: '240px', objectFit: 'cover', display: 'block', filter: 'brightness(0.7) saturate(0.8)' }}
-                  />
-                  <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to top, rgba(7,27,59,0.9) 0%, transparent 60%)` }} />
-                  <div style={{ position: 'absolute', top: 16, left: 16 }}>
-                    <span
-                      style={{
-                        padding: '5px 14px',
-                        borderRadius: '999px',
-                        background: o.color === '#0057FF' ? 'rgba(0,87,255,0.85)' : 'rgba(0,168,120,0.85)',
-                        fontFamily: 'Space Grotesk',
-                        fontSize: 'clamp(9px, 2vw, 11px)',
-                        fontWeight: 700,
-                        color: 'white',
-                        letterSpacing: '0.08em',
-                      }}
-                    >
-                      {o.tag}
-                    </span>
+
+          {/* Single full‑width card */}
+          <div className="gradient-border-card" style={{ overflow: 'hidden' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {/* Image side */}
+              <div style={{ position: 'relative', overflow: 'hidden', minHeight: '240px' }}>
+                <img
+                  src={offices[0].mapImg}
+                  alt={`${offices[0].city} Office`}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    minHeight: '280px',
+                    objectFit: 'cover',
+                    display: 'block',
+                    filter: 'brightness(0.7) saturate(0.8)',
+                  }}
+                />
+                <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to top, rgba(7,27,59,0.9) 0%, transparent 60%)` }} />
+                <div style={{ position: 'absolute', top: 16, left: 16 }}>
+                  <span
+                    style={{
+                      padding: '5px 14px',
+                      borderRadius: '999px',
+                      background: 'rgba(0,87,255,0.85)',
+                      fontFamily: 'Space Grotesk',
+                      fontSize: 'clamp(9px, 2vw, 11px)',
+                      fontWeight: 700,
+                      color: 'white',
+                      letterSpacing: '0.08em',
+                    }}
+                  >
+                    {offices[0].tag}
+                  </span>
+                </div>
+                <div style={{ position: 'absolute', bottom: 16, left: 20 }}>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 900, fontSize: 'clamp(22px, 4vw, 28px)', color: 'white' }}>
+                    {offices[0].city}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Details side */}
+              <div style={{ padding: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div className="flex gap-3 items-start">
+                  <div className="icon-box" style={{ width: 36, height: 36, borderRadius: '8px', flexShrink: 0 }}>
+                    <MapPin size={15} style={{ color: offices[0].color }} />
                   </div>
-                  <div style={{ position: 'absolute', bottom: 16, left: 20 }}>
-                    <h3 style={{ fontFamily: 'Satoshi', fontWeight: 900, fontSize: 'clamp(22px, 4vw, 28px)', color: 'white' }}>{o.city}</h3>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.65 }}>
+                    {offices[0].address}
+                  </p>
+                </div>
+                <div className="flex gap-3 items-center">
+                  <div className="icon-box" style={{ width: 36, height: 36, borderRadius: '8px', flexShrink: 0 }}>
+                    <Phone size={15} style={{ color: offices[0].color }} />
+                  </div>
+                  <div>
+                    {offices[0].phone.map(p => (
+                      <p key={p} style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.8)' }}>{p}</p>
+                    ))}
                   </div>
                 </div>
-                <div style={{ padding: '28px' }}>
-                  <div className="flex flex-col gap-5">
-                    <div className="flex gap-3 items-start">
-                      <div className="icon-box" style={{ width: 36, height: 36, borderRadius: '8px', flexShrink: 0 }}>
-                        <MapPin size={15} style={{ color: o.color }} />
-                      </div>
-                      <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.65 }}>
-                        {o.address}
-                      </p>
-                    </div>
-                    <div className="flex gap-3 items-center">
-                      <div className="icon-box" style={{ width: 36, height: 36, borderRadius: '8px', flexShrink: 0 }}>
-                        <Phone size={15} style={{ color: o.color }} />
-                      </div>
-                      <div>
-                        {o.phone.map(p => (
-                          <p key={p} style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.8)' }}>{p}</p>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex gap-3 items-center">
-                      <div className="icon-box" style={{ width: 36, height: 36, borderRadius: '8px', flexShrink: 0 }}>
-                        <Mail size={15} style={{ color: o.color }} />
-                      </div>
-                      <div>
-                        {o.email.map(e => (
-                          <p key={e} style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)' }}>{e}</p>
-                        ))}
-                      </div>
-                    </div>
+                <div className="flex gap-3 items-center">
+                  <div className="icon-box" style={{ width: 36, height: 36, borderRadius: '8px', flexShrink: 0 }}>
+                    <Mail size={15} style={{ color: offices[0].color }} />
+                  </div>
+                  <div>
+                    {offices[0].email.map(e => (
+                      <p key={e} style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)' }}>{e}</p>
+                    ))}
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -332,10 +342,10 @@ export default function Contact() {
             engineering to every corner of India.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+919966000000" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
+            <a href="tel:+919000877499" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
               <Phone size={16} /> Call Now
             </a>
-            <a href="mailto:info@snehaandprahar.com" className="btn-secondary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
+            <a href="mailto:spconsultanancies@gmail.com" className="btn-secondary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
               <Mail size={16} /> Send Email
             </a>
           </div>

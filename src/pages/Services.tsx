@@ -154,7 +154,7 @@ export default function Services() {
             <span className="gradient-text">from Concept to Compliance.</span>
           </h1>
           <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
-            Twelve specialized service lines covering every engineering, validation, and compliance
+            specialized service lines covering every engineering, validation, and compliance
             need for pharmaceutical and biotechnology facility lifecycle management.
           </p>
         </div>

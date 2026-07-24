@@ -573,16 +573,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── INDUSTRIES ──────────────────────────────────────────────────── */}
+{/* ─── INDUSTRIES ──────────────────────────────────────────────────── */}
       <section className="mesh-bg-alt" style={{ padding: 'clamp(50px, 6vw, 80px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
-            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Industries Served</div>
+            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>
+              Industries Served
+            </div>
+
             <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 48px)' }}>
               Sector Expertise Across
               <span className="gradient-text"> 25+ Industries</span>
             </h2>
+
+            <p
+              className="section-description mx-auto mt-4"
+              style={{
+                maxWidth: '700px',
+                fontSize: 'clamp(15px, 2vw, 18px)',
+                color: '#6b7280',
+                lineHeight: '1.7',
+              }}
+            >
+              Delivering specialized engineering, validation, and compliance solutions
+              across pharmaceuticals, biotechnology, vaccines, APIs, and allied industries.
+            </p>
           </div>
+
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
             {industries.map(ind => (
               <div key={ind} className="tag-pill">{ind}</div>
@@ -590,7 +607,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── GLOBAL STANDARDS ────────────────────────────────────────────── */}
       <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -747,7 +763,7 @@ export default function Home() {
                 </p>
                 <div className="divider-gradient" style={{ marginBottom: '16px' }} />
                 <div>
-                  <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 15px)', color: 'white' }}>{t.name}</p>
+                  <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white' }}>{t.name}</p>
                   <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.45)', marginTop: '3px' }}>{t.title}</p>
                 </div>
               </div>

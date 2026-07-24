@@ -145,6 +145,7 @@ export default function About() {
             <img
               src="https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=800&h=600&fit=crop&auto=format"
               alt="Engineering team in cleanroom"
+              className="animate-shake-hover"
               style={{ width: '100%', height: 'clamp(300px, 40vw, 500px)', objectFit: 'cover', borderRadius: '20px', display: 'block' }}
             />
             <div
