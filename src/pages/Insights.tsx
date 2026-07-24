@@ -1,4 +1,5 @@
 import { Clock, ArrowRight, BookOpen } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const articles = [
   {
@@ -114,14 +115,14 @@ export default function Insights() {
       {/* Hero */}
       <section className="page-hero">
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
-        <div className="max-w-7xl mx-auto px-6" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label mb-5">Engineering Insights</div>
-          <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="section-label mb-4 sm:mb-5">Engineering Insights</div>
+          <h1 className="section-heading mb-4 sm:mb-6" style={{ fontSize: 'clamp(32px, 5vw, 72px)', maxWidth: '100%' }}>
             Knowledge From the
             <br />
             <span className="gradient-text">Engineering Front Line.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: '18px', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '100%' }}>
             Technical articles, regulatory guidance summaries, and engineering best practices
             written by our specialist team for pharmaceutical industry professionals.
           </p>
@@ -129,9 +130,9 @@ export default function Insights() {
       </section>
 
       {/* Featured article */}
-      <section className="mesh-bg" style={{ padding: '80px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="section-label mb-8" style={{ justifyContent: 'flex-start' }}>Featured Article</div>
+      <section className="mesh-bg" style={{ padding: 'clamp(50px, 6vw, 80px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="section-label mb-6 sm:mb-8" style={{ justifyContent: 'flex-start' }}>Featured Article</div>
           <div
             className="gradient-border-card"
             style={{ overflow: 'hidden' }}
@@ -141,41 +142,41 @@ export default function Insights() {
                 <img
                   src={featured.img}
                   alt={featured.title}
-                  style={{ width: '100%', height: '100%', minHeight: '360px', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
+                  style={{ width: '100%', height: '100%', minHeight: 'clamp(280px, 40vw, 360px)', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
                   onMouseEnter={e => ((e.currentTarget as HTMLElement).style.transform = 'scale(1.04)')}
                   onMouseLeave={e => ((e.currentTarget as HTMLElement).style.transform = 'scale(1)')}
                 />
-                <div style={{ position: 'absolute', top: 20, left: 20 }}>
-                  <span style={{ padding: '6px 14px', borderRadius: '999px', background: 'rgba(0,87,255,0.85)', fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 700, color: 'white', letterSpacing: '0.08em' }}>
+                <div style={{ position: 'absolute', top: 'clamp(16px, 2vw, 20px)', left: 'clamp(16px, 2vw, 20px)' }}>
+                  <span style={{ padding: 'clamp(4px, 1vw, 6px) clamp(10px, 2vw, 14px)', borderRadius: '999px', background: 'rgba(0,87,255,0.85)', fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 700, color: 'white', letterSpacing: '0.08em' }}>
                     Featured
                   </span>
                 </div>
               </div>
-              <div style={{ padding: '44px' }}>
-                <div className="flex items-center gap-3 mb-4">
-                  <span style={{ padding: '4px 12px', borderRadius: '999px', background: 'rgba(0,87,255,0.12)', border: '1px solid rgba(0,87,255,0.25)', fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 600, color: '#3378FF' }}>
+              <div style={{ padding: 'clamp(28px, 4vw, 44px)' }}>
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
+                  <span style={{ padding: '4px 12px', borderRadius: '999px', background: 'rgba(0,87,255,0.12)', border: '1px solid rgba(0,87,255,0.25)', fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 600, color: '#3378FF' }}>
                     {featured.category}
                   </span>
-                  <div className="flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '12px' }}>
+                  <div className="flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 'clamp(11px, 2vw, 12px)' }}>
                     <Clock size={12} />
-                    <span style={{ fontFamily: 'Inter', fontSize: '12px' }}>{featured.readTime}</span>
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)' }}>{featured.readTime}</span>
                   </div>
-                  <span style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.35)' }}>{featured.date}</span>
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.35)' }}>{featured.date}</span>
                 </div>
-                <h2 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '26px', color: 'white', lineHeight: 1.25, marginBottom: '14px' }}>
+                <h2 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(20px, 3vw, 26px)', color: 'white', lineHeight: 1.25, marginBottom: '14px' }}>
                   {featured.title}
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontSize: '15px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.75, marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(13px, 2vw, 15px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.75, marginBottom: '20px' }}>
                   {featured.intro}
                 </p>
                 <div className="divider-gradient" style={{ marginBottom: '20px' }} />
-                <p style={{ fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>
+                <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>
                   Key Takeaways
                 </p>
                 {featured.keyTakeaways.slice(0, 3).map((kp, i) => (
                   <div key={i} className="flex gap-2 items-start mb-2">
                     <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', marginTop: '7px', flexShrink: 0 }} />
-                    <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{kp}</p>
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 13px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{kp}</p>
                   </div>
                 ))}
               </div>
@@ -185,57 +186,57 @@ export default function Insights() {
       </section>
 
       {/* All articles */}
-      <section className="mesh-bg-alt" style={{ padding: '60px 0 100px' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="section-label mb-10">All Articles</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(40px, 5vw, 60px) 0 clamp(60px, 8vw, 100px)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="section-label mb-8 sm:mb-10">All Articles</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {rest.map((a, i) => (
               <div key={i} className="insight-card">
                 <div style={{ overflow: 'hidden' }}>
                   <img
                     src={a.img}
                     alt={a.title}
-                    style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
+                    style={{ width: '100%', height: 'clamp(160px, 25vw, 200px)', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
                     onMouseEnter={e => ((e.currentTarget as HTMLElement).style.transform = 'scale(1.05)')}
                     onMouseLeave={e => ((e.currentTarget as HTMLElement).style.transform = 'scale(1)')}
                   />
                 </div>
-                <div style={{ padding: '24px' }}>
-                  <div className="flex items-center gap-3 mb-3">
-                    <span style={{ padding: '3px 10px', borderRadius: '999px', background: 'rgba(0,87,255,0.1)', border: '1px solid rgba(0,87,255,0.2)', fontFamily: 'Space Grotesk', fontSize: '10px', fontWeight: 600, color: '#3378FF' }}>
+                <div style={{ padding: 'clamp(18px, 2vw, 24px)' }}>
+                  <div className="flex items-center gap-2 sm:gap-3 mb-3">
+                    <span style={{ padding: '3px 10px', borderRadius: '999px', background: 'rgba(0,87,255,0.1)', border: '1px solid rgba(0,87,255,0.2)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, color: '#3378FF' }}>
                       {a.category}
                     </span>
-                    <div className="flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.35)', fontSize: '11px' }}>
+                    <div className="flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.35)', fontSize: 'clamp(10px, 2vw, 11px)' }}>
                       <Clock size={11} />
-                      <span style={{ fontFamily: 'Inter', fontSize: '11px' }}>{a.readTime}</span>
+                      <span style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)' }}>{a.readTime}</span>
                     </div>
                   </div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '17px', color: 'white', lineHeight: 1.3, marginBottom: '10px' }}>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', lineHeight: 1.3, marginBottom: '10px' }}>
                     {a.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '16px' }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 13px)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '16px' }}>
                     {a.excerpt}
                   </p>
                   <div className="divider-gradient" style={{ marginBottom: '14px' }} />
                   <div>
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: '10px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: '8px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: '8px' }}>
                       Key Takeaways
                     </p>
                     {a.keyTakeaways.slice(0, 2).map((kp, j) => (
                       <div key={j} className="flex gap-2 items-start mb-2">
                         <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#00A878', marginTop: '7px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.5)', lineHeight: 1.55 }}>{kp}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.55 }}>{kp}</p>
                       </div>
                     ))}
                   </div>
-                  <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '4px', color: 'rgba(255,255,255,0.35)', fontSize: '12px' }}>
+                  <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '4px', color: 'rgba(255,255,255,0.35)', fontSize: 'clamp(11px, 2vw, 12px)' }}>
                     <BookOpen size={12} />
-                    <span style={{ fontFamily: 'Inter', fontSize: '12px' }}>{a.date}</span>
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)' }}>{a.date}</span>
                     <div style={{ flex: 1 }} />
-                    <div className="flex items-center gap-1" style={{ color: '#0057FF', cursor: 'pointer' }}>
-                      <span style={{ fontFamily: 'Inter', fontSize: '12px', fontWeight: 600 }}>Read more</span>
+                    <Link to="/contact" className="flex items-center gap-1" style={{ color: '#0057FF', textDecoration: 'none' }}>
+                      <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', fontWeight: 600 }}>Contact</span>
                       <ArrowRight size={12} />
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>

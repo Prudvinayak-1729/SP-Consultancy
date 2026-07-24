@@ -47,18 +47,27 @@ export default function Navbar() {
           boxShadow: scrolled ? '0 8px 32px rgba(0,0,0,0.3)' : 'none',
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-4 group" style={{ textDecoration: 'none' }}>
+          <Link to="/" className="flex items-center gap-2 sm:gap-4 group" style={{ textDecoration: 'none' }}>
             <img
               src="/assets/img/logo.png"
               alt="Sneha and Prahar Consultancy Services Logo"
-              style={{ width: '70px', height: 'auto', display: 'block' }}
+              style={{
+                width: 'clamp(24px, 4vw, 70px)',
+                height: 'auto',
+                display: 'block',
+                maxWidth: '70px',
+              }}
             />
-            <div className="flex flex-col">
+            <div className="hidden sm:flex flex-col">
               <span
                 className="text-white font-bold leading-none"
-                style={{ fontFamily: 'Satoshi, sans-serif', fontSize: '17px', letterSpacing: '0.01em' }}
+                style={{
+                  fontFamily: 'Satoshi, sans-serif',
+                  fontSize: 'clamp(10px, 2vw, 17px)',
+                  letterSpacing: '0.01em',
+                }}
               >
                 Sneha &amp; Prahar
               </span>
@@ -66,7 +75,7 @@ export default function Navbar() {
                 className="leading-none mt-0.5"
                 style={{
                   fontFamily: 'Space Grotesk, sans-serif',
-                  fontSize: '11px',
+                  fontSize: 'clamp(7px, 1.2vw, 11px)',
                   letterSpacing: '0.14em',
                   color: 'rgba(255,255,255,0.5)',
                   textTransform: 'uppercase',
@@ -91,8 +100,15 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + hamburger */}
-          <div className="flex items-center gap-4">
-            <Link to="/contact" className="hidden md:inline-flex btn-primary" style={{ padding: '10px 22px', fontSize: '13px' }}>
+          <div className="flex items-center gap-3 sm:gap-4">
+            <Link
+              to="/contact"
+              className="hidden md:inline-flex btn-primary"
+              style={{
+                padding: 'clamp(8px, 1.5vw, 10px) clamp(16px, 2vw, 22px)',
+                fontSize: 'clamp(11px, 2vw, 13px)',
+              }}
+            >
               Contact Us
             </Link>
             <button

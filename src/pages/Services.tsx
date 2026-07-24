@@ -146,8 +146,8 @@ export default function Services() {
       {/* Hero */}
       <section className="page-hero">
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
-        <div className="max-w-7xl mx-auto px-6" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label mb-5">Our Services</div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="section-label mb-4 sm:mb-5">Our Services</div>
           <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
             Complete Engineering
             <br />

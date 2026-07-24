@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, Link2, X, Globe, ArrowRight } from 'lucide-react'
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
 
 const services = [
   'Engineering Consultancy', 'HVAC Systems Design', 'Cleanroom Engineering',
@@ -65,13 +65,18 @@ export default function Footer() {
             <img
               src="/assets/img/logo.png"
               alt="Sneha and Prahar Consultancy Services Logo"
-              style={{ width: '50px', height: 'auto', display: 'block' }}
+              style={{
+                width: 'clamp(32px, 4vw, 50px)',
+                height: 'auto',
+                display: 'block',
+                maxWidth: '50px',
+              }}
             />
             <div>
-              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: '16px', color: 'white' }}>
+              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 16px)', color: 'white' }}>
                 Sneha &amp; Prahar
               </p>
-              <p style={{ fontFamily: 'Space Grotesk', fontSize: '11px', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>
+              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 1.2vw, 11px)', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>
                 Consultancy Services
               </p>
             </div>
@@ -80,37 +85,6 @@ export default function Footer() {
             World-class pharmaceutical engineering consultancy delivering regulatory-compliant,
             technically advanced solutions since 2022.
           </p>
-          <div className="flex gap-3 mb-8">
-            {[
-              { icon: <Link2 size={16} />, label: 'LinkedIn' },
-              { icon: <X size={16} />, label: 'Twitter' },
-              { icon: <Globe size={16} />, label: 'Web' },
-            ].map(s => (
-              <button
-                key={s.label}
-                aria-label={s.label}
-                className="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200"
-                style={{
-                  background: 'rgba(255,255,255,0.06)',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  color: 'rgba(255,255,255,0.6)',
-                  cursor: 'pointer',
-                }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLElement).style.background = 'rgba(0,87,255,0.2)'
-                  ;(e.currentTarget as HTMLElement).style.color = 'white'
-                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,87,255,0.4)'
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.06)'
-                  ;(e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.6)'
-                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'
-                }}
-              >
-                {s.icon}
-              </button>
-            ))}
-          </div>
           {/* Standards */}
           <p style={{ fontFamily: 'Space Grotesk', fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px', marginTop: '16px' }}>
             Compliance Standards

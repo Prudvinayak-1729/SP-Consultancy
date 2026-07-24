@@ -118,7 +118,7 @@ const projects = [
   },
   {
     title: 'Biotech R&D Campus',
-    location: 'Pune, Maharashtra',
+    location: 'Hyderabad Telangana',
     scope: 'Multi-product cell culture facility with cGMP utilities, BMS integration, and equipment qualification',
     duration: '24 months',
     category: 'Utility Engineering',
@@ -174,13 +174,14 @@ const clients = [
 export default function Home() {
   return (
     <div>
-      {/* ─── HERO ────────────────────────────────────────────────────────── */}
+            {/* ─── HERO ────────────────────────────────────────────────────────── */}
       <section
         style={{
           position: 'relative',
           minHeight: '100vh',
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'center',
           overflow: 'hidden',
         }}
       >
@@ -207,7 +208,7 @@ export default function Home() {
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0, opacity: 0.7 }} />
         {/* Gradient orbs */}
         <div
-          className="animate-float"
+          className="animate-float hidden sm:block"
           style={{
             position: 'absolute',
             top: '15%',
@@ -220,7 +221,7 @@ export default function Home() {
           }}
         />
         <div
-          className="animate-float-delayed"
+          className="animate-float-delayed hidden sm:block"
           style={{
             position: 'absolute',
             bottom: '20%',
@@ -232,7 +233,7 @@ export default function Home() {
             filter: 'blur(40px)',
           }}
         />
-        {/* Floating particles */}
+        {/* Floating particles – show only on larger screens */}
         {[
           { top: '22%', left: '18%', size: 6, delay: 0, color: '#0057FF' },
           { top: '65%', left: '75%', size: 4, delay: 1.5, color: '#00A878' },
@@ -242,7 +243,7 @@ export default function Home() {
         ].map((p, i) => (
           <div
             key={i}
-            className={i % 2 === 0 ? 'animate-float' : 'animate-float-delayed'}
+            className={i % 2 === 0 ? 'animate-float hidden sm:block' : 'animate-float-delayed hidden sm:block'}
             style={{
               position: 'absolute',
               top: p.top,
@@ -260,11 +261,16 @@ export default function Home() {
 
         {/* Hero content */}
         <div
-          className="max-w-7xl mx-auto px-6 w-full"
-          style={{ position: 'relative', zIndex: 10, paddingTop: '100px', paddingBottom: '140px' }}
+          className="max-w-7xl mx-auto px-4 sm:px-6 w-full"
+          style={{
+            position: 'relative',
+            zIndex: 10,
+            paddingTop: 'clamp(120px, 20vw, 140px)',
+            paddingBottom: 'clamp(160px, 25vw, 220px)', // ✅ increased bottom padding
+          }}
         >
-          <div className="max-w-4xl">
-            <div className="section-label animate-fadeUp mb-6" style={{ animationDelay: '0.1s', opacity: 0 }}>
+          <div className="max-w-full">
+            <div className="section-label animate-fadeUp mb-4 sm:mb-6" style={{ animationDelay: '0.1s', opacity: 0 }}>
               Pharmaceutical Engineering Consultancy
             </div>
             <h1
@@ -272,10 +278,10 @@ export default function Home() {
               style={{
                 fontFamily: 'Satoshi, sans-serif',
                 fontWeight: 900,
-                fontSize: 'clamp(48px, 6.5vw, 88px)',
-                lineHeight: 1.04,
+                fontSize: 'clamp(28px, 5vw, 88px)',
+                lineHeight: 1.1,
                 color: 'white',
-                marginBottom: '28px',
+                marginBottom: 'clamp(16px, 3vw, 28px)',
                 animationDelay: '0.2s',
                 opacity: 0,
               }}
@@ -289,9 +295,9 @@ export default function Home() {
             <p
               className="body-text animate-fadeUp"
               style={{
-                fontSize: '18px',
-                maxWidth: '580px',
-                marginBottom: '44px',
+                fontSize: 'clamp(14px, 2.5vw, 18px)',
+                maxWidth: '100%',
+                marginBottom: 'clamp(24px, 4vw, 44px)',
                 animationDelay: '0.35s',
                 opacity: 0,
               }}
@@ -302,26 +308,26 @@ export default function Home() {
               regulatory, and GMP standards.
             </p>
             <div
-              className="flex flex-wrap gap-4 animate-fadeUp"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeUp w-full"
               style={{ animationDelay: '0.5s', opacity: 0 }}
             >
-              <Link to="/services" className="btn-primary" style={{ fontSize: '15px', padding: '16px 36px' }}>
+              <Link to="/services" className="btn-primary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
                 Explore Services <ArrowRight size={16} />
               </Link>
-              <Link to="/projects" className="btn-secondary" style={{ fontSize: '15px', padding: '16px 36px' }}>
+              <Link to="/projects" className="btn-secondary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
                 View Projects <ChevronRight size={16} />
               </Link>
             </div>
 
             {/* Trust indicators */}
             <div
-              className="flex flex-wrap gap-6 mt-12 animate-fadeUp"
+              className="grid grid-cols-2 sm:flex flex-wrap gap-3 sm:gap-6 mt-8 sm:mt-12 animate-fadeUp"
               style={{ animationDelay: '0.65s', opacity: 0 }}
             >
               {['WHO GMP Certified', 'US FDA Compliance', 'ISO 14644 Expertise', 'ISPE Member'].map(badge => (
                 <div key={badge} className="flex items-center gap-2">
                   <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#00A878' }} />
-                  <span style={{ fontFamily: 'Space Grotesk', fontSize: '12px', fontWeight: 500, color: 'rgba(255,255,255,0.55)', letterSpacing: '0.04em' }}>
+                  <span style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', fontWeight: 500, color: 'rgba(255,255,255,0.55)', letterSpacing: '0.04em' }}>
                     {badge}
                   </span>
                 </div>
@@ -330,7 +336,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Stats bar at bottom */}
+        {/* Stats bar at bottom – unchanged, remains absolute */}
         <div
           style={{
             position: 'absolute',
@@ -342,17 +348,17 @@ export default function Home() {
             borderTop: '1px solid rgba(255,255,255,0.08)',
           }}
         >
-          <div className="max-w-7xl mx-auto px-6 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
               {stats.map((s, i) => (
                 <div key={i} className="text-center">
                   <div
                     className="stat-number"
-                    style={{ fontSize: '28px', marginBottom: '4px' }}
+                    style={{ fontSize: 'clamp(18px, 3vw, 28px)', marginBottom: '8px', lineHeight: 1 }}
                   >
                     <span className="gradient-text">{s.number}{s.suffix}</span>
                   </div>
-                  <div style={{ fontFamily: 'Inter', fontSize: '11px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  <div style={{ fontFamily: 'Inter', fontSize: 'clamp(8px, 1.5vw, 11px)', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.06em', textTransform: 'uppercase', lineHeight: 1.3 }}>
                     {s.label}
                   </div>
                 </div>
@@ -361,13 +367,13 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator – hidden on mobile */}
         <div
+          className="hidden lg:flex"
           style={{
             position: 'absolute',
             right: '40px',
             bottom: '180px',
-            display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             gap: '8px',
@@ -397,14 +403,14 @@ export default function Home() {
       </section>
 
       {/* ─── ABOUT PREVIEW ───────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: '100px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
-              <div className="section-label mb-5">Who We Are</div>
-              <h2 className="section-heading mb-6"
+              <div className="section-label mb-4 sm:mb-5">Who We Are</div>
+              <h2 className="section-heading mb-4 sm:mb-6"
                   style={{
-                    fontSize: 'clamp(30px, 3vw, 46px)',
+                    fontSize: 'clamp(24px, 4vw, 46px)',
                     lineHeight: 1.15,
                   }}
                 >
@@ -414,7 +420,7 @@ export default function Home() {
                     Excellence for Global Life Sciences
                   </span>
                 </h2>
-              <p className="body-text mb-5" style={{ fontSize: '17px' }}>
+              <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2vw, 17px)' }}>
                 Sneha and Prahar Consultancy Services is a trusted engineering and
                 validation partner specializing in pharmaceutical, biotechnology,
                 healthcare, and other highly regulated industries. We provide
@@ -422,7 +428,7 @@ export default function Home() {
                 Computer System Validation (CSV), cleanroom engineering, utility
                 systems, GMP compliance, and turnkey project execution solutions.
               </p>
-              <p className="body-text mb-8" style={{ fontSize: '17px' }}>
+              <p className="body-text mb-6 sm:mb-8" style={{ fontSize: 'clamp(14px, 2vw, 17px)' }}>
                 Our multidisciplinary team combines technical expertise with
                 international regulatory standards to deliver reliable, compliant,
                 and future-ready manufacturing facilities. From concept and design
@@ -430,7 +436,7 @@ export default function Home() {
                 we help organizations achieve quality, regulatory compliance,
                 operational excellence, and sustainable business growth.
               </p>
-              <div className="grid grid-cols-2 gap-5 mb-8">
+              <div className="grid grid-cols-2 gap-3 sm:gap-5 mb-6 sm:mb-8">
                 {[
                   { label: 'Senior Engineers', value: '35+' },
                   { label: 'Active Projects', value: '18' },
@@ -440,10 +446,10 @@ export default function Home() {
                   <div
                     key={m.label}
                     className="gradient-border-card"
-                    style={{ padding: '20px 22px' }}
+                    style={{ padding: 'clamp(16px, 2vw, 20px) clamp(18px, 2vw, 22px)' }}
                   >
-                    <div className="stat-number gradient-text" style={{ fontSize: '30px', marginBottom: '4px' }}>{m.value}</div>
-                    <div style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.55)' }}>{m.label}</div>
+                    <div className="stat-number gradient-text" style={{ fontSize: 'clamp(24px, 4vw, 30px)', marginBottom: '4px' }}>{m.value}</div>
+                    <div style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.55)' }}>{m.label}</div>
                   </div>
                 ))}
               </div>
@@ -451,7 +457,7 @@ export default function Home() {
                 Discover Our Story <ArrowRight size={16} />
               </Link>
             </div>
-            <div style={{ position: 'relative' }}>
+            <div className="order-2 lg:order-1" style={{ position: 'relative' }}>
               <div
                 style={{
                   borderRadius: '20px',
@@ -462,7 +468,7 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1669101602124-f5b78895d91c?w=800&h=560&fit=crop&auto=format"
                   alt="Pharmaceutical cleanroom facility"
-                  style={{ width: '100%', height: '480px', objectFit: 'cover', display: 'block' }}
+                  style={{ width: '100%', height: 'clamp(300px, 40vw, 480px)', objectFit: 'cover', display: 'block' }}
                 />
                 <div
                   style={{
@@ -475,17 +481,17 @@ export default function Home() {
               </div>
               {/* Floating stat card */}
               <div
-                className="glass-card animate-pulse-glow"
+                className="glass-card animate-pulse-glow hidden sm:block"
                 style={{
                   position: 'absolute',
-                  bottom: 30,
-                  left: -20,
-                  padding: '18px 22px',
-                  minWidth: '180px',
+                  bottom: 'clamp(20px, 3vw, 30px)',
+                  left: 'clamp(-10px, -2vw, -20px)',
+                  padding: 'clamp(14px, 2vw, 18px) clamp(18px, 2vw, 22px)',
+                  minWidth: 'clamp(150px, 20vw, 180px)',
                 }}
               >
-                <div className="stat-number gradient-text" style={{ fontSize: '36px', lineHeight: 1 }}>99%</div>
-                <div style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>Client Satisfaction Rate</div>
+                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(28px, 5vw, 36px)', lineHeight: 1 }}>99%</div>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 12px)', color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>Client Satisfaction Rate</div>
               </div>
             </div>
           </div>
@@ -493,29 +499,29 @@ export default function Home() {
       </section>
 
       {/* ─── WHY CHOOSE US ───────────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: '100px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="section-label mb-5" style={{ justifyContent: 'center' }}>Why Choose Us</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(36px, 3.5vw, 52px)', maxWidth: '640px', margin: '0 auto 20px' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Why Choose Us</div>
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)', maxWidth: '640px', margin: '0 auto 20px' }}>
               The Engineering Partner You Can
               <span className="gradient-text"> Trust.</span>
             </h2>
-            <p className="body-text" style={{ fontSize: '17px', maxWidth: '520px', margin: '0 auto' }}>
+            <p className="body-text" style={{ fontSize: 'clamp(14px, 2vw, 17px)', maxWidth: '520px', margin: '0 auto' }}>
               Nine pillars of excellence that make us the preferred engineering consultancy for
               India&apos;s top pharmaceutical companies.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {whyChooseUs.map((item, i) => (
-              <div key={i} className="glass-card-hover" style={{ padding: '28px' }}>
-                <div className="icon-box" style={{ marginBottom: '18px' }}>
+              <div key={i} className="glass-card-hover flex flex-col h-full" style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
+                <div className="icon-box" style={{ marginBottom: 'clamp(14px, 2vw, 18px)' }}>
                   {item.icon}
                 </div>
-                <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: '18px', color: 'white', marginBottom: '10px' }}>
+                <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 18px)', color: 'white', marginBottom: '10px' }}>
                   {item.title}
                 </h3>
-                <p className="body-text" style={{ fontSize: '14px' }}>{item.desc}</p>
+                <p className="body-text" style={{ fontSize: 'clamp(13px, 2vw, 14px)', flex: 1 }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -523,12 +529,12 @@ export default function Home() {
       </section>
 
       {/* ─── SERVICES PREVIEW ────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: '100px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
             <div>
-              <div className="section-label mb-5">Our Services</div>
-              <h2 className="section-heading" style={{ fontSize: 'clamp(36px, 3.5vw, 52px)' }}>
+              <div className="section-label mb-4 sm:mb-5">Our Services</div>
+              <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
                 End-to-End Engineering
                 <br />
                 <span className="gradient-text">Capabilities</span>
@@ -538,12 +544,12 @@ export default function Home() {
               All Services <ArrowRight size={15} />
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
             {services.map((s, i) => (
               <div
                 key={i}
-                className="glass-card-hover"
-                style={{ padding: '22px 20px' }}
+                className="glass-card-hover flex flex-col h-full"
+                style={{ padding: 'clamp(18px, 2vw, 22px) clamp(16px, 2vw, 20px)' }}
               >
                 <div
                   style={{
@@ -551,14 +557,14 @@ export default function Home() {
                     height: 8,
                     borderRadius: '50%',
                     background: s.color,
-                    marginBottom: '14px',
+                    marginBottom: 'clamp(10px, 2vw, 14px)',
                     boxShadow: `0 0 12px ${s.color}`,
                   }}
                 />
-                <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: '15px', color: 'white', marginBottom: '8px', lineHeight: 1.3 }}>
+                <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(13px, 2vw, 15px)', color: 'white', marginBottom: '8px', lineHeight: 1.3 }}>
                   {s.title}
                 </h3>
-                <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, flex: 1 }}>
                   {s.desc}
                 </p>
               </div>
@@ -568,16 +574,16 @@ export default function Home() {
       </section>
 
       {/* ─── INDUSTRIES ──────────────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: '80px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <div className="section-label mb-5" style={{ justifyContent: 'center' }}>Industries Served</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(32px, 3vw, 48px)' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(50px, 6vw, 80px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Industries Served</div>
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 48px)' }}>
               Sector Expertise Across
               <span className="gradient-text"> 25+ Industries</span>
             </h2>
           </div>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
             {industries.map(ind => (
               <div key={ind} className="tag-pill">{ind}</div>
             ))}
@@ -586,26 +592,26 @@ export default function Home() {
       </section>
 
       {/* ─── GLOBAL STANDARDS ────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: '100px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <div className="section-label mb-5" style={{ justifyContent: 'center' }}>Compliance Framework</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(36px, 3.5vw, 52px)' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-14">
+            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Compliance Framework</div>
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
               Engineering to Global
               <span className="gradient-text"> Regulatory Standards</span>
             </h2>
-            <p className="body-text mt-4" style={{ fontSize: '16px', maxWidth: '500px', margin: '16px auto 0' }}>
+            <p className="body-text mt-4" style={{ fontSize: 'clamp(14px, 2vw, 16px)', maxWidth: '500px', margin: '16px auto 0' }}>
               Every project is designed, executed, and documented to satisfy the world&apos;s
               most demanding pharmaceutical regulatory authorities.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-4">
             {standards.map((s, i) => (
               <div key={i} className="certification-card">
                 <div
                   style={{
-                    width: 44,
-                    height: 44,
+                    width: 'clamp(36px, 5vw, 44px)',
+                    height: 'clamp(36px, 5vw, 44px)',
                     borderRadius: '12px',
                     background: i % 2 === 0 ? 'rgba(0,87,255,0.15)' : 'rgba(0,168,120,0.15)',
                     border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.25)' : 'rgba(0,168,120,0.25)'}`,
@@ -616,10 +622,10 @@ export default function Home() {
                 >
                   <Shield size={18} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
                 </div>
-                <div style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', color: 'white' }}>
+                <div style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(11px, 2vw, 13px)', color: 'white' }}>
                   {s.name}
                 </div>
-                <div style={{ fontFamily: 'Inter', fontSize: '11px', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>
                   {s.desc}
                 </div>
               </div>
@@ -629,12 +635,12 @@ export default function Home() {
       </section>
 
       {/* ─── FEATURED PROJECTS ───────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: '100px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
             <div>
-              <div className="section-label mb-5">Featured Projects</div>
-              <h2 className="section-heading" style={{ fontSize: 'clamp(36px, 3.5vw, 52px)' }}>
+              <div className="section-label mb-4 sm:mb-5">Featured Projects</div>
+              <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
                 Landmark Deliveries That
                 <br />
                 <span className="gradient-text">Define Excellence</span>
@@ -644,30 +650,30 @@ export default function Home() {
               All Projects <ArrowRight size={15} />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {projects.map((p, i) => (
-              <div key={i} className="project-card" style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', transition: 'all 0.35s ease' }}>
+              <div key={i} className="project-card flex flex-col h-full" style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', transition: 'all 0.35s ease' }}>
                 <div style={{ overflow: 'hidden' }}>
                   <img
                     src={p.img}
                     alt={p.title}
-                    className="project-card-img"
-                    style={{ height: '220px', display: 'block' }}
+                    className="project-card-img w-full h-auto"
+                    style={{ height: 'clamp(180px, 25vw, 220px)', display: 'block', objectFit: 'cover' }}
                   />
                 </div>
-                <div style={{ padding: '22px' }}>
-                  <div style={{ fontFamily: 'Space Grotesk', fontSize: '11px', fontWeight: 600, color: '#00A878', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
+                <div style={{ padding: 'clamp(18px, 2vw, 22px)', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 600, color: '#00A878', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
                     {p.category}
                   </div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '19px', color: 'white', marginBottom: '10px' }}>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 19px)', color: 'white', marginBottom: '10px' }}>
                     {p.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '16px' }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 13px)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '16px', flex: 1 }}>
                     {p.scope}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.4)' }}>📍 {p.location}</span>
-                    <span style={{ fontFamily: 'Space Grotesk', fontSize: '12px', color: 'rgba(0,87,255,0.8)', fontWeight: 600 }}>{p.duration}</span>
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.4)' }}>📍 {p.location}</span>
+                    <span style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(0,87,255,0.8)', fontWeight: 600 }}>{p.duration}</span>
                   </div>
                 </div>
               </div>
@@ -677,24 +683,24 @@ export default function Home() {
       </section>
 
       {/* ─── OUR PROCESS ─────────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: '100px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="section-label mb-5" style={{ justifyContent: 'center' }}>How We Work</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(36px, 3.5vw, 52px)' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>How We Work</div>
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
               A Rigorous <span className="gradient-text">Engineering Process</span>
               <br />Engineered for Results.
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {process.map((p, i) => (
-              <div key={i} className="process-step">
+              <div key={i} className="process-step flex flex-col h-full">
                 <div className="process-step-number">{p.step}</div>
-                <div>
+                <div className="flex-1">
                   <div
                     style={{
-                      width: 32,
-                      height: 32,
+                      width: 'clamp(28px, 4vw, 32px)',
+                      height: 'clamp(28px, 4vw, 32px)',
                       borderRadius: '50%',
                       background: i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)',
                       border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'}`,
@@ -706,10 +712,10 @@ export default function Home() {
                   >
                     <CheckCircle size={14} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
                   </div>
-                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: '17px', color: 'white', marginBottom: '10px' }}>
+                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '10px' }}>
                     {p.title}
                   </h3>
-                  <p className="body-text" style={{ fontSize: '13px' }}>{p.desc}</p>
+                  <p className="body-text" style={{ fontSize: 'clamp(12px, 2vw, 13px)' }}>{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -718,31 +724,31 @@ export default function Home() {
       </section>
 
       {/* ─── TESTIMONIALS ────────────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: '100px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <div className="section-label mb-5" style={{ justifyContent: 'center' }}>Client Voices</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(36px, 3.5vw, 52px)' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-14">
+            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Client Voices</div>
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
               Trusted by Industry
               <span className="gradient-text"> Leaders</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {testimonials.map((t, i) => (
-              <div key={i} className="testimonial-card">
-                <div className="flex gap-1 mb-5">
+              <div key={i} className="testimonial-card" style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
+                <div className="flex gap-1 mb-4 sm:mb-5">
                   {Array.from({ length: t.rating }).map((_, j) => (
                     <Star key={j} size={14} style={{ fill: '#00A878', color: '#00A878' }} />
                   ))}
                 </div>
-                <Quote size={28} style={{ color: 'rgba(0,87,255,0.4)', marginBottom: '16px' }} />
-                <p style={{ fontFamily: 'Inter', fontSize: '16px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, marginBottom: '24px', fontStyle: 'italic' }}>
+                <Quote size={24} style={{ color: 'rgba(0,87,255,0.4)', marginBottom: '16px' }} />
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, marginBottom: '20px', fontStyle: 'italic' }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div className="divider-gradient" style={{ marginBottom: '20px' }} />
+                <div className="divider-gradient" style={{ marginBottom: '16px' }} />
                 <div>
-                  <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: '15px', color: 'white' }}>{t.name}</p>
-                  <p style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.45)', marginTop: '3px' }}>{t.title}</p>
+                  <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 15px)', color: 'white' }}>{t.name}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.45)', marginTop: '3px' }}>{t.title}</p>
                 </div>
               </div>
             ))}
@@ -751,33 +757,33 @@ export default function Home() {
       </section>
 
       {/* ─── CLIENT LOGOS ────────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: '70px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="mesh-bg" style={{ padding: 'clamp(50px, 6vw, 70px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <p
             style={{
               fontFamily: 'Space Grotesk',
-              fontSize: '11px',
+              fontSize: 'clamp(10px, 2vw, 11px)',
               fontWeight: 600,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
               color: 'rgba(255,255,255,0.3)',
               textAlign: 'center',
-              marginBottom: '32px',
+              marginBottom: '24px sm:mb-32',
             }}
           >
             Trusted by India&apos;s Leading Pharmaceutical Companies
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {clients.map(c => (
               <div
                 key={c}
                 style={{
-                  padding: '12px 22px',
+                  padding: 'clamp(10px, 2vw, 12px) clamp(18px, 3vw, 22px)',
                   borderRadius: '8px',
                   border: '1px solid rgba(255,255,255,0.08)',
                   background: 'rgba(255,255,255,0.03)',
                   fontFamily: 'Space Grotesk',
-                  fontSize: '13px',
+                  fontSize: 'clamp(11px, 2vw, 13px)',
                   fontWeight: 600,
                   color: 'rgba(255,255,255,0.5)',
                   transition: 'all 0.2s ease',
@@ -802,11 +808,11 @@ export default function Home() {
       </section>
 
       {/* ─── MILESTONES ──────────────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: '100px 0' }}>
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="section-label mb-5" style={{ justifyContent: 'center' }}>Company Timeline</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(36px, 3.5vw, 52px)' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Company Timeline</div>
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
               Our Journey of
               <span className="gradient-text"> Engineering Excellence</span>
             </h2>
@@ -815,17 +821,17 @@ export default function Home() {
             {milestones.map((m, i) => (
               <div
                 key={i}
+                className="flex flex-col sm:flex-row"
                 style={{
-                  display: 'flex',
-                  gap: '32px',
+                  gap: 'clamp(16px, 3vw, 32px)',
                   alignItems: 'flex-start',
-                  paddingBottom: i < milestones.length - 1 ? '40px' : '0',
+                  paddingBottom: i < milestones.length - 1 ? 'clamp(24px, 4vw, 40px)' : '0',
                   position: 'relative',
                 }}
               >
-                {/* Left: year */}
-                <div style={{ minWidth: '80px', textAlign: 'right', paddingTop: '4px' }}>
-                  <span className="number-text gradient-text" style={{ fontSize: '20px' }}>{m.year}</span>
+                {/* Left: year - on mobile show above content */}
+                <div className="sm:text-right text-left" style={{ minWidth: '80px', paddingTop: '4px' }}>
+                  <span className="number-text gradient-text" style={{ fontSize: 'clamp(16px, 2.5vw, 20px)' }}>{m.year}</span>
                 </div>
                 {/* Center: dot + line */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '6px', flexShrink: 0 }}>
@@ -844,11 +850,11 @@ export default function Home() {
                   )}
                 </div>
                 {/* Right: content */}
-                <div className="glass-card" style={{ padding: '18px 22px', flex: 1, marginTop: '-2px' }}>
-                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: '17px', color: 'white', marginBottom: '6px' }}>
+                <div className="glass-card" style={{ padding: 'clamp(16px, 2vw, 18px) clamp(18px, 2vw, 22px)', flex: 1, marginTop: '-2px' }}>
+                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '6px' }}>
                     {m.title}
                   </h3>
-                  <p className="body-text" style={{ fontSize: '13px' }}>{m.desc}</p>
+                  <p className="body-text" style={{ fontSize: 'clamp(12px, 2vw, 13px)' }}>{m.desc}</p>
                 </div>
               </div>
             ))}
@@ -859,7 +865,7 @@ export default function Home() {
       {/* ─── INNOVATION SECTION ──────────────────────────────────────────── */}
       <section
         style={{
-          padding: '100px 0',
+          padding: 'clamp(60px, 8vw, 100px) 20px',
           position: 'relative',
           overflow: 'hidden',
           background: 'linear-gradient(135deg, #071B3B 0%, #0D2954 50%, #071B3B 100%)',
@@ -876,31 +882,31 @@ export default function Home() {
           }}
         />
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
-        <div className="max-w-7xl mx-auto px-6 text-center" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label mb-5" style={{ justifyContent: 'center' }}>Innovation at Core</div>
-          <h2 className="section-heading mb-6" style={{ fontSize: 'clamp(40px, 4vw, 64px)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Innovation at Core</div>
+          <h2 className="section-heading mb-4 sm:mb-6" style={{ fontSize: 'clamp(28px, 4vw, 64px)' }}>
             Digital Engineering.
             <br />
             <span className="gradient-text-animated">Future-Ready Facilities.</span>
           </h2>
-          <p className="body-text mb-10" style={{ fontSize: '17px', maxWidth: '600px', margin: '0 auto 40px' }}>
+          <p className="body-text mb-8 sm:mb-10" style={{ fontSize: 'clamp(14px, 2vw, 17px)', maxWidth: '600px', margin: '0 auto clamp(24px, 4vw, 40px)' }}>
             We leverage BIM, digital twins, and Industry 4.0 technologies to design pharmaceutical
             facilities that are not just compliant today, but adaptable for the demands of tomorrow.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto mb-8 sm:mb-12">
             {[
               { label: 'BIM 3D Modeling', value: '100%', note: 'All projects' },
               { label: 'Digital Documentation', value: 'Paperless', note: 'End-to-end' },
               { label: 'Remote Monitoring', value: '24/7', note: 'IoT enabled' },
             ].map(f => (
-              <div key={f.label} className="gradient-border-card" style={{ padding: '28px', textAlign: 'center' }}>
-                <div className="stat-number gradient-text" style={{ fontSize: '28px', marginBottom: '4px' }}>{f.value}</div>
-                <div style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: '14px', color: 'white', marginBottom: '4px' }}>{f.label}</div>
-                <div style={{ fontFamily: 'Inter', fontSize: '12px', color: 'rgba(255,255,255,0.4)' }}>{f.note}</div>
+              <div key={f.label} className="gradient-border-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}>
+                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(22px, 3vw, 28px)', marginBottom: '4px' }}>{f.value}</div>
+                <div style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(13px, 2vw, 14px)', color: 'white', marginBottom: '4px' }}>{f.label}</div>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.4)' }}>{f.note}</div>
               </div>
             ))}
           </div>
-          <Link to="/technology" className="btn-primary" style={{ padding: '16px 40px', fontSize: '15px' }}>
+          <Link to="/technology" className="btn-primary" style={{ padding: 'clamp(14px, 2vw, 16px) clamp(28px, 4vw, 40px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
             Explore Our Technology <ArrowRight size={16} />
           </Link>
         </div>
