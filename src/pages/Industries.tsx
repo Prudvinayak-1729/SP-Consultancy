@@ -77,7 +77,7 @@ export default function Industries() {
               <br />
               <span className="gradient-text">Across Life Sciences & Beyond</span>
             </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
             Deep vertical expertise across pharmaceutical, biotechnology, vaccine, API,
             and medical device industries — with specialized understanding of each
             sector&apos;s unique regulatory and engineering challenges.
@@ -120,7 +120,7 @@ export default function Industries() {
                 <h2 className="section-heading mb-4" style={{ fontSize: 'clamp(28px, 2.5vw, 40px)' }}>
                   {ind.title}
                 </h2>
-                <p className="body-text mb-6" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>{ind.desc}</p>
+                <p className="body-text mb-6" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', textAlign: 'justify' }}>{ind.desc}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                   <div className="glass-card" style={{ padding: '20px' }}>
                     <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>

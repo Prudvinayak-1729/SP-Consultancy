@@ -10,7 +10,7 @@ const services = [
     desc: 'Comprehensive pharmaceutical facility engineering from initial concept through to commissioning and handover. We manage all engineering disciplines in a single integrated team.',
     benefits: [
       'Single point of responsibility for all engineering disciplines',
-      'BIM-integrated design with 3D clash detection',
+      '3D integrated design with clash detection',
       'Cost engineering and value analysis throughout design',
       'Regulatory strategy embedded from day one',
       'Experienced team with 15+ years average project tenure',
@@ -32,7 +32,7 @@ const services = [
       'Full airflow validation and smoke studies',
       'HEPA filter integrity testing protocols included',
     ],
-    scope: ['Cleanroom HVAC design', 'AHU specifications', 'Ductwork layout', 'CFD analysis', 'Pressure cascade design', 'HVAC qualification'],
+    scope: ['Cleanroom HVAC design', 'AHU specifications', 'Ductwork layout', 'Airflow analysis', 'Pressure cascade design', 'HVAC qualification'],
     color: '#00A878',
     img: 'https://images.unsplash.com/photo-1622534376374-fe4480328daa?w=700&h=420&fit=crop&auto=format',
   },
@@ -153,7 +153,7 @@ export default function Services() {
             <br />
             <span className="gradient-text">from Concept to Compliance.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
             specialized service lines covering every engineering, validation, and compliance
             need for pharmaceutical and biotechnology facility lifecycle management.
           </p>
@@ -182,7 +182,7 @@ export default function Services() {
                 <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', fontStyle: 'italic', color: s.color, marginBottom: '16px', fontWeight: 500 }}>
                   {s.tagline}
                 </p>
-                <p className="body-text mb-6" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>{s.desc}</p>
+                <p className="body-text mb-6" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', textAlign: 'justify' }}>{s.desc}</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                   <div>

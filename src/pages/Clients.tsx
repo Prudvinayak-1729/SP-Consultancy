@@ -77,7 +77,7 @@ export default function Clients() {
             <br />
             <span className="gradient-text">Pharmaceutical Elite.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
             From India&apos;s largest generic manufacturers to innovative biotech startups —
             our clients trust us to deliver engineering excellence that protects their
             regulatory standing and competitive advantage.

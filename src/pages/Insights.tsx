@@ -122,7 +122,7 @@ export default function Insights() {
             <br />
             <span className="gradient-text">Engineering Front Line.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '100%' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '100%', textAlign: 'justify' }}>
             Technical articles, regulatory guidance summaries, and engineering best practices
             written by our specialist team for pharmaceutical industry professionals.
           </p>

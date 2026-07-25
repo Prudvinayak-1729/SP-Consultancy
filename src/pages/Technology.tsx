@@ -20,72 +20,13 @@ export default function Technology() {
             <br />
             <span className="gradient-text">at the Cutting Edge.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
             We invest in the most advanced engineering and digital tools available to deliver
             faster, more accurate, and better-documented pharmaceutical facility projects.
           </p>
         </div>
       </section>
 
-      {/* Innovation showcase */}
-      <section className="mesh-bg" style={{ padding: '80px 0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div
-              style={{
-                borderRadius: '20px',
-                overflow: 'hidden',
-                position: 'relative',
-                background: 'linear-gradient(135deg, rgba(0,87,255,0.15) 0%, rgba(0,168,120,0.1) 100%)',
-                border: '1px solid rgba(0,87,255,0.2)',
-                padding: '40px',
-              }}
-            >
-              <div className="grid-overlay" style={{ position: 'absolute', inset: 0, borderRadius: '20px' }} />
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(48px, 6vw, 64px)', lineHeight: 1, marginBottom: '8px' }}>BIM</div>
-                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 24px)', color: 'white', marginBottom: '14px' }}>3D Building Information Modelling</h3>
-                <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', marginBottom: '20px' }}>
-                  100% of our facility projects are designed in full 3D BIM, enabling clash
-                  detection, spatial coordination, accurate quantity take-offs, and visual
-                  communication with clients and contractors.
-                </p>
-                <div className="flex gap-3 flex-wrap">
-                  {['Autodesk Revit', 'Navisworks', 'BIM 360'].map(t => (
-                    <span key={t} className="tag-pill" style={{ fontSize: 'clamp(9px, 2vw, 11px)' }}>{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div
-              style={{
-                borderRadius: '20px',
-                overflow: 'hidden',
-                position: 'relative',
-                background: 'linear-gradient(135deg, rgba(0,168,120,0.15) 0%, rgba(0,87,255,0.1) 100%)',
-                border: '1px solid rgba(0,168,120,0.2)',
-                padding: '40px',
-              }}
-            >
-              <div className="grid-overlay" style={{ position: 'absolute', inset: 0, borderRadius: '20px' }} />
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(48px, 6vw, 64px)', lineHeight: 1, marginBottom: '8px' }}>CFD</div>
-                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 24px)', color: 'white', marginBottom: '14px' }}>Computational Fluid Dynamics</h3>
-                <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', marginBottom: '20px' }}>
-                  Advanced CFD simulation for cleanroom airflow validation before construction,
-                  ensuring air change rates, velocity profiles, and contamination control meet
-                  EU GMP requirements.
-                </p>
-                <div className="flex gap-3 flex-wrap">
-                  {['ANSYS Fluent', 'Simcenter', 'CFD-ACE+'].map(t => (
-                    <span key={t} className="tag-pill" style={{ fontSize: 'clamp(9px, 2vw, 11px)' }}>{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Future capabilities */}
       <section className="mesh-bg" style={{ padding: '100px 0' }}>

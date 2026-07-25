@@ -132,7 +132,7 @@ export default function Projects() {
             <br />
             <span className="gradient-text">100% Delivered.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
             A curated selection from our portfolio of pharmaceutical, biotech, and industrial
             engineering projects delivered since 2022 — across India and beyond.
           </p>
@@ -264,7 +264,7 @@ export default function Projects() {
           <h2 className="section-heading mb-4" style={{ fontSize: 'clamp(32px, 3vw, 44px)' }}>
             Ready to add your project to this portfolio?
           </h2>
-          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '480px', margin: '0 auto 32px' }}>
+          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '480px', margin: '0 auto 32px', textAlign: 'justify' }}>
             Let&apos;s discuss your engineering requirements and how we can deliver results that
             exceed your regulatory and operational expectations.
           </p>

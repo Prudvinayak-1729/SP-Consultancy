@@ -136,7 +136,7 @@ const projects = [
 
 const process = [
   { step: '01', title: 'Discovery & Assessment', desc: 'Site survey, regulatory gap analysis, and project scope definition with stakeholder alignment.' },
-  { step: '02', title: 'Conceptual Engineering', desc: 'Process flow, equipment selection, and layout design with 3D BIM modeling.' },
+  { step: '02', title: 'Conceptual Engineering', desc: 'Process flow, equipment selection, and layout design with 3D modeling.' },
   { step: '03', title: 'Detailed Engineering', desc: 'Complete engineering packages including P&IDs, specifications, and procurement support.' },
   { step: '04', title: 'Execution & Installation', desc: 'Construction management, vendor supervision, and quality control during build phase.' },
   { step: '05', title: 'Validation & Commissioning', desc: 'Systematic IQ/OQ/PQ execution, documentation, and regulatory readiness review.' },
@@ -149,21 +149,6 @@ const milestones = [
   { year: '2024', title: 'Major Project Deliveries', desc: 'Completed 40+ projects including sterile injectables, API plants, and R&D facilities.' },
   { year: '2025', title: 'Engineering Excellence', desc: 'Recognized for outstanding validation services across 6 major pharmaceutical companies.' },
   { year: '2026', title: 'International Growth', desc: 'Expanding engineering footprint with projects in SE Asia and Middle Eastern markets.' },
-]
-
-const testimonials = [
-  {
-    quote: "Sneha and Prahar delivered our sterile injectable cleanroom on time and ahead of WHO GMP inspection. Their validation documentation was exemplary and made our regulator audit completely seamless.",
-    name: "Dr. Rajesh Venkataraman",
-    title: "VP Engineering, Hetero Drugs",
-    rating: 5,
-  },
-  {
-    quote: "The HVAC and utilities team engineered a precision solution for our biotech campus that we couldn't find from larger consultancies. Their understanding of ISPE guidelines is unmatched in the region.",
-    name: "Priya Chandrasekhar",
-    title: "Director of Facilities, Biological E",
-    rating: 5,
-  },
 ]
 
 const clients = [
@@ -292,21 +277,14 @@ export default function Home() {
               <br />
               Facilities.
             </h1>
-            <p
-              className="body-text animate-fadeUp"
-              style={{
-                fontSize: 'clamp(14px, 2.5vw, 18px)',
-                maxWidth: '100%',
-                marginBottom: 'clamp(24px, 4vw, 44px)',
-                animationDelay: '0.35s',
-                opacity: 0,
-              }}
-            >
+            <div style={{ textAlign: 'justify' }}>
+                <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
               Sneha and Prahar Consultancy Services delivers world-class engineering, Commissioning, Qualification & Validation (CQV), 
               Computer System Validation (CSV), cleanroom, utility, compliance, and project execution solutions, enabling pharmaceutical 
               and biotechnology companies to design, build, qualify, and operate facilities that meet the highest international quality, 
               regulatory, and GMP standards.
             </p>
+            </div>
             <div
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeUp w-full"
               style={{ animationDelay: '0.5s', opacity: 0 }}
@@ -420,7 +398,8 @@ export default function Home() {
                     Excellence for Global Life Sciences
                   </span>
                 </h2>
-              <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+              <div style={{ textAlign: 'justify' }}>
+                <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
                 Sneha and Prahar Consultancy Services is a trusted engineering and
                 validation partner specializing in pharmaceutical, biotechnology,
                 healthcare, and other highly regulated industries. We provide
@@ -428,7 +407,7 @@ export default function Home() {
                 Computer System Validation (CSV), cleanroom engineering, utility
                 systems, GMP compliance, and turnkey project execution solutions.
               </p>
-              <p className="body-text mb-6 sm:mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+              <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
                 Our multidisciplinary team combines technical expertise with
                 international regulatory standards to deliver reliable, compliant,
                 and future-ready manufacturing facilities. From concept and design
@@ -436,6 +415,7 @@ export default function Home() {
                 we help organizations achieve quality, regulatory compliance,
                 operational excellence, and sustainable business growth.
               </p>
+              </div>
               <div className="grid grid-cols-2 gap-3 sm:gap-5 mb-6 sm:mb-8">
                 {[
                   { label: 'Senior Engineers', value: '35+' },
@@ -506,7 +486,7 @@ export default function Home() {
               The Engineering Partner You Can
               <span className="gradient-text"> Trust.</span>
             </h2>
-            <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '520px', margin: '0 auto' }}>
+            <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '520px', margin: '0 auto', textAlign: 'justify' }}>
               Nine pillars of excellence that make us the preferred engineering consultancy for
               India&apos;s top pharmaceutical companies.
             </p>
@@ -738,9 +718,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── TESTIMONIALS ────────────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* ─── FEATURED TESTIMONIAL ─────────────────────────────────────────── */}
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Client Voices</div>
             <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
@@ -748,25 +728,21 @@ export default function Home() {
               <span className="gradient-text"> Leaders</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="testimonial-card" style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
-                <div className="flex gap-1 mb-4 sm:mb-5">
-                  {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} size={14} style={{ fill: '#00A878', color: '#00A878' }} />
-                  ))}
-                </div>
-                <Quote size={24} style={{ color: 'rgba(0,87,255,0.4)', marginBottom: '16px' }} />
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: '20px', fontStyle: 'italic' }}>
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="divider-gradient" style={{ marginBottom: '16px' }} />
-                <div>
-                  <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white' }}>{t.name}</p>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.45)', marginTop: '3px' }}>{t.title}</p>
-                </div>
+          <div className="glass-card" style={{ padding: 'clamp(32px, 4vw, 48px)', position: 'relative' }}>
+            <Quote size={48} style={{ color: 'rgba(0,87,255,0.2)', position: 'absolute', top: '20px', left: '20px' }} />
+            <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
+              <div className="flex gap-1 mb-6 justify-center">
+                {[1, 2, 3, 4, 5].map((_, j) => (
+                  <Star key={j} size={20} style={{ fill: '#00A878', color: '#00A878' }} />
+                ))}
               </div>
-            ))}
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(16px, 2.5vw, 20px)', color: 'rgba(255,255,255,0.85)', lineHeight: 1.8, marginBottom: '24px', fontStyle: 'italic' }}>
+                "Thank you Rajendra. The project has come out really well. Good idea and thanks for sharing. This is one of our dream projects. We're now able to view the levels clearly on the digital monitoring display. Apart from the digital display of level and alarms, we have done auto email alert with the help of Honeywell team. Now we are able to receive auto emails when the nitrogen level comes to low level. We like to continue driving more and more innovations in Utility. Please do share any further ideas or opportunities like this—we're eager to explore and implement them!"
+              </p>
+              <div className="divider-gradient" style={{ marginBottom: '20px', maxWidth: '200px', margin: '0 auto 20px' }} />
+              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 22px)', color: 'white', marginBottom: '4px' }}>R. Dinagaran</p>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.6)' }}>Engineering Head - FTO7</p>
+            </div>
           </div>
         </div>
       </section>
@@ -905,12 +881,12 @@ export default function Home() {
             <span className="gradient-text-animated">Future-Ready Facilities.</span>
           </h2>
           <p className="body-text mb-8 sm:mb-10" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '600px', margin: '0 auto clamp(24px, 4vw, 40px)' }}>
-            We leverage BIM, digital twins, and Industry 4.0 technologies to design pharmaceutical
+            We leverage digital twins and Industry 4.0 technologies to design pharmaceutical
             facilities that are not just compliant today, but adaptable for the demands of tomorrow.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto mb-8 sm:mb-12">
             {[
-              { label: 'BIM 3D Modeling', value: '100%', note: 'All projects' },
+              { label: '3D Modeling', value: '100%', note: 'All projects' },
               { label: 'Digital Documentation', value: 'Paperless', note: 'End-to-end' },
               { label: 'Remote Monitoring', value: '24/7', note: 'IoT enabled' },
             ].map(f => (

@@ -77,7 +77,7 @@ export default function Contact() {
             <br />
             <span className="gradient-text">Exceptional Together.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
             Whether you have a fully scoped project or are exploring options for a new facility —
             our team is ready to discuss your pharmaceutical engineering requirements.
           </p>

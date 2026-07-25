@@ -39,7 +39,7 @@ export default function About() {
             <br />
             <span className="gradient-text">For the Industry.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '580px' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '580px', textAlign: 'justify' }}>
             Founded in 2022 by a team of passionate pharmaceutical engineers, Sneha and Prahar
             Consultancy Services exists to raise the bar for engineering quality in India&apos;s
             pharmaceutical sector.
@@ -83,7 +83,7 @@ export default function About() {
           {/* Industry Focus */}
           <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
             <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Industry Focus</h3>
-            <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7 }}>
+            <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
               We specialize in Life Sciences service verticals including pharmaceuticals, medical equipment manufacturing, genetics research, and biotechnology.
             </p>
           </div>
@@ -143,8 +143,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div style={{ position: 'relative' }}>
             <img
-              src="https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=800&h=600&fit=crop&auto=format"
-              alt="Engineering team in cleanroom"
+              src="https://images.unsplash.com/photo-k2H_b2AEqbg?w=800&h=600&fit=crop&auto=format"
+              alt="Workers in protective suits inside a cleanroom"
               className="animate-shake-hover"
               style={{ width: '100%', height: 'clamp(300px, 40vw, 500px)', objectFit: 'cover', borderRadius: '20px', display: 'block' }}
             />

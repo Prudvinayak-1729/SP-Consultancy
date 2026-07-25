@@ -60,7 +60,7 @@ export default function Quality() {
             <br />
             <span className="gradient-text">an Afterthought.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '100%' }}>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '100%', textAlign: 'justify' }}>
             At Sneha and Prahar, regulatory compliance is engineered into every drawing,
             specification, and protocol from the first day of a project — never retrofitted at the end.
           </p>
@@ -150,7 +150,7 @@ export default function Quality() {
               Quality Certified
               <span className="gradient-text"> Quality System</span>
             </h2>
-            <p className="body-text mt-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '500px', margin: '16px auto 0' }}>
+            <p className="body-text mt-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '500px', margin: '16px auto 0', textAlign: 'justify' }}>
               Our quality management system ensures every deliverable meets the same rigorous
               standard — whether it&apos;s a single protocol or a complete facility engineering package.
             </p>
