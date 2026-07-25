@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
 
 const services = [
   'Engineering Consultancy', 'HVAC Systems Design', 'Cleanroom Engineering',
-  'Utility Engineering', 'CSV & Validation', 'Equipment Qualification',
+  'Cleanroom Engineering', 'Utility Engineering', 'CSV & Validation', 'Equipment Qualification',
   'Water Systems (WFI/PW)', 'Automation & BMS', 'Shutdown Services',
 ]
 
@@ -209,19 +209,19 @@ export default function Footer() {
             Get In Touch
           </h4>
           <div className="flex flex-col gap-5">
+            {/* Address – exactly 3 lines, no wrapping inside each line */}
             <div className="flex gap-3">
               <div className="icon-box" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0, marginTop: 2 }}>
                 <MapPin size={15} style={{ color: '#00A878' }} />
               </div>
-              <div>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
-                  #8-80/80NP, Ramidi Malla Reddy Nagar,<br />
-                  Almasguda, Badangpet,<br />
-                  Hyderabad, Telangana — 500081,<br />
-                  India
-                </p>
+              <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                <div style={{ whiteSpace: 'nowrap' }}>#8-80/80NP, Ramidi Malla Reddy Nagar, Almasguda,</div>
+                <div style={{ whiteSpace: 'nowrap' }}>Badangpet, Hyderabad, Telangana — 500081,</div>
+                <div style={{ whiteSpace: 'nowrap' }}>India</div>
               </div>
             </div>
+
+            {/* Phone */}
             <div className="flex gap-3 items-center">
               <div className="icon-box" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0 }}>
                 <Phone size={15} style={{ color: '#0057FF' }} />
@@ -232,6 +232,8 @@ export default function Footer() {
                 <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>+91 82962 76148</p>
               </div>
             </div>
+
+            {/* Email */}
             <div className="flex gap-3 items-center">
               <div className="icon-box" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0 }}>
                 <Mail size={15} style={{ color: '#00A878' }} />
@@ -240,6 +242,8 @@ export default function Footer() {
                 <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>spconsultanancies@gmail.com</p>
               </div>
             </div>
+
+            {/* Working Hours */}
             <div
               style={{
                 padding: '12px 16px',

@@ -15,18 +15,34 @@ export default function Technology() {
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-label mb-4 sm:mb-5">Technology</div>
-          <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
-            Engineering Software
-            <br />
-            <span className="gradient-text">at the Cutting Edge.</span>
+          <h1
+            className="section-heading mb-6"
+            style={{
+              fontSize: 'clamp(32px, 4vw, 60px)',
+              maxWidth: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              flexWrap: 'nowrap',
+              lineHeight: 1.2,
+            }}
+          >
+            <span style={{ whiteSpace: 'nowrap' }}>Engineering Software</span>
+            <span className="gradient-text" style={{ whiteSpace: 'nowrap' }}>at the Cutting Edge.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
-            We invest in the most advanced engineering and digital tools available to deliver
-            faster, more accurate, and better-documented pharmaceutical facility projects.
+          <p
+            className="body-text"
+            style={{
+              fontSize: 'clamp(14px, 2.5vw, 18px)',
+              maxWidth: '100%',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            We invest in the most advanced engineering and digital tools available to deliver faster, more accurate, and better-documented pharmaceutical facility projects.
           </p>
         </div>
       </section>
-
 
       {/* Future capabilities */}
       <section className="mesh-bg" style={{ padding: '100px 0' }}>

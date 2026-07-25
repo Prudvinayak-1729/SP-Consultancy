@@ -482,13 +482,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Why Choose Us</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)', maxWidth: '640px', margin: '0 auto 20px' }}>
-              The Engineering Partner You Can
-              <span className="gradient-text"> Trust.</span>
-            </h2>
-            <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '520px', margin: '0 auto', textAlign: 'justify' }}>
-              Nine pillars of excellence that make us the preferred engineering consultancy for
-              India&apos;s top pharmaceutical companies.
+            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 18px)', color: 'rgba(255,255,255,0.7)' }}>
+              Nine pillars of excellence that make us the preferred engineering consultancy for India's top pharmaceutical companies.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -586,7 +581,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* ─── GLOBAL STANDARDS ────────────────────────────────────────────── */}
+     {/* ─── GLOBAL STANDARDS ────────────────────────────────────────────── */}
       <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
@@ -595,14 +590,37 @@ export default function Home() {
               Engineering to Global
               <span className="gradient-text"> Regulatory Standards</span>
             </h2>
-            <p className="body-text mt-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '500px', margin: '16px auto 0' }}>
-              Every project is designed, executed, and documented to satisfy the world&apos;s
-              most demanding pharmaceutical regulatory authorities.
+            {/* ─── SINGLE LINE TEXT ─── */}
+            <p
+              className="body-text mt-4"
+              style={{
+                fontSize: 'clamp(14px, 2.5vw, 18px)',
+                maxWidth: '100%',
+                margin: '16px auto 0',
+                whiteSpace: 'nowrap',           // ← forces single line
+                overflow: 'hidden',             // ← prevents layout break
+                textOverflow: 'ellipsis',       // ← adds '…' on overflow
+              }}
+            >
+              Every project is designed, executed, and documented to satisfy the world&apos;s most demanding pharmaceutical regulatory authorities.
             </p>
           </div>
+
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3 sm:gap-4">
             {standards.map((s, i) => (
-              <div key={i} className="certification-card">
+              <div
+                key={i}
+                className="certification-card"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'flex-start',
+                  height: '100%',
+                  minHeight: 'clamp(120px, 15vw, 160px)',
+                  paddingTop: 'clamp(16px, 2vw, 24px)',
+                }}
+              >
                 <div
                   style={{
                     width: 'clamp(36px, 5vw, 44px)',
@@ -613,6 +631,8 @@ export default function Home() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    marginBottom: '8px',
+                    flexShrink: 0,
                   }}
                 >
                   <Shield size={18} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
@@ -717,12 +737,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── FEATURED TESTIMONIAL ─────────────────────────────────────────── */}
       <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
-            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Client Voices</div>
+            {/* Removed invalid justifyContent style – text-center already centers it */}
+            <div className="section-label mb-4 sm:mb-5">Client Voices</div>
             <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
               Trusted by Industry
               <span className="gradient-text"> Leaders</span>
@@ -736,7 +756,15 @@ export default function Home() {
                   <Star key={j} size={20} style={{ fill: '#00A878', color: '#00A878' }} />
                 ))}
               </div>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(16px, 2.5vw, 20px)', color: 'rgba(255,255,255,0.85)', lineHeight: 1.8, marginBottom: '24px', fontStyle: 'italic' }}>
+              {/* ─── Added textAlign: 'justify' here ─── */}
+              <p style={{
+                fontFamily: 'Inter',
+                fontSize: 'clamp(16px, 2.5vw, 20px)',
+                color: 'rgba(255,255,255,0.85)',
+                lineHeight: 1.8,
+                marginBottom: '24px',
+                textAlign: 'justify', // ← added this line
+              }}>
                 "Thank you Rajendra. The project has come out really well. Good idea and thanks for sharing. This is one of our dream projects. We're now able to view the levels clearly on the digital monitoring display. Apart from the digital display of level and alarms, we have done auto email alert with the help of Honeywell team. Now we are able to receive auto emails when the nitrogen level comes to low level. We like to continue driving more and more innovations in Utility. Please do share any further ideas or opportunities like this—we're eager to explore and implement them!"
               </p>
               <div className="divider-gradient" style={{ marginBottom: '20px', maxWidth: '200px', margin: '0 auto 20px' }} />
@@ -852,56 +880,105 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/* ─── INNOVATION SECTION ──────────────────────────────────────────── */}
+<section
+  style={{
+    padding: 'clamp(60px, 8vw, 100px) 20px',
+    position: 'relative',
+    overflow: 'hidden',
+    background: 'linear-gradient(135deg, #071B3B 0%, #0D2954 50%, #071B3B 100%)',
+  }}
+>
+  {/* Background decorative elements */}
+  <div
+    style={{
+      position: 'absolute',
+      inset: 0,
+      backgroundImage: `
+        radial-gradient(circle at 25% 25%, rgba(0,87,255,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(0,168,120,0.12) 0%, transparent 50%)
+      `,
+    }}
+  />
+  <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
 
-      {/* ─── INNOVATION SECTION ──────────────────────────────────────────── */}
-      <section
-        style={{
-          padding: 'clamp(60px, 8vw, 100px) 20px',
-          position: 'relative',
-          overflow: 'hidden',
-          background: 'linear-gradient(135deg, #071B3B 0%, #0D2954 50%, #071B3B 100%)',
-        }}
-      >
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center" style={{ position: 'relative', zIndex: 1 }}>
+    <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Innovation at Core</div>
+    <h2 className="section-heading mb-4 sm:mb-6" style={{ fontSize: 'clamp(28px, 4vw, 64px)' }}>
+      Digital Engineering.
+      <br />
+      <span className="gradient-text-animated">Future-Ready Facilities.</span>
+    </h2>
+
+    {/* ─── TEXT NOW IN EXACTLY 2 LINES ─── */}
+    <p
+      className="body-text mb-8 sm:mb-10"
+      style={{
+        fontSize: 'clamp(14px, 2.5vw, 18px)',
+        maxWidth: '800px',                // wider to keep second line on one line
+        margin: '0 auto clamp(24px, 4vw, 40px)',
+        lineHeight: 1.6,
+      }}
+    >
+      We leverage digital twins and Industry 4.0 technologies to design pharmaceutical facilities<br />
+      that are not just compliant today, but adaptable for the demands of tomorrow.
+    </p>
+
+    {/* Feature cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto mb-8 sm:mb-12">
+      {[
+        { label: '3D Modeling', value: '100%', note: 'All projects' },
+        { label: 'Digital Documentation', value: 'Paperless', note: 'End-to-end' },
+        { label: 'Remote Monitoring', value: '24/7', note: 'IoT enabled' },
+      ].map(f => (
         <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: `
-              radial-gradient(circle at 25% 25%, rgba(0,87,255,0.15) 0%, transparent 50%),
-              radial-gradient(circle at 75% 75%, rgba(0,168,120,0.12) 0%, transparent 50%)
-            `,
-          }}
-        />
-        <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Innovation at Core</div>
-          <h2 className="section-heading mb-4 sm:mb-6" style={{ fontSize: 'clamp(28px, 4vw, 64px)' }}>
-            Digital Engineering.
-            <br />
-            <span className="gradient-text-animated">Future-Ready Facilities.</span>
-          </h2>
-          <p className="body-text mb-8 sm:mb-10" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '600px', margin: '0 auto clamp(24px, 4vw, 40px)' }}>
-            We leverage digital twins and Industry 4.0 technologies to design pharmaceutical
-            facilities that are not just compliant today, but adaptable for the demands of tomorrow.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto mb-8 sm:mb-12">
-            {[
-              { label: '3D Modeling', value: '100%', note: 'All projects' },
-              { label: 'Digital Documentation', value: 'Paperless', note: 'End-to-end' },
-              { label: 'Remote Monitoring', value: '24/7', note: 'IoT enabled' },
-            ].map(f => (
-              <div key={f.label} className="gradient-border-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}>
-                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(22px, 3vw, 28px)', marginBottom: '4px' }}>{f.value}</div>
-                <div style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white', marginBottom: '4px' }}>{f.label}</div>
-                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.4)' }}>{f.note}</div>
-              </div>
-            ))}
+          key={f.label}
+          className="gradient-border-card"
+          style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}
+        >
+          <div
+            className="stat-number gradient-text"
+            style={{ fontSize: 'clamp(22px, 3vw, 28px)', marginBottom: '4px' }}
+          >
+            {f.value}
           </div>
-          <Link to="/technology" className="btn-primary" style={{ padding: 'clamp(14px, 2vw, 16px) clamp(28px, 4vw, 40px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
-            Explore Our Technology <ArrowRight size={16} />
-          </Link>
+          <div
+            style={{
+              fontFamily: 'Satoshi',
+              fontWeight: 700,
+              fontSize: 'clamp(14px, 2.5vw, 18px)',
+              color: 'white',
+              marginBottom: '4px',
+            }}
+          >
+            {f.label}
+          </div>
+          <div
+            style={{
+              fontFamily: 'Inter',
+              fontSize: 'clamp(11px, 2vw, 12px)',
+              color: 'rgba(255,255,255,0.4)',
+            }}
+          >
+            {f.note}
+          </div>
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <Link
+      to="/technology"
+      className="btn-primary"
+      style={{
+        padding: 'clamp(14px, 2vw, 16px) clamp(28px, 4vw, 40px)',
+        fontSize: 'clamp(13px, 2vw, 15px)',
+      }}
+    >
+      Explore Our Technology <ArrowRight size={16} />
+    </Link>
+  </div>
+</section>
     </div>
   )
 }

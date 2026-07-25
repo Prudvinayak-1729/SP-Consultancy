@@ -143,23 +143,39 @@ const services = [
 export default function Services() {
   return (
     <div>
-      {/* Hero */}
-      <section className="page-hero">
-        <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label mb-4 sm:mb-5">Our Services</div>
-          <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
-            Complete Engineering
-            <br />
-            <span className="gradient-text">from Concept to Compliance.</span>
-          </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
-            specialized service lines covering every engineering, validation, and compliance
-            need for pharmaceutical and biotechnology facility lifecycle management.
-          </p>
-        </div>
-      </section>
-
+     {/* Hero */}
+<section className="page-hero">
+  <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
+  <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
+    <div className="section-label mb-4 sm:mb-5">Our Services</div>
+    <h1
+      className="section-heading mb-6"
+      style={{
+        fontSize: 'clamp(32px, 4vw, 60px)',    // ← reduced size to fit on mobile
+        maxWidth: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'nowrap',
+        lineHeight: 1.2,
+      }}
+    >
+      <span style={{ whiteSpace: 'nowrap' }}>Complete Engineering</span>
+      <span className="gradient-text" style={{ whiteSpace: 'nowrap' }}>from Concept to Compliance.</span>
+    </h1>
+    <p
+      className="body-text"
+      style={{
+        fontSize: 'clamp(14px, 2.5vw, 18px)',
+        maxWidth: '100%',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',   // keeps it on one line with … if needed
+      }}
+    >
+      specialized service lines covering every engineering, validation, and compliance need for pharmaceutical and biotechnology facility lifecycle management.
+    </p>
+  </div>
+</section>
       {/* Service list */}
       {services.map((s, i) => (
         <section

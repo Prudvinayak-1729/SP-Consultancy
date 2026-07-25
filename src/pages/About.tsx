@@ -29,20 +29,26 @@ const achievements = [
 export default function About() {
   return (
     <div>
-      {/* Hero */}
+    {/* Hero */}
       <section className="page-hero">
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-label mb-4 sm:mb-5">About Us</div>
           <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
-            Built by Engineers,
-            <br />
+            Built by Engineers,<br />
             <span className="gradient-text">For the Industry.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '580px', textAlign: 'justify' }}>
-            Founded in 2022 by a team of passionate pharmaceutical engineers, Sneha and Prahar
-            Consultancy Services exists to raise the bar for engineering quality in India&apos;s
-            pharmaceutical sector.
+          <p
+            className="body-text"
+            style={{
+              fontSize: 'clamp(14px, 2.5vw, 18px)',
+              maxWidth: '100%',                 // allows full width
+              whiteSpace: 'nowrap',             // forces single line
+              overflow: 'hidden',               // hides overflow
+              textOverflow: 'ellipsis',         // adds … if too long
+            }}
+          >
+            Founded in 2022 by a team of passionate pharmaceutical engineers, Sneha and Prahar Consultancy Services exists to raise the bar for engineering quality in India&apos;s pharmaceutical sector.
           </p>
         </div>
       </section>
@@ -57,28 +63,27 @@ export default function About() {
               <span className="gradient-text"> Engineering Solutions</span>
             </h2>
           </div>
-
-          {/* Specializations */}
-          <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
-            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Our Specializations</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              {[
-                'Computer System Validations (CSV) & CQV',
-                'Cost & Energy Saving Projects',
-                'Utility and Facility Projects',
-                'Green Field & Brown Field Projects',
-                'Lab Support',
-                'Qualification & Validation Process',
-                'Automation, PLC & Upgradation Projects',
-                'Outsourcing / Manpower Support Services'
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#00A878', flexShrink: 0 }} />
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6 }}>{item}</span>
-                </div>
-              ))}
+            {/* Specializations */}
+            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
+              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Our Specializations</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+                {[
+                  'Computer System Validations (CSV) & CQV',
+                  'Cost & Energy Saving Projects',
+                  'Utility and Facility Projects',
+                  'Green Field & Brown Field Projects',
+                  'Lab Support',
+                  'Qualification & Validation Process',
+                  'Automation, PLC & Upgradation Projects',
+                  'Outsourcing / Manpower Support Services'
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-2">
+                    <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '8px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6 }}>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
           {/* Industry Focus */}
           <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
@@ -143,7 +148,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div style={{ position: 'relative' }}>
             <img
-              src="https://images.unsplash.com/photo-k2H_b2AEqbg?w=800&h=600&fit=crop&auto=format"
+              src="https://png.pngtree.com/background/20250419/original/pngtree-a-modern-pharmacy-interior-with-pharmacists-assisting-customers-amidst-shelves-of-picture-image_16417690.jpg"
               alt="Workers in protective suits inside a cleanroom"
               className="animate-shake-hover"
               style={{ width: '100%', height: 'clamp(300px, 40vw, 500px)', objectFit: 'cover', borderRadius: '20px', display: 'block' }}

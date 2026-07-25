@@ -66,21 +66,31 @@ export default function Industries() {
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-label mb-4 sm:mb-5">Industries We Serve</div>
-          <h1 className="section-heading mb-6"
-              style={{
-                fontSize: 'clamp(44px, 5vw, 72px)',
-                maxWidth: '900px',
-                lineHeight: 1.05,
-              }}
-            >
-              Engineering Excellence
-              <br />
-              <span className="gradient-text">Across Life Sciences & Beyond</span>
-            </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
-            Deep vertical expertise across pharmaceutical, biotechnology, vaccine, API,
-            and medical device industries — with specialized understanding of each
-            sector&apos;s unique regulatory and engineering challenges.
+          <h1
+            className="section-heading mb-6"
+            style={{
+              fontSize: 'clamp(32px, 4vw, 60px)',
+              maxWidth: '100%',
+              lineHeight: 1.2,
+              display: 'flex',
+              flexDirection: 'column',
+              flexWrap: 'nowrap',
+            }}
+          >
+            <span style={{ whiteSpace: 'nowrap' }}>Engineering Excellence</span>
+            <span className="gradient-text" style={{ whiteSpace: 'nowrap' }}>Across Life Sciences & Beyond</span>
+          </h1>
+          <p
+            className="body-text"
+            style={{
+              fontSize: 'clamp(14px, 2.5vw, 18px)',
+              maxWidth: '100%',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            Deep vertical expertise across pharmaceutical, biotechnology, vaccine, API, and medical device industries — with specialized understanding of each sector&apos;s unique regulatory and engineering challenges.
           </p>
         </div>
       </section>
