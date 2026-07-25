@@ -96,7 +96,7 @@ export default function Contact() {
             {contactMethods.map((c, i) => (
               <div
                 key={i}
-                className="glass-card-hover"
+                className="glass-card"
                 style={{ padding: '28px', display: 'flex', flexDirection: 'column', gap: '12px' }}
               >
                 <div className="icon-box">{c.icon}</div>

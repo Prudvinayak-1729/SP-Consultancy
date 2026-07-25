@@ -11,7 +11,7 @@ const values = [
 const milestones = [
   { year: '2022', events: ['Company incorporated in Hyderabad, Telangana', 'First project: Oral Solid Dosage facility, Medak', 'Team of 8 core engineers at founding'] },
   { year: '2023', events: ['Expansion into biotech & vaccine sector', 'Completed 30+ projects; team grew to 22 engineers'] },
-  { year: '2024', events: ['Achieved ISO 9001:2015 quality certification', 'Delivered 45+ projects including sterile injectables', 'Launched digital documentation system'] },
+  { year: '2024', events: ['Achieved quality certification', 'Delivered 45+ projects including sterile injectables', 'Launched digital documentation system'] },
   { year: '2025', events: ['Recognized as preferred consultant by 3 top-10 pharma companies', '35+ engineers; 100+ projects lifetime', 'International project pipeline opened'] },
 ]
 
@@ -23,7 +23,7 @@ const achievements = [
   '99% client satisfaction across all engagements',
   'Successfully supported 18 WHO GMP inspections',
   'USFDA, EU GMP, and TGA inspection readiness support',
-  'ISO 9001:2015 certified quality management system',
+  'Quality management system certified',
 ]
 
 export default function About() {
@@ -249,7 +249,7 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {values.map((v, i) => (
-              <div key={i} className="glass-card-hover" style={{ padding: 'clamp(20px, 3vw, 32px) clamp(16px, 2vw, 24px)', textAlign: 'center' }}>
+              <div key={i} className="glass-card" style={{ padding: 'clamp(20px, 3vw, 32px) clamp(16px, 2vw, 24px)', textAlign: 'center' }}>
                 <div className="icon-box" style={{ margin: '0 auto clamp(12px, 2vw, 18px)' }}>{v.icon}</div>
                 <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '10px' }}>{v.title}</h3>
                 <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{v.desc}</p>
@@ -282,14 +282,13 @@ export default function About() {
               { val: '100+', label: 'Projects Delivered', sub: 'Since 2022' },
               { val: '35+', label: 'Engineers', sub: 'Specialists' },
               { val: '99%', label: 'Satisfaction', sub: 'Client rated' },
-              { val: '12', label: 'Indian States', sub: 'Active presence' },
               { val: '18', label: 'GMP Audits', sub: 'Successfully supported' },
               { val: '250K+', label: 'Eng. Hours', sub: 'Delivered' },
             ].map(s => (
               <div key={s.label} className="gradient-border-card" style={{ padding: 'clamp(16px, 2vw, 20px) clamp(12px, 2vw, 16px)', textAlign: 'center' }}>
-                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(20px, 4vw, 28px)', marginBottom: '4px' }}>{s.val}</div>
-                <div style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(11px, 2vw, 12px)', color: 'white', marginBottom: '2px' }}>{s.label}</div>
-                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(9px, 2vw, 10px)', color: 'rgba(255,255,255,0.4)' }}>{s.sub}</div>
+                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(28px, 5vw, 36px)', marginBottom: '6px' }}>{s.val}</div>
+                <div style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white', marginBottom: '4px' }}>{s.label}</div>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.5)' }}>{s.sub}</div>
               </div>
             ))}
           </div>

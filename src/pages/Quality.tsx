@@ -23,13 +23,6 @@ const standards = [
     color: '#0057FF',
   },
   {
-    name: 'ISO 14644',
-    fullName: 'Cleanrooms and Associated Controlled Environments',
-    desc: 'Certified expertise in ISO 14644 Parts 1-4 covering cleanroom classification, design, construction, test methods, and operations for pharmaceutical and biotech applications.',
-    scope: ['ISO Classes 1-9 design', 'Air cleanliness measurement methods', 'Cleanroom design considerations', 'Operations and maintenance standards', 'Energy efficiency ISO 14644-16'],
-    color: '#00A878',
-  },
-  {
     name: 'Schedule M (India)',
     fullName: 'Good Manufacturing Practices for Pharmaceutical Products',
     desc: 'Comprehensive knowledge of India&apos;s revised Schedule M (2023) requirements for pharmaceutical manufacturing facilities, covering factory premises, equipment, and environmental conditions.',
@@ -105,7 +98,7 @@ export default function Quality() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {standards.map((s, i) => (
-              <div key={i} className="glass-card-hover" style={{ padding: 'clamp(24px, 3vw, 32px)' }}>
+              <div key={i} className="glass-card" style={{ padding: 'clamp(24px, 3vw, 32px)' }}>
                 <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-5">
                   <div
                     style={{
@@ -154,7 +147,7 @@ export default function Quality() {
           <div className="text-center mb-10 sm:mb-14">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Quality Management</div>
             <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-              ISO 9001:2015 Certified
+              Quality Certified
               <span className="gradient-text"> Quality System</span>
             </h2>
             <p className="body-text mt-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '500px', margin: '16px auto 0' }}>
@@ -164,7 +157,7 @@ export default function Quality() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {qmsElements.map((q, i) => (
-              <div key={i} className="glass-card-hover" style={{ padding: 'clamp(20px, 2vw, 24px)' }}>
+              <div key={i} className="glass-card" style={{ padding: 'clamp(20px, 2vw, 24px)' }}>
                 <div className="icon-box" style={{ marginBottom: 'clamp(12px, 2vw, 14px)' }}>{q.icon}</div>
                 <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 16px)', color: 'white', marginBottom: '10px' }}>{q.title}</h3>
                 <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65 }}>{q.desc}</p>

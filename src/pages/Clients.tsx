@@ -99,7 +99,7 @@ export default function Clients() {
             {clients.map((c, i) => (
               <div
                 key={i}
-                className="glass-card-hover"
+                className="glass-card"
                 style={{ padding: '24px 20px', textAlign: 'center' }}
               >
                 <div

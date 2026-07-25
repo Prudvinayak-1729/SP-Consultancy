@@ -26,7 +26,7 @@ const services = [
     tagline: 'Precision Air Management for GMP Environments',
     desc: 'Design, engineering, and qualification of HVAC systems for pharmaceutical manufacturing, cleanroom, and laboratory environments to the most stringent international standards.',
     benefits: [
-      'ISO 14644-1 cleanroom classification compliance',
+      'Cleanroom classification compliance',
       'ASHRAE 170 healthcare facility ventilation standards',
       'Energy-optimized designs reducing operational costs by 20-30%',
       'Full airflow validation and smoke studies',
@@ -40,10 +40,10 @@ const services = [
     id: 'cleanroom',
     category: 'Cleanroom Engineering',
     title: 'Cleanroom Design & Build',
-    tagline: 'ISO-Classified Environments Built to Last',
-    desc: 'End-to-end cleanroom design and construction management for pharmaceutical sterile manufacturing, OSD, and biotech applications, certified to ISO, EU GMP, and USFDA standards.',
+    tagline: 'Cleanroom Environments Built to Last',
+    desc: 'End-to-end cleanroom design and construction management for pharmaceutical sterile manufacturing, OSD, and biotech applications, certified to EU GMP and USFDA standards.',
     benefits: [
-      'ISO Classes 5-8 / EU GMP Grade A-D classification',
+      'EU GMP Grade A-D classification',
       'Modular and traditional construction approaches',
       'Integrated monitoring systems (EMS/BMS)',
       'Decontamination and VHP compatibility',
@@ -128,7 +128,7 @@ const services = [
     tagline: 'Sustainable Pharmaceutical Manufacturing',
     desc: 'Comprehensive energy auditing, decarbonization planning, and sustainable engineering solutions tailored to the unique energy profile of pharmaceutical and biotech manufacturing.',
     benefits: [
-      'ISO 50001 energy management system guidance',
+      'Energy management system guidance',
       'Utility consumption benchmarking vs. ISPE targets',
       'Heat recovery and waste reduction roadmaps',
       'Solar and renewable integration feasibility',

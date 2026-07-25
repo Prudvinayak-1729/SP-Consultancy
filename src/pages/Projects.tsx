@@ -13,7 +13,7 @@ const projects = [
     category: 'Cleanroom',
     year: '2024',
     desc: 'Grade A/B aseptic fill-finish facility with RABS, EU GMP Annex 1 compliant HVAC, isolator integration, and complete IQ/OQ/PQ documentation package.',
-    tech: ['RABS', 'ISO 5 Cleanroom', 'Annex 1 HVAC', 'EMS Integration', 'VHP Decontamination'],
+    tech: ['RABS', 'Grade 5 Cleanroom', 'Annex 1 HVAC', 'EMS Integration', 'VHP Decontamination'],
     img: 'https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=700&h=420&fit=crop&auto=format',
     highlight: true,
   },
@@ -108,8 +108,8 @@ const projects = [
     duration: '14 months',
     category: 'Cleanroom',
     year: '2023',
-    desc: 'ISO Class 7 and 8 cleanroom design and construction for sterile implant manufacturing with ISO 13485 quality system documentation integration.',
-    tech: ['ISO Class 7/8', 'ISO 13485', 'EtO Sterilization', 'Particle Monitoring', 'IQ/OQ/PQ'],
+    desc: 'Class 7 and 8 cleanroom design and construction for sterile implant manufacturing with quality system documentation integration.',
+    tech: ['Class 7/8', 'Quality System', 'EtO Sterilization', 'Particle Monitoring', 'IQ/OQ/PQ'],
     img: 'https://images.unsplash.com/photo-1605781231474-f60dea478e8a?w=700&h=420&fit=crop&auto=format',
     highlight: false,
   },
@@ -145,7 +145,6 @@ export default function Projects() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { val: '100+', label: 'Total Projects' },
-              { val: '12', label: 'Indian States' },
               { val: '25+', label: 'Industries Covered' },
               { val: '0', label: 'Regulatory Failures' },
             ].map(s => (

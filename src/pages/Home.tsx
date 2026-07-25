@@ -63,7 +63,7 @@ const whyChooseUs = [
 const services = [
   { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0057FF' },
   { title: 'HVAC Systems', desc: 'Precision HVAC design for cleanroom environments', color: '#00A878' },
-  { title: 'Cleanroom Engineering', desc: 'ISO 14644 classified cleanroom design and qualification', color: '#0057FF' },
+  { title: 'Cleanroom Engineering', desc: 'Cleanroom design and qualification', color: '#0057FF' },
   { title: 'Utility Engineering', desc: 'Pharmaceutical-grade utility systems design', color: '#00A878' },
   { title: 'CSV & Validation', desc: 'Computer system validation per GAMP 5 guidelines', color: '#0057FF' },
   { title: 'IQ / OQ / PQ', desc: 'Installation, operational, and performance qualification', color: '#00A878' },
@@ -101,10 +101,10 @@ const standards = [
   { name: 'WHO GMP', desc: 'World Health Organization Good Manufacturing Practice' },
   { name: 'US FDA', desc: '21 CFR Parts 210, 211 & 820 Compliance' },
   { name: 'EU GMP', desc: 'European Union GMP Annex 1 & EMA Guidelines' },
-  { name: 'ISO 14644', desc: 'Cleanroom Classification & Air Cleanliness Standards' },
   { name: 'Schedule M', desc: 'Indian GMP Requirements for Pharmaceutical Plants' },
   { name: 'ASHRAE 170', desc: 'Ventilation of Health Care Facilities Standard' },
   { name: 'ISPE GAMP 5', desc: 'Good Automated Manufacturing Practice Guidelines' },
+  { name: 'ICH Guidelines', desc: 'International Council for Harmonisation Technical Requirements' },
 ]
 
 const projects = [
@@ -324,7 +324,7 @@ export default function Home() {
               className="grid grid-cols-2 sm:flex flex-wrap gap-3 sm:gap-6 mt-8 sm:mt-12 animate-fadeUp"
               style={{ animationDelay: '0.65s', opacity: 0 }}
             >
-              {['WHO GMP Certified', 'US FDA Compliance', 'ISO 14644 Expertise', 'ISPE Member'].map(badge => (
+              {['WHO GMP Certified', 'US FDA Compliance', 'ISPE Member'].map(badge => (
                 <div key={badge} className="flex items-center gap-2">
                   <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#00A878' }} />
                   <span style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', fontWeight: 500, color: 'rgba(255,255,255,0.55)', letterSpacing: '0.04em' }}>
@@ -440,7 +440,6 @@ export default function Home() {
                 {[
                   { label: 'Senior Engineers', value: '35+' },
                   { label: 'Active Projects', value: '18' },
-                  { label: 'States Served', value: '12' },
                   { label: 'GMP Audits Passed', value: '100%' },
                 ].map(m => (
                   <div
@@ -514,7 +513,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {whyChooseUs.map((item, i) => (
-              <div key={i} className="glass-card-hover flex flex-col h-full" style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
+              <div key={i} className="glass-card flex flex-col h-full" style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
                 <div className="icon-box" style={{ marginBottom: 'clamp(14px, 2vw, 18px)' }}>
                   {item.icon}
                 </div>
@@ -548,7 +547,7 @@ export default function Home() {
             {services.map((s, i) => (
               <div
                 key={i}
-                className="glass-card-hover flex flex-col h-full"
+                className="glass-card flex flex-col h-full"
                 style={{ padding: 'clamp(18px, 2vw, 22px) clamp(16px, 2vw, 20px)' }}
               >
                 <div

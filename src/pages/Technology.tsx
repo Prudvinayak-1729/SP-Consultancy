@@ -74,7 +74,7 @@ export default function Technology() {
                 <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', marginBottom: '20px' }}>
                   Advanced CFD simulation for cleanroom airflow validation before construction,
                   ensuring air change rates, velocity profiles, and contamination control meet
-                  ISO 14644 and EU GMP requirements.
+                  EU GMP requirements.
                 </p>
                 <div className="flex gap-3 flex-wrap">
                   {['ANSYS Fluent', 'Simcenter', 'CFD-ACE+'].map(t => (
@@ -99,7 +99,7 @@ export default function Technology() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {capabilities.map((c, i) => (
-              <div key={i} className="glass-card-hover" style={{ padding: '32px', display: 'flex', gap: '20px' }}>
+              <div key={i} className="glass-card" style={{ padding: '32px', display: 'flex', gap: '20px' }}>
                 <div className="icon-box" style={{ flexShrink: 0 }}>{c.icon}</div>
                 <div>
                   <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white', marginBottom: '10px' }}>{c.title}</h3>

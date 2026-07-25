@@ -18,7 +18,7 @@ const company = [
   { label: 'Contact', path: '/contact' },
 ]
 
-const standards = ['WHO GMP Certified', 'US FDA Compliance', 'ISO 14644 Expertise', 'ISPE Member']
+const standards = ['WHO GMP Certified', 'US FDA Compliance', 'ISPE Member']
 
 export default function Footer() {
   return (
