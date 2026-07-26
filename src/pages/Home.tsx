@@ -297,20 +297,7 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Trust indicators */}
-            <div
-              className="grid grid-cols-2 sm:flex flex-wrap gap-3 sm:gap-6 mt-8 sm:mt-12 animate-fadeUp"
-              style={{ animationDelay: '0.65s', opacity: 0 }}
-            >
-              {['WHO GMP Certified', 'US FDA Compliance', 'ISPE Member'].map(badge => (
-                <div key={badge} className="flex items-center gap-2">
-                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#00A878' }} />
-                  <span style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', fontWeight: 500, color: 'rgba(255,255,255,0.55)', letterSpacing: '0.04em' }}>
-                    {badge}
-                  </span>
-                </div>
-              ))}
-            </div>
+            {/* Trust indicators – REMOVED the three badges as requested */}
           </div>
         </div>
 
@@ -482,8 +469,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Why Choose Us</div>
-            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 18px)', color: 'rgba(255,255,255,0.7)' }}>
-              Nine pillars of excellence that make us the preferred engineering consultancy for India's top pharmaceutical companies.
+            {/* ─── SPLIT INTO 3 LINES WITH UPDATED TEXT ─── */}
+            <p
+              style={{
+                fontFamily: 'Inter',
+                fontSize: 'clamp(14px, 2vw, 18px)',
+                color: 'rgba(255,255,255,0.7)',
+                lineHeight: 1.7,
+                maxWidth: '700px',
+                margin: '0 auto',
+              }}
+            >
+              Nine pillars of excellence engineering<br />
+              that make us the preferred consultancy<br />
+              for India's top pharmaceutical companies.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
