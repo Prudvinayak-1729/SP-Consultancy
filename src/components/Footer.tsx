@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
+import logo from '/assets/img/logo.png'
 
 const services = [
   'Engineering Consultancy', 'HVAC Systems Design', 'Cleanroom Engineering',
@@ -61,7 +62,7 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3 mb-5">
             <img
-              src="/assets/img/logo.png"
+              src={logo}
               alt="Sneha and Prahar Consultancy Services Logo"
               style={{
                 width: 'clamp(32px, 4vw, 50px)',
@@ -191,7 +192,7 @@ export default function Footer() {
               </div>
               <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
                 <div style={{ whiteSpace: 'nowrap' }}>#8-80/80NP, Ramidi Malla Reddy Nagar, Almasguda,</div>
-                <div style={{ whiteSpace: 'nowrap' }}>Badangpet, Hyderabad, Telangana — 500081, India</div>
+                <div style={{ whiteSpace: 'nowrap' }}>Badangpet, Hyderabad, Telangana 500081, India</div>
               </div>
             </div>
 

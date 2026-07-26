@@ -1,4 +1,5 @@
 import { Cpu, Globe, Shield, Zap } from 'lucide-react'
+import techImage from '/assets/img/Technology.png'
 
 const capabilities = [
   { icon: <Globe size={24} style={{ color: '#0057FF' }} />, title: 'Digital Twin Development', desc: 'Creating virtual replicas of pharmaceutical facilities for predictive maintenance, operational optimization, and regulatory change assessment without production disruption.' },
@@ -102,8 +103,9 @@ export default function Technology() {
               }}
             >
               <img
-                src="https://media.hashcashconsultants.com/wp-content/uploads/2022/12/blockchain-ai-and-iot-hashcash.jpg"
-                alt="Blockchain, AI and IoT in pharmaceutical engineering"
+                src={techImage}
+                alt="Technology capabilities"
+                className="image-hover-effect"
                 style={{
                   width: '100%',
                   height: 'clamp(220px, 25vw, 320px)',

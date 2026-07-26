@@ -150,7 +150,7 @@ export default function About() {
             <img
               src="https://png.pngtree.com/thumb_back/fh260/background/20250323/pngtree-a-modern-pharmacy-interior-with-pharmacists-assisting-customers-amidst-shelves-of-image_17131846.jpg"
               alt="Workers in protective suits inside a cleanroom"
-              className="animate-shake-hover"
+              className="image-hover-effect"
               style={{ width: '100%', height: 'clamp(300px, 40vw, 500px)', objectFit: 'cover', borderRadius: '20px', display: 'block' }}
             />
             <div
@@ -430,6 +430,7 @@ export default function About() {
                 <img
                   src="/assets/img/owoner.jpeg"
                   alt="Mr. Rajendra Prasad - Managing Director"
+                  className="image-hover-effect"
                   style={{ width: '100%', maxWidth: 'clamp(200px, 30vw, 300px)', height: 'auto', objectFit: 'contain', display: 'block' }}
                 />
               </div>

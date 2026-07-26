@@ -207,10 +207,7 @@ export default function Projects() {
                 }}
               >
                 <div style={{ overflow: 'hidden', position: 'relative' }}>
-                  <img src={p.img} alt={p.title} style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
-                    onMouseEnter={e => ((e.currentTarget as HTMLElement).style.transform = 'scale(1.05)')}
-                    onMouseLeave={e => ((e.currentTarget as HTMLElement).style.transform = '')}
-                  />
+                  <img src={p.img} alt={p.title} className="image-hover-effect" style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block' }} />
                   <div style={{ position: 'absolute', top: 14, left: 14 }}>
                     <span style={{ padding: '4px 12px', borderRadius: '999px', background: 'rgba(7,27,59,0.85)', border: '1px solid rgba(255,255,255,0.15)', fontFamily: 'Space Grotesk', fontSize: 'clamp(14px, 2.5vw, 18px)', fontWeight: 600, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.1em' }}>
                       {p.category}
