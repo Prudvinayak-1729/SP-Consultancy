@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, Users, Award, Shield, Globe } from 'lucide-react'
+import ownerImage from '/assets/img/owoner.jpeg'
 
 const values = [
   { icon: <Award size={20} style={{ color: '#0057FF' }} />, title: 'Engineering Excellence', desc: 'Rigorous technical standards in every deliverable, every time.' },
@@ -428,7 +429,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div style={{ background: '#0a1f3d', padding: 'clamp(24px, 4vw, 32px) clamp(16px, 3vw, 24px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img
-                  src="/assets/img/owoner.jpeg"
+                  src={ownerImage}
                   alt="Mr. Rajendra Prasad - Managing Director"
                   className="image-hover-effect"
                   style={{ width: '100%', maxWidth: 'clamp(200px, 30vw, 300px)', height: 'auto', objectFit: 'contain', display: 'block' }}
