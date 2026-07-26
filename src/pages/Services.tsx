@@ -207,8 +207,8 @@ export default function Services() {
                     </p>
                     {s.benefits.map((b, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
-                        <CheckCircle size={13} style={{ color: s.color, marginTop: '3px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)' }}>{b}</p>
+                        <CheckCircle size={13} style={{ color: s.color, marginTop: '9px', flexShrink: 0 }} />
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, marginTop: '0px' }}>{b}</p>
                       </div>
                     ))}
                   </div>
@@ -217,9 +217,9 @@ export default function Services() {
                       Scope Includes
                     </p>
                     {s.scope.map((sc, j) => (
-                      <div key={j} className="flex gap-2 items-center mb-2">
-                        <div style={{ width: 5, height: 5, borderRadius: '50%', background: s.color, flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)' }}>{sc}</p>
+                      <div key={j} className="flex gap-2 items-start mb-2">
+                        <div style={{ width: 5, height: 5, borderRadius: '50%', background: s.color, marginTop: '9px', flexShrink: 0 }} />
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, marginTop: '0px' }}>{sc}</p>
                       </div>
                     ))}
                   </div>

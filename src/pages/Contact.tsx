@@ -303,15 +303,16 @@ export default function Contact() {
                 >
                   <div
                     style={{
-                      width: 8,
-                      height: 8,
+                      width: 5,
+                      height: 5,
                       borderRadius: '50%',
                       background: i % 2 === 0 ? '#0057FF' : '#00A878',
                       flexShrink: 0,
+                      marginTop: '9px',
                       boxShadow: `0 0 8px ${i % 2 === 0 ? 'rgba(0,87,255,0.5)' : 'rgba(0,168,120,0.5)'}`,
                     }}
                   />
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.72)' }}>{s}</span>
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.72)', lineHeight: 1.6, marginTop: '0px' }}>{s}</span>
                 </div>
               ))}
             </div>
