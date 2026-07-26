@@ -138,8 +138,8 @@ export default function Industries() {
                     </p>
                     {ind.challenges.map((c, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
-                        <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(255,87,87,0.7)', marginTop: '7px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{c}</p>
+                        <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(255,87,87,0.7)', marginTop: '9px', flexShrink: 0 }} />
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginTop: '0px' }}>{c}</p>
                       </div>
                     ))}
                   </div>
@@ -149,8 +149,8 @@ export default function Industries() {
                     </p>
                     {ind.solutions.map((s, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
-                        <CheckCircle size={12} style={{ color: ind.color, marginTop: '3px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{s}</p>
+                        <CheckCircle size={12} style={{ color: ind.color, marginTop: '4px', flexShrink: 0 }} />
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginTop: '0px' }}>{s}</p>
                       </div>
                     ))}
                   </div>
