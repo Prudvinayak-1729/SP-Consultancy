@@ -163,9 +163,10 @@ export default function Industries() {
                 <img
                   src={ind.img}
                   alt={ind.title}
+                  className="image-hover-effect"
                   style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '16px', display: 'block', boxShadow: '0 24px 64px rgba(0,0,0,0.4)' }}
                 />
-                <div style={{ position: 'absolute', inset: 0, borderRadius: '16px', background: `linear-gradient(to top, ${ind.color}33 0%, transparent 60%)` }} />
+                <div style={{ position: 'absolute', inset: 0, borderRadius: '16px', background: `linear-gradient(to top, ${ind.color}33 0%, transparent 60%)`, pointerEvents: 'none' }} />
               </div>
             </div>
           </div>

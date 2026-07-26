@@ -434,6 +434,7 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1669101602124-f5b78895d91c?w=800&h=560&fit=crop&auto=format"
                   alt="Pharmaceutical cleanroom facility"
+                  className="image-hover-effect"
                   style={{ width: '100%', height: 'clamp(300px, 40vw, 480px)', objectFit: 'cover', display: 'block' }}
                 />
                 <div

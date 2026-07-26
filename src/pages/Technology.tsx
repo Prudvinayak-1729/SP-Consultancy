@@ -104,6 +104,7 @@ export default function Technology() {
               <img
                 src="https://media.hashcashconsultants.com/wp-content/uploads/2022/12/blockchain-ai-and-iot-hashcash.jpg"
                 alt="Blockchain, AI and IoT in pharmaceutical engineering"
+                className="image-hover-effect"
                 style={{
                   width: '100%',
                   height: 'clamp(220px, 25vw, 320px)',

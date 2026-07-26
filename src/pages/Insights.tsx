@@ -142,9 +142,8 @@ export default function Insights() {
                 <img
                   src={featured.img}
                   alt={featured.title}
-                  style={{ width: '100%', height: '100%', minHeight: 'clamp(280px, 40vw, 360px)', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLElement).style.transform = 'scale(1.04)')}
-                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.transform = 'scale(1)')}
+                  className="image-hover-effect"
+                  style={{ width: '100%', height: '100%', minHeight: 'clamp(280px, 40vw, 360px)', objectFit: 'cover', display: 'block' }}
                 />
                 <div style={{ position: 'absolute', top: 'clamp(16px, 2vw, 20px)', left: 'clamp(16px, 2vw, 20px)' }}>
                   <span style={{ padding: 'clamp(4px, 1vw, 6px) clamp(10px, 2vw, 14px)', borderRadius: '999px', background: 'rgba(0,87,255,0.85)', fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 700, color: 'white', letterSpacing: '0.08em' }}>
@@ -196,9 +195,8 @@ export default function Insights() {
                   <img
                     src={a.img}
                     alt={a.title}
-                    style={{ width: '100%', height: 'clamp(160px, 25vw, 200px)', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
-                    onMouseEnter={e => ((e.currentTarget as HTMLElement).style.transform = 'scale(1.05)')}
-                    onMouseLeave={e => ((e.currentTarget as HTMLElement).style.transform = 'scale(1)')}
+                    className="image-hover-effect"
+                    style={{ width: '100%', height: 'clamp(160px, 25vw, 200px)', objectFit: 'cover', display: 'block' }}
                   />
                 </div>
                 <div style={{ padding: 'clamp(18px, 2vw, 24px)' }}>

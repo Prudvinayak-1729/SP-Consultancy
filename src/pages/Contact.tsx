@@ -158,6 +158,7 @@ export default function Contact() {
                 <img
                   src={offices[0].mapImg}
                   alt={`${offices[0].city} Office`}
+                  className="image-hover-effect"
                   style={{
                     width: '100%',
                     height: '100%',

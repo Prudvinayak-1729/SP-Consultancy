@@ -188,7 +188,7 @@ export default function Clients() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div style={{ order: i % 2 === 0 ? 1 : 2 }}>
-                  <img src={cs.img} alt={cs.client} style={{ width: '100%', height: '320px', objectFit: 'cover', display: 'block' }} />
+                  <img src={cs.img} alt={cs.client} className="image-hover-effect" style={{ width: '100%', height: '320px', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div style={{ padding: '40px', order: i % 2 === 0 ? 2 : 1 }}>
                   <div className="section-label mb-4">{cs.client}</div>
