@@ -247,7 +247,7 @@ export default function Footer() {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '20px 0' }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.3)' }}>
-            © 2024 Sneha and Prahar Consultancy Services. All rights reserved.
+            © 2026 Sneha and Prahar Consultancy Services. All rights reserved.
           </p>
           <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.3)' }}>
             Founded 2022 · Hyderabad, India · Pharmaceutical Engineering Excellence
