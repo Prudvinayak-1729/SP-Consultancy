@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
+import logo from '/assets/img/logo.png'
 
 const services = [
   'Engineering Consultancy', 'HVAC Systems Design', 'Cleanroom Engineering',
@@ -61,7 +62,7 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3 mb-5">
             <img
-              src="/assets/img/logo.png"
+              src={logo}
               alt="Sneha and Prahar Consultancy Services Logo"
               style={{
                 width: 'clamp(32px, 4vw, 50px)',

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import logo from '/assets/img/logo.png'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -51,7 +52,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 sm:gap-4 group" style={{ textDecoration: 'none' }}>
             <img
-              src="/assets/img/logo.png"
+              src={logo}
               alt="Sneha and Prahar Consultancy Services Logo"
               style={{
                 width: 'clamp(24px, 4vw, 70px)',
