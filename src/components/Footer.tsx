@@ -192,7 +192,7 @@ export default function Footer() {
               </div>
               <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
                 <div style={{ whiteSpace: 'nowrap' }}>#8-80/80NP, Ramidi Malla Reddy Nagar, Almasguda,</div>
-                <div style={{ whiteSpace: 'nowrap' }}>Badangpet, Hyderabad, Telangana — 500081, India</div>
+                <div style={{ whiteSpace: 'nowrap' }}>Badangpet, Hyderabad, Telangana 500081, India</div>
               </div>
             </div>
 
