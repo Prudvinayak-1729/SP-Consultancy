@@ -18,8 +18,6 @@ const company = [
   { label: 'Contact', path: '/contact' },
 ]
 
-const standards = ['WHO GMP Certified', 'US FDA Compliance', 'ISPE Member']
-
 export default function Footer() {
   return (
     <footer style={{ background: '#040f1f', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
@@ -85,30 +83,7 @@ export default function Footer() {
             World-class pharmaceutical engineering consultancy delivering regulatory-compliant,
             technically advanced solutions since 2022.
           </p>
-          {/* Standards */}
-          <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px', marginTop: '16px' }}>
-            Compliance Standards
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {standards.map(s => (
-              <span
-                key={s}
-                style={{
-                  padding: '4px 12px',
-                  borderRadius: '999px',
-                  border: '1px solid rgba(0,168,120,0.25)',
-                  background: 'rgba(0,168,120,0.07)',
-                  fontFamily: 'Space Grotesk',
-                  fontSize: 'clamp(9px, 2vw, 11px)',
-                  fontWeight: 500,
-                  color: 'rgba(255,255,255,0.6)',
-                  letterSpacing: '0.04em',
-                }}
-              >
-                {s}
-              </span>
-            ))}
-          </div>
+          {/* Compliance Standards section removed */}
         </div>
 
         {/* Services */}
@@ -209,15 +184,14 @@ export default function Footer() {
             Get In Touch
           </h4>
           <div className="flex flex-col gap-5">
-            {/* Address – exactly 3 lines, no wrapping inside each line */}
+            {/* Address – now exactly 2 lines, with India on the second line beside the rest */}
             <div className="flex gap-3">
               <div className="icon-box" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0, marginTop: 2 }}>
                 <MapPin size={15} style={{ color: '#00A878' }} />
               </div>
               <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
                 <div style={{ whiteSpace: 'nowrap' }}>#8-80/80NP, Ramidi Malla Reddy Nagar, Almasguda,</div>
-                <div style={{ whiteSpace: 'nowrap' }}>Badangpet, Hyderabad, Telangana — 500081,</div>
-                <div style={{ whiteSpace: 'nowrap' }}>India</div>
+                <div style={{ whiteSpace: 'nowrap' }}>Badangpet, Hyderabad, Telangana — 500081, India</div>
               </div>
             </div>
 
@@ -243,7 +217,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Working Hours */}
+            {/* Working Hours – exactly two lines, each with nowrap */}
             <div
               style={{
                 padding: '12px 16px',
@@ -256,10 +230,14 @@ export default function Footer() {
               <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', fontWeight: 600, color: '#00A878', letterSpacing: '0.06em', marginBottom: '4px' }}>
                 WORKING HOURS
               </p>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.6)' }}>
-                Monday – Saturday: 9:00 AM – 7:00 PM<br />
-                Sunday: Emergency Support Only
-              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap' }}>
+                  Monday – Saturday: 9:00 AM – 7:00 PM
+                </span>
+                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap' }}>
+                  Sunday: Emergency Support Only
+                </span>
+              </div>
             </div>
           </div>
         </div>
