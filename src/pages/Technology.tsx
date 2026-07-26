@@ -47,13 +47,83 @@ export default function Technology() {
       {/* Future capabilities */}
       <section className="mesh-bg" style={{ padding: '100px 0' }}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <div className="section-label mb-5" style={{ justifyContent: 'center' }}>Future Capabilities</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(36px, 3vw, 52px)' }}>
-              Tomorrow&apos;s Pharma Engineering,
-              <span className="gradient-text"> Available Today</span>
-            </h2>
+          {/* ─── HEADER WITH IMAGE ─────────────────────────────────────── */}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: 'clamp(40px, 5vw, 80px)',
+              alignItems: 'center',
+              marginBottom: 'clamp(50px, 6vw, 80px)',
+            }}
+          >
+            {/* Left: Heading */}
+            <div>
+              <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'flex-start' }}>
+                Future Capabilities
+              </div>
+              <h2
+                className="section-heading"
+                style={{
+                  fontSize: 'clamp(28px, 3.5vw, 52px)',
+                  lineHeight: 1.15,
+                }}
+              >
+                Tomorrow&apos;s Pharma
+                <br />
+                <span className="gradient-text">Engineering,</span>
+                <br />
+                <span className="gradient-text" style={{ background: 'linear-gradient(135deg, #00A878, #0057FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                  Available Today
+                </span>
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'Inter',
+                  fontSize: 'clamp(14px, 2vw, 18px)',
+                  color: 'rgba(255,255,255,0.6)',
+                  marginTop: '16px',
+                  maxWidth: '500px',
+                  lineHeight: 1.7,
+                }}
+              >
+                Leveraging next-generation digital tools to design, simulate, and validate
+                pharmaceutical facilities with unprecedented speed and precision.
+              </p>
+            </div>
+
+            {/* Right: Image */}
+            <div
+              style={{
+                borderRadius: '16px',
+                overflow: 'hidden',
+                boxShadow: '0 24px 64px rgba(0,0,0,0.4), 0 0 40px rgba(0,87,255,0.1)',
+                position: 'relative',
+              }}
+            >
+              <img
+                src="https://media.hashcashconsultants.com/wp-content/uploads/2022/12/blockchain-ai-and-iot-hashcash.jpg"
+                alt="Blockchain, AI and IoT in pharmaceutical engineering"
+                style={{
+                  width: '100%',
+                  height: 'clamp(220px, 25vw, 320px)',
+                  objectFit: 'cover',
+                  display: 'block',
+                }}
+              />
+              {/* Subtle overlay glow */}
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'linear-gradient(135deg, rgba(0,87,255,0.08) 0%, rgba(0,168,120,0.05) 100%)',
+                  pointerEvents: 'none',
+                }}
+              />
+            </div>
           </div>
+
+          {/* ─── CAPABILITIES CARDS ────────────────────────────────────── */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {capabilities.map((c, i) => (
               <div key={i} className="glass-card" style={{ padding: '32px', display: 'flex', gap: '20px' }}>

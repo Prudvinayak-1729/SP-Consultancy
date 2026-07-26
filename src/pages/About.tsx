@@ -148,7 +148,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div style={{ position: 'relative' }}>
             <img
-              src="https://png.pngtree.com/background/20250419/original/pngtree-a-modern-pharmacy-interior-with-pharmacists-assisting-customers-amidst-shelves-of-picture-image_16417690.jpg"
+              src="https://png.pngtree.com/thumb_back/fh260/background/20250323/pngtree-a-modern-pharmacy-interior-with-pharmacists-assisting-customers-amidst-shelves-of-image_17131846.jpg"
               alt="Workers in protective suits inside a cleanroom"
               className="animate-shake-hover"
               style={{ width: '100%', height: 'clamp(300px, 40vw, 500px)', objectFit: 'cover', borderRadius: '20px', display: 'block' }}
