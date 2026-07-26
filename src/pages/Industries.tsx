@@ -17,7 +17,7 @@ const industries = [
     desc: 'Specialized engineering for cell culture, fermentation, purification, and fill-finish biotech manufacturing operations.',
     challenges: ['Containment requirements for live organisms', 'Ultra-pure water systems with stringent TOC limits', 'CIP/SIP system design for complex bioreactor trains', 'Biosafety Level 2/3 facility requirements'],
     solutions: ['Biosafety-integrated HVAC and containment design', 'WFI generation and distribution to pharmacopeial standards', 'Automated CIP/SIP validation protocols', 'BSL classification compliance engineering'],
-    img: 'https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=700&h=420&fit=crop&auto=format',
+    img: 'https://biologysimple.com/wp-content/uploads/2024/01/advancing_healthcare_through_biotechnology.jpg',
     color: '#00A878',
   },
   {
@@ -26,7 +26,7 @@ const industries = [
     desc: 'Engineering excellence for bulk vaccine production, formulation, fill-finish, and cold chain storage infrastructure.',
     challenges: ['Biocontainment for live attenuated viral organisms', 'Aseptic fill-finish operations with Grade 5 requirements', 'Cold chain facility design for -20°C and -80°C storage', 'WHO prequalification compliance documentation'],
     solutions: ['Grade A/B classified aseptic processing areas', 'Biocontainment engineering per WHO/CDC guidelines', 'Cold storage facility design with redundant systems', 'WHO prequalification documentation support'],
-    img: 'https://images.unsplash.com/photo-1669101283561-642d16d924ba?w=700&h=420&fit=crop&auto=format',
+    img: 'https://www.genengnews.com/wp-content/uploads/2021/12/Supp_MRNAVaccines_Fig4_Cytiva.jpg',
     color: '#0057FF',
   },
   {
@@ -53,7 +53,7 @@ const industries = [
     desc: 'Cleanroom and facility engineering for sterile and non-sterile medical device manufacturing.',
     challenges: ['Cleanroom classification for device manufacturing', 'EtO sterilization facility design and validation', 'Particulate contamination control in assembly areas', 'Quality system integration'],
     solutions: ['Class 7/8 cleanroom design for device assembly', 'EtO sterilization chamber engineering and validation', 'HVAC with enhanced particle monitoring', 'Facility documentation support'],
-    img: 'https://images.unsplash.com/photo-1605781231474-f60dea478e8a?w=700&h=420&fit=crop&auto=format',
+    img: 'https://shelmex.com/wp-content/uploads/Medical-Device-Producers-Innovations-Unveiled.webp',
     color: '#00A878',
   },
 ]
