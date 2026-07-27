@@ -54,96 +54,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Company Overview / Introduction */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-14">
-            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Company Overview</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-              Life Science & Pharmaceutical
-              <span className="gradient-text"> Engineering Solutions</span>
-            </h2>
-          </div>
-            {/* Specializations */}
-            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Our Specializations</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-                {[
-                  'Computer System Validations (CSV) & CQV',
-                  'Cost & Energy Saving Projects',
-                  'Utility and Facility Projects',
-                  'Green Field & Brown Field Projects',
-                  'Lab Support',
-                  'Qualification & Validation Process',
-                  'Automation, PLC & Upgradation Projects',
-                  'Outsourcing / Manpower Support Services'
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          {/* Industry Focus */}
-          <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
-            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Industry Focus</h3>
-            <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
-              We specialize in Life Sciences service verticals including pharmaceuticals, medical equipment manufacturing, genetics research, and biotechnology.
-            </p>
-          </div>
-
-          {/* Ongoing Services */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-8">
-            <div className="gradient-border-card" style={{ padding: 'clamp(18px, 3vw, 24px) clamp(14px, 2vw, 20px)' }}>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 3vw, 20px)', color: 'white', marginBottom: 'clamp(10px, 2vw, 14px)' }}>Civil Support Services</h3>
-              <div className="flex flex-col gap-2">
-                {['Construction works', 'Epoxy & Floor Revamping works', 'Clean room panel works', 'Furniture support works', 'Interior project works'].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#0057FF', flexShrink: 0, marginTop: '9px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="gradient-border-card" style={{ padding: 'clamp(18px, 3vw, 24px) clamp(14px, 2vw, 20px)' }}>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 3vw, 20px)', color: 'white', marginBottom: 'clamp(10px, 2vw, 14px)' }}>Fabrication Works</h3>
-              <div className="flex flex-col gap-2">
-                {['SS & MS Fabrication', 'Pipe line modification', 'Lathe machine tools', 'Railing works', 'Certified welders (Overseas experienced)'].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="gradient-border-card" style={{ padding: 'clamp(18px, 3vw, 24px) clamp(14px, 2vw, 20px)' }}>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 3vw, 20px)', color: 'white', marginBottom: 'clamp(10px, 2vw, 14px)' }}>Electrical Support Services</h3>
-              <div className="flex flex-col gap-2">
-                {['Solar panel installation & Maintenance', 'Electrical Projects', 'VFD upgradation works', 'Motor & Pump servicing', 'Electrical wire dressing works'].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#0057FF', flexShrink: 0, marginTop: '9px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="gradient-border-card" style={{ padding: 'clamp(18px, 3vw, 24px) clamp(14px, 2vw, 20px)' }}>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 3vw, 20px)', color: 'white', marginBottom: 'clamp(10px, 2vw, 14px)' }}>Improvement Projects</h3>
-              <div className="flex flex-col gap-2">
-                {['Water system Upgradation projects', 'Liquid Nitrogen Upgradation Project', 'Rain Water Harvesting Projects', 'AHU duct leak project', 'PLC upgradation & Automation support'].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Story */}
       <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -186,6 +96,52 @@ export default function About() {
             <div className="flex gap-3 sm:gap-4 flex-wrap">
               <Link to="/services" className="btn-primary">Explore Services <ArrowRight size={15} /></Link>
               <Link to="/contact" className="btn-secondary">Contact Us</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-14">
+            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Leadership</div>
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
+              Experienced Engineers at
+              <span className="gradient-text"> Every Level</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Managing Director */}
+            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}>
+              <div style={{ background: 'rgba(0,87,255,0.1)', borderRadius: '12px', padding: 'clamp(16px, 3vw, 24px)', marginBottom: 'clamp(16px, 2vw, 20px)' }}>
+                <img
+                  src={ownerImage}
+                  alt="Mr. Rajendra Prasad - Managing Director"
+                  style={{ width: '100%', maxWidth: 'clamp(150px, 25vw, 200px)', height: 'auto', objectFit: 'contain', display: 'block', margin: '0 auto' }}
+                />
+              </div>
+              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '8px' }}>Mr. Rajendra Prasad</h3>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#0057FF', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Founder & Managing Director</p>
+              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'left' }}>
+                Self-esteemed professional from Facilities, Pharma and Biotech service background with vast experience in handling critical services. Held Senior Lead and Project Leadership roles in Singapore supporting world-class pharmaceutical manufacturing.
+              </p>
+              <a href="https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 'clamp(12px, 2vw, 16px)', color: '#0057FF', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+                View LinkedIn Profile →
+              </a>
+            </div>
+            {/* CEO */}
+            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}>
+              <div style={{ background: 'rgba(0,168,120,0.1)', borderRadius: '12px', padding: 'clamp(16px, 3vw, 24px)', marginBottom: 'clamp(16px, 2vw, 20px)' }}>
+                <div style={{ width: 'clamp(150px, 25vw, 200px)', height: 'clamp(150px, 25vw, 200px)', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(0,168,120,0.2) 0%, rgba(0,168,120,0.05) 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto' }}>
+                  <Users size={60} style={{ color: '#00A878' }} />
+                </div>
+              </div>
+              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '8px' }}>Chief Executive Officer</h3>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#00A878', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>CEO</p>
+              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'left' }}>
+                Leading strategic initiatives and operational excellence with extensive experience in pharmaceutical engineering and project management.
+              </p>
             </div>
           </div>
         </div>
@@ -238,6 +194,40 @@ export default function About() {
             </h3>
             <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
               To be the preferred facility management service provider, delivering effective, reliable and excellent services as a collaborative and valued partner.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Specializations */}
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
+            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Our Specializations</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              {[
+                'Computer System Validations (CSV) & CQV',
+                'Cost & Energy Saving Projects',
+                'Utility and Facility Projects',
+                'Green Field & Brown Field Projects',
+                'Lab Support',
+                'Qualification & Validation Process',
+                'Automation, PLC & Upgradation Projects',
+                'Outsourcing / Manpower Support Services'
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Industry Focus */}
+          <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)' }}>
+            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Industry Focus</h3>
+            <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
+              We specialize in Life Sciences service verticals including pharmaceuticals, medical equipment manufacturing, genetics research, and biotechnology.
             </p>
           </div>
         </div>
@@ -301,76 +291,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Client Portfolio */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-14">
-            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Client Portfolio</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-              Trusted by Leading
-              <span className="gradient-text"> Pharmaceutical Companies</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Dr. Reddy's */}
-            <div className="gradient-border-card" style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Dr. Reddy's Laboratories</h3>
-              <div className="flex flex-col gap-2">
-                {['Epoxy works in warehouse and Production', 'Liquid N2 IoT & Automation Project', 'Electrical ACB Breaker replacement', 'Man power deployment for Maintenance activities', 'All spares we do provide here for DRL - 11 No\'s sites', '1M liters sump water tank cleaning', 'Facility Support works', 'Fabrication works', 'CQV & CSV projects delivered', 'LAB support works (Furniture, Fabrication, Acrylic works for HPLC)', 'Facility support'].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#0057FF', flexShrink: 0, marginTop: '9px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Amneal */}
-            <div className="gradient-border-card" style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Amneal Pharmaceuticals</h3>
-              <div className="flex flex-col gap-2">
-                {['Man power deployment for Qualification works support', 'Cost saving projects has been completed', 'SS railing work', 'Deployment of continuous Maintenance support and CQV project support works', 'Facility support'].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Biological E */}
-            <div className="gradient-border-card" style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Biological E (BE)</h3>
-              <div className="glass-card" style={{ padding: 'clamp(12px, 2vw, 16px)', marginBottom: '12px', background: 'rgba(0,87,255,0.1)' }}>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#0057FF', fontWeight: 600, marginBottom: '4px', lineHeight: 1.6 }}>CQV Project Execution</p>
-              </div>
-              <div className="flex flex-col gap-2">
-                {['Successfully completed line-5 CQV documentation & protocol support', 'Currently supporting ongoing validation and qualification activities', 'Providing man power support for project Qualification & executions'].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#0057FF', flexShrink: 0, marginTop: '9px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Ichor Biologics */}
-            <div className="gradient-border-card" style={{ padding: 'clamp(20px, 3vw, 28px)' }}>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Ichor Biologics</h3>
-              <div className="flex flex-col gap-2">
-                {['AHU Ducting & SS Orbital Welding Works', 'Boiler pipe line fabrication works', 'Laboratory Furniture Work Support and Spare support', 'Continuous support for Maintenance works', 'CSV & CQV projects support'].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Corporate Profile Highlights */}
       <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -410,41 +330,6 @@ export default function About() {
                   <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.8)', fontWeight: 500, lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership Team */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-14">
-            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Leadership</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-              Experienced Engineers at
-              <span className="gradient-text"> Every Level</span>
-            </h2>
-          </div>
-          <div className="glass-card" style={{ padding: 0, overflow: 'hidden', maxWidth: '900px', margin: '0 auto' }}>
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              <div style={{ background: '#0a1f3d', padding: 'clamp(24px, 4vw, 32px) clamp(16px, 3vw, 24px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <img
-                  src={ownerImage}
-                  alt="Mr. Rajendra Prasad - Managing Director"
-                  className="image-hover-effect"
-                  style={{ width: '100%', maxWidth: 'clamp(200px, 30vw, 300px)', height: 'auto', objectFit: 'contain', display: 'block' }}
-                />
-              </div>
-              <div style={{ padding: 'clamp(24px, 4vw, 32px) clamp(16px, 3vw, 24px)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(20px, 4vw, 26px)', color: 'white', marginBottom: '8px', textAlign: 'left' }}>Mr. Rajendra Prasad</h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#0057FF', marginBottom: 'clamp(16px, 2vw, 20px)', fontWeight: 600, textAlign: 'left' }}>Founder & Managing Director</p>
-                <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'left' }}>
-                  Mr. Rajendra Prasad is a self-esteemed professional from Facilities, Pharma and Biotech service background with vast experience in handling these critical services.
-                </p>
-                <p className="body-text mb-6" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'left' }}>
-                  With extensive expertise in pharmaceutical engineering, facility management, and computer system validation, he leads the company with a vision to deliver innovative and value-driven products and services to the life sciences industry.
-                </p>
-              </div>
             </div>
           </div>
         </div>

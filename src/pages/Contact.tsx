@@ -111,7 +111,7 @@ export default function Contact() {
                     c.title === 'Call Us Directly' ? 'tel:+919000877499' :
                     c.title === 'WhatsApp' ? 'https://wa.me/6593530873' :
                     c.title === 'Email' ? 'mailto:spconsultanancies@gmail.com' :
-                    c.title === 'LinkedIn' ? 'https://www.linkedin.com/company/sneha-and-prahar-consultancy-services' : '#'
+                    c.title === 'LinkedIn' ? 'https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/' : '#'
                   }
                   target={c.title === 'LinkedIn' ? '_blank' : undefined}
                   rel={c.title === 'LinkedIn' ? 'noopener noreferrer' : undefined}
