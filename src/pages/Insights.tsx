@@ -174,8 +174,8 @@ export default function Insights() {
                 </p>
                 {featured.keyTakeaways.slice(0, 3).map((kp, i) => (
                   <div key={i} className="flex gap-2 items-start mb-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', marginTop: '7px', flexShrink: 0 }} />
-                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{kp}</p>
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', marginTop: '10px', flexShrink: 0 }} />
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
                   </div>
                 ))}
               </div>
@@ -222,8 +222,8 @@ export default function Insights() {
                     </p>
                     {a.keyTakeaways.slice(0, 2).map((kp, j) => (
                       <div key={j} className="flex gap-2 items-start mb-2">
-                        <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#00A878', marginTop: '7px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.55 }}>{kp}</p>
+                        <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', marginTop: '10px', flexShrink: 0 }} />
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
                       </div>
                     ))}
                   </div>

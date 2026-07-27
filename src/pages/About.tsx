@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, Users, Award, Shield, Globe } from 'lucide-react'
+import ownerImage from '/assets/img/owoner.jpeg'
 
 const values = [
   { icon: <Award size={20} style={{ color: '#0057FF' }} />, title: 'Engineering Excellence', desc: 'Rigorous technical standards in every deliverable, every time.' },
@@ -78,8 +79,8 @@ export default function About() {
                   'Outsourcing / Manpower Support Services'
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2">
-                    <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '8px' }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6 }}>{item}</span>
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -99,9 +100,9 @@ export default function About() {
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 3vw, 20px)', color: 'white', marginBottom: 'clamp(10px, 2vw, 14px)' }}>Civil Support Services</h3>
               <div className="flex flex-col gap-2">
                 {['Construction works', 'Epoxy & Floor Revamping works', 'Clean room panel works', 'Furniture support works', 'Interior project works'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#0057FF', flexShrink: 0 }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{item}</span>
+                  <div key={i} className="flex items-start gap-2">
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#0057FF', flexShrink: 0, marginTop: '9px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -110,9 +111,9 @@ export default function About() {
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 3vw, 20px)', color: 'white', marginBottom: 'clamp(10px, 2vw, 14px)' }}>Fabrication Works</h3>
               <div className="flex flex-col gap-2">
                 {['SS & MS Fabrication', 'Pipe line modification', 'Lathe machine tools', 'Railing works', 'Certified welders (Overseas experienced)'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#00A878', flexShrink: 0 }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{item}</span>
+                  <div key={i} className="flex items-start gap-2">
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -121,9 +122,9 @@ export default function About() {
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 3vw, 20px)', color: 'white', marginBottom: 'clamp(10px, 2vw, 14px)' }}>Electrical Support Services</h3>
               <div className="flex flex-col gap-2">
                 {['Solar panel installation & Maintenance', 'Electrical Projects', 'VFD upgradation works', 'Motor & Pump servicing', 'Electrical wire dressing works'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#0057FF', flexShrink: 0 }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{item}</span>
+                  <div key={i} className="flex items-start gap-2">
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#0057FF', flexShrink: 0, marginTop: '9px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -132,9 +133,9 @@ export default function About() {
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 3vw, 20px)', color: 'white', marginBottom: 'clamp(10px, 2vw, 14px)' }}>Improvement Projects</h3>
               <div className="flex flex-col gap-2">
                 {['Water system Upgradation projects', 'Liquid Nitrogen Upgradation Project', 'Rain Water Harvesting Projects', 'AHU duct leak project', 'PLC upgradation & Automation support'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#00A878', flexShrink: 0 }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{item}</span>
+                  <div key={i} className="flex items-start gap-2">
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -276,8 +277,8 @@ export default function About() {
             <div className="flex flex-col gap-3 sm:gap-4">
               {achievements.map((a, i) => (
                 <div key={i} className="flex gap-3 items-start">
-                  <CheckCircle size={16} style={{ color: '#00A878', marginTop: '3px', flexShrink: 0 }} />
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{a}</p>
+                  <CheckCircle size={16} style={{ color: '#00A878', marginTop: '9px', flexShrink: 0 }} />
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{a}</p>
                 </div>
               ))}
             </div>
@@ -317,9 +318,9 @@ export default function About() {
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Dr. Reddy's Laboratories</h3>
               <div className="flex flex-col gap-2">
                 {['Epoxy works in warehouse and Production', 'Liquid N2 IoT & Automation Project', 'Electrical ACB Breaker replacement', 'Man power deployment for Maintenance activities', 'All spares we do provide here for DRL - 11 No\'s sites', '1M liters sump water tank cleaning', 'Facility Support works', 'Fabrication works', 'CQV & CSV projects delivered', 'LAB support works (Furniture, Fabrication, Acrylic works for HPLC)', 'Facility support'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#0057FF', flexShrink: 0 }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{item}</span>
+                  <div key={i} className="flex items-start gap-2">
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#0057FF', flexShrink: 0, marginTop: '9px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -330,9 +331,9 @@ export default function About() {
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Amneal Pharmaceuticals</h3>
               <div className="flex flex-col gap-2">
                 {['Man power deployment for Qualification works support', 'Cost saving projects has been completed', 'SS railing work', 'Deployment of continuous Maintenance support and CQV project support works', 'Facility support'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#00A878', flexShrink: 0 }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{item}</span>
+                  <div key={i} className="flex items-start gap-2">
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -346,9 +347,9 @@ export default function About() {
               </div>
               <div className="flex flex-col gap-2">
                 {['Successfully completed line-5 CQV documentation & protocol support', 'Currently supporting ongoing validation and qualification activities', 'Providing man power support for project Qualification & executions'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#0057FF', flexShrink: 0 }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{item}</span>
+                  <div key={i} className="flex items-start gap-2">
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#0057FF', flexShrink: 0, marginTop: '9px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -359,9 +360,9 @@ export default function About() {
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Ichor Biologics</h3>
               <div className="flex flex-col gap-2">
                 {['AHU Ducting & SS Orbital Welding Works', 'Boiler pipe line fabrication works', 'Laboratory Furniture Work Support and Spare support', 'Continuous support for Maintenance works', 'CSV & CQV projects support'].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
-                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#00A878', flexShrink: 0 }} />
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{item}</span>
+                  <div key={i} className="flex items-start gap-2">
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
+                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                   </div>
                 ))}
               </div>
@@ -406,7 +407,7 @@ export default function About() {
                   >
                     <CheckCircle size={16} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
                   </div>
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.8)', fontWeight: 500 }}>{item}</span>
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.8)', fontWeight: 500, lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -428,7 +429,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div style={{ background: '#0a1f3d', padding: 'clamp(24px, 4vw, 32px) clamp(16px, 3vw, 24px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img
-                  src="/assets/img/owoner.jpeg"
+                  src={ownerImage}
                   alt="Mr. Rajendra Prasad - Managing Director"
                   className="image-hover-effect"
                   style={{ width: '100%', maxWidth: 'clamp(200px, 30vw, 300px)', height: 'auto', objectFit: 'contain', display: 'block' }}
@@ -471,8 +472,8 @@ export default function About() {
               <div className="glass-card" style={{ padding: 'clamp(14px, 2vw, 16px) clamp(16px, 2vw, 20px)', flex: 1 }}>
                 {m.events.map((e, j) => (
                   <div key={j} className="flex gap-2 items-start mb-2">
-                    <div style={{ width: 4, height: 4, borderRadius: '50%', background: i % 2 === 0 ? '#0057FF' : '#00A878', marginTop: '6px', flexShrink: 0 }} />
-                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.72)', lineHeight: 1.6 }}>{e}</p>
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: i % 2 === 0 ? '#0057FF' : '#00A878', marginTop: '9px', flexShrink: 0 }} />
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.72)', lineHeight: 1.6, marginTop: '0px' }}>{e}</p>
                   </div>
                 ))}
               </div>
