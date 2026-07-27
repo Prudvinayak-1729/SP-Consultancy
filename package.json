@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://spconsultancies.in",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
@@ -10,6 +11,10 @@
     "format": "oxfmt",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Prudvinayak-1729/SP-Consultancy.git"
   },
   "dependencies": {
     "lucide-react": "^1.25.0",
