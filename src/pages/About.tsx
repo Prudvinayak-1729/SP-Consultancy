@@ -119,7 +119,7 @@ export default function About() {
                 <img
                   src={ownerImage}
                   alt="Mr. Rajendra Prasad - Managing Director"
-                  style={{ width: '220px', height: '220px', objectFit: 'cover', borderRadius: '12px', display: 'block', margin: '0 auto' }}
+                  style={{ width: '220px', height: '220px', objectFit: 'contain', borderRadius: '12px', display: 'block', margin: '0 auto' }}
                 />
               </div>
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '8px' }}>Mr. Rajendra Prasad</h3>
