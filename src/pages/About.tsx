@@ -137,11 +137,14 @@ export default function About() {
                   <Users size={60} style={{ color: '#00A878' }} />
                 </div>
               </div>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '8px' }}>Chief Executive Officer</h3>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#00A878', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>CEO</p>
-              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'left' }}>
-                Leading strategic initiatives and operational excellence with extensive experience in pharmaceutical engineering and project management.
+              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '8px' }}>Mr. Prudvi Nayak</h3>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#00A878', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Chief Executive Officer</p>
+              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'left', wordBreak: 'keep-all', hyphens: 'none', overflowWrap: 'normal' }}>
+                Provides strategic leadership, driving engineering excellence, business growth, and operational performance across pharmaceutical, biotechnology, and life sciences projects while ensuring innovation, quality, and client satisfaction
               </p>
+              <a href="https://www.linkedin.com/in/prudvi-nayak-gugulothu-77496513a/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 'clamp(12px, 2vw, 16px)', color: '#00A878', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+                View LinkedIn Profile →
+              </a>
             </div>
           </div>
         </div>
