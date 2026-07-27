@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, Users, Award, Shield, Globe } from 'lucide-react'
 import ownerImage from '/assets/img/owoner.jpeg'
+import ceoImage from '/assets/CEO.png'
 
 const values = [
   { icon: <Award size={20} style={{ color: '#0057FF' }} />, title: 'Engineering Excellence', desc: 'Rigorous technical standards in every deliverable, every time.' },
@@ -113,36 +114,38 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Managing Director */}
-            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}>
+            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center', display: 'flex', flexDirection: 'column', minHeight: '780px' }}>
               <div style={{ background: 'rgba(0,87,255,0.1)', borderRadius: '12px', padding: 'clamp(16px, 3vw, 24px)', marginBottom: 'clamp(16px, 2vw, 20px)' }}>
                 <img
                   src={ownerImage}
                   alt="Mr. Rajendra Prasad - Managing Director"
-                  style={{ width: '100%', maxWidth: 'clamp(150px, 25vw, 200px)', height: 'auto', objectFit: 'contain', display: 'block', margin: '0 auto' }}
+                  style={{ width: '220px', height: '220px', objectFit: 'cover', borderRadius: '12px', display: 'block', margin: '0 auto' }}
                 />
               </div>
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '8px' }}>Mr. Rajendra Prasad</h3>
               <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#0057FF', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Founder & Managing Director</p>
-              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'left' }}>
-                Self-esteemed professional from Facilities, Pharma and Biotech service background with vast experience in handling critical services. Held Senior Lead and Project Leadership roles in Singapore supporting world-class pharmaceutical manufacturing.
+              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
+                Self-esteemed professional from Facilities, Pharma and Biotech service background with vast experience in handling critical services. Held Senior Lead and Project Leadership roles in Singapore supporting world-class pharmaceutical manufacturing, delivering excellence in engineering consultancy and validation services across global markets.
               </p>
-              <a href="https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 'clamp(12px, 2vw, 16px)', color: '#0057FF', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+              <a href="https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: '24px', color: '#0057FF', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
                 View LinkedIn Profile →
               </a>
             </div>
             {/* CEO */}
-            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}>
+            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center', display: 'flex', flexDirection: 'column', minHeight: '780px' }}>
               <div style={{ background: 'rgba(0,168,120,0.1)', borderRadius: '12px', padding: 'clamp(16px, 3vw, 24px)', marginBottom: 'clamp(16px, 2vw, 20px)' }}>
-                <div style={{ width: 'clamp(150px, 25vw, 200px)', height: 'clamp(150px, 25vw, 200px)', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(0,168,120,0.2) 0%, rgba(0,168,120,0.05) 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto' }}>
-                  <Users size={60} style={{ color: '#00A878' }} />
-                </div>
+                <img
+                  src={ceoImage}
+                  alt="Mr. Prudvi Nayak - Chief Executive Officer"
+                  style={{ width: '220px', height: '220px', objectFit: 'cover', borderRadius: '12px', display: 'block', margin: '0 auto' }}
+                />
               </div>
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '8px' }}>Mr. Prudvi Nayak</h3>
               <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#00A878', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Chief Executive Officer</p>
-              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'left', wordBreak: 'keep-all', hyphens: 'none', overflowWrap: 'normal' }}>
-                Provides strategic leadership, driving engineering excellence, business growth, and operational performance across pharmaceutical, biotechnology, and life sciences projects while ensuring innovation, quality, and client satisfaction
+              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
+                Provides strategic leadership, driving engineering excellence, business growth, and operational performance across Engineering, pharmaceutical, biotechnology, and life sciences projects while ensuring innovation, quality, and client satisfaction through comprehensive project management and technical expertise in facility design and validation.
               </p>
-              <a href="https://www.linkedin.com/in/prudvi-nayak-gugulothu-77496513a/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 'clamp(12px, 2vw, 16px)', color: '#00A878', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+              <a href="https://www.linkedin.com/in/prudvi-nayak-gugulothu-77496513a/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: '24px', color: '#00A878', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
                 View LinkedIn Profile →
               </a>
             </div>
