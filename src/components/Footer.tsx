@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
 import logo from '/assets/img/logo.png'
 
 const services = [
-  'Engineering Consultancy', 'HVAC Systems Design', 'Cleanroom Engineering',
-  'Cleanroom Engineering', 'Utility Engineering', 'CSV & Validation', 'Equipment Qualification',
+  'CSV & Validation', 'Cleanroom Engineering', 'Engineering Consultancy', 'HVAC Systems Design',
+  'Utility Engineering', 'Equipment Qualification',
   'Water Systems (WFI/PW)', 'Automation & BMS', 'Shutdown Services',
 ]
 

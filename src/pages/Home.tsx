@@ -635,24 +635,26 @@ export default function Home() {
               <div key={i} className="process-step flex flex-col h-full">
                 <div className="process-step-number">{p.step}</div>
                 <div className="flex-1">
-                  <div
-                    style={{
-                      width: 'clamp(28px, 4vw, 32px)',
-                      height: 'clamp(28px, 4vw, 32px)',
-                      borderRadius: '50%',
-                      background: i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)',
-                      border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'}`,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    <CheckCircle size={14} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
+                  <div className="flex items-center gap-2 mb-3">
+                    <div
+                      style={{
+                        width: 'clamp(28px, 4vw, 32px)',
+                        height: 'clamp(28px, 4vw, 32px)',
+                        borderRadius: '50%',
+                        background: i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)',
+                        border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'}`,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                      }}
+                    >
+                      <CheckCircle size={14} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
+                    </div>
+                    <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white' }}>
+                      {p.title}
+                    </h3>
                   </div>
-                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '10px' }}>
-                    {p.title}
-                  </h3>
                   <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{p.desc}</p>
                 </div>
               </div>
