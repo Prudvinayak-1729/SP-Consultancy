@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, CheckCircle, Shield, Zap, Users, Building2,
-  FlaskConical, Award, Clock, ChevronRight, Star, Quote
+  FlaskConical, Award, Clock, ChevronRight, Star, Quote, Thermometer
 } from 'lucide-react'
 
 const stats = [
@@ -39,7 +39,12 @@ const whyChooseUs = [
     desc: 'Comprehensive audit preparation support ensuring facilities are ready for WHO GMP, US FDA, EU GMP, and regulatory inspections.',
   },
   {
-    icon: <Building2 size={22} style={{ color: '#00A878' }} />,
+    icon: <Thermometer size={22} style={{ color: '#00A878' }} />,
+    title: 'Temperature Mapping',
+    desc: 'Temperature mapping studies for cold rooms, freezers, and storage areas ensuring compliance with regulatory requirements.',
+  },
+  {
+    icon: <Building2 size={22} style={{ color: '#0057FF' }} />,
     title: 'Facility & Utility Engineering',
     desc: 'Design, installation, qualification, and modernization of HVAC, cleanrooms, water systems, boilers, chillers, AHUs, and critical utilities.',
   },
@@ -78,7 +83,8 @@ const services = [
   { title: 'CSV & Validation', desc: 'Computer system validation per GAMP 5 guidelines', color: '#0057FF' },
   { title: 'MES Solutions', desc: 'Manufacturing Execution Systems for production monitoring and compliance', color: '#00A878' },
   { title: 'Facility Audit Readiness', desc: 'Audit preparation support for WHO GMP, US FDA, EU GMP inspections', color: '#0057FF' },
-  { title: 'IQ / OQ / PQ', desc: 'Installation, operational, and performance qualification', color: '#00A878' },
+  { title: 'Temperature Mapping', desc: 'Temperature mapping studies for cold rooms, freezers, and storage areas', color: '#00A878' },
+  { title: 'IQ / OQ / PQ', desc: 'Installation, operational, and performance qualification', color: '#0057FF' },
   { title: 'Water Systems', desc: 'WFI, PW, and water for injection loop design', color: '#0057FF' },
   { title: 'Automation & BMS', desc: 'Integrated building management and process automation', color: '#00A878' },
   { title: 'Shutdown Services', desc: 'Planned maintenance shutdown and turnaround management', color: '#0057FF' },
@@ -264,7 +270,7 @@ export default function Home() {
             <div style={{ textAlign: 'justify' }}>
                 <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
               Sneha And Prahar Consultancy Services Delivers World-Class Engineering, Commissioning Qualification And Validation (CQV), 
-              Computer System Validation (CSV), MES, Facility Audit Readiness, Cleanroom, Utility, Compliance, And Project Execution Solutions, Enabling Pharmaceutical 
+              Computer System Validation (CSV), MES, Facility Audit Readiness, Temperature Mapping, Cleanroom, Utility, Compliance, And Project Execution Solutions, Enabling Pharmaceutical 
               And Bio-Technology Companies To Design, Build, Qualify, And Operate Facilities That Meet The Highest International Quality, 
               Regulatory, And GMP Standards.
             </p>
@@ -375,7 +381,7 @@ export default function Home() {
                 Validation Partner Specializing in Pharmaceutical, Bio-Technology,
                 Healthcare, and other highly regulated industries. We provide
                 Integrated Engineering, Commissioning, Qualification & Validation (CQV),
-                Computer System Validation (CSV), MES, Facility Audit Readiness, Cleanroom Engineering, Utility
+                Computer System Validation (CSV), MES, Facility Audit Readiness, Temperature Mapping, Cleanroom Engineering, Utility
                 Systems, GMP Compliance, and Turnkey Project Execution Solutions.
               </p>
               <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
@@ -452,7 +458,7 @@ export default function Home() {
                 margin: '0 auto',
               }}
             >
-              Eleven pillars of excellence engineering<br />
+              Twelve pillars of excellence engineering<br />
               that make us the preferred consultancy<br />
               for India's top pharmaceutical companies.
             </p>
