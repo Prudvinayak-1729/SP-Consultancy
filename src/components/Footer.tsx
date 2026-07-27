@@ -10,7 +10,6 @@ const services = [
 
 const company = [
   { label: 'About Us', path: '/about' },
-  { label: 'Our Services', path: '/services' },
   { label: 'Industries', path: '/industries' },
   { label: 'Projects', path: '/projects' },
   { label: 'Quality & Compliance', path: '/quality' },

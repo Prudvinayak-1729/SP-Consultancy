@@ -95,7 +95,7 @@ export default function About() {
               </p>
             </div>
             <div className="flex gap-3 sm:gap-4 flex-wrap">
-              <Link to="/services" className="btn-primary">Explore Services <ArrowRight size={15} /></Link>
+              <Link to="/projects" className="btn-primary">View Projects <ArrowRight size={15} /></Link>
               <Link to="/contact" className="btn-secondary">Contact Us</Link>
             </div>
           </div>
