@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, Users, Award, Shield, Globe } from 'lucide-react'
-import ownerImage from '/assets/Rajendra.png'
-import ceoImage from '/assets/CEO.png'
+import ownerImage from '/assets/img/Rajendra.png'
+import ceoImage from '/assets/img/CEO.png'
 
 const values = [
   { icon: <Award size={20} style={{ color: '#0057FF' }} />, title: 'Engineering Excellence', desc: 'Rigorous technical standards in every deliverable, every time.' },
