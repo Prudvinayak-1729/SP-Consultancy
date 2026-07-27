@@ -76,6 +76,8 @@ const services = [
   { title: 'Cleanroom Engineering', desc: 'Cleanroom design and qualification', color: '#0057FF' },
   { title: 'Utility Engineering', desc: 'Pharmaceutical-grade utility systems design', color: '#00A878' },
   { title: 'CSV & Validation', desc: 'Computer system validation per GAMP 5 guidelines', color: '#0057FF' },
+  { title: 'MES Solutions', desc: 'Manufacturing Execution Systems for production monitoring and compliance', color: '#00A878' },
+  { title: 'Facility Audit Readiness', desc: 'Audit preparation support for WHO GMP, US FDA, EU GMP inspections', color: '#0057FF' },
   { title: 'IQ / OQ / PQ', desc: 'Installation, operational, and performance qualification', color: '#00A878' },
   { title: 'Water Systems', desc: 'WFI, PW, and water for injection loop design', color: '#0057FF' },
   { title: 'Automation & BMS', desc: 'Integrated building management and process automation', color: '#00A878' },
@@ -117,33 +119,6 @@ const standards = [
   { name: 'ICH Guidelines', desc: 'International Council for Harmonisation Technical Requirements' },
 ]
 
-const projects = [
-  {
-    title: 'Sterile Injectable Facility',
-    location: 'Hyderabad, Telangana',
-    scope: 'Cleanroom design, HVAC, utilities, IQ/OQ/PQ validation for Class B & C manufacturing suites',
-    duration: '18 months',
-    category: 'Cleanroom Engineering',
-    img: 'https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=800&h=480&fit=crop&auto=format',
-  },
-  {
-    title: 'Biotech R&D Campus',
-    location: 'Hyderabad Telangana',
-    scope: 'Multi-product cell culture facility with cGMP utilities, BMS integration, and equipment qualification',
-    duration: '24 months',
-    category: 'Utility Engineering',
-    img: 'https://images.unsplash.com/photo-1581093577421-f561a654a353?w=800&h=480&fit=crop&auto=format',
-  },
-  {
-    title: 'API Manufacturing Expansion',
-    location: 'Visakhapatnam, AP',
-    scope: 'Greenfield API plant with solvent recovery, effluent treatment, and Schedule M compliance documentation',
-    duration: '20 months',
-    category: 'Industrial Projects',
-    img: 'https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?w=800&h=480&fit=crop&auto=format',
-  },
-]
-
 const process = [
   { step: '01', title: 'Discovery & Assessment', desc: 'Site survey, regulatory gap analysis, and project scope definition with stakeholder alignment.' },
   { step: '02', title: 'Conceptual Engineering', desc: 'Process flow, equipment selection, and layout design with 3D modeling.' },
@@ -162,8 +137,7 @@ const milestones = [
 ]
 
 const clients = [
-  'Hetero Drugs', "Dr. Reddy's", 'Aurobindo Pharma', 'Biological E', 'Bharat Biotech',
-  'Divi\'s Laboratories', 'Suven Life Sciences', 'Granules India', 'Laurus Labs',
+  "Dr. Reddy's", 'Biological E', 'Divi\'s Laboratories', 'Ichor Biologics', 'Amneal',
 ]
 
 export default function Home() {
@@ -646,54 +620,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── FEATURED PROJECTS ───────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
-            <div>
-              <div className="section-label mb-4 sm:mb-5">Featured Projects</div>
-              <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-                Landmark Deliveries That
-                <br />
-                <span className="gradient-text">Define Excellence</span>
-              </h2>
-            </div>
-            <Link to="/projects" className="btn-secondary flex-shrink-0">
-              All Projects <ArrowRight size={15} />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {projects.map((p, i) => (
-              <div key={i} className="project-card flex flex-col h-full" style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', transition: 'all 0.35s ease' }}>
-                <div style={{ overflow: 'hidden' }}>
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    className="project-card-img w-full h-auto"
-                    style={{ height: 'clamp(180px, 25vw, 220px)', display: 'block', objectFit: 'cover' }}
-                  />
-                </div>
-                <div style={{ padding: 'clamp(18px, 2vw, 22px)', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 600, color: '#00A878', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
-                    {p.category}
-                  </div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 19px)', color: 'white', marginBottom: '10px' }}>
-                    {p.title}
-                  </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: '16px', flex: 1 }}>
-                    {p.scope}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.4)' }}>📍 {p.location}</span>
-                    <span style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(0,87,255,0.8)', fontWeight: 600 }}>{p.duration}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ─── OUR PROCESS ─────────────────────────────────────────────────── */}
       <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -753,20 +679,44 @@ export default function Home() {
                   <Star key={j} size={20} style={{ fill: '#00A878', color: '#00A878' }} />
                 ))}
               </div>
-              {/* ─── Added textAlign: 'justify' here ─── */}
+              <p style={{
+                fontFamily: 'Space Grotesk',
+                fontSize: 'clamp(12px, 2vw, 14px)',
+                fontWeight: 600,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                color: '#0057FF',
+                marginBottom: '8px',
+              }}>
+                Project
+              </p>
+              <p style={{
+                fontFamily: 'Satoshi',
+                fontSize: 'clamp(16px, 2.5vw, 20px)',
+                fontWeight: 700,
+                color: 'white',
+                marginBottom: '24px',
+                lineHeight: 1.4,
+              }}>
+                Liquid Nitrogen Level Monitoring & Intelligent Alert System (13 KL Tank)
+              </p>
               <p style={{
                 fontFamily: 'Inter',
                 fontSize: 'clamp(16px, 2.5vw, 20px)',
                 color: 'rgba(255,255,255,0.85)',
                 lineHeight: 1.8,
                 marginBottom: '24px',
-                textAlign: 'justify', // ← added this line
+                textAlign: 'justify',
               }}>
-                "Thank you Rajendra. The project has come out really well. Good idea and thanks for sharing. This is one of our dream projects. We're now able to view the levels clearly on the digital monitoring display. Apart from the digital display of level and alarms, we have done auto email alert with the help of Honeywell team. Now we are able to receive auto emails when the nitrogen level comes to low level. We like to continue driving more and more innovations in Utility. Please do share any further ideas or opportunities like this—we're eager to explore and implement them!"
+                "Thank you, Rajendra. The project has come out exceptionally well. Thank you for the excellent idea and for sharing it with us. This is one of our dream projects. We are now able to clearly monitor the Liquid Nitrogen tank levels through the digital monitoring display.
+
+                In addition to real-time level monitoring and alarm notifications, we have successfully implemented an automated email alert system with the support of the Honeywell team. We now receive instant email notifications whenever the nitrogen level reaches a low-level condition, enabling timely action.
+
+                We look forward to driving more innovations in our Utility systems. Please continue sharing such ideas and opportunities—we're always eager to explore and implement innovative solutions."
               </p>
               <div className="divider-gradient" style={{ marginBottom: '20px', maxWidth: '200px', margin: '0 auto 20px' }} />
               <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 22px)', color: 'white', marginBottom: '4px' }}>R. Dinagaran</p>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.6)' }}>Engineering Head - FTO7</p>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.6)' }}>Engineering Head</p>
             </div>
           </div>
         </div>
@@ -867,10 +817,10 @@ export default function Home() {
                 </div>
                 {/* Right: content */}
                 <div className="glass-card" style={{ padding: 'clamp(16px, 2vw, 18px) clamp(18px, 2vw, 22px)', flex: 1, marginTop: '-2px' }}>
-                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '6px' }}>
+                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '6px', wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>
                     {m.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{m.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>{m.desc}</p>
                 </div>
               </div>
             ))}
