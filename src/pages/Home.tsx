@@ -29,6 +29,16 @@ const whyChooseUs = [
     desc: 'Comprehensive CSV services aligned with GAMP 5, FDA 21 CFR Part 11, and international regulatory requirements.',
   },
   {
+    icon: <Zap size={22} style={{ color: '#00A878' }} />,
+    title: 'MES Solutions',
+    desc: 'Manufacturing Execution Systems for production monitoring, quality control, and regulatory compliance.',
+  },
+  {
+    icon: <Shield size={22} style={{ color: '#0057FF' }} />,
+    title: 'Facility Audit Readiness',
+    desc: 'Comprehensive audit preparation support ensuring facilities are ready for WHO GMP, US FDA, EU GMP, and regulatory inspections.',
+  },
+  {
     icon: <Building2 size={22} style={{ color: '#00A878' }} />,
     title: 'Facility & Utility Engineering',
     desc: 'Design, installation, qualification, and modernization of HVAC, cleanrooms, water systems, boilers, chillers, AHUs, and critical utilities.',
@@ -468,7 +478,7 @@ export default function Home() {
                 margin: '0 auto',
               }}
             >
-              Nine pillars of excellence engineering<br />
+              Eleven pillars of excellence engineering<br />
               that make us the preferred consultancy<br />
               for India's top pharmaceutical companies.
             </p>
