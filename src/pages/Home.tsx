@@ -75,40 +75,6 @@ const whyChooseUs = [
   },
 ];
 
-const services = [
-  { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0057FF' },
-  { title: 'HVAC Systems', desc: 'Precision HVAC design for cleanroom environments', color: '#00A878' },
-  { title: 'Cleanroom Engineering', desc: 'Cleanroom design and qualification', color: '#0057FF' },
-  { title: 'Utility Engineering', desc: 'Pharmaceutical-grade utility systems design', color: '#00A878' },
-  { title: 'CSV & Validation', desc: 'Computer system validation per GAMP 5 guidelines', color: '#0057FF' },
-  { title: 'MES Solutions', desc: 'Manufacturing Execution Systems for production monitoring and compliance', color: '#00A878' },
-  { title: 'Facility Audit Readiness', desc: 'Audit preparation support for WHO GMP, US FDA, EU GMP inspections', color: '#0057FF' },
-  { title: 'Temperature Mapping', desc: 'Temperature mapping studies for cold rooms, freezers, and storage areas', color: '#00A878' },
-  { title: 'IQ / OQ / PQ', desc: 'Installation, operational, and performance qualification', color: '#0057FF' },
-  { title: 'Water Systems', desc: 'WFI, PW, and water for injection loop design', color: '#0057FF' },
-  { title: 'Automation & BMS', desc: 'Integrated building management and process automation', color: '#00A878' },
-  { title: 'Shutdown Services', desc: 'Planned maintenance shutdown and turnaround management', color: '#0057FF' },
-  { title: 'Energy Audits', desc: 'Energy efficiency assessment and decarbonization planning', color: '#00A878' },
-  { title: 'Documentation', desc: 'GMP documentation, SOPs, and validation protocols', color: '#0057FF' },
-  { title: 'Equipment Qualification', desc: 'Risk-based equipment qualification and requalification', color: '#00A878' },
-  { title: 'Process Engineering', desc: 'Process flow development, PFDs, P&IDs, equipment sizing, utility calculations, and process optimization.', color: '#0057FF' },
-  {
-  title: 'CQV Services',
-  desc: 'Commissioning, Qualification & Validation (CQV) for facilities, utilities, equipment, and manufacturing systems.',
-  color: '#00A878',
-},
-{
-  title: 'Project Management Consultancy',
-  desc: 'End-to-end project planning, coordination, execution, monitoring, and successful delivery of pharmaceutical engineering projects.',
-  color: '#0057FF',
-},
-{
-  title: 'Greenfield & Brownfield Projects',
-  desc: 'Complete engineering, expansion, modernization, commissioning, and validation of pharmaceutical manufacturing facilities.',
-  color: '#00A878',
-},
-]
-
 const industries = [
   'Pharmaceutical Manufacturing', 'Biotechnology', 'Vaccine Production',
   'Active Pharmaceutical Ingredients', 'Research Laboratories', 'Healthcare Facilities',
@@ -279,11 +245,11 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeUp w-full"
               style={{ animationDelay: '0.5s', opacity: 0 }}
             >
-              <Link to="/services" className="btn-primary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
-                Explore Services <ArrowRight size={16} />
+              <Link to="/projects" className="btn-primary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
+                View Projects <ArrowRight size={16} />
               </Link>
-              <Link to="/projects" className="btn-secondary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
-                View Projects <ChevronRight size={16} />
+              <Link to="/industries" className="btn-secondary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
+                Explore Industries <ChevronRight size={16} />
               </Link>
             </div>
 
@@ -479,50 +445,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── SERVICES PREVIEW ────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
-            <div>
-              <div className="section-label mb-4 sm:mb-5">Our Services</div>
-              <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-                End-to-End Engineering
-                <br />
-                <span className="gradient-text">Capabilities</span>
-              </h2>
-            </div>
-            <Link to="/services" className="btn-secondary flex-shrink-0">
-              All Services <ArrowRight size={15} />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-            {services.map((s, i) => (
-              <div
-                key={i}
-                className="glass-card flex flex-col h-full"
-                style={{ padding: 'clamp(18px, 2vw, 22px) clamp(16px, 2vw, 20px)' }}
-              >
-                <div
-                  style={{
-                    width: 8,
-                    height: 8,
-                    borderRadius: '50%',
-                    background: s.color,
-                    marginBottom: 'clamp(10px, 2vw, 14px)',
-                    boxShadow: `0 0 12px ${s.color}`,
-                  }}
-                />
-                <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(13px, 2vw, 15px)', color: 'white', marginBottom: '8px', lineHeight: 1.3 }}>
-                  {s.title}
-                </h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, flex: 1 }}>
-                  {s.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
 {/* ─── INDUSTRIES ──────────────────────────────────────────────────── */}
       <section className="mesh-bg-alt" style={{ padding: 'clamp(50px, 6vw, 80px) 0' }}>

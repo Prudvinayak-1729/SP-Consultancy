@@ -54,6 +54,10 @@ const hours = [
 ]
 
 const specialties = [
+  'Computer System Validation (CSV)',
+  'Manufacturing Execution Systems (MES)',
+  'Facility Audit Readiness',
+  'Temperature Mapping Studies',
   'New Pharmaceutical Facility Projects',
   'Cleanroom Design & Engineering',
   'HVAC System Design & Upgrade',
@@ -61,7 +65,6 @@ const specialties = [
   'Regulatory Compliance Gap Assessment',
   'Shutdown Planning & Management',
   'Energy Audits & Optimization',
-  'Computer System Validation (CSV)',
 ]
 
 export default function Contact() {

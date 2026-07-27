@@ -106,7 +106,7 @@ export default function Footer() {
             {services.map(s => (
               <li key={s}>
                 <Link
-                  to="/services"
+                  to="/projects"
                   style={{
                     fontFamily: 'Inter',
                     fontSize: 'clamp(12px, 2vw, 14px)',
