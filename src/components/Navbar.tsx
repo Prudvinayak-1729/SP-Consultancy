@@ -6,7 +6,6 @@ import logo from '/assets/img/logo.png'
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
   { label: 'Industries', path: '/industries' },
   { label: 'Projects', path: '/projects' },
   { label: 'Quality', path: '/quality' },
@@ -55,10 +54,10 @@ export default function Navbar() {
               src={logo}
               alt="Sneha and Prahar Consultancy Services Logo"
               style={{
-                width: 'clamp(24px, 4vw, 70px)',
+                width: 'clamp(33px, 5.05vw, 91px)',
                 height: 'auto',
                 display: 'block',
-                maxWidth: '70px',
+                maxWidth: '91px',
               }}
             />
             <div className="hidden sm:flex flex-col">
@@ -66,8 +65,9 @@ export default function Navbar() {
                 className="text-white font-bold leading-none"
                 style={{
                   fontFamily: 'Satoshi, sans-serif',
-                  fontSize: 'clamp(10px, 2vw, 17px)',
+                  fontSize: 'clamp(12px, 2.2vw, 19px)',
                   letterSpacing: '0.01em',
+                  textTransform: 'uppercase',
                 }}
               >
                 Sneha &amp; Prahar
@@ -76,9 +76,9 @@ export default function Navbar() {
                 className="leading-none mt-0.5"
                 style={{
                   fontFamily: 'Space Grotesk, sans-serif',
-                  fontSize: 'clamp(7px, 1.2vw, 11px)',
+                  fontSize: 'clamp(8px, 1.4vw, 13px)',
                   letterSpacing: '0.14em',
-                  color: 'rgba(255,255,255,0.5)',
+                  color: 'white',
                   textTransform: 'uppercase',
                 }}
               >

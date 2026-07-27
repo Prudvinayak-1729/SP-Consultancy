@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, CheckCircle, Shield, Zap, Users, Building2,
-  FlaskConical, Award, Clock, ChevronRight, Star, Quote
+  FlaskConical, Award, Clock, ChevronRight, Star, Quote, Thermometer
 } from 'lucide-react'
 
 const stats = [
@@ -29,7 +29,22 @@ const whyChooseUs = [
     desc: 'Comprehensive CSV services aligned with GAMP 5, FDA 21 CFR Part 11, and international regulatory requirements.',
   },
   {
-    icon: <Building2 size={22} style={{ color: '#00A878' }} />,
+    icon: <Zap size={22} style={{ color: '#00A878' }} />,
+    title: 'MES Solutions',
+    desc: 'Manufacturing Execution Systems for production monitoring, quality control, and regulatory compliance.',
+  },
+  {
+    icon: <Shield size={22} style={{ color: '#0057FF' }} />,
+    title: 'Facility Audit Readiness',
+    desc: 'Comprehensive audit preparation support ensuring facilities are ready for WHO GMP, US FDA, EU GMP, and regulatory inspections.',
+  },
+  {
+    icon: <Thermometer size={22} style={{ color: '#00A878' }} />,
+    title: 'Temperature Mapping',
+    desc: 'Temperature mapping studies for cold rooms, freezers, and storage areas ensuring compliance with regulatory requirements.',
+  },
+  {
+    icon: <Building2 size={22} style={{ color: '#0057FF' }} />,
     title: 'Facility & Utility Engineering',
     desc: 'Design, installation, qualification, and modernization of HVAC, cleanrooms, water systems, boilers, chillers, AHUs, and critical utilities.',
   },
@@ -60,37 +75,6 @@ const whyChooseUs = [
   },
 ];
 
-const services = [
-  { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0057FF' },
-  { title: 'HVAC Systems', desc: 'Precision HVAC design for cleanroom environments', color: '#00A878' },
-  { title: 'Cleanroom Engineering', desc: 'Cleanroom design and qualification', color: '#0057FF' },
-  { title: 'Utility Engineering', desc: 'Pharmaceutical-grade utility systems design', color: '#00A878' },
-  { title: 'CSV & Validation', desc: 'Computer system validation per GAMP 5 guidelines', color: '#0057FF' },
-  { title: 'IQ / OQ / PQ', desc: 'Installation, operational, and performance qualification', color: '#00A878' },
-  { title: 'Water Systems', desc: 'WFI, PW, and water for injection loop design', color: '#0057FF' },
-  { title: 'Automation & BMS', desc: 'Integrated building management and process automation', color: '#00A878' },
-  { title: 'Shutdown Services', desc: 'Planned maintenance shutdown and turnaround management', color: '#0057FF' },
-  { title: 'Energy Audits', desc: 'Energy efficiency assessment and decarbonization planning', color: '#00A878' },
-  { title: 'Documentation', desc: 'GMP documentation, SOPs, and validation protocols', color: '#0057FF' },
-  { title: 'Equipment Qualification', desc: 'Risk-based equipment qualification and requalification', color: '#00A878' },
-  { title: 'Process Engineering', desc: 'Process flow development, PFDs, P&IDs, equipment sizing, utility calculations, and process optimization.', color: '#0057FF' },
-  {
-  title: 'CQV Services',
-  desc: 'Commissioning, Qualification & Validation (CQV) for facilities, utilities, equipment, and manufacturing systems.',
-  color: '#00A878',
-},
-{
-  title: 'Project Management Consultancy',
-  desc: 'End-to-end project planning, coordination, execution, monitoring, and successful delivery of pharmaceutical engineering projects.',
-  color: '#0057FF',
-},
-{
-  title: 'Greenfield & Brownfield Projects',
-  desc: 'Complete engineering, expansion, modernization, commissioning, and validation of pharmaceutical manufacturing facilities.',
-  color: '#00A878',
-},
-]
-
 const industries = [
   'Pharmaceutical Manufacturing', 'Biotechnology', 'Vaccine Production',
   'Active Pharmaceutical Ingredients', 'Research Laboratories', 'Healthcare Facilities',
@@ -105,33 +89,6 @@ const standards = [
   { name: 'ASHRAE 170', desc: 'Ventilation of Health Care Facilities Standard' },
   { name: 'ISPE GAMP 5', desc: 'Good Automated Manufacturing Practice Guidelines' },
   { name: 'ICH Guidelines', desc: 'International Council for Harmonisation Technical Requirements' },
-]
-
-const projects = [
-  {
-    title: 'Sterile Injectable Facility',
-    location: 'Hyderabad, Telangana',
-    scope: 'Cleanroom design, HVAC, utilities, IQ/OQ/PQ validation for Class B & C manufacturing suites',
-    duration: '18 months',
-    category: 'Cleanroom Engineering',
-    img: 'https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=800&h=480&fit=crop&auto=format',
-  },
-  {
-    title: 'Biotech R&D Campus',
-    location: 'Hyderabad Telangana',
-    scope: 'Multi-product cell culture facility with cGMP utilities, BMS integration, and equipment qualification',
-    duration: '24 months',
-    category: 'Utility Engineering',
-    img: 'https://images.unsplash.com/photo-1581093577421-f561a654a353?w=800&h=480&fit=crop&auto=format',
-  },
-  {
-    title: 'API Manufacturing Expansion',
-    location: 'Visakhapatnam, AP',
-    scope: 'Greenfield API plant with solvent recovery, effluent treatment, and Schedule M compliance documentation',
-    duration: '20 months',
-    category: 'Industrial Projects',
-    img: 'https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?w=800&h=480&fit=crop&auto=format',
-  },
 ]
 
 const process = [
@@ -152,8 +109,7 @@ const milestones = [
 ]
 
 const clients = [
-  'Hetero Drugs', "Dr. Reddy's", 'Aurobindo Pharma', 'Biological E', 'Bharat Biotech',
-  'Divi\'s Laboratories', 'Suven Life Sciences', 'Granules India', 'Laurus Labs',
+  "Dr. Reddy's", 'Biological E', 'Divi\'s Laboratories', 'Ichor Biologics', 'Amneal',
 ]
 
 export default function Home() {
@@ -279,21 +235,21 @@ export default function Home() {
             </h1>
             <div style={{ textAlign: 'justify' }}>
                 <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
-              Sneha and Prahar Consultancy Services delivers world-class engineering, Commissioning, Qualification & Validation (CQV), 
-              Computer System Validation (CSV), cleanroom, utility, compliance, and project execution solutions, enabling pharmaceutical 
-              and biotechnology companies to design, build, qualify, and operate facilities that meet the highest international quality, 
-              regulatory, and GMP standards.
+              Sneha And Prahar Consultancy Services Delivers World-Class Engineering, Commissioning Qualification And Validation (CQV), 
+              Computer System Validation (CSV), MES, Facility Audit Readiness, Temperature Mapping, Cleanroom, Utility, Compliance, And Project Execution Solutions, Enabling Pharmaceutical 
+              And Bio-Technology Companies To Design, Build, Qualify, And Operate Facilities That Meet The Highest International Quality, 
+              Regulatory, And GMP Standards.
             </p>
             </div>
             <div
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeUp w-full"
               style={{ animationDelay: '0.5s', opacity: 0 }}
             >
-              <Link to="/services" className="btn-primary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
-                Explore Services <ArrowRight size={16} />
+              <Link to="/projects" className="btn-primary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
+                View Projects <ArrowRight size={16} />
               </Link>
-              <Link to="/projects" className="btn-secondary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
-                View Projects <ChevronRight size={16} />
+              <Link to="/industries" className="btn-secondary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
+                Explore Industries <ChevronRight size={16} />
               </Link>
             </div>
 
@@ -387,18 +343,18 @@ export default function Home() {
                 </h2>
               <div style={{ textAlign: 'justify' }}>
                 <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
-                Sneha and Prahar Consultancy Services is a trusted engineering and
-                validation partner specializing in pharmaceutical, biotechnology,
-                healthcare, and other highly regulated industries. We provide
-                integrated Engineering, Commissioning, Qualification & Validation (CQV),
-                Computer System Validation (CSV), cleanroom engineering, utility
-                systems, GMP compliance, and turnkey project execution solutions.
+                Sneha and Prahar Consultancy Services is a Trusted Engineering and
+                Validation Partner Specializing in Pharmaceutical, Bio-Technology,
+                Healthcare, and other highly regulated industries. We provide
+                Integrated Engineering, Commissioning, Qualification & Validation (CQV),
+                Computer System Validation (CSV), MES, Facility Audit Readiness, Temperature Mapping, Cleanroom Engineering, Utility
+                Systems, GMP Compliance, and Turnkey Project Execution Solutions.
               </p>
               <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
-                Our multidisciplinary team combines technical expertise with
-                international regulatory standards to deliver reliable, compliant,
-                and future-ready manufacturing facilities. From concept and design
-                to commissioning, qualification, validation, and operational support,
+                Our Multidisciplinary Team Combines Technical Expertise with
+                International Regulatory Standards to deliver reliable, Compliant,
+                and Future-Ready manufacturing Facilities. From concept and design
+                to Commissioning, Qualification, Validation, and Operational Support,
                 we help organizations achieve quality, regulatory compliance,
                 operational excellence, and sustainable business growth.
               </p>
@@ -408,6 +364,7 @@ export default function Home() {
                   { label: 'Senior Engineers', value: '35+' },
                   { label: 'Active Projects', value: '18' },
                   { label: 'GMP Audits Passed', value: '100%' },
+                  { label: 'Client Satisfaction Rate', value: '99%' },
                 ].map(m => (
                   <div
                     key={m.label}
@@ -446,20 +403,6 @@ export default function Home() {
                   }}
                 />
               </div>
-              {/* Floating stat card */}
-              <div
-                className="glass-card animate-pulse-glow hidden sm:block"
-                style={{
-                  position: 'absolute',
-                  bottom: 'clamp(20px, 3vw, 30px)',
-                  left: 'clamp(-10px, -2vw, -20px)',
-                  padding: 'clamp(14px, 2vw, 18px) clamp(18px, 2vw, 22px)',
-                  minWidth: 'clamp(150px, 20vw, 180px)',
-                }}
-              >
-                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(28px, 5vw, 36px)', lineHeight: 1 }}>99%</div>
-                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>Client Satisfaction Rate</div>
-              </div>
             </div>
           </div>
         </div>
@@ -481,7 +424,7 @@ export default function Home() {
                 margin: '0 auto',
               }}
             >
-              Nine pillars of excellence engineering<br />
+              Twelve pillars of excellence engineering<br />
               that make us the preferred consultancy<br />
               for India's top pharmaceutical companies.
             </p>
@@ -502,50 +445,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── SERVICES PREVIEW ────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
-            <div>
-              <div className="section-label mb-4 sm:mb-5">Our Services</div>
-              <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-                End-to-End Engineering
-                <br />
-                <span className="gradient-text">Capabilities</span>
-              </h2>
-            </div>
-            <Link to="/services" className="btn-secondary flex-shrink-0">
-              All Services <ArrowRight size={15} />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-            {services.map((s, i) => (
-              <div
-                key={i}
-                className="glass-card flex flex-col h-full"
-                style={{ padding: 'clamp(18px, 2vw, 22px) clamp(16px, 2vw, 20px)' }}
-              >
-                <div
-                  style={{
-                    width: 8,
-                    height: 8,
-                    borderRadius: '50%',
-                    background: s.color,
-                    marginBottom: 'clamp(10px, 2vw, 14px)',
-                    boxShadow: `0 0 12px ${s.color}`,
-                  }}
-                />
-                <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(13px, 2vw, 15px)', color: 'white', marginBottom: '8px', lineHeight: 1.3 }}>
-                  {s.title}
-                </h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, flex: 1 }}>
-                  {s.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
 {/* ─── INDUSTRIES ──────────────────────────────────────────────────── */}
       <section className="mesh-bg-alt" style={{ padding: 'clamp(50px, 6vw, 80px) 0' }}>
@@ -649,54 +548,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── FEATURED PROJECTS ───────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
-            <div>
-              <div className="section-label mb-4 sm:mb-5">Featured Projects</div>
-              <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-                Landmark Deliveries That
-                <br />
-                <span className="gradient-text">Define Excellence</span>
-              </h2>
-            </div>
-            <Link to="/projects" className="btn-secondary flex-shrink-0">
-              All Projects <ArrowRight size={15} />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {projects.map((p, i) => (
-              <div key={i} className="project-card flex flex-col h-full" style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', transition: 'all 0.35s ease' }}>
-                <div style={{ overflow: 'hidden' }}>
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    className="project-card-img w-full h-auto"
-                    style={{ height: 'clamp(180px, 25vw, 220px)', display: 'block', objectFit: 'cover' }}
-                  />
-                </div>
-                <div style={{ padding: 'clamp(18px, 2vw, 22px)', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 600, color: '#00A878', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>
-                    {p.category}
-                  </div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 19px)', color: 'white', marginBottom: '10px' }}>
-                    {p.title}
-                  </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: '16px', flex: 1 }}>
-                    {p.scope}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.4)' }}>📍 {p.location}</span>
-                    <span style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(0,87,255,0.8)', fontWeight: 600 }}>{p.duration}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ─── OUR PROCESS ─────────────────────────────────────────────────── */}
       <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -712,24 +563,26 @@ export default function Home() {
               <div key={i} className="process-step flex flex-col h-full">
                 <div className="process-step-number">{p.step}</div>
                 <div className="flex-1">
-                  <div
-                    style={{
-                      width: 'clamp(28px, 4vw, 32px)',
-                      height: 'clamp(28px, 4vw, 32px)',
-                      borderRadius: '50%',
-                      background: i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)',
-                      border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'}`,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    <CheckCircle size={14} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
+                  <div className="flex items-center gap-2 mb-3">
+                    <div
+                      style={{
+                        width: 'clamp(28px, 4vw, 32px)',
+                        height: 'clamp(28px, 4vw, 32px)',
+                        borderRadius: '50%',
+                        background: i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)',
+                        border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'}`,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                      }}
+                    >
+                      <CheckCircle size={14} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
+                    </div>
+                    <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white' }}>
+                      {p.title}
+                    </h3>
                   </div>
-                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '10px' }}>
-                    {p.title}
-                  </h3>
                   <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{p.desc}</p>
                 </div>
               </div>
@@ -756,20 +609,44 @@ export default function Home() {
                   <Star key={j} size={20} style={{ fill: '#00A878', color: '#00A878' }} />
                 ))}
               </div>
-              {/* ─── Added textAlign: 'justify' here ─── */}
+              <p style={{
+                fontFamily: 'Space Grotesk',
+                fontSize: 'clamp(12px, 2vw, 14px)',
+                fontWeight: 600,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                color: '#0057FF',
+                marginBottom: '8px',
+              }}>
+                Project
+              </p>
+              <p style={{
+                fontFamily: 'Satoshi',
+                fontSize: 'clamp(16px, 2.5vw, 20px)',
+                fontWeight: 700,
+                color: 'white',
+                marginBottom: '24px',
+                lineHeight: 1.4,
+              }}>
+                Liquid Nitrogen Level Monitoring & Intelligent Alert System (13 KL Tank)
+              </p>
               <p style={{
                 fontFamily: 'Inter',
                 fontSize: 'clamp(16px, 2.5vw, 20px)',
                 color: 'rgba(255,255,255,0.85)',
                 lineHeight: 1.8,
                 marginBottom: '24px',
-                textAlign: 'justify', // ← added this line
+                textAlign: 'justify',
               }}>
-                "Thank you Rajendra. The project has come out really well. Good idea and thanks for sharing. This is one of our dream projects. We're now able to view the levels clearly on the digital monitoring display. Apart from the digital display of level and alarms, we have done auto email alert with the help of Honeywell team. Now we are able to receive auto emails when the nitrogen level comes to low level. We like to continue driving more and more innovations in Utility. Please do share any further ideas or opportunities like this—we're eager to explore and implement them!"
+                "Thank you, Rajendra. The project has come out exceptionally well. Thank you for the excellent idea and for sharing it with us. This is one of our dream projects. We are now able to clearly monitor the Liquid Nitrogen tank levels through the digital monitoring display.
+
+                In addition to real-time level monitoring and alarm notifications, we have successfully implemented an automated email alert system with the support of the Honeywell team. We now receive instant email notifications whenever the nitrogen level reaches a low-level condition, enabling timely action.
+
+                We look forward to driving more innovations in our Utility systems. Please continue sharing such ideas and opportunities—we're always eager to explore and implement innovative solutions."
               </p>
               <div className="divider-gradient" style={{ marginBottom: '20px', maxWidth: '200px', margin: '0 auto 20px' }} />
               <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 22px)', color: 'white', marginBottom: '4px' }}>R. Dinagaran</p>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.6)' }}>Engineering Head - FTO7</p>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.6)' }}>Engineering Head</p>
             </div>
           </div>
         </div>
@@ -870,115 +747,16 @@ export default function Home() {
                 </div>
                 {/* Right: content */}
                 <div className="glass-card" style={{ padding: 'clamp(16px, 2vw, 18px) clamp(18px, 2vw, 22px)', flex: 1, marginTop: '-2px' }}>
-                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '6px' }}>
+                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '6px', wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>
                     {m.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{m.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>{m.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-{/* ─── INNOVATION SECTION ──────────────────────────────────────────── */}
-<section
-  style={{
-    padding: 'clamp(60px, 8vw, 100px) 20px',
-    position: 'relative',
-    overflow: 'hidden',
-    background: 'linear-gradient(135deg, #071B3B 0%, #0D2954 50%, #071B3B 100%)',
-  }}
->
-  {/* Background decorative elements */}
-  <div
-    style={{
-      position: 'absolute',
-      inset: 0,
-      backgroundImage: `
-        radial-gradient(circle at 25% 25%, rgba(0,87,255,0.15) 0%, transparent 50%),
-        radial-gradient(circle at 75% 75%, rgba(0,168,120,0.12) 0%, transparent 50%)
-      `,
-    }}
-  />
-  <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
-
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center" style={{ position: 'relative', zIndex: 1 }}>
-    <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Innovation at Core</div>
-    <h2 className="section-heading mb-4 sm:mb-6" style={{ fontSize: 'clamp(28px, 4vw, 64px)' }}>
-      Digital Engineering.
-      <br />
-      <span className="gradient-text-animated">Future-Ready Facilities.</span>
-    </h2>
-
-    {/* ─── TEXT NOW IN EXACTLY 2 LINES ─── */}
-    <p
-      className="body-text mb-8 sm:mb-10"
-      style={{
-        fontSize: 'clamp(14px, 2.5vw, 18px)',
-        maxWidth: '800px',                // wider to keep second line on one line
-        margin: '0 auto clamp(24px, 4vw, 40px)',
-        lineHeight: 1.6,
-      }}
-    >
-      We leverage digital twins and Industry 4.0 technologies to design pharmaceutical facilities<br />
-      that are not just compliant today, but adaptable for the demands of tomorrow.
-    </p>
-
-    {/* Feature cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto mb-8 sm:mb-12">
-      {[
-        { label: '3D Modeling', value: '100%', note: 'All projects' },
-        { label: 'Digital Documentation', value: 'Paperless', note: 'End-to-end' },
-        { label: 'Remote Monitoring', value: '24/7', note: 'IoT enabled' },
-      ].map(f => (
-        <div
-          key={f.label}
-          className="gradient-border-card"
-          style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center' }}
-        >
-          <div
-            className="stat-number gradient-text"
-            style={{ fontSize: 'clamp(22px, 3vw, 28px)', marginBottom: '4px' }}
-          >
-            {f.value}
-          </div>
-          <div
-            style={{
-              fontFamily: 'Satoshi',
-              fontWeight: 700,
-              fontSize: 'clamp(14px, 2.5vw, 18px)',
-              color: 'white',
-              marginBottom: '4px',
-            }}
-          >
-            {f.label}
-          </div>
-          <div
-            style={{
-              fontFamily: 'Inter',
-              fontSize: 'clamp(11px, 2vw, 12px)',
-              color: 'rgba(255,255,255,0.4)',
-            }}
-          >
-            {f.note}
-          </div>
-        </div>
-      ))}
-    </div>
-
-    {/* CTA */}
-    <Link
-      to="/technology"
-      className="btn-primary"
-      style={{
-        padding: 'clamp(14px, 2vw, 16px) clamp(28px, 4vw, 40px)',
-        fontSize: 'clamp(13px, 2vw, 15px)',
-      }}
-    >
-      Explore Our Technology <ArrowRight size={16} />
-    </Link>
-  </div>
-</section>
     </div>
   )
 }

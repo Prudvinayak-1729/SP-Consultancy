@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
 import logo from '/assets/img/logo.png'
 
 const services = [
-  'Engineering Consultancy', 'HVAC Systems Design', 'Cleanroom Engineering',
-  'Cleanroom Engineering', 'Utility Engineering', 'CSV & Validation', 'Equipment Qualification',
+  'CSV & Validation', 'Cleanroom Engineering', 'Engineering Consultancy', 'HVAC Systems Design',
+  'Utility Engineering', 'Equipment Qualification',
   'Water Systems (WFI/PW)', 'Automation & BMS', 'Shutdown Services',
 ]
 
@@ -65,17 +65,17 @@ export default function Footer() {
               src={logo}
               alt="Sneha and Prahar Consultancy Services Logo"
               style={{
-                width: 'clamp(32px, 4vw, 50px)',
+                width: 'clamp(33px, 5.05vw, 91px)',
                 height: 'auto',
                 display: 'block',
-                maxWidth: '50px',
+                maxWidth: '91px',
               }}
             />
             <div>
-              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 16px)', color: 'white' }}>
+              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2.02vw, 16px)', color: 'white', textTransform: 'uppercase' }}>
                 Sneha &amp; Prahar
               </p>
-              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 1.2vw, 11px)', letterSpacing: '0.12em', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>
+              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 1.21vw, 11px)', letterSpacing: '0.12em', color: 'white', textTransform: 'uppercase' }}>
                 Consultancy Services
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function Footer() {
             {services.map(s => (
               <li key={s}>
                 <Link
-                  to="/services"
+                  to="/projects"
                   style={{
                     fontFamily: 'Inter',
                     fontSize: 'clamp(12px, 2vw, 14px)',

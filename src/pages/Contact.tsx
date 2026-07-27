@@ -54,6 +54,10 @@ const hours = [
 ]
 
 const specialties = [
+  'Computer System Validation (CSV)',
+  'Manufacturing Execution Systems (MES)',
+  'Facility Audit Readiness',
+  'Temperature Mapping Studies',
   'New Pharmaceutical Facility Projects',
   'Cleanroom Design & Engineering',
   'HVAC System Design & Upgrade',
@@ -61,7 +65,6 @@ const specialties = [
   'Regulatory Compliance Gap Assessment',
   'Shutdown Planning & Management',
   'Energy Audits & Optimization',
-  'Computer System Validation (CSV)',
 ]
 
 export default function Contact() {
@@ -111,7 +114,7 @@ export default function Contact() {
                     c.title === 'Call Us Directly' ? 'tel:+919000877499' :
                     c.title === 'WhatsApp' ? 'https://wa.me/6593530873' :
                     c.title === 'Email' ? 'mailto:spconsultanancies@gmail.com' :
-                    c.title === 'LinkedIn' ? 'https://www.linkedin.com/company/sneha-and-prahar-consultancy-services' : '#'
+                    c.title === 'LinkedIn' ? 'https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/' : '#'
                   }
                   target={c.title === 'LinkedIn' ? '_blank' : undefined}
                   rel={c.title === 'LinkedIn' ? 'noopener noreferrer' : undefined}
