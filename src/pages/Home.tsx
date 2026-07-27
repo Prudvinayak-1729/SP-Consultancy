@@ -279,10 +279,10 @@ export default function Home() {
             </h1>
             <div style={{ textAlign: 'justify' }}>
                 <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
-              Sneha and Prahar Consultancy Services delivers world-class engineering, Commissioning, Qualification & Validation (CQV), 
-              Computer System Validation (CSV), cleanroom, utility, compliance, and project execution solutions, enabling pharmaceutical 
-              and biotechnology companies to design, build, qualify, and operate facilities that meet the highest international quality, 
-              regulatory, and GMP standards.
+              Sneha And Prahar Consultancy Services Delivers World-Class Engineering, Commissioning Qualification And Validation (CQV), 
+              Computer System Validation (CSV), MES, Facility Audit Readiness, Cleanroom, Utility, Compliance, And Project Execution Solutions, Enabling Pharmaceutical 
+              And Bio-Technology Companies To Design, Build, Qualify, And Operate Facilities That Meet The Highest International Quality, 
+              Regulatory, And GMP Standards.
             </p>
             </div>
             <div
@@ -387,18 +387,18 @@ export default function Home() {
                 </h2>
               <div style={{ textAlign: 'justify' }}>
                 <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
-                Sneha and Prahar Consultancy Services is a trusted engineering and
-                validation partner specializing in pharmaceutical, biotechnology,
-                healthcare, and other highly regulated industries. We provide
-                integrated Engineering, Commissioning, Qualification & Validation (CQV),
-                Computer System Validation (CSV), cleanroom engineering, utility
-                systems, GMP compliance, and turnkey project execution solutions.
+                Sneha and Prahar Consultancy Services is a Trusted Engineering and
+                Validation Partner Specializing in Pharmaceutical, Bio-Technology,
+                Healthcare, and other highly regulated industries. We provide
+                Integrated Engineering, Commissioning, Qualification & Validation (CQV),
+                Computer System Validation (CSV), MES, Facility Audit Readiness, Cleanroom Engineering, Utility
+                Systems, GMP Compliance, and Turnkey Project Execution Solutions.
               </p>
               <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
-                Our multidisciplinary team combines technical expertise with
-                international regulatory standards to deliver reliable, compliant,
-                and future-ready manufacturing facilities. From concept and design
-                to commissioning, qualification, validation, and operational support,
+                Our Multidisciplinary Team Combines Technical Expertise with
+                International Regulatory Standards to deliver reliable, Compliant,
+                and Future-Ready manufacturing Facilities. From concept and design
+                to Commissioning, Qualification, Validation, and Operational Support,
                 we help organizations achieve quality, regulatory compliance,
                 operational excellence, and sustainable business growth.
               </p>
@@ -408,6 +408,7 @@ export default function Home() {
                   { label: 'Senior Engineers', value: '35+' },
                   { label: 'Active Projects', value: '18' },
                   { label: 'GMP Audits Passed', value: '100%' },
+                  { label: 'Client Satisfaction Rate', value: '99%' },
                 ].map(m => (
                   <div
                     key={m.label}
@@ -445,20 +446,6 @@ export default function Home() {
                     borderRadius: '20px',
                   }}
                 />
-              </div>
-              {/* Floating stat card */}
-              <div
-                className="glass-card animate-pulse-glow hidden sm:block"
-                style={{
-                  position: 'absolute',
-                  bottom: 'clamp(20px, 3vw, 30px)',
-                  left: 'clamp(-10px, -2vw, -20px)',
-                  padding: 'clamp(14px, 2vw, 18px) clamp(18px, 2vw, 22px)',
-                  minWidth: 'clamp(150px, 20vw, 180px)',
-                }}
-              >
-                <div className="stat-number gradient-text" style={{ fontSize: 'clamp(28px, 5vw, 36px)', lineHeight: 1 }}>99%</div>
-                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>Client Satisfaction Rate</div>
               </div>
             </div>
           </div>
