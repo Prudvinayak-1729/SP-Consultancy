@@ -1,116 +1,148 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
 
-const categories = ['All', 'CSV & Validation', 'Cleanroom Engineering', 'Engineering Consultancy', 'HVAC Systems Design', 'Utility Engineering', 'Equipment Qualification', 'Water Systems (WFI/PW)', 'Automation & BMS', 'Shutdown Services']
+const categories = [
+  'All',
+  'Engineering Consultancy',
+  'Facility Audit Readiness',
+  'CSV & Validation',
+  'Cleanroom Engineering',
+  'HVAC Systems Design',
+  'Utility Engineering',
+  'Equipment Qualification',
+  'Water Systems (WFI/PW)',
+  'Automation & BMS',
+  'Shutdown Services',
+]
 
 const projects = [
   {
-    title: 'Computer System Validation for Manufacturing Facility',
-    client: 'Leading Generics Manufacturer',
-    location: 'Hyderabad, Telangana',
+    title: 'Computer System Validation (CSV) & CQV Services',
+    client: 'Leading Multinational Pharmaceutical Company',
+    location: 'Genome Valley (Shamirpet), Hyderabad',
     duration: '18 months',
     category: 'CSV & Validation',
     year: '2024',
-    desc: 'Executed end-to-end CSV, IQ, OQ, PQ, and 21 CFR Part 11 compliance for manufacturing, laboratory, and utility systems in accordance with GAMP 5 guidelines.',
-    tech: ['GAMP 5', '21 CFR Part 11', 'IQ/OQ/PQ', 'CSV Documentation', 'Risk Assessment'],
+    desc: 'Successfully completed CSV, CQV, IQ, OQ, and PQ activities for manufacturing, laboratory, utility, and computerized systems for a leading multinational pharmaceutical manufacturing facility.',
+    tech: ['GAMP 5', '21 CFR Part 11', 'CSV', 'CQV', 'IQ/OQ/PQ'],
     img: 'https://images.unsplash.com/photo-1669101283516-e608dcf142df?w=700&h=420&fit=crop&auto=format',
-    highlight: true,
   },
   {
-    title: 'GMP Cleanroom Design & Qualification',
-    client: 'Biopharmaceutical Company',
-    location: 'Hyderabad Telangana',
+    title: 'Facility Audit Readiness & GMP Compliance',
+    client: 'Leading Pharmaceutical Manufacturing Company',
+    location: 'Visakhapatnam & Pydibhimavaram, Andhra Pradesh',
+    duration: '12 months',
+    category: 'Facility Audit Readiness',
+    year: '2024',
+    desc: 'Successfully delivered GMP Facility Audit Readiness, engineering compliance, qualification review, documentation support, and utility verification for a leading pharmaceutical manufacturing facility.',
+    tech: ['GMP Gap Assessment', 'USFDA', 'MHRA', 'WHO-GMP', 'Schedule M'],
+    img: 'https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=700&h=420&fit=crop&auto=format',
+  },
+  {
+    title: 'Cleanroom Engineering & Qualification',
+    client: 'Leading Sterile Pharmaceutical Manufacturer',
+    location: 'Genome Valley (Shamirpet), Hyderabad',
     duration: '24 months',
     category: 'Cleanroom Engineering',
     year: '2024',
-    desc: 'Designed, executed, and qualified ISO-classified cleanrooms including HVAC, pressure cascade, airflow visualization, recovery testing, and environmental monitoring.',
-    tech: ['ISO Classification', 'HVAC Design', 'Pressure Cascade', 'Airflow Visualization', 'EMS Integration'],
-    img: 'https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=700&h=420&fit=crop&auto=format',
-    highlight: false,
-  },
-  {
-    title: 'Greenfield Pharmaceutical Manufacturing Facility',
-    client: 'Specialty Chemicals Group',
-    location: 'Visakhapatnam, AP',
-    duration: '20 months',
-    category: 'Engineering Consultancy',
-    year: '2023',
-    desc: 'Delivered engineering consultancy covering facility planning, equipment layout, utility design, GMP compliance, BOQ preparation, and project execution support.',
-    tech: ['Facility Planning', 'Equipment Layout', 'Utility Design', 'GMP Compliance', 'BOQ Preparation'],
+    desc: 'Successfully executed cleanroom engineering, HVAC qualification, airflow visualization, environmental monitoring, and cleanroom validation for a sterile pharmaceutical manufacturing facility.',
+    tech: ['ISO 14644', 'HVAC Qualification', 'Airflow Visualization', 'Environmental Monitoring', 'GMP'],
     img: 'https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?w=700&h=420&fit=crop&auto=format',
     highlight: false,
   },
   {
-    title: 'Pharmaceutical HVAC System Design & Validation',
-    client: 'Pan-India Pharma Company',
-    location: 'Hyderabad, Telangana',
-    duration: '12 months',
-    category: 'HVAC Systems Design',
-    year: '2024',
-    desc: 'Engineered GMP-compliant HVAC systems with pressure differentials, temperature & humidity control, HEPA filtration, cleanroom balancing, and qualification.',
-    tech: ['Pressure Differentials', 'HEPA Filtration', 'Cleanroom Balancing', 'HVAC Qualification', 'Temperature Control'],
+    title: 'Engineering Consultancy & Facility Development',
+    client: 'Leading Pharmaceutical Company',
+    location: 'Visakhapatnam, Andhra Pradesh',
+    duration: '20 months',
+    category: 'Engineering Consultancy',
+    year: '2023',
+    desc: 'Delivered engineering consultancy, Greenfield and Brownfield facility development, utility engineering, and GMP-compliant engineering solutions for a leading pharmaceutical company.',
+    tech: ['Facility Planning', 'Process Layouts', 'Utility Engineering', 'BOQ Preparation', 'Regulatory Compliance'],
     img: 'https://images.unsplash.com/photo-1622534376374-fe4480328daa?w=700&h=420&fit=crop&auto=format',
     highlight: false,
   },
   {
-    title: 'Utility Monitoring & Process Optimization',
-    client: 'National Vaccine Manufacturer',
+    title: 'Pharmaceutical HVAC Engineering',
+    client: 'Leading Pharmaceutical Manufacturer',
     location: 'Hyderabad, Telangana',
+    duration: '12 months',
+    category: 'HVAC Systems Design',
+    year: '2024',
+    desc: 'Successfully designed and qualified GMP HVAC systems including HEPA filtration, pressure cascade, temperature and humidity control, and cleanroom balancing for a pharmaceutical manufacturing facility.',
+    tech: ['HEPA Filtration', 'Pressure Cascade', 'Temperature Control', 'Air Balancing', 'HVAC Qualification'],
+    img: 'https://images.unsplash.com/photo-1542274368-443d694d79aa?w=700&h=420&fit=crop&auto=format',
+    highlight: false,
+  },
+  {
+    title: 'Critical Utility Engineering',
+    client: 'Leading Pharmaceutical Manufacturing Company',
+    location: 'Bachupally, Hyderabad',
     duration: '15 months',
     category: 'Utility Engineering',
     year: '2023',
-    desc: 'Designed and upgraded pharmaceutical utilities including Chillers, Boilers, Air Compressors, Nitrogen, Clean Steam, EMS, and utility monitoring systems.',
-    tech: ['Chillers', 'Boilers', 'Air Compressors', 'Nitrogen Systems', 'EMS Integration'],
-    img: 'https://images.unsplash.com/photo-1542274368-443d694d79aa?w=700&h=420&fit=crop&auto=format',
-    highlight: false,
-  },
-  {
-    title: 'Manufacturing Equipment Qualification',
-    client: 'Multinational Pharma',
-    location: 'Visakhapatnam, AP',
-    duration: '6 months',
-    category: 'Equipment Qualification',
-    year: '2024',
-    desc: 'Performed DQ, IQ, OQ, PQ, SAT, FAT, commissioning, and validation of manufacturing, packaging, and laboratory equipment.',
-    tech: ['DQ/IQ/OQ/PQ', 'SAT/FAT', 'Commissioning', 'Equipment Validation', 'Documentation'],
-    img: 'https://images.unsplash.com/photo-1542274368-443d694d79aa?w=700&h=420&fit=crop&auto=format',
-    highlight: false,
-  },
-  {
-    title: 'Purified Water & WFI System Qualification',
-    client: 'Research Hospital Complex',
-    location: 'Visakhapatnam, AP',
-    duration: '9 months',
-    category: 'Water Systems (WFI/PW)',
-    year: '2023',
-    desc: 'Completed design review, commissioning, validation, and performance qualification of Purified Water, Water for Injection (WFI), Clean Steam, and distribution loops.',
-    tech: ['Purified Water', 'WFI Systems', 'Clean Steam', 'Distribution Loops', 'Performance Qualification'],
-    img: 'https://images.unsplash.com/photo-1542274368-443d694d79aa?w=700&h=420&fit=crop&auto=format',
-    highlight: false,
-  },
-  {
-    title: 'Building Management System & Utility Automation',
-    client: 'Formulation Plant',
-    location: 'Hyderabad Telangana',
-    duration: '3 weeks',
-    category: 'Automation & BMS',
-    year: '2024',
-    desc: 'Implemented PLC, SCADA, BMS, EMS, real-time monitoring, alarm management, historian integration, and automated reporting for pharmaceutical facilities.',
-    tech: ['PLC/SCADA', 'BMS/EMS', 'Real-time Monitoring', 'Alarm Management', 'Historian Integration'],
+    desc: 'Successfully completed utility engineering projects involving chilled water systems, boilers, clean steam, compressed air, nitrogen systems, EMS, and utility monitoring.',
+    tech: ['Chilled Water', 'Boilers', 'Clean Steam', 'Compressed Air', 'EMS/BMS'],
     img: 'https://images.unsplash.com/photo-1586057285471-2f78bffaf074?w=700&h=420&fit=crop&auto=format',
     highlight: false,
   },
   {
-    title: 'Annual Plant Shutdown & Maintenance Support',
-    client: 'Orthopedic Device Manufacturer',
-    location: 'Visakhapatnam, AP',
-    duration: '14 months',
-    category: 'Shutdown Services',
+    title: 'Equipment Qualification & Commissioning',
+    client: 'Leading Pharmaceutical Manufacturing Company',
+    location: 'Visakhapatnam, Andhra Pradesh',
+    duration: '6 months',
+    category: 'Equipment Qualification',
+    year: '2024',
+    desc: 'Successfully completed FAT, SAT, commissioning, IQ, OQ, and PQ for manufacturing, laboratory, utility, and packaging equipment while ensuring GMP compliance.',
+    tech: ['FAT/SAT', 'IQ/OQ/PQ', 'Commissioning', 'GMP Documentation', 'Regulatory Compliance'],
+    img: 'https://images.unsplash.com/photo-1669101283516-e608dcf142df?w=700&h=420&fit=crop&auto=format',
+    highlight: false,
+  },
+  {
+    title: 'PW, WFI & Clean Steam Systems',
+    client: 'Leading Pharmaceutical Manufacturing Facility',
+    location: 'Genome Valley (Shamirpet), Hyderabad',
+    duration: '9 months',
+    category: 'Water Systems (WFI/PW)',
     year: '2023',
-    desc: 'Successfully executed planned shutdown activities including equipment maintenance, utility modifications, validation support, recommissioning, and startup assistance.',
-    tech: ['Equipment Maintenance', 'Utility Modifications', 'Validation Support', 'Recommissioning', 'Startup Assistance'],
-    img: 'https://images.unsplash.com/photo-1615309662243-70f6df917b59?w=700&h=420&fit=crop&auto=format',
+    desc: 'Successfully completed commissioning, qualification, and validation of Purified Water (PW), Water for Injection (WFI), Clean Steam systems, and distribution loops.',
+    tech: ['Purified Water', 'WFI', 'Clean Steam', 'Distribution Loops', 'Performance Verification'],
+    img: 'https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=700&h=420&fit=crop&auto=format',
+    highlight: false,
+  },
+  {
+    title: 'Automation, PLC, SCADA, EMS & BMS',
+    client: 'Leading Pharmaceutical Manufacturing Facility',
+    location: 'Bachupally, Hyderabad',
+    duration: '3 weeks',
+    category: 'Automation & BMS',
+    year: '2024',
+    desc: 'Successfully implemented PLC, SCADA, BMS, EMS, alarm management, and real-time monitoring solutions for a regulated pharmaceutical manufacturing facility.',
+    tech: ['PLC', 'SCADA', 'BMS', 'EMS', 'Historian Integration'],
+    img: 'https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?w=700&h=420&fit=crop&auto=format',
+    highlight: false,
+  },
+  {
+    title: 'Plant Shutdown & Engineering Maintenance',
+    client: 'Leading Pharmaceutical Manufacturing Company',
+    location: 'Visakhapatnam, Andhra Pradesh',
+    duration: '2 weeks',
+    category: 'Shutdown Services',
+    year: '2024',
+    desc: 'Successfully executed annual plant shutdown activities including equipment maintenance, utility modifications, recommissioning, validation support, and startup assistance.',
+    tech: ['Preventive Maintenance', 'Utility Modifications', 'Recommissioning', 'Qualification Support', 'Startup Assistance'],
+    img: 'https://images.unsplash.com/photo-1622534376374-fe4480328daa?w=700&h=420&fit=crop&auto=format',
+    highlight: false,
+  },
+  {
+    title: 'Liquid Nitrogen Monitoring System',
+    client: 'Leading Pharmaceutical Manufacturing Company',
+    location: 'Visakhapatnam & Hyderabad',
+    duration: '6 months',
+    category: 'Automation & BMS',
+    year: '2024',
+    desc: 'Successfully implemented automated Liquid Nitrogen tank level monitoring system with digital display, real-time alerts, and email notification system for low-level conditions.',
+    tech: ['Liquid Nitrogen', 'Level Monitoring', 'Digital Display', 'Email Alerts', 'Real-time Monitoring'],
+    img: 'https://images.unsplash.com/photo-1586057285471-2f78bffaf074?w=700&h=420&fit=crop&auto=format',
     highlight: false,
   },
 ]
@@ -128,13 +160,12 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-label mb-4 sm:mb-5">Project Delivered</div>
           <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
-            100+ Projects.
+            100+ Engineering Projects
             <br />
-            <span className="gradient-text">100% Delivered.</span>
+            <span className="gradient-text">Successfully Delivered</span>
           </h1>
           <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
-            A curated selection from our portfolio of pharmaceutical, biotech, and industrial
-            engineering projects delivered since 2022 — across India and beyond.
+            Successfully delivered 100+ engineering projects including Facility Audit Readiness, Engineering Consultancy, Commissioning, Qualification & Validation (CQV), Computer System Validation (CSV), Cleanroom Engineering, Utility Engineering, HVAC, Water Systems, Automation, BMS, Equipment Qualification, and Plant Shutdown Services for leading multinational and Indian pharmaceutical, biotechnology, vaccine, and life sciences companies across Genome Valley (Shamirpet), Hyderabad, Visakhapatnam, Bengaluru, Chennai, Pune, Ahmedabad, Goa, and other major pharmaceutical manufacturing hubs in India.
           </p>
         </div>
       </section>
@@ -218,6 +249,9 @@ export default function Projects() {
                   <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#111827', marginBottom: '8px', lineHeight: 1.3 }}>
                     {p.title}
                   </h3>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#0057FF', fontWeight: 500, marginBottom: '10px' }}>
+                    {p.location}
+                  </p>
                   <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.65, marginBottom: '14px' }}>
                     {p.desc}
                   </p>
@@ -237,22 +271,6 @@ export default function Projects() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="mesh-bg" style={{ padding: '80px 0' }}>
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="section-heading mb-4" style={{ fontSize: 'clamp(32px, 3vw, 44px)' }}>
-            Ready to add your project to this portfolio?
-          </h2>
-          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '480px', margin: '0 auto 32px', textAlign: 'justify' }}>
-            Let&apos;s discuss your engineering requirements and how we can deliver results that
-            exceed your regulatory and operational expectations.
-          </p>
-          <Link to="/contact" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 40px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
-            Start a Conversation <ArrowRight size={16} />
-          </Link>
         </div>
       </section>
     </div>
