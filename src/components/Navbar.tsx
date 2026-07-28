@@ -68,7 +68,7 @@ export default function Navbar() {
                   fontSize: 'clamp(12px, 2.2vw, 19px)',
                   letterSpacing: '0.01em',
                   textTransform: 'uppercase',
-                  color: '#071B3B',
+                  color: '#008B8B',
                 }}
               >
                 Sneha &amp; Prahar
@@ -79,7 +79,7 @@ export default function Navbar() {
                   fontFamily: 'Space Grotesk, sans-serif',
                   fontSize: 'clamp(8px, 1.4vw, 13px)',
                   letterSpacing: '0.14em',
-                  color: '#071B3B',
+                  color: '#008B8B',
                   textTransform: 'uppercase',
                 }}
               >

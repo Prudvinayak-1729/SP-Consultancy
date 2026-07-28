@@ -71,10 +71,10 @@ export default function Footer() {
               }}
             />
             <div>
-              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2.02vw, 16px)', color: '#111827', textTransform: 'uppercase' }}>
+              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2.02vw, 16px)', color: '#008B8B', textTransform: 'uppercase' }}>
                 Sneha &amp; Prahar
               </p>
-              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 1.21vw, 11px)', letterSpacing: '0.12em', color: '#111827', textTransform: 'uppercase' }}>
+              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 1.21vw, 11px)', letterSpacing: '0.12em', color: '#008B8B', textTransform: 'uppercase' }}>
                 Consultancy Services
               </p>
             </div>
