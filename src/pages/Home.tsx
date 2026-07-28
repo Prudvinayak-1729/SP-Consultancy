@@ -196,9 +196,17 @@ export default function Home() {
             position: 'relative',
             zIndex: 10,
             paddingTop: 'clamp(120px, 20vw, 140px)',
-            paddingBottom: 'clamp(160px, 25vw, 220px)', // ✅ increased bottom padding
+            paddingBottom: 'clamp(160px, 25vw, 220px)',
           }}
         >
+          <style>{`
+            @media (max-width: 640px) {
+              .hero-content-padding {
+                paddingBottom: 280px !important;
+              }
+            }
+          `}</style>
+          <div className="hero-content-padding" style={{ paddingBottom: 'clamp(160px, 25vw, 220px)' }}>
           <div className="max-w-full">
             <div className="section-label animate-fadeUp mb-4 sm:mb-6" style={{ animationDelay: '0.1s', opacity: 0 }}>
               Pharmaceutical Engineering Consultancy
@@ -243,6 +251,7 @@ export default function Home() {
             </div>
 
             {/* Trust indicators – REMOVED the three badges as requested */}
+          </div>
           </div>
         </div>
 
