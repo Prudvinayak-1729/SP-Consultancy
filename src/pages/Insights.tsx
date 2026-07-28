@@ -1,4 +1,5 @@
 import { Clock, ArrowRight, BookOpen } from 'lucide-react'
+import featuredImage from '/assets/img/p2.jpeg'
 import { Link } from 'react-router-dom'
 
 const articles = [
@@ -16,7 +17,7 @@ const articles = [
       'Personnel qualification and gowning procedures are integral to the engineering design process',
       'RABS and isolator technology is increasingly mandated for aseptic filling operations',
     ],
-    img: 'https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=800&h=440&fit=crop&auto=format',
+    img: featuredImage,
     highlight: true,
   },
   {
@@ -245,3 +246,5 @@ export default function Insights() {
     </div>
   )
 }
+
+

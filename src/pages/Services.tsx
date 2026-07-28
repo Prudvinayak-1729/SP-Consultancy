@@ -1,4 +1,5 @@
 import { Award, Shield, Users, Globe } from 'lucide-react'
+import servicesHeroImage from '/assets/img/S1.png'
 
 const services = [
   { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0057FF' },
@@ -48,17 +49,29 @@ export default function Services() {
       <section className="page-hero">
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
         <div className="max-w-7xl mx-auto px-6" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label mb-5">Our Services</div>
-          <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
-            End-to-End
-            <br />
-            <span className="gradient-text">Engineering Capabilities</span>
-          </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
-            Comprehensive pharmaceutical engineering services from concept to commissioning. 
-            We deliver regulatory-compliant solutions for cleanrooms, utilities, automation, 
-            validation, and complete facility projects across India and beyond.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="section-label mb-5">Our Services</div>
+              <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
+                End-to-End
+                <br />
+                <span className="gradient-text">Engineering Capabilities</span>
+              </h1>
+              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
+                Comprehensive pharmaceutical engineering services from concept to commissioning. 
+                We deliver regulatory-compliant solutions for cleanrooms, utilities, automation, 
+                validation, and complete facility projects across India and beyond.
+              </p>
+            </div>
+            <div style={{ position: 'relative' }}>
+              <img
+                src={servicesHeroImage}
+                alt="Engineering Services"
+                className="image-hover-effect"
+                style={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'cover', borderRadius: '20px', display: 'block', boxShadow: '0 24px 64px rgba(0,0,0,0.4)' }}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -98,7 +111,7 @@ export default function Services() {
       <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)' }}>
-            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Industry Focus</h3>
+            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: 'clamp(12px, 2vw, 16px)', textAlign: 'center' }}>Industry Focus</h3>
             <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
               We specialize in Life Sciences service verticals including pharmaceuticals, medical equipment manufacturing, genetics research, and biotechnology.
             </p>
@@ -130,3 +143,4 @@ export default function Services() {
     </div>
   )
 }
+

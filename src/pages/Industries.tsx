@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle } from 'lucide-react'
-import Biotech from '../../assets/img/I1.jpeg'
+import Biotech from '/assets/img/I1.jpeg'
 
 const industries = [
   {
@@ -176,6 +176,7 @@ export default function Industries() {
     </div>
   )
 }
+
 
 
 

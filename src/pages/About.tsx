@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, Award, Globe } from 'lucide-react'
 import ownerImage from '/assets/img/Rajendra.png'
 import ceoImage from '/assets/img/CEO.png'
+import Aboutimage from '/assets/img/A1.png'
 
 const milestones = [
   { year: '2022', events: ['Company incorporated in Hyderabad, Telangana', 'First project: Oral Solid Dosage facility, Medak', 'Team of 8 core engineers at founding'] },
@@ -53,7 +54,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div style={{ position: 'relative' }}>
             <img
-              src="https://png.pngtree.com/thumb_back/fh260/background/20250323/pngtree-a-modern-pharmacy-interior-with-pharmacists-assisting-customers-amidst-shelves-of-image_17131846.jpg"
+              src={Aboutimage}
               alt="Workers in protective suits inside a cleanroom"
               className="image-hover-effect"
               style={{ width: '100%', height: 'clamp(300px, 40vw, 500px)', objectFit: 'cover', borderRadius: '20px', display: 'block' }}
@@ -72,13 +73,13 @@ export default function About() {
               Sneha and Prahar
               <span className="gradient-text"> Consultancy Services</span>
             </h2>
-            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', textAlign: 'justify' }}>
               Established in 2022, Sneha and Prahar Consultancy Services is a specialized Facilities, Pharma and Biotech service provider company focused on delivering the best customer satisfaction without compromising on quality and services.
             </p>
-            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', hyphens: 'none', wordBreak: 'break-word', textAlign: 'left' }}>
+            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', hyphens: 'none', wordBreak: 'break-word', textAlign: 'justify' }}>
               <strong style={{ color: '#0057FF' }}>Mr. Rajendra Prasad</strong>, Founder & Managing Director, is a self-esteemed professional from Facilities, Pharma and Biotech service background with vast experience in handling these critical services. With extensive expertise in pharmaceutical engineering, facility management, and computer system validation, he leads the company with a vision to deliver innovative and value-driven products and services to the life sciences industry.
             </p>
-            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', textAlign: 'justify' }}>
               We specialize in Greenfield projects, Process support projects, Automation, Computer System Validations, IT infrastructure evaluation, IT Lab Support, LIMS, SAP, Microbiology, MES tools, and spreadsheet development/validation especially in Life Sciences service verticals.
             </p>
             
