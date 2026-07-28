@@ -117,7 +117,7 @@ export default function Insights() {
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-label mb-4 sm:mb-5">Engineering Insights</div>
-          <h1 className="section-heading mb-4 sm:mb-6" style={{ fontSize: 'clamp(32px, 5vw, 72px)', maxWidth: '100%' }}>
+          <h1 className="section-heading mb-4 sm:mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '100%' }}>
             Knowledge From the
             <br />
             <span className="gradient-text">Engineering Front Line.</span>
