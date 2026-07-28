@@ -146,7 +146,7 @@ export default function Insights() {
                   style={{ width: '100%', height: '100%', minHeight: 'clamp(280px, 40vw, 360px)', objectFit: 'cover', display: 'block' }}
                 />
                 <div style={{ position: 'absolute', top: 'clamp(16px, 2vw, 20px)', left: 'clamp(16px, 2vw, 20px)' }}>
-                  <span style={{ padding: 'clamp(4px, 1vw, 6px) clamp(10px, 2vw, 14px)', borderRadius: '999px', background: 'rgba(0,87,255,0.85)', fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 700, color: 'white', letterSpacing: '0.08em' }}>
+                  <span style={{ padding: 'clamp(4px, 1vw, 6px) clamp(10px, 2vw, 14px)', borderRadius: '999px', background: 'rgba(0,87,255,0.85)', fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 700, color: '#FFFFFF', letterSpacing: '0.08em' }}>
                     Featured
                   </span>
                 </div>
@@ -156,26 +156,26 @@ export default function Insights() {
                   <span style={{ padding: '4px 12px', borderRadius: '999px', background: 'rgba(0,87,255,0.12)', border: '1px solid rgba(0,87,255,0.25)', fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 600, color: '#3378FF' }}>
                     {featured.category}
                   </span>
-                  <div className="flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 'clamp(11px, 2vw, 12px)' }}>
+                  <div className="flex items-center gap-1" style={{ color: '#6B7280', fontSize: 'clamp(11px, 2vw, 12px)' }}>
                     <Clock size={12} />
                     <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)' }}>{featured.readTime}</span>
                   </div>
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: 'rgba(255,255,255,0.35)' }}>{featured.date}</span>
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: '#6B7280' }}>{featured.date}</span>
                 </div>
-                <h2 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(20px, 3vw, 26px)', color: 'white', lineHeight: 1.25, marginBottom: '14px' }}>
+                <h2 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(20px, 3vw, 26px)', color: '#111827', lineHeight: 1.25, marginBottom: '14px' }}>
                   {featured.title}
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.75, marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.75, marginBottom: '20px' }}>
                   {featured.intro}
                 </p>
                 <div className="divider-gradient" style={{ marginBottom: '20px' }} />
-                <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>
+                <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#6B7280', marginBottom: '12px' }}>
                   Key Takeaways
                 </p>
                 {featured.keyTakeaways.slice(0, 3).map((kp, i) => (
                   <div key={i} className="flex gap-2 items-start mb-2">
                     <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', marginTop: '10px', flexShrink: 0 }} />
-                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
                   </div>
                 ))}
               </div>
@@ -204,30 +204,30 @@ export default function Insights() {
                     <span style={{ padding: '3px 10px', borderRadius: '999px', background: 'rgba(0,87,255,0.1)', border: '1px solid rgba(0,87,255,0.2)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, color: '#3378FF' }}>
                       {a.category}
                     </span>
-                    <div className="flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.35)', fontSize: 'clamp(10px, 2vw, 11px)' }}>
+                    <div className="flex items-center gap-1" style={{ color: '#6B7280', fontSize: 'clamp(10px, 2vw, 11px)' }}>
                       <Clock size={11} />
                       <span style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)' }}>{a.readTime}</span>
                     </div>
                   </div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', lineHeight: 1.3, marginBottom: '10px' }}>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: '#111827', lineHeight: 1.3, marginBottom: '10px' }}>
                     {a.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '16px' }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.65, marginBottom: '16px' }}>
                     {a.excerpt}
                   </p>
                   <div className="divider-gradient" style={{ marginBottom: '14px' }} />
                   <div>
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: '8px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6B7280', marginBottom: '8px' }}>
                       Key Takeaways
                     </p>
                     {a.keyTakeaways.slice(0, 2).map((kp, j) => (
                       <div key={j} className="flex gap-2 items-start mb-2">
                         <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', marginTop: '10px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
                       </div>
                     ))}
                   </div>
-                  <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '4px', color: 'rgba(255,255,255,0.35)', fontSize: 'clamp(11px, 2vw, 12px)' }}>
+                  <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '4px', color: '#6B7280', fontSize: 'clamp(11px, 2vw, 12px)' }}>
                     <BookOpen size={12} />
                     <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)' }}>{a.date}</span>
                     <div style={{ flex: 1 }} />

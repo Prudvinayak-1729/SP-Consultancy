@@ -70,7 +70,7 @@ export default function About() {
               style={{ position: 'absolute', bottom: 'clamp(12px, 2vw, 16px)', right: 'clamp(-4px, -1vw, -8px)', padding: 'clamp(12px, 2vw, 16px) clamp(16px, 2vw, 20px)' }}
             >
               <div className="stat-number gradient-text" style={{ fontSize: 'clamp(24px, 4vw, 32px)' }}>100+</div>
-              <div style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: 'rgba(255,255,255,0.6)', marginTop: '4px' }}>Projects Delivered</div>
+              <div style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: '#4B5563', marginTop: '4px' }}>Projects Delivered</div>
             </div>
           </div>
           <div>
@@ -122,7 +122,7 @@ export default function About() {
                   style={{ width: '220px', height: '220px', objectFit: 'contain', borderRadius: '12px', display: 'block', margin: '0 auto' }}
                 />
               </div>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '8px' }}>Mr. Rajendra Prasad</h3>
+              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: '8px' }}>Mr. Rajendra Prasad</h3>
               <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#0057FF', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Founder & Managing Director</p>
               <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
                 Self-esteemed professional from Facilities, Pharma and Biotech service background with vast experience in handling critical services. Held Senior Lead and Project Leadership roles in Singapore supporting world-class pharmaceutical manufacturing, delivering excellence in engineering consultancy and validation services across global markets.
@@ -140,7 +140,7 @@ export default function About() {
                   style={{ width: '220px', height: '220px', objectFit: 'cover', borderRadius: '12px', display: 'block', margin: '0 auto' }}
                 />
               </div>
-              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '8px' }}>Mr. Prudvi Nayak</h3>
+              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: '8px' }}>Mr. Prudvi Nayak</h3>
               <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#00A878', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Chief Executive Officer</p>
               <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
                 Provides strategic leadership, driving engineering excellence, business growth, and operational performance across Engineering, Pharmaceutical, Biotechnology, and Life Sciences projects while ensuring innovation, quality, and client satisfaction through comprehensive project management and technical expertise in facility design and validation.
@@ -172,10 +172,10 @@ export default function About() {
             >
               <Award size={22} style={{ color: '#0057FF' }} />
             </div>
-            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '14px' }}>
+            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: '14px' }}>
               Our Mission
             </h3>
-            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
+            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>
               To provide consistently high quality services in an efficient and professional manner to ensure building/business safety, comfort and enhance productivity.
             </p>
           </div>
@@ -195,10 +195,10 @@ export default function About() {
             >
               <Globe size={22} style={{ color: '#00A878' }} />
             </div>
-            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: '14px' }}>
+            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: '14px' }}>
               Our Vision
             </h3>
-            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
+            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>
               To be the preferred facility management service provider, delivering effective, reliable and excellent services as a collaborative and valued partner.
             </p>
           </div>
@@ -209,7 +209,7 @@ export default function About() {
       <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
-            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Our Specializations</h3>
+            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Our Specializations</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {[
                 'Computer System Validations (CSV) & CQV',
@@ -223,7 +223,7 @@ export default function About() {
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-2">
                   <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -231,7 +231,7 @@ export default function About() {
 
           {/* Industry Focus */}
           <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)' }}>
-            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: 'white', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Industry Focus</h3>
+            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Industry Focus</h3>
             <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
               We specialize in Life Sciences service verticals including pharmaceuticals, medical equipment manufacturing, genetics research, and biotechnology.
             </p>
@@ -253,8 +253,8 @@ export default function About() {
             {values.map((v, i) => (
               <div key={i} className="glass-card" style={{ padding: 'clamp(20px, 3vw, 32px) clamp(16px, 2vw, 24px)', textAlign: 'center' }}>
                 <div className="icon-box" style={{ margin: '0 auto clamp(12px, 2vw, 18px)' }}>{v.icon}</div>
-                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '10px' }}>{v.title}</h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{v.desc}</p>
+                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: '#111827', marginBottom: '10px' }}>{v.title}</h3>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>{v.desc}</p>
               </div>
             ))}
           </div>
@@ -274,7 +274,7 @@ export default function About() {
               {achievements.map((a, i) => (
                 <div key={i} className="flex gap-3 items-start">
                   <CheckCircle size={16} style={{ color: '#00A878', marginTop: '9px', flexShrink: 0 }} />
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginTop: '0px' }}>{a}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{a}</p>
                 </div>
               ))}
             </div>
@@ -289,8 +289,8 @@ export default function About() {
             ].map(s => (
               <div key={s.label} className="gradient-border-card" style={{ padding: 'clamp(16px, 2vw, 20px) clamp(12px, 2vw, 16px)', textAlign: 'center' }}>
                 <div className="stat-number gradient-text" style={{ fontSize: 'clamp(28px, 5vw, 36px)', marginBottom: '6px' }}>{s.val}</div>
-                <div style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white', marginBottom: '4px' }}>{s.label}</div>
-                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.5)' }}>{s.sub}</div>
+                <div style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#111827', marginBottom: '4px' }}>{s.label}</div>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#6B7280' }}>{s.sub}</div>
               </div>
             ))}
           </div>
@@ -333,7 +333,7 @@ export default function About() {
                   >
                     <CheckCircle size={16} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
                   </div>
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.8)', fontWeight: 500, lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', fontWeight: 500, lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -358,13 +358,13 @@ export default function About() {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0, paddingTop: '8px' }}>
                 <div style={{ width: 'clamp(8px, 1.5vw, 10px)', height: 'clamp(8px, 1.5vw, 10px)', borderRadius: '50%', background: i % 2 === 0 ? '#0057FF' : '#00A878', flexShrink: 0 }} />
-                {i < milestones.length - 1 && <div style={{ width: 2, flex: 1, background: 'rgba(255,255,255,0.08)', minHeight: 'clamp(20px, 3vw, 24px)', marginTop: '6px' }} />}
+                {i < milestones.length - 1 && <div style={{ width: 2, flex: 1, background: 'rgba(0,0,0,0.08)', minHeight: 'clamp(20px, 3vw, 24px)', marginTop: '6px' }} />}
               </div>
               <div className="glass-card" style={{ padding: 'clamp(14px, 2vw, 16px) clamp(16px, 2vw, 20px)', flex: 1 }}>
                 {m.events.map((e, j) => (
                   <div key={j} className="flex gap-2 items-start mb-2">
                     <div style={{ width: 5, height: 5, borderRadius: '50%', background: i % 2 === 0 ? '#0057FF' : '#00A878', marginTop: '9px', flexShrink: 0 }} />
-                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.72)', lineHeight: 1.6, marginTop: '0px' }}>{e}</p>
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{e}</p>
                   </div>
                 ))}
               </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
-import logo from '/assets/img/logo.png'
+import logo from '/assets/img/SPC Logo.png'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -39,12 +39,12 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
           background: scrolled
-            ? 'rgba(7,27,59,0.88)'
-            : 'transparent',
-          backdropFilter: scrolled ? 'blur(24px)' : 'none',
-          WebkitBackdropFilter: scrolled ? 'blur(24px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : '1px solid transparent',
-          boxShadow: scrolled ? '0 8px 32px rgba(0,0,0,0.3)' : 'none',
+            ? 'rgba(255,255,255,0.95)'
+            : 'rgba(255,255,255,0.95)',
+          backdropFilter: scrolled ? 'blur(24px)' : 'blur(24px)',
+          WebkitBackdropFilter: scrolled ? 'blur(24px)' : 'blur(24px)',
+          borderBottom: scrolled ? '1px solid rgba(0,0,0,0.08)' : '1px solid rgba(0,0,0,0.08)',
+          boxShadow: scrolled ? '0 8px 32px rgba(0,0,0,0.1)' : '0 8px 32px rgba(0,0,0,0.1)',
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16 md:h-20">
@@ -62,12 +62,13 @@ export default function Navbar() {
             />
             <div className="hidden sm:flex flex-col">
               <span
-                className="text-white font-bold leading-none"
+                className="font-bold leading-none"
                 style={{
                   fontFamily: 'Satoshi, sans-serif',
                   fontSize: 'clamp(12px, 2.2vw, 19px)',
                   letterSpacing: '0.01em',
                   textTransform: 'uppercase',
+                  color: '#071B3B',
                 }}
               >
                 Sneha &amp; Prahar
@@ -78,7 +79,7 @@ export default function Navbar() {
                   fontFamily: 'Space Grotesk, sans-serif',
                   fontSize: 'clamp(8px, 1.4vw, 13px)',
                   letterSpacing: '0.14em',
-                  color: 'white',
+                  color: '#071B3B',
                   textTransform: 'uppercase',
                 }}
               >
@@ -113,7 +114,8 @@ export default function Navbar() {
               Contact Us
             </Link>
             <button
-              className="lg:hidden text-white p-2 rounded-lg transition-colors hover:bg-white/10"
+              className="lg:hidden p-2 rounded-lg transition-colors hover:bg-gray-100"
+              style={{ color: '#071B3B' }}
               onClick={() => setMobileOpen(v => !v)}
               aria-label="Toggle menu"
             >
@@ -129,7 +131,7 @@ export default function Navbar() {
         style={{
           opacity: mobileOpen ? 1 : 0,
           pointerEvents: mobileOpen ? 'all' : 'none',
-          background: 'rgba(7,27,59,0.97)',
+          background: 'rgba(255,255,255,0.98)',
           backdropFilter: 'blur(24px)',
         }}
       >
@@ -144,7 +146,7 @@ export default function Navbar() {
                 fontFamily: 'Satoshi, sans-serif',
                 fontSize: 'clamp(18px, 3vw, 22px)',
                 fontWeight: '700',
-                color: pathname === link.path ? '#0057FF' : 'white',
+                color: pathname === link.path ? '#0057FF' : '#071B3B',
                 textDecoration: 'none',
                 opacity: mobileOpen ? 1 : 0,
                 transform: mobileOpen ? 'translateX(0)' : 'translateX(-20px)',

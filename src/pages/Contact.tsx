@@ -104,10 +104,10 @@ export default function Contact() {
               >
                 <div className="icon-box">{c.icon}</div>
                 <div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 16px)', color: 'white', marginBottom: '6px' }}>{c.title}</h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, marginBottom: '10px' }}>{c.desc}</p>
-                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 13px)', color: 'white', marginBottom: '4px' }}>{c.value}</p>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: 'rgba(255,255,255,0.35)' }}>{c.sub}</p>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 16px)', color: '#111827', marginBottom: '6px' }}>{c.title}</h3>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginBottom: '10px' }}>{c.desc}</p>
+                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 13px)', color: '#111827', marginBottom: '4px' }}>{c.value}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: '#6B7280' }}>{c.sub}</p>
                 </div>
                 <a
                   href={
@@ -171,7 +171,7 @@ export default function Contact() {
                     filter: 'brightness(0.7) saturate(0.8)',
                   }}
                 />
-                <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to top, rgba(7,27,59,0.9) 0%, transparent 60%)` }} />
+                <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%)` }} />
                 <div style={{ position: 'absolute', top: 16, left: 16 }}>
                   <span
                     style={{
@@ -181,7 +181,7 @@ export default function Contact() {
                       fontFamily: 'Space Grotesk',
                       fontSize: 'clamp(9px, 2vw, 11px)',
                       fontWeight: 700,
-                      color: 'white',
+                      color: '#FFFFFF',
                       letterSpacing: '0.08em',
                     }}
                   >
@@ -189,7 +189,7 @@ export default function Contact() {
                   </span>
                 </div>
                 <div style={{ position: 'absolute', bottom: 16, left: 20 }}>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 900, fontSize: 'clamp(22px, 4vw, 28px)', color: 'white' }}>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 900, fontSize: 'clamp(22px, 4vw, 28px)', color: '#FFFFFF' }}>
                     {offices[0].city}
                   </h3>
                 </div>
@@ -201,7 +201,7 @@ export default function Contact() {
                   <div className="icon-box" style={{ width: 36, height: 36, borderRadius: '8px', flexShrink: 0 }}>
                     <MapPin size={15} style={{ color: offices[0].color }} />
                   </div>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.65 }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#111827', lineHeight: 1.65 }}>
                     {offices[0].address}
                   </p>
                 </div>
@@ -211,7 +211,7 @@ export default function Contact() {
                   </div>
                   <div>
                     {offices[0].phone.map(p => (
-                      <p key={p} style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.8)' }}>{p}</p>
+                      <p key={p} style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>{p}</p>
                     ))}
                   </div>
                 </div>
@@ -221,7 +221,7 @@ export default function Contact() {
                   </div>
                   <div>
                     {offices[0].email.map(e => (
-                      <p key={e} style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)' }}>{e}</p>
+                      <p key={e} style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#111827' }}>{e}</p>
                     ))}
                   </div>
                 </div>
@@ -250,7 +250,7 @@ export default function Contact() {
                 >
                   <div className="flex items-center gap-3">
                     <Clock size={15} style={{ color: '#0057FF' }} />
-                    <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: 'clamp(12px, 2vw, 14px)', color: 'white' }}>{h.day}</span>
+                    <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>{h.day}</span>
                   </div>
                   <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(0,168,120,0.9)' }}>{h.time}</span>
                 </div>
@@ -266,7 +266,7 @@ export default function Contact() {
                   EMERGENCY SUPPORT
                 </span>
               </div>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6 }}>
                 For critical project emergencies during commissioning or validation phases, our
                 24/7 emergency support line is available to active project clients.
               </p>
@@ -287,8 +287,8 @@ export default function Contact() {
                   style={{
                     padding: '14px 18px',
                     borderRadius: '10px',
-                    background: 'rgba(255,255,255,0.03)',
-                    border: '1px solid rgba(255,255,255,0.07)',
+                    background: 'rgba(0,0,0,0.03)',
+                    border: '1px solid rgba(0,0,0,0.07)',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '12px',
@@ -300,8 +300,8 @@ export default function Contact() {
                     ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,87,255,0.25)'
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)'
-                    ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)'
+                    (e.currentTarget as HTMLElement).style.background = 'rgba(0,0,0,0.03)'
+                    ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.07)'
                   }}
                 >
                   <div
@@ -315,7 +315,7 @@ export default function Contact() {
                       boxShadow: `0 0 8px ${i % 2 === 0 ? 'rgba(0,87,255,0.5)' : 'rgba(0,168,120,0.5)'}`,
                     }}
                   />
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.72)', lineHeight: 1.6, marginTop: '0px' }}>{s}</span>
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{s}</span>
                 </div>
               ))}
             </div>
@@ -327,8 +327,8 @@ export default function Contact() {
       <section
         style={{
           padding: '80px 0',
-          background: 'linear-gradient(135deg, rgba(0,87,255,0.12) 0%, rgba(0,168,120,0.08) 100%)',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
+          background: '#FFFFFF',
+          borderTop: '1px solid rgba(0,0,0,0.06)',
         }}
       >
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -337,12 +337,12 @@ export default function Contact() {
             <Globe size={16} style={{ color: '#0057FF' }} />
             <div style={{ height: 1, width: 60, background: 'linear-gradient(to right, rgba(0,87,255,0.5), transparent)' }} />
           </div>
-          <h2 className="section-heading mb-4" style={{ fontSize: 'clamp(32px, 3vw, 48px)' }}>
+          <h2 className="section-heading mb-4" style={{ fontSize: 'clamp(32px, 3vw, 48px)', color: '#111827' }}>
             India&apos;s Premier Pharmaceutical
             <br />
             <span className="gradient-text">Engineering Consultancy</span>
           </h2>
-          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '480px', margin: '0 auto 32px' }}>
+          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '480px', margin: '0 auto 32px', color: '#4B5563' }}>
             From Hyderabad to Mumbai, from Baddi to Chennai — we bring world-class pharmaceutical
             engineering to every corner of India.
           </p>

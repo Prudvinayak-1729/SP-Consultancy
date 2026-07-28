@@ -140,7 +140,7 @@ export default function Projects() {
       </section>
 
       {/* Stats */}
-      <section className="mesh-bg" style={{ padding: '48px 0', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+      <section className="mesh-bg" style={{ padding: '48px 0', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
@@ -168,12 +168,12 @@ export default function Projects() {
                 style={{
                   padding: '8px 20px',
                   borderRadius: '999px',
-                  border: `1px solid ${active === c ? '#0057FF' : 'rgba(255,255,255,0.12)'}`,
-                  background: active === c ? 'rgba(0,87,255,0.15)' : 'rgba(255,255,255,0.03)',
+                  border: `1px solid ${active === c ? '#0057FF' : 'rgba(0,0,0,0.12)'}`,
+                  background: active === c ? 'rgba(0,87,255,0.15)' : 'rgba(0,0,0,0.03)',
                   fontFamily: 'Space Grotesk',
                   fontSize: 'clamp(14px, 2.5vw, 18px)',
                   fontWeight: 600,
-                  color: active === c ? 'white' : 'rgba(255,255,255,0.5)',
+                  color: active === c ? '#111827' : '#4B5563',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
                 }}
@@ -190,8 +190,8 @@ export default function Projects() {
                 style={{
                   borderRadius: '16px',
                   overflow: 'hidden',
-                  border: `1px solid ${p.highlight ? 'rgba(0,87,255,0.3)' : 'rgba(255,255,255,0.08)'}`,
-                  background: p.highlight ? 'rgba(0,87,255,0.05)' : 'rgba(255,255,255,0.03)',
+                  border: `1px solid ${p.highlight ? 'rgba(0,87,255,0.3)' : 'rgba(0,0,0,0.08)'}`,
+                  background: p.highlight ? 'rgba(0,87,255,0.05)' : 'rgba(0,0,0,0.03)',
                   transition: 'all 0.35s cubic-bezier(0.22,1,0.36,1)',
                   cursor: 'default',
                 }}
@@ -203,32 +203,32 @@ export default function Projects() {
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLElement).style.transform = ''
                   ;(e.currentTarget as HTMLElement).style.boxShadow = ''
-                  ;(e.currentTarget as HTMLElement).style.borderColor = p.highlight ? 'rgba(0,87,255,0.3)' : 'rgba(255,255,255,0.08)'
+                  ;(e.currentTarget as HTMLElement).style.borderColor = p.highlight ? 'rgba(0,87,255,0.3)' : 'rgba(0,0,0,0.08)'
                 }}
               >
                 <div style={{ overflow: 'hidden', position: 'relative' }}>
                   <img src={p.img} alt={p.title} className="image-hover-effect" style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block' }} />
                   <div style={{ position: 'absolute', top: 14, left: 14 }}>
-                    <span style={{ padding: '4px 12px', borderRadius: '999px', background: 'rgba(7,27,59,0.85)', border: '1px solid rgba(255,255,255,0.15)', fontFamily: 'Space Grotesk', fontSize: 'clamp(14px, 2.5vw, 18px)', fontWeight: 600, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.1em' }}>
+                    <span style={{ padding: '4px 12px', borderRadius: '999px', background: 'rgba(255,255,255,0.9)', border: '1px solid rgba(0,0,0,0.15)', fontFamily: 'Space Grotesk', fontSize: 'clamp(14px, 2.5vw, 18px)', fontWeight: 600, color: '#111827', letterSpacing: '0.1em' }}>
                       {p.category}
                     </span>
                   </div>
                 </div>
                 <div style={{ padding: '22px' }}>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white', marginBottom: '8px', lineHeight: 1.3 }}>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#111827', marginBottom: '8px', lineHeight: 1.3 }}>
                     {p.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '14px' }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.65, marginBottom: '14px' }}>
                     {p.desc}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-14px">
                     {p.tech.slice(0, 3).map(t => (
-                      <span key={t} style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(0,87,255,0.1)', border: '1px solid rgba(0,87,255,0.2)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 500, color: 'rgba(255,255,255,0.6)' }}>
+                      <span key={t} style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(0,87,255,0.1)', border: '1px solid rgba(0,87,255,0.2)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 500, color: '#4B5563' }}>
                         {t}
                       </span>
                     ))}
                     {p.tech.length > 3 && (
-                      <span style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(255,255,255,0.05)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', color: 'rgba(255,255,255,0.4)' }}>
+                      <span style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(0,0,0,0.05)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', color: '#6B7280' }}>
                         +{p.tech.length - 3}
                       </span>
                     )}

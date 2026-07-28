@@ -78,8 +78,8 @@ export default function Quality() {
             ].map(s => (
               <div key={s.label} className="gradient-border-card" style={{ padding: 'clamp(24px, 4vw, 36px)', textAlign: 'center' }}>
                 <div className="stat-number gradient-text" style={{ fontSize: 'clamp(32px, 6vw, 48px)', marginBottom: '8px' }}>{s.val}</div>
-                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 16px)', color: 'white', marginBottom: '8px' }}>{s.label}</h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>{s.desc}</p>
+                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 16px)', color: '#111827', marginBottom: '8px' }}>{s.label}</h3>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6 }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -116,22 +116,22 @@ export default function Quality() {
                     <Shield size={22} style={{ color: s.color }} />
                   </div>
                   <div>
-                    <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 18px)', color: 'white', marginBottom: '3px' }}>{s.name}</h3>
+                    <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 18px)', color: '#111827', marginBottom: '3px' }}>{s.name}</h3>
                     <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', color: s.color, fontStyle: 'italic' }}>{s.fullName}</p>
                   </div>
                 </div>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, marginBottom: '16px' }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7, marginBottom: '16px' }}>
                   {s.desc}
                 </p>
                 <div className="divider-gradient" style={{ marginBottom: '16px' }} />
-                <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '10px' }}>
+                <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#6B7280', marginBottom: '10px' }}>
                   Scope of Application
                 </p>
                 <div className="flex flex-col gap-2">
                   {s.scope.map((sc, j) => (
                     <div key={j} className="flex gap-2 items-start">
                       <div style={{ width: 5, height: 5, borderRadius: '50%', background: s.color, marginTop: '9px', flexShrink: 0 }} />
-                      <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginTop: '0px' }}>{sc}</p>
+                      <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{sc}</p>
                     </div>
                   ))}
                 </div>
@@ -159,8 +159,8 @@ export default function Quality() {
             {qmsElements.map((q, i) => (
               <div key={i} className="glass-card" style={{ padding: 'clamp(20px, 2vw, 24px)' }}>
                 <div className="icon-box" style={{ marginBottom: 'clamp(12px, 2vw, 14px)' }}>{q.icon}</div>
-                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 16px)', color: 'white', marginBottom: '10px' }}>{q.title}</h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65 }}>{q.desc}</p>
+                <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2vw, 16px)', color: '#111827', marginBottom: '10px' }}>{q.title}</h3>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.65 }}>{q.desc}</p>
               </div>
             ))}
           </div>

@@ -82,7 +82,7 @@ export default function Technology() {
                 style={{
                   fontFamily: 'Inter',
                   fontSize: 'clamp(14px, 2vw, 18px)',
-                  color: 'rgba(255,255,255,0.6)',
+                  color: '#4B5563',
                   marginTop: '16px',
                   maxWidth: '500px',
                   lineHeight: 1.7,
@@ -131,8 +131,8 @@ export default function Technology() {
               <div key={i} className="glass-card" style={{ padding: '32px', display: 'flex', gap: '20px' }}>
                 <div className="icon-box" style={{ flexShrink: 0 }}>{c.icon}</div>
                 <div>
-                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'white', marginBottom: '10px' }}>{c.title}</h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.62)', lineHeight: 1.7 }}>{c.desc}</p>
+                  <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#111827', marginBottom: '10px' }}>{c.title}</h3>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>{c.desc}</p>
                 </div>
               </div>
             ))}
