@@ -234,50 +234,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Corporate Profile Highlights */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-14">
-            <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Corporate Profile</div>
-            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-              Sneha & Prahar Consultancy
-              <span className="gradient-text"> Services Highlights</span>
-            </h2>
-          </div>
-          <div className="glass-card" style={{ padding: 'clamp(24px, 4vw, 32px) clamp(16px, 3vw, 24px)' }}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {[
-                'Life Science & Pharmaceutical Engineering Solutions',
-                'Qualification & Validation Support',
-                'Facility and Utility Projects',
-                'Automation & Improvement Projects',
-                'Trusted Support Partner for Leading Pharma Organizations',
-                'Cost & Energy Saving Expertise'
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <div
-                    style={{
-                      width: 'clamp(32px, 4vw, 40px)',
-                      height: 'clamp(32px, 4vw, 40px)',
-                      borderRadius: '10px',
-                      background: i % 2 === 0 ? 'rgba(0,87,255,0.15)' : 'rgba(0,168,120,0.15)',
-                      border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.3)' : 'rgba(0,168,120,0.3)'}`,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0
-                    }}
-                  >
-                    <CheckCircle size={16} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
-                  </div>
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', fontWeight: 500, lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Timeline */}
       <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0 clamp(80px, 10vw, 120px) 0' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

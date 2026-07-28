@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight, Award, Shield, Users, Globe } from 'lucide-react'
+import { Award, Shield, Users, Globe } from 'lucide-react'
 
 const services = [
   { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0057FF' },
@@ -30,17 +29,6 @@ const services = [
     desc: 'Complete engineering, expansion, modernization, commissioning, and validation of pharmaceutical manufacturing facilities.',
     color: '#00A878',
   },
-]
-
-const specializations = [
-  'Computer System Validations (CSV) & CQV',
-  'Cost & Energy Saving Projects',
-  'Utility and Facility Projects',
-  'Green Field & Brown Field Projects',
-  'Lab Support',
-  'Qualification & Validation Process',
-  'Automation, PLC & Upgradation Projects',
-  'Outsourcing / Manpower Support Services'
 ]
 
 const values = [
@@ -103,22 +91,9 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Specializations */}
+      {/* Industry Focus */}
       <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)', marginBottom: 'clamp(24px, 4vw, 32px)' }}>
-            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Our Specializations</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              {specializations.map((item, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', flexShrink: 0, marginTop: '9px' }} />
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Industry Focus */}
           <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)' }}>
             <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Industry Focus</h3>
             <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
@@ -147,24 +122,6 @@ export default function Services() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="section-heading mb-6" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>
-            Ready to Discuss Your
-            <br />
-            <span className="gradient-text">Project Requirements?</span>
-          </h2>
-          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '500px', margin: '0 auto 32px' }}>
-            Our engineering team is ready to help you design, build, and qualify 
-            pharmaceutical facilities that meet global standards.
-          </p>
-          <Link to="/contact" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
-            Get In Touch <ArrowRight size={16} />
-          </Link>
         </div>
       </section>
     </div>
