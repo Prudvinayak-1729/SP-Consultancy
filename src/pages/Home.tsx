@@ -126,23 +126,12 @@ export default function Home() {
           overflow: 'hidden',
         }}
       >
-        {/* Background image */}
+        {/* Light background */}
         <div
           style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: 'url(https://images.unsplash.com/photo-1748002388689-c62b45d5c28b?w=1920&h=1080&fit=crop&auto=format)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        />
-        {/* Dark overlay */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(135deg, rgba(7,27,59,0.96) 0%, rgba(7,27,59,0.85) 50%, rgba(0,87,255,0.12) 100%)',
+            background: 'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(249,250,251,0.95) 50%, rgba(243,244,246,0.92) 100%)',
           }}
         />
         {/* Grid overlay */}
@@ -207,9 +196,17 @@ export default function Home() {
             position: 'relative',
             zIndex: 10,
             paddingTop: 'clamp(120px, 20vw, 140px)',
-            paddingBottom: 'clamp(160px, 25vw, 220px)', // ✅ increased bottom padding
+            paddingBottom: 'clamp(160px, 25vw, 220px)',
           }}
         >
+          <style>{`
+            @media (max-width: 640px) {
+              .hero-content-padding {
+                paddingBottom: 280px !important;
+              }
+            }
+          `}</style>
+          <div className="hero-content-padding" style={{ paddingBottom: 'clamp(160px, 25vw, 220px)' }}>
           <div className="max-w-full">
             <div className="section-label animate-fadeUp mb-4 sm:mb-6" style={{ animationDelay: '0.1s', opacity: 0 }}>
               Pharmaceutical Engineering Consultancy
@@ -221,7 +218,7 @@ export default function Home() {
                 fontWeight: 900,
                 fontSize: 'clamp(28px, 5vw, 88px)',
                 lineHeight: 1.1,
-                color: 'white',
+                color: '#111827',
                 marginBottom: 'clamp(16px, 3vw, 28px)',
                 animationDelay: '0.2s',
                 opacity: 0,
@@ -255,6 +252,7 @@ export default function Home() {
 
             {/* Trust indicators – REMOVED the three badges as requested */}
           </div>
+          </div>
         </div>
 
         {/* Stats bar at bottom – unchanged, remains absolute */}
@@ -264,9 +262,9 @@ export default function Home() {
             bottom: 0,
             left: 0,
             right: 0,
-            background: 'rgba(7,27,59,0.8)',
+            background: 'rgba(255,255,255,0.95)',
             backdropFilter: 'blur(24px)',
-            borderTop: '1px solid rgba(255,255,255,0.08)',
+            borderTop: '1px solid rgba(0,0,0,0.08)',
           }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
@@ -279,7 +277,7 @@ export default function Home() {
                   >
                     <span className="gradient-text">{s.number}{s.suffix}</span>
                   </div>
-                  <div style={{ fontFamily: 'Inter', fontSize: 'clamp(8px, 1.5vw, 11px)', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.06em', textTransform: 'uppercase', lineHeight: 1.3 }}>
+                  <div style={{ fontFamily: 'Inter', fontSize: 'clamp(8px, 1.5vw, 11px)', color: '#4B5563', letterSpacing: '0.06em', textTransform: 'uppercase', lineHeight: 1.3 }}>
                     {s.label}
                   </div>
                 </div>
@@ -307,7 +305,7 @@ export default function Home() {
               fontSize: 'clamp(8px, 2vw, 9px)',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: 'white',
+              color: '#111827',
               writingMode: 'vertical-rl',
             }}
           >
@@ -317,7 +315,7 @@ export default function Home() {
             style={{
               width: 1,
               height: 40,
-              background: 'linear-gradient(to bottom, white, transparent)',
+              background: 'linear-gradient(to bottom, #111827, transparent)',
             }}
           />
         </div>
@@ -372,7 +370,7 @@ export default function Home() {
                     style={{ padding: 'clamp(16px, 2vw, 20px) clamp(18px, 2vw, 22px)' }}
                   >
                     <div className="stat-number gradient-text" style={{ fontSize: 'clamp(24px, 4vw, 30px)', marginBottom: '4px' }}>{m.value}</div>
-                    <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.55)' }}>{m.label}</div>
+                    <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563' }}>{m.label}</div>
                   </div>
                 ))}
               </div>
@@ -418,7 +416,7 @@ export default function Home() {
               style={{
                 fontFamily: 'Inter',
                 fontSize: 'clamp(14px, 2vw, 18px)',
-                color: 'rgba(255,255,255,0.7)',
+                color: '#4B5563',
                 lineHeight: 1.7,
                 maxWidth: '700px',
                 margin: '0 auto',
@@ -435,10 +433,10 @@ export default function Home() {
                 <div className="icon-box" style={{ marginBottom: 'clamp(14px, 2vw, 18px)' }}>
                   {item.icon}
                 </div>
-                <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 18px)', color: 'white', marginBottom: '10px' }}>
+                <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 18px)', color: '#111827', marginBottom: '10px' }}>
                   {item.title}
                 </h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, flex: 1 }}>{item.desc}</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7, flex: 1 }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -536,10 +534,10 @@ export default function Home() {
                 >
                   <Shield size={18} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
                 </div>
-                <div style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(11px, 2vw, 13px)', color: 'white' }}>
+                <div style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(11px, 2vw, 13px)', color: '#111827' }}>
                   {s.name}
                 </div>
-                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.45)', lineHeight: 1.5 }}>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.5 }}>
                   {s.desc}
                 </div>
               </div>
@@ -579,11 +577,11 @@ export default function Home() {
                     >
                       <CheckCircle size={14} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
                     </div>
-                    <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white' }}>
+                    <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: '#111827' }}>
                       {p.title}
                     </h3>
                   </div>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{p.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -624,7 +622,7 @@ export default function Home() {
                 fontFamily: 'Satoshi',
                 fontSize: 'clamp(16px, 2.5vw, 20px)',
                 fontWeight: 700,
-                color: 'white',
+                color: '#111827',
                 marginBottom: '24px',
                 lineHeight: 1.4,
               }}>
@@ -633,67 +631,68 @@ export default function Home() {
               <p style={{
                 fontFamily: 'Inter',
                 fontSize: 'clamp(16px, 2.5vw, 20px)',
-                color: 'rgba(255,255,255,0.85)',
+                color: '#4B5563',
                 lineHeight: 1.8,
                 marginBottom: '24px',
                 textAlign: 'justify',
               }}>
                 "Thank you, Rajendra. The project has come out exceptionally well. Thank you for the excellent idea and for sharing it with us. This is one of our dream projects. We are now able to clearly monitor the Liquid Nitrogen tank levels through the digital monitoring display.
 
-                In addition to real-time level monitoring and alarm notifications, we have successfully implemented an automated email alert system with the support of the Honeywell team. We now receive instant email notifications whenever the nitrogen level reaches a low-level condition, enabling timely action.
+                In addition to real-time level monitoring and alarm notifications, we have successfully implemented an automated email alert system with the support of the Sneha and Prahar team. We now receive instant email notifications whenever the nitrogen level reaches a low-level condition, enabling timely action.
 
                 We look forward to driving more innovations in our Utility systems. Please continue sharing such ideas and opportunities—we're always eager to explore and implement innovative solutions."
               </p>
               <div className="divider-gradient" style={{ marginBottom: '20px', maxWidth: '200px', margin: '0 auto 20px' }} />
-              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 22px)', color: 'white', marginBottom: '4px' }}>R. Dinagaran</p>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: 'rgba(255,255,255,0.6)' }}>Engineering Head</p>
+              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 22px)', color: '#111827', marginBottom: '4px' }}>R. Dinagaran</p>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563' }}>Engineering Head</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ─── CLIENT LOGOS ────────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(50px, 6vw, 70px) 0' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 90px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <p
-            style={{
-              fontFamily: 'Space Grotesk',
-              fontSize: 'clamp(10px, 2vw, 11px)',
-              fontWeight: 600,
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.3)',
-              textAlign: 'center',
-              marginBottom: '24px sm:mb-32',
-            }}
-          >
-            Trusted by India&apos;s Leading Pharmaceutical Companies
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-            {clients.map(c => (
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
+              Trusted by India&apos;s Leading
+              <span className="gradient-text"> Pharmaceutical Companies</span>
+            </h2>
+            <div className="divider-gradient" style={{ maxWidth: '120px', margin: '16px auto 0' }} />
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            {clients.map((c, i) => (
               <div
                 key={c}
+                className="glass-card"
                 style={{
-                  padding: 'clamp(10px, 2vw, 12px) clamp(18px, 3vw, 22px)',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  background: 'rgba(255,255,255,0.03)',
-                  fontFamily: 'Space Grotesk',
-                  fontSize: 'clamp(11px, 2vw, 13px)',
-                  fontWeight: 600,
-                  color: 'rgba(255,255,255,0.5)',
-                  transition: 'all 0.2s ease',
+                  padding: 'clamp(16px, 2.5vw, 24px) clamp(24px, 4vw, 36px)',
+                  borderRadius: '16px',
+                  border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'}`,
+                  background: i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)',
+                  fontFamily: 'Satoshi',
+                  fontSize: 'clamp(14px, 2.5vw, 18px)',
+                  fontWeight: 700,
+                  color: '#111827',
+                  transition: 'all 0.3s cubic-bezier(0.22,1,0.36,1)',
                   cursor: 'default',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
                 }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLElement).style.color = 'white'
-                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,87,255,0.3)'
-                  ;(e.currentTarget as HTMLElement).style.background = 'rgba(0,87,255,0.06)'
+                  const el = e.currentTarget as HTMLElement
+                  el.style.transform = 'translateY(-4px)'
+                  el.style.color = i % 2 === 0 ? '#0057FF' : '#00A878'
+                  el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'
+                  el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.08)' : 'rgba(0,168,120,0.08)'
+                  el.style.boxShadow = i % 2 === 0 ? '0 12px 40px rgba(0,87,255,0.15)' : '0 12px 40px rgba(0,168,120,0.15)'
                 }}
                 onMouseLeave={e => {
-                  (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.5)'
-                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'
-                  ;(e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)'
+                  const el = e.currentTarget as HTMLElement
+                  el.style.transform = ''
+                  el.style.color = '#111827'
+                  el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'
+                  el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)'
+                  el.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)'
                 }}
               >
                 {c}
@@ -742,15 +741,15 @@ export default function Home() {
                     }}
                   />
                   {i < milestones.length - 1 && (
-                    <div style={{ width: 2, flex: 1, background: 'rgba(255,255,255,0.08)', minHeight: '40px', marginTop: '6px' }} />
+                    <div style={{ width: 2, flex: 1, background: 'rgba(0,0,0,0.08)', minHeight: '40px', marginTop: '6px' }} />
                   )}
                 </div>
                 {/* Right: content */}
                 <div className="glass-card" style={{ padding: 'clamp(16px, 2vw, 18px) clamp(18px, 2vw, 22px)', flex: 1, marginTop: '-2px' }}>
-                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: 'white', marginBottom: '6px', wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>
+                  <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: '#111827', marginBottom: '6px', wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>
                     {m.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>{m.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7, wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>{m.desc}</p>
                 </div>
               </div>
             ))}

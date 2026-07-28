@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
-import logo from '/assets/img/logo.png'
+import logo from '/assets/img/SPC Logo.png'
 
-const services = [
-  'CSV & Validation', 'Cleanroom Engineering', 'Engineering Consultancy', 'HVAC Systems Design',
-  'Utility Engineering', 'Equipment Qualification',
+const projectCategories = [
+  'CSV & Validation', 'Facility Audit Readiness', 'Cleanroom Engineering', 'Engineering Consultancy',
+  'HVAC Systems Design', 'Utility Engineering', 'Equipment Qualification',
   'Water Systems (WFI/PW)', 'Automation & BMS', 'Shutdown Services',
 ]
 
@@ -20,12 +20,12 @@ const company = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#040f1f', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+    <footer style={{ background: '#FFFFFF', borderTop: '1px solid rgba(0,0,0,0.08)' }}>
       {/* Top CTA band */}
       <div
         style={{
-          background: 'linear-gradient(135deg, rgba(0,87,255,0.15) 0%, rgba(0,168,120,0.1) 100%)',
-          borderBottom: '1px solid rgba(255,255,255,0.06)',
+          background: 'linear-gradient(135deg, rgba(0,87,255,0.05) 0%, rgba(0,168,120,0.03) 100%)',
+          borderBottom: '1px solid rgba(0,0,0,0.08)',
           padding: '48px 0',
         }}
       >
@@ -71,10 +71,10 @@ export default function Footer() {
               }}
             />
             <div>
-              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2.02vw, 16px)', color: 'white', textTransform: 'uppercase' }}>
+              <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(14px, 2.02vw, 16px)', color: '#008B8B', textTransform: 'uppercase' }}>
                 Sneha &amp; Prahar
               </p>
-              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 1.21vw, 11px)', letterSpacing: '0.12em', color: 'white', textTransform: 'uppercase' }}>
+              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 1.21vw, 11px)', letterSpacing: '0.12em', color: '#008B8B', textTransform: 'uppercase' }}>
                 Consultancy Services
               </p>
             </div>
@@ -86,7 +86,7 @@ export default function Footer() {
           {/* Compliance Standards section removed */}
         </div>
 
-        {/* Services */}
+        {/* Projects */}
         <div>
           <h4
             style={{
@@ -95,29 +95,29 @@ export default function Footer() {
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.4)',
+              color: '#4B5563',
               marginBottom: '20px',
             }}
           >
-            Our Services
+            Our Projects
           </h4>
           <ul className="flex flex-col gap-3">
-            {services.map(s => (
+            {projectCategories.map(s => (
               <li key={s}>
                 <Link
                   to="/projects"
                   style={{
                     fontFamily: 'Inter',
                     fontSize: 'clamp(12px, 2vw, 14px)',
-                    color: 'rgba(255,255,255,0.55)',
+                    color: '#4B5563',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '6px',
                   }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = 'white')}
-                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.55)')}
+                  onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = '#111827')}
+                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = '#4B5563')}
                 >
                   <span style={{ color: 'rgba(0,87,255,0.5)', fontSize: 'clamp(9px, 2vw, 10px)' }}>▸</span>
                   {s}
@@ -136,7 +136,7 @@ export default function Footer() {
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.4)',
+              color: '#4B5563',
               marginBottom: '20px',
             }}
           >
@@ -150,15 +150,15 @@ export default function Footer() {
                   style={{
                     fontFamily: 'Inter',
                     fontSize: 'clamp(12px, 2vw, 14px)',
-                    color: 'rgba(255,255,255,0.55)',
+                    color: '#4B5563',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '6px',
                   }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = 'white')}
-                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.55)')}
+                  onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = '#111827')}
+                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = '#4B5563')}
                 >
                   <span style={{ color: 'rgba(0,168,120,0.5)', fontSize: 'clamp(9px, 2vw, 10px)' }}>▸</span>
                   {c.label}
@@ -177,7 +177,7 @@ export default function Footer() {
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.4)',
+              color: '#4B5563',
               marginBottom: '20px',
             }}
           >
@@ -189,7 +189,7 @@ export default function Footer() {
               <div className="icon-box" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0, marginTop: 2 }}>
                 <MapPin size={15} style={{ color: '#00A878' }} />
               </div>
-              <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+              <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827', lineHeight: 1.6 }}>
                 <div style={{ whiteSpace: 'nowrap' }}>#8-80/80NP, Ramidi Malla Reddy Nagar, Almasguda,</div>
                 <div style={{ whiteSpace: 'nowrap' }}>Badangpet, Hyderabad, Telangana 500081, India</div>
               </div>
@@ -201,9 +201,9 @@ export default function Footer() {
                 <Phone size={15} style={{ color: '#0057FF' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>+91 90008 77499</p>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>+91 88014 11271</p>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>+91 82962 76148</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>+91 90008 77499</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>+91 88014 11271</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>+91 82962 76148</p>
               </div>
             </div>
 
@@ -213,7 +213,7 @@ export default function Footer() {
                 <Mail size={15} style={{ color: '#00A878' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(255,255,255,0.7)' }}>spconsultanancies@gmail.com</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>spconsultanancies@gmail.com</p>
               </div>
             </div>
 
@@ -231,10 +231,10 @@ export default function Footer() {
                 WORKING HOURS
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap' }}>
+                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: '#4B5563', whiteSpace: 'nowrap' }}>
                   Monday – Saturday: 9:00 AM – 7:00 PM
                 </span>
-                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap' }}>
+                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: '#4B5563', whiteSpace: 'nowrap' }}>
                   Sunday: Emergency Support Only
                 </span>
               </div>
@@ -244,12 +244,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '20px 0' }}>
+      <div style={{ borderTop: '1px solid rgba(0,0,0,0.08)', padding: '20px 0' }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.3)' }}>
+          <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: '#6B7280' }}>
             © 2026 Sneha and Prahar Consultancy Services. All rights reserved.
           </p>
-          <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: 'rgba(255,255,255,0.3)' }}>
+          <p style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: '#6B7280' }}>
             Founded 2022 · Hyderabad, India · Pharmaceutical Engineering Excellence
           </p>
         </div>

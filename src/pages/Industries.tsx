@@ -119,7 +119,7 @@ export default function Industries() {
           key={ind.title}
           id={ind.shortTitle.toLowerCase().replace(/\s+/g, '-')}
           className={i % 2 === 0 ? 'mesh-bg-alt' : 'mesh-bg'}
-          style={{ padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.05)' }}
+          style={{ padding: '80px 0', borderTop: '1px solid rgba(0,0,0,0.05)' }}
         >
           <div className="max-w-7xl mx-auto px-6">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-14 items-center`}>
@@ -133,24 +133,24 @@ export default function Industries() {
                 <p className="body-text mb-6" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', textAlign: 'justify' }}>{ind.desc}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                   <div className="glass-card" style={{ padding: '20px' }}>
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#6B7280', marginBottom: '12px' }}>
                       Key Challenges
                     </p>
                     {ind.challenges.map((c, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
                         <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(255,87,87,0.7)', marginTop: '9px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginTop: '0px' }}>{c}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{c}</p>
                       </div>
                     ))}
                   </div>
                   <div className="glass-card" style={{ padding: '20px' }}>
-                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '12px' }}>
+                    <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 11px)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#6B7280', marginBottom: '12px' }}>
                       Our Solutions
                     </p>
                     {ind.solutions.map((s, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
                         <CheckCircle size={12} style={{ color: ind.color, marginTop: '9px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginTop: '0px' }}>{s}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{s}</p>
                       </div>
                     ))}
                   </div>
