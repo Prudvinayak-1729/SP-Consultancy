@@ -20,7 +20,7 @@ const projects = [
   {
     title: 'Computer System Validation (CSV) & CQV Services',
     client: 'Leading Multinational Pharmaceutical Company',
-    location: 'Genome Valley (Shamirpet), Hyderabad',
+    location: 'Genome Valley (Shamirpet), Hyderabad • USA • Malaysia •Vietnam',
     duration: '18 months',
     category: 'CSV & Validation',
     year: '2024',
@@ -78,7 +78,7 @@ const projects = [
   {
     title: 'Critical Utility Engineering',
     client: 'Leading Pharmaceutical Manufacturing Company',
-    location: 'Bachupally, Hyderabad',
+    location: 'Genome Valley (Shamirpet) • Visakhapatnam • Bachupally, Hyderabad',
     duration: '15 months',
     category: 'Utility Engineering',
     year: '2023',
