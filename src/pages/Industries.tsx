@@ -10,7 +10,7 @@ const industries = [
     challenges: ['Stringent Schedule M and USFDA compliance requirements', 'Cross-contamination prevention in multi-product facilities', 'Energy-intensive HVAC and cleanroom systems', 'Complex validation documentation requirements'],
     solutions: ['Risk-based facility design with cross-contamination barriers', 'WHO/USFDA-aligned qualification protocols', 'Energy-efficient cleanroom HVAC design', 'End-to-end documentation management'],
     img: 'https://images.unsplash.com/photo-1748002388689-c62b45d5c28b?w=700&h=420&fit=crop&auto=format',
-    color: '#0057FF',
+    color: '#0969E8',
   },
   {
     title: 'Biotechnology',
@@ -19,7 +19,7 @@ const industries = [
     challenges: ['Containment requirements for live organisms', 'Ultra-pure water systems with stringent TOC limits', 'CIP/SIP system design for complex bioreactor trains', 'Biosafety Level 2/3 facility requirements'],
     solutions: ['Biosafety-integrated HVAC and containment design', 'WFI generation and distribution to pharmacopeial standards', 'Automated CIP/SIP validation protocols', 'BSL classification compliance engineering'],
     img: Biotech,
-    color: '#00A878',
+    color: '#008C86',
   },
   {
     title: 'Vaccine Production',
@@ -28,7 +28,7 @@ const industries = [
     challenges: ['Biocontainment for live attenuated viral organisms', 'Aseptic fill-finish operations with Grade 5 requirements', 'Cold chain facility design for -20°C and -80°C storage', 'WHO prequalification compliance documentation'],
     solutions: ['Grade A/B classified aseptic processing areas', 'Biocontainment engineering per WHO/CDC guidelines', 'Cold storage facility design with redundant systems', 'WHO prequalification documentation support'],
     img: 'https://www.genengnews.com/wp-content/uploads/2021/12/Supp_MRNAVaccines_Fig4_Cytiva.jpg',
-    color: '#0057FF',
+    color: '#0969E8',
   },
   {
     title: 'API Manufacturing',
@@ -37,7 +37,7 @@ const industries = [
     challenges: ['Solvent handling, storage, and recovery systems', 'Highly potent API (HPAPI) containment requirements', 'Effluent treatment for chemical waste streams', 'HAZOP and process safety management'],
     solutions: ['Solvent recovery systems and explosion-proof HVAC', 'Occupational Exposure Band containment design', 'Effluent treatment plant design and qualification', 'HAZOP facilitation and LOPA analysis'],
     img: 'https://images.unsplash.com/photo-1542274368-443d694d79aa?w=700&h=420&fit=crop&auto=format',
-    color: '#00A878',
+    color: '#008C86',
   },
   {
     title: 'Research & Development',
@@ -46,7 +46,7 @@ const industries = [
     challenges: ['Flexible space design for evolving R&D workflows', 'Laboratory HVAC for fume hood exhaust management', 'Pilot scale equipment integration and qualification', 'Multi-hazard chemical and biological safety'],
     solutions: ['Modular lab design with flexible infrastructure', 'Demand-controlled laboratory ventilation (DCLV)', 'Pilot plant scale-up support and qualification', 'Integrated chemical and biosafety engineering'],
     img: 'https://images.unsplash.com/photo-1581093577421-f561a654a353?w=700&h=420&fit=crop&auto=format',
-    color: '#0057FF',
+    color: '#0969E8',
   },
   {
     title: 'Medical Devices',
@@ -55,7 +55,7 @@ const industries = [
     challenges: ['Cleanroom classification for device manufacturing', 'EtO sterilization facility design and validation', 'Particulate contamination control in assembly areas', 'Quality system integration'],
     solutions: ['Class 7/8 cleanroom design for device assembly', 'EtO sterilization chamber engineering and validation', 'HVAC with enhanced particle monitoring', 'Facility documentation support'],
     img: 'https://shelmex.com/wp-content/uploads/Medical-Device-Producers-Innovations-Unveiled.webp',
-    color: '#00A878',
+    color: '#008C86',
   },
 ]
 
@@ -97,7 +97,7 @@ export default function Industries() {
       </section>
 
       {/* Industry quick nav */}
-      <section className="mesh-bg" style={{ padding: '40px 0' }}>
+      <section className="mesh-bg" style={{ padding: '30px 0' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap gap-3 justify-center">
             {industries.map(ind => (
@@ -125,7 +125,7 @@ export default function Industries() {
           <div className="max-w-7xl mx-auto px-6">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-14 items-center`}>
               <div style={{ order: i % 2 !== 0 ? 2 : 1 }}>
-                <div className="section-label mb-3" style={{ color: ind.color === '#0057FF' ? '#3378FF' : '#00A878' }}>
+                <div className="section-label mb-3" style={{ color: ind.color === '#0969E8' ? '#3378FF' : '#008C86' }}>
                   {ind.shortTitle}
                 </div>
                 <h2 className="section-heading mb-4" style={{ fontSize: 'clamp(28px, 2.5vw, 40px)' }}>
@@ -140,7 +140,7 @@ export default function Industries() {
                     {ind.challenges.map((c, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
                         <div style={{ width: 5, height: 5, borderRadius: '50%', background: 'rgba(255,87,87,0.7)', marginTop: '9px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{c}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6, marginTop: '0px' }}>{c}</p>
                       </div>
                     ))}
                   </div>
@@ -151,7 +151,7 @@ export default function Industries() {
                     {ind.solutions.map((s, j) => (
                       <div key={j} className="flex gap-2 items-start mb-3">
                         <CheckCircle size={12} style={{ color: ind.color, marginTop: '9px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{s}</p>
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6, marginTop: '0px' }}>{s}</p>
                       </div>
                     ))}
                   </div>
@@ -176,6 +176,9 @@ export default function Industries() {
     </div>
   )
 }
+
+
+
 
 
 

@@ -8,13 +8,13 @@ const offices = [
     phone: ['+91 90008 77499', '+91 88014 11271', '+91 82962 76148'],
     email: ['spconsultanancies@gmail.com'],
     mapImg: 'https://images.unsplash.com/photo-1531972111231-7482a960e109?w=700&h=380&fit=crop&auto=format',
-    color: '#0057FF',
+    color: '#0969E8',
   },
 ]
 
 const contactMethods = [
   {
-    icon: <Phone size={22} style={{ color: '#0057FF' }} />,
+    icon: <Phone size={22} style={{ color: '#0969E8' }} />,
     title: 'Call Us Directly',
     desc: 'Speak with a senior engineer about your project requirements.',
     value: '+91 88014 11271\n+91 90008 77499',
@@ -22,7 +22,7 @@ const contactMethods = [
     action: 'Call Now',
   },
   {
-    icon: <MessageCircle size={22} style={{ color: '#00A878' }} />,
+    icon: <MessageCircle size={22} style={{ color: '#008C86' }} />,
     title: 'WhatsApp',
     desc: 'Quick project enquiries and instant communication.',
     value: '+65 9353 0873',
@@ -30,7 +30,7 @@ const contactMethods = [
     action: 'Start Chat',
   },
   {
-    icon: <Mail size={22} style={{ color: '#0057FF' }} />,
+    icon: <Mail size={22} style={{ color: '#0969E8' }} />,
     title: 'Email',
     desc: 'Send detailed project briefs and RFQ documents.',
     value: 'spconsultanancies@gmail.com',
@@ -38,7 +38,7 @@ const contactMethods = [
     action: 'Send Email',
   },
   {
-    icon: <Link2 size={22} style={{ color: '#00A878' }} />,
+    icon: <Link2 size={22} style={{ color: '#008C86' }} />,
     title: 'LinkedIn',
     desc: 'Follow our latest projects, insights, and company news.',
     value: 'Sneha & Prahar Consultancy',
@@ -105,7 +105,7 @@ export default function Contact() {
                 <div className="icon-box">{c.icon}</div>
                 <div>
                   <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 16px)', color: '#111827', marginBottom: '6px' }}>{c.title}</h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginBottom: '10px' }}>{c.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6, marginBottom: '10px' }}>{c.desc}</p>
                   <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 13px)', color: '#111827', marginBottom: '4px' }}>{c.value}</p>
                   <p style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: '#6B7280' }}>{c.sub}</p>
                 </div>
@@ -127,7 +127,7 @@ export default function Contact() {
                     fontFamily: 'Inter',
                     fontSize: 'clamp(12px, 2vw, 13px)',
                     fontWeight: 600,
-                    color: i % 2 === 0 ? '#3378FF' : '#00A878',
+                    color: i % 2 === 0 ? '#3378FF' : '#008C86',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
                     textDecoration: 'none',
@@ -249,7 +249,7 @@ export default function Contact() {
                   style={{ padding: '16px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                 >
                   <div className="flex items-center gap-3">
-                    <Clock size={15} style={{ color: '#0057FF' }} />
+                    <Clock size={15} style={{ color: '#0969E8' }} />
                     <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>{h.day}</span>
                   </div>
                   <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: 'clamp(12px, 2vw, 14px)', color: 'rgba(0,168,120,0.9)' }}>{h.time}</span>
@@ -261,12 +261,12 @@ export default function Contact() {
               style={{ marginTop: '24px', padding: '20px', borderColor: 'rgba(0,87,255,0.25)', borderWidth: 1 }}
             >
               <div className="flex items-center gap-2 mb-3">
-                <Phone size={15} style={{ color: '#0057FF' }} />
-                <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(11px, 2vw, 13px)', color: '#0057FF', letterSpacing: '0.06em' }}>
+                <Phone size={15} style={{ color: '#0969E8' }} />
+                <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(11px, 2vw, 13px)', color: '#0969E8', letterSpacing: '0.06em' }}>
                   EMERGENCY SUPPORT
                 </span>
               </div>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6 }}>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6 }}>
                 For critical project emergencies during commissioning or validation phases, our
                 24/7 emergency support line is available to active project clients.
               </p>
@@ -309,13 +309,13 @@ export default function Contact() {
                       width: 5,
                       height: 5,
                       borderRadius: '50%',
-                      background: i % 2 === 0 ? '#0057FF' : '#00A878',
+                      background: i % 2 === 0 ? '#0969E8' : '#008C86',
                       flexShrink: 0,
                       marginTop: '9px',
                       boxShadow: `0 0 8px ${i % 2 === 0 ? 'rgba(0,87,255,0.5)' : 'rgba(0,168,120,0.5)'}`,
                     }}
                   />
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{s}</span>
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6, marginTop: '0px' }}>{s}</span>
                 </div>
               ))}
             </div>
@@ -334,7 +334,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', marginBottom: '20px' }}>
             <div style={{ height: 1, width: 60, background: 'linear-gradient(to left, rgba(0,87,255,0.5), transparent)' }} />
-            <Globe size={16} style={{ color: '#0057FF' }} />
+            <Globe size={16} style={{ color: '#0969E8' }} />
             <div style={{ height: 1, width: 60, background: 'linear-gradient(to right, rgba(0,87,255,0.5), transparent)' }} />
           </div>
           <h2 className="section-heading mb-4" style={{ fontSize: 'clamp(32px, 3vw, 48px)', color: '#111827' }}>
@@ -342,7 +342,7 @@ export default function Contact() {
             <br />
             <span className="gradient-text">Engineering Consultancy</span>
           </h2>
-          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '480px', margin: '0 auto 32px', color: '#4B5563' }}>
+          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '480px', margin: '0 auto 32px', color: '#475569' }}>
             From Hyderabad to Mumbai, from Baddi to Chennai — we bring world-class pharmaceutical
             engineering to every corner of India.
           </p>
@@ -359,3 +359,5 @@ export default function Contact() {
     </div>
   )
 }
+
+

@@ -116,7 +116,7 @@ export default function Navbar() {
             </Link>
             <button
               className="lg:hidden p-2 rounded-lg transition-colors hover:bg-gray-100"
-              style={{ color: '#071B3B' }}
+              style={{ color: '#0B2545' }}
               onClick={() => setMobileOpen(v => !v)}
               aria-label="Toggle menu"
             >
@@ -147,7 +147,7 @@ export default function Navbar() {
                 fontFamily: 'Satoshi, sans-serif',
                 fontSize: 'clamp(18px, 3vw, 22px)',
                 fontWeight: '700',
-                color: pathname === link.path ? '#0057FF' : '#071B3B',
+                color: pathname === link.path ? '#0969E8' : '#0B2545',
                 textDecoration: 'none',
                 opacity: mobileOpen ? 1 : 0,
                 transform: mobileOpen ? 'translateX(0)' : 'translateX(-20px)',
@@ -169,3 +169,5 @@ export default function Navbar() {
     </>
   )
 }
+
+

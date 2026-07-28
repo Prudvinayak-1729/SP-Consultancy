@@ -14,62 +14,62 @@ const stats = [
 
 const whyChooseUs = [
   {
-    icon: <Award size={22} style={{ color: '#0057FF' }} />,
+    icon: <Award size={22} style={{ color: '#0969E8' }} />,
     title: 'Engineering Excellence',
     desc: 'Comprehensive engineering solutions for pharmaceutical, biotechnology, and life science facilities with a strong focus on quality, safety, and operational excellence.',
   },
   {
-    icon: <Shield size={22} style={{ color: '#00A878' }} />,
+    icon: <Shield size={22} style={{ color: '#008C86' }} />,
     title: 'CQV Specialists',
     desc: 'Expert Commissioning, Qualification & Validation (CQV) services ensuring facilities, equipment, and utilities meet global GMP standards.',
   },
   {
-    icon: <FlaskConical size={22} style={{ color: '#0057FF' }} />,
+    icon: <FlaskConical size={22} style={{ color: '#0969E8' }} />,
     title: 'Computer System Validation',
     desc: 'Comprehensive CSV services aligned with GAMP 5, FDA 21 CFR Part 11, and international regulatory requirements.',
   },
   {
-    icon: <Zap size={22} style={{ color: '#00A878' }} />,
+    icon: <Zap size={22} style={{ color: '#008C86' }} />,
     title: 'MES Solutions',
     desc: 'Manufacturing Execution Systems for production monitoring, quality control, and regulatory compliance.',
   },
   {
-    icon: <Shield size={22} style={{ color: '#0057FF' }} />,
+    icon: <Shield size={22} style={{ color: '#0969E8' }} />,
     title: 'Facility Audit Readiness',
     desc: 'Comprehensive audit preparation support ensuring facilities are ready for WHO GMP, US FDA, EU GMP, and regulatory inspections.',
   },
   {
-    icon: <Thermometer size={22} style={{ color: '#00A878' }} />,
+    icon: <Thermometer size={22} style={{ color: '#008C86' }} />,
     title: 'Temperature Mapping',
     desc: 'Temperature mapping studies for cold rooms, freezers, and storage areas ensuring compliance with regulatory requirements.',
   },
   {
-    icon: <Building2 size={22} style={{ color: '#0057FF' }} />,
+    icon: <Building2 size={22} style={{ color: '#0969E8' }} />,
     title: 'Facility & Utility Engineering',
     desc: 'Design, installation, qualification, and modernization of HVAC, cleanrooms, water systems, boilers, chillers, AHUs, and critical utilities.',
   },
   {
-    icon: <CheckCircle size={22} style={{ color: '#0057FF' }} />,
+    icon: <CheckCircle size={22} style={{ color: '#0969E8' }} />,
     title: 'Regulatory Compliance',
     desc: 'Strong expertise in WHO GMP, US FDA, EU GMP, Schedule M, and other global pharmaceutical compliance standards.',
   },
   {
-    icon: <Zap size={22} style={{ color: '#00A878' }} />,
+    icon: <Zap size={22} style={{ color: '#008C86' }} />,
     title: 'Automation & PLC Solutions',
     desc: 'PLC, SCADA, VFD, IoT integration, automation upgrades, and energy-efficient engineering solutions.',
   },
   {
-    icon: <Users size={22} style={{ color: '#0057FF' }} />,
+    icon: <Users size={22} style={{ color: '#0969E8' }} />,
     title: 'Greenfield & Brownfield Projects',
     desc: 'Complete project execution from concept and design to commissioning, qualification, validation, and handover.',
   },
   {
-    icon: <Clock size={22} style={{ color: '#00A878' }} />,
+    icon: <Clock size={22} style={{ color: '#008C86' }} />,
     title: 'Fast Project Execution',
     desc: 'Efficient planning and multidisciplinary teams delivering projects on time without compromising quality or safety.',
   },
   {
-    icon: <Award size={22} style={{ color: '#0057FF' }} />,
+    icon: <Award size={22} style={{ color: '#0969E8' }} />,
     title: 'Dedicated Engineering Support',
     desc: 'Continuous technical support, maintenance services, shutdown assistance, manpower deployment, and lifecycle engineering solutions.',
   },
@@ -165,10 +165,10 @@ export default function Home() {
         />
         {/* Floating particles – show only on larger screens */}
         {[
-          { top: '22%', left: '18%', size: 6, delay: 0, color: '#0057FF' },
-          { top: '65%', left: '75%', size: 4, delay: 1.5, color: '#00A878' },
-          { top: '40%', right: '20%', size: 8, delay: 3, color: '#0057FF' },
-          { top: '78%', left: '35%', size: 5, delay: 0.8, color: '#00A878' },
+          { top: '22%', left: '18%', size: 6, delay: 0, color: '#0969E8' },
+          { top: '65%', left: '75%', size: 4, delay: 1.5, color: '#008C86' },
+          { top: '40%', right: '20%', size: 8, delay: 3, color: '#0969E8' },
+          { top: '78%', left: '35%', size: 5, delay: 0.8, color: '#008C86' },
           { top: '12%', left: '58%', size: 3, delay: 2.2, color: '#3378FF' },
         ].map((p, i) => (
           <div
@@ -195,18 +195,11 @@ export default function Home() {
           style={{
             position: 'relative',
             zIndex: 10,
-            paddingTop: 'clamp(120px, 20vw, 140px)',
-            paddingBottom: 'clamp(160px, 25vw, 220px)',
+            paddingTop: 'clamp(100px, 15vw, 120px)',
+            paddingBottom: 'clamp(100px, 15vw, 140px)',
           }}
         >
-          <style>{`
-            @media (max-width: 640px) {
-              .hero-content-padding {
-                paddingBottom: 280px !important;
-              }
-            }
-          `}</style>
-          <div className="hero-content-padding" style={{ paddingBottom: 'clamp(160px, 25vw, 220px)' }}>
+          <div>
           <div className="max-w-full">
             <div className="section-label animate-fadeUp mb-4 sm:mb-6" style={{ animationDelay: '0.1s', opacity: 0 }}>
               Pharmaceutical Engineering Consultancy
@@ -277,7 +270,7 @@ export default function Home() {
                   >
                     <span className="gradient-text">{s.number}{s.suffix}</span>
                   </div>
-                  <div style={{ fontFamily: 'Inter', fontSize: 'clamp(8px, 1.5vw, 11px)', color: '#4B5563', letterSpacing: '0.06em', textTransform: 'uppercase', lineHeight: 1.3 }}>
+                  <div style={{ fontFamily: 'Inter', fontSize: 'clamp(8px, 1.5vw, 11px)', color: '#475569', letterSpacing: '0.06em', textTransform: 'uppercase', lineHeight: 1.3 }}>
                     {s.label}
                   </div>
                 </div>
@@ -322,7 +315,7 @@ export default function Home() {
       </section>
 
       {/* ─── ABOUT PREVIEW ───────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
@@ -370,7 +363,7 @@ export default function Home() {
                     style={{ padding: 'clamp(16px, 2vw, 20px) clamp(18px, 2vw, 22px)' }}
                   >
                     <div className="stat-number gradient-text" style={{ fontSize: 'clamp(24px, 4vw, 30px)', marginBottom: '4px' }}>{m.value}</div>
-                    <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563' }}>{m.label}</div>
+                    <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569' }}>{m.label}</div>
                   </div>
                 ))}
               </div>
@@ -407,7 +400,7 @@ export default function Home() {
       </section>
 
       {/* ─── WHY CHOOSE US ───────────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Why Choose Us</div>
@@ -416,7 +409,7 @@ export default function Home() {
               style={{
                 fontFamily: 'Inter',
                 fontSize: 'clamp(14px, 2vw, 18px)',
-                color: '#4B5563',
+                color: '#475569',
                 lineHeight: 1.7,
                 maxWidth: '700px',
                 margin: '0 auto',
@@ -436,7 +429,7 @@ export default function Home() {
                 <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(16px, 2vw, 18px)', color: '#111827', marginBottom: '10px' }}>
                   {item.title}
                 </h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7, flex: 1 }}>{item.desc}</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.7, flex: 1 }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -445,7 +438,7 @@ export default function Home() {
 
 
 {/* ─── INDUSTRIES ──────────────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(50px, 6vw, 80px) 0' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>
@@ -479,7 +472,7 @@ export default function Home() {
         </div>
       </section>
      {/* ─── GLOBAL STANDARDS ────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Compliance Framework</div>
@@ -532,12 +525,12 @@ export default function Home() {
                     flexShrink: 0,
                   }}
                 >
-                  <Shield size={18} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
+                  <Shield size={18} style={{ color: i % 2 === 0 ? '#0969E8' : '#008C86' }} />
                 </div>
                 <div style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: 'clamp(11px, 2vw, 13px)', color: '#111827' }}>
                   {s.name}
                 </div>
-                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.5 }}>
+                <div style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.5 }}>
                   {s.desc}
                 </div>
               </div>
@@ -547,7 +540,7 @@ export default function Home() {
       </section>
 
       {/* ─── OUR PROCESS ─────────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>How We Work</div>
@@ -575,13 +568,13 @@ export default function Home() {
                         flexShrink: 0,
                       }}
                     >
-                      <CheckCircle size={14} style={{ color: i % 2 === 0 ? '#0057FF' : '#00A878' }} />
+                      <CheckCircle size={14} style={{ color: i % 2 === 0 ? '#0969E8' : '#008C86' }} />
                     </div>
                     <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: '#111827' }}>
                       {p.title}
                     </h3>
                   </div>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>{p.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.7 }}>{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -589,7 +582,7 @@ export default function Home() {
         </div>
       </section>
       {/* ─── FEATURED TESTIMONIAL ─────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
             {/* Removed invalid justifyContent style – text-center already centers it */}
@@ -604,7 +597,7 @@ export default function Home() {
             <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
               <div className="flex gap-1 mb-6 justify-center">
                 {[1, 2, 3, 4, 5].map((_, j) => (
-                  <Star key={j} size={20} style={{ fill: '#00A878', color: '#00A878' }} />
+                  <Star key={j} size={20} style={{ fill: '#008C86', color: '#008C86' }} />
                 ))}
               </div>
               <p style={{
@@ -613,7 +606,7 @@ export default function Home() {
                 fontWeight: 600,
                 letterSpacing: '0.12em',
                 textTransform: 'uppercase',
-                color: '#0057FF',
+                color: '#0969E8',
                 marginBottom: '8px',
               }}>
                 Project
@@ -631,7 +624,7 @@ export default function Home() {
               <p style={{
                 fontFamily: 'Inter',
                 fontSize: 'clamp(16px, 2.5vw, 20px)',
-                color: '#4B5563',
+                color: '#475569',
                 lineHeight: 1.8,
                 marginBottom: '24px',
                 textAlign: 'justify',
@@ -644,14 +637,14 @@ export default function Home() {
               </p>
               <div className="divider-gradient" style={{ marginBottom: '20px', maxWidth: '200px', margin: '0 auto 20px' }} />
               <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 22px)', color: '#111827', marginBottom: '4px' }}>R. Dinagaran</p>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: '#4B5563' }}>Engineering Head</p>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: '#475569' }}>Engineering Head</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ─── CLIENT LOGOS ────────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 90px) 0' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
@@ -681,7 +674,7 @@ export default function Home() {
                 onMouseEnter={e => {
                   const el = e.currentTarget as HTMLElement
                   el.style.transform = 'translateY(-4px)'
-                  el.style.color = i % 2 === 0 ? '#0057FF' : '#00A878'
+                  el.style.color = i % 2 === 0 ? '#0969E8' : '#008C86'
                   el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'
                   el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.08)' : 'rgba(0,168,120,0.08)'
                   el.style.boxShadow = i % 2 === 0 ? '0 12px 40px rgba(0,87,255,0.15)' : '0 12px 40px rgba(0,168,120,0.15)'
@@ -703,7 +696,7 @@ export default function Home() {
       </section>
 
       {/* ─── MILESTONES ──────────────────────────────────────────────────── */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Company Timeline</div>
@@ -735,7 +728,7 @@ export default function Home() {
                       width: 14,
                       height: 14,
                       borderRadius: '50%',
-                      background: i % 2 === 0 ? '#0057FF' : '#00A878',
+                      background: i % 2 === 0 ? '#0969E8' : '#008C86',
                       boxShadow: `0 0 16px ${i % 2 === 0 ? 'rgba(0,87,255,0.5)' : 'rgba(0,168,120,0.5)'}`,
                       flexShrink: 0,
                     }}
@@ -749,7 +742,7 @@ export default function Home() {
                   <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: '#111827', marginBottom: '6px', wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>
                     {m.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7, wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>{m.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.7, wordBreak: 'keep-all', overflowWrap: 'normal', hyphens: 'none' }}>{m.desc}</p>
                 </div>
               </div>
             ))}
@@ -759,3 +752,5 @@ export default function Home() {
     </div>
   )
 }
+
+

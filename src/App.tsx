@@ -21,7 +21,7 @@ function ScrollToTop() {
 
 function Layout() {
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#071B3B' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: '#0B2545' }}>
       <Navbar />
       <main>
         <Routes>
@@ -50,3 +50,6 @@ export default function App() {
     </BrowserRouter>
   )
 }
+
+
+
