@@ -17,7 +17,7 @@ const contactMethods = [
     icon: <Phone size={22} style={{ color: '#0057FF' }} />,
     title: 'Call Us Directly',
     desc: 'Speak with a senior engineer about your project requirements.',
-    value: '+91 90008 77499',
+    value: '+91 88014 11271\n+91 90008 77499',
     sub: 'Monday–Saturday, 9 AM – 7 PM IST',
     action: 'Call Now',
   },
@@ -111,7 +111,7 @@ export default function Contact() {
                 </div>
                 <a
                   href={
-                    c.title === 'Call Us Directly' ? 'tel:+919000877499' :
+                    c.title === 'Call Us Directly' ? 'tel:+918801411271' :
                     c.title === 'WhatsApp' ? 'https://wa.me/6593530873' :
                     c.title === 'Email' ? 'mailto:spconsultanancies@gmail.com' :
                     c.title === 'LinkedIn' ? 'https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/' : '#'
@@ -347,7 +347,7 @@ export default function Contact() {
             engineering to every corner of India.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+919000877499" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
+            <a href="tel:+918801411271" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
               <Phone size={16} /> Call Now
             </a>
             <a href="mailto:spconsultanancies@gmail.com" className="btn-secondary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
