@@ -629,7 +629,7 @@ export default function Home() {
               }}>
                 "Thank you, Rajendra. The project has come out exceptionally well. Thank you for the excellent idea and for sharing it with us. This is one of our dream projects. We are now able to clearly monitor the Liquid Nitrogen tank levels through the digital monitoring display.
 
-                In addition to real-time level monitoring and alarm notifications, we have successfully implemented an automated email alert system with the support of the Honeywell team. We now receive instant email notifications whenever the nitrogen level reaches a low-level condition, enabling timely action.
+                In addition to real-time level monitoring and alarm notifications, we have successfully implemented an automated email alert system with the support of the Sneha and Prahar team. We now receive instant email notifications whenever the nitrogen level reaches a low-level condition, enabling timely action.
 
                 We look forward to driving more innovations in our Utility systems. Please continue sharing such ideas and opportunities—we're always eager to explore and implement innovative solutions."
               </p>
