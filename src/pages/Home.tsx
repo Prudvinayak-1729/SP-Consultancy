@@ -119,10 +119,9 @@ export default function Home() {
       <section
         style={{
           position: 'relative',
-          minHeight: '100vh',
+          minHeight: '100svh',
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          flexDirection: 'column',
           overflow: 'hidden',
         }}
       >
@@ -193,10 +192,14 @@ export default function Home() {
         <div
           className="max-w-7xl mx-auto px-4 sm:px-6 w-full"
           style={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
             position: 'relative',
             zIndex: 10,
-            paddingTop: 'clamp(100px, 15vw, 120px)',
-            paddingBottom: 'clamp(100px, 15vw, 140px)',
+            paddingTop: 'clamp(120px, 18vw, 150px)',
+            paddingBottom: '40px',
           }}
         >
           <div>
@@ -223,8 +226,8 @@ export default function Home() {
               <br />
               Facilities.
             </h1>
-            <div style={{ textAlign: 'justify' }}>
-                <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+            <div style={{ textAlign: 'left' }}>
+                <p className="body-text mb-4 sm:mb-5" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '720px', lineHeight: 1.7 }}>
               Sneha And Prahar Consultancy Services Delivers World-Class Engineering, Commissioning Qualification And Validation (CQV), 
               Computer System Validation (CSV), MES, Facility Audit Readiness, Temperature Mapping, Cleanroom, Utility, Compliance, And Project Execution Solutions, Enabling Pharmaceutical 
               And Bio-Technology Companies To Design, Build, Qualify, And Operate Facilities That Meet The Highest International Quality, 
@@ -233,7 +236,7 @@ export default function Home() {
             </div>
             <div
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeUp w-full"
-              style={{ animationDelay: '0.5s', opacity: 0 }}
+              style={{ animationDelay: '0.5s', opacity: 0, marginTop: '28px' }}
             >
               <Link to="/projects" className="btn-primary w-full sm:w-auto" style={{ fontSize: 'clamp(13px, 2vw, 15px)', padding: 'clamp(12px, 2vw, 16px) clamp(20px, 4vw, 36px)', maxWidth: '340px', margin: '0 auto sm:0' }}>
                 View Projects <ArrowRight size={16} />
@@ -248,19 +251,16 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Stats bar at bottom – unchanged, remains absolute */}
+        {/* Stats bar at bottom – using flexbox instead of absolute */}
         <div
           style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
+            marginTop: 'auto',
             background: 'rgba(255,255,255,0.95)',
             backdropFilter: 'blur(24px)',
             borderTop: '1px solid rgba(0,0,0,0.08)',
           }}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 md:py-8">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
               {stats.map((s, i) => (
                 <div key={i} className="text-center">
