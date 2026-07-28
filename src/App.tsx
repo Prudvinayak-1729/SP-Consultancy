@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -16,6 +16,21 @@ import Services from './pages/Services'
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior }) }, [pathname])
+  return null
+}
+
+function GitHubPagesRedirect() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search)
+    const redirectPath = params.get('redirect')
+    if (redirectPath) {
+      navigate(redirectPath, { replace: true })
+    }
+  }, [location, navigate])
+
   return null
 }
 
@@ -45,6 +60,7 @@ function Layout() {
 export default function App() {
   return (
     <BrowserRouter>
+      <GitHubPagesRedirect />
       <ScrollToTop />
       <Layout />
     </BrowserRouter>
