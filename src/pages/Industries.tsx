@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle } from 'lucide-react'
+import Biotech from '../../assets/img/I1.jpeg'
 
 const industries = [
   {
@@ -17,7 +18,7 @@ const industries = [
     desc: 'Specialized engineering for cell culture, fermentation, purification, and fill-finish biotech manufacturing operations.',
     challenges: ['Containment requirements for live organisms', 'Ultra-pure water systems with stringent TOC limits', 'CIP/SIP system design for complex bioreactor trains', 'Biosafety Level 2/3 facility requirements'],
     solutions: ['Biosafety-integrated HVAC and containment design', 'WFI generation and distribution to pharmacopeial standards', 'Automated CIP/SIP validation protocols', 'BSL classification compliance engineering'],
-    img: 'https://biologysimple.com/wp-content/uploads/2024/01/advancing_healthcare_through_biotechnology.jpg',
+    img: Biotech,
     color: '#00A878',
   },
   {
@@ -175,3 +176,8 @@ export default function Industries() {
     </div>
   )
 }
+
+
+
+
+
