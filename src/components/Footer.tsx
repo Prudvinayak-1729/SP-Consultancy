@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
 import logo from '/assets/img/SPC Logo.png'
 
-const services = [
-  'CSV & Validation', 'Cleanroom Engineering', 'Engineering Consultancy', 'HVAC Systems Design',
-  'Utility Engineering', 'Equipment Qualification',
+const projectCategories = [
+  'CSV & Validation', 'Facility Audit Readiness', 'Cleanroom Engineering', 'Engineering Consultancy',
+  'HVAC Systems Design', 'Utility Engineering', 'Equipment Qualification',
   'Water Systems (WFI/PW)', 'Automation & BMS', 'Shutdown Services',
 ]
 
@@ -86,7 +86,7 @@ export default function Footer() {
           {/* Compliance Standards section removed */}
         </div>
 
-        {/* Services */}
+        {/* Projects */}
         <div>
           <h4
             style={{
@@ -99,10 +99,10 @@ export default function Footer() {
               marginBottom: '20px',
             }}
           >
-            Our Services
+            Our Projects
           </h4>
           <ul className="flex flex-col gap-3">
-            {services.map(s => (
+            {projectCategories.map(s => (
               <li key={s}>
                 <Link
                   to="/projects"

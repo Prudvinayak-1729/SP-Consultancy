@@ -11,6 +11,8 @@ const categories = [
   'Equipment Qualification',
   'Water Systems (WFI/PW)',
   'Automation & BMS',
+  'MES',
+  'Temperature Mapping',
   'Shutdown Services',
 ]
 
@@ -160,12 +162,12 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-label mb-4 sm:mb-5">Project Delivered</div>
           <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
-            100+ Engineering Projects
+            100+ Projects.
             <br />
-            <span className="gradient-text">Successfully Delivered</span>
+            <span className="gradient-text">100% Delivered.</span>
           </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
-            Successfully delivered 100+ engineering projects including Facility Audit Readiness, Engineering Consultancy, Commissioning, Qualification & Validation (CQV), Computer System Validation (CSV), Cleanroom Engineering, Utility Engineering, HVAC, Water Systems, Automation, BMS, Equipment Qualification, and Plant Shutdown Services for leading multinational and Indian pharmaceutical, biotechnology, vaccine, and life sciences companies across Genome Valley (Shamirpet), Hyderabad, Visakhapatnam, Bengaluru, Chennai, Pune, Ahmedabad, Goa, and other major pharmaceutical manufacturing hubs in India.
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '900px', textAlign: 'justify' }}>
+            Successfully delivered 100+ engineering projects including Facility Audit Readiness, Engineering Consultancy, CQV, CSV, Cleanroom Engineering, Utility Engineering, HVAC, Water Systems, Automation, BMS, MES, Temperature Mapping, Equipment Qualification, and Plant Shutdown Services for leading multinational and Indian pharmaceutical, biotechnology, vaccine, and life sciences companies across Genome Valley (Shamirpet), Hyderabad, Visakhapatnam, Bengaluru, Chennai, Pune, Ahmedabad, Goa and other major pharmaceutical manufacturing hubs in India.
           </p>
         </div>
       </section>

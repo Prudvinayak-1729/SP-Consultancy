@@ -642,47 +642,48 @@ export default function Home() {
       </section>
 
       {/* ─── CLIENT LOGOS ────────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(50px, 6vw, 70px) 0' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 90px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <p
-            style={{
-              fontFamily: 'Space Grotesk',
-              fontSize: 'clamp(10px, 2vw, 11px)',
-              fontWeight: 600,
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: '#6B7280',
-              textAlign: 'center',
-              marginBottom: '24px sm:mb-32',
-            }}
-          >
-            Trusted by India&apos;s Leading Pharmaceutical Companies
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-            {clients.map(c => (
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
+              Trusted by India&apos;s Leading
+              <span className="gradient-text"> Pharmaceutical Companies</span>
+            </h2>
+            <div className="divider-gradient" style={{ maxWidth: '120px', margin: '16px auto 0' }} />
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            {clients.map((c, i) => (
               <div
                 key={c}
+                className="glass-card"
                 style={{
-                  padding: 'clamp(10px, 2vw, 12px) clamp(18px, 3vw, 22px)',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(0,0,0,0.08)',
-                  background: 'rgba(0,0,0,0.02)',
-                  fontFamily: 'Space Grotesk',
-                  fontSize: 'clamp(11px, 2vw, 13px)',
-                  fontWeight: 600,
-                  color: '#4B5563',
-                  transition: 'all 0.2s ease',
+                  padding: 'clamp(16px, 2.5vw, 24px) clamp(24px, 4vw, 36px)',
+                  borderRadius: '16px',
+                  border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'}`,
+                  background: i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)',
+                  fontFamily: 'Satoshi',
+                  fontSize: 'clamp(14px, 2.5vw, 18px)',
+                  fontWeight: 700,
+                  color: '#111827',
+                  transition: 'all 0.3s cubic-bezier(0.22,1,0.36,1)',
                   cursor: 'default',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
                 }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLElement).style.color = '#0057FF'
-                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,87,255,0.3)'
-                  ;(e.currentTarget as HTMLElement).style.background = 'rgba(0,87,255,0.06)'
+                  const el = e.currentTarget as HTMLElement
+                  el.style.transform = 'translateY(-4px)'
+                  el.style.color = i % 2 === 0 ? '#0057FF' : '#00A878'
+                  el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'
+                  el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.08)' : 'rgba(0,168,120,0.08)'
+                  el.style.boxShadow = i % 2 === 0 ? '0 12px 40px rgba(0,87,255,0.15)' : '0 12px 40px rgba(0,168,120,0.15)'
                 }}
                 onMouseLeave={e => {
-                  (e.currentTarget as HTMLElement).style.color = '#4B5563'
-                  ;(e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.08)'
-                  ;(e.currentTarget as HTMLElement).style.background = 'rgba(0,0,0,0.02)'
+                  const el = e.currentTarget as HTMLElement
+                  el.style.transform = ''
+                  el.style.color = '#111827'
+                  el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'
+                  el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)'
+                  el.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)'
                 }}
               >
                 {c}
