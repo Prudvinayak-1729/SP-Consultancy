@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, Award, Globe } from 'lucide-react'
 import ownerImage from '/assets/img/Rajendra.png'
 import ceoImage from '/assets/img/CEO.png'
+import Aboutimage from '/assets/img/A1.png'
 
 const milestones = [
   { year: '2022', events: ['Company incorporated in Hyderabad, Telangana', 'First project: Oral Solid Dosage facility, Medak', 'Team of 8 core engineers at founding'] },
@@ -49,11 +50,11 @@ export default function About() {
       </section>
 
       {/* Story */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div style={{ position: 'relative' }}>
             <img
-              src="https://png.pngtree.com/thumb_back/fh260/background/20250323/pngtree-a-modern-pharmacy-interior-with-pharmacists-assisting-customers-amidst-shelves-of-image_17131846.jpg"
+              src={Aboutimage}
               alt="Workers in protective suits inside a cleanroom"
               className="image-hover-effect"
               style={{ width: '100%', height: 'clamp(300px, 40vw, 500px)', objectFit: 'cover', borderRadius: '20px', display: 'block' }}
@@ -63,7 +64,7 @@ export default function About() {
               style={{ position: 'absolute', bottom: 'clamp(12px, 2vw, 16px)', right: 'clamp(-4px, -1vw, -8px)', padding: 'clamp(12px, 2vw, 16px) clamp(16px, 2vw, 20px)' }}
             >
               <div className="stat-number gradient-text" style={{ fontSize: 'clamp(24px, 4vw, 32px)' }}>100+</div>
-              <div style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: '#4B5563', marginTop: '4px' }}>Projects Delivered</div>
+              <div style={{ fontFamily: 'Inter', fontSize: 'clamp(10px, 2vw, 11px)', color: '#475569', marginTop: '4px' }}>Projects Delivered</div>
             </div>
           </div>
           <div>
@@ -72,18 +73,18 @@ export default function About() {
               Sneha and Prahar
               <span className="gradient-text"> Consultancy Services</span>
             </h2>
-            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', textAlign: 'justify' }}>
               Established in 2022, Sneha and Prahar Consultancy Services is a specialized Facilities, Pharma and Biotech service provider company focused on delivering the best customer satisfaction without compromising on quality and services.
             </p>
-            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', hyphens: 'none', wordBreak: 'break-word', textAlign: 'left' }}>
-              <strong style={{ color: '#0057FF' }}>Mr. Rajendra Prasad</strong>, Founder & Managing Director, is a self-esteemed professional from Facilities, Pharma and Biotech service background with vast experience in handling these critical services. With extensive expertise in pharmaceutical engineering, facility management, and computer system validation, he leads the company with a vision to deliver innovative and value-driven products and services to the life sciences industry.
+            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', hyphens: 'none', wordBreak: 'break-word', textAlign: 'justify' }}>
+              <strong style={{ color: '#0969E8' }}>Mr. Rajendra Prasad</strong>, Founder & Managing Director, is a self-esteemed professional from Facilities, Pharma and Biotech service background with vast experience in handling these critical services. With extensive expertise in pharmaceutical engineering, facility management, and computer system validation, he leads the company with a vision to deliver innovative and value-driven products and services to the life sciences industry.
             </p>
-            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+            <p className="body-text mb-4" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', textAlign: 'justify' }}>
               We specialize in Greenfield projects, Process support projects, Automation, Computer System Validations, IT infrastructure evaluation, IT Lab Support, LIMS, SAP, Microbiology, MES tools, and spreadsheet development/validation especially in Life Sciences service verticals.
             </p>
             
             <div className="glass-card" style={{ padding: 'clamp(14px, 2vw, 16px) clamp(16px, 2vw, 20px)', marginBottom: 'clamp(16px, 2vw, 20px)' }}>
-              <p style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#00A878', marginBottom: '8px', textAlign: 'center' }}>
+              <p style={{ fontFamily: 'Inter', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#008C86', marginBottom: '8px', textAlign: 'center' }}>
                 "A Hygiene Workplace will Increase Productivity"
               </p>
             </div>
@@ -96,7 +97,7 @@ export default function About() {
       </section>
 
       {/* Leadership Team */}
-      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
+      <section className="mesh-bg" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Leadership</div>
@@ -107,7 +108,7 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Managing Director */}
-            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center', display: 'flex', flexDirection: 'column', minHeight: '780px' }}>
+            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center', display: 'flex', flexDirection: 'column', minHeight: '600px' }}>
               <div style={{ background: 'rgba(0,87,255,0.1)', borderRadius: '12px', padding: 'clamp(16px, 3vw, 24px)', marginBottom: 'clamp(16px, 2vw, 20px)' }}>
                 <img
                   src={ownerImage}
@@ -116,16 +117,16 @@ export default function About() {
                 />
               </div>
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: '8px' }}>Mr. Rajendra Prasad</h3>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#0057FF', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Founder & Managing Director</p>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#0969E8', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Founder & Managing Director</p>
               <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
                 A distinguished engineering leader with extensive expertise in Pharmaceutical and Biotechnology Industries. Held Senior Leadership and Project Management roles in Singapore, delivering engineering solutions for globally recognized pharmaceutical manufacturing facilities. Brings deep experience in project execution, GMP compliance, and engineering excellence. Passionate about driving innovation, quality, and operational efficiency through world-class engineering practices. Committed to delivering sustainable, client-focused solutions that create long-term value.
               </p>
-              <a href="https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: '24px', color: '#0057FF', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+              <a href="https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: '24px', color: '#0969E8', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
                 View LinkedIn Profile →
               </a>
             </div>
             {/* CEO */}
-            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center', display: 'flex', flexDirection: 'column', minHeight: '780px' }}>
+            <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px)', textAlign: 'center', display: 'flex', flexDirection: 'column', minHeight: '600px' }}>
               <div style={{ background: 'rgba(0,168,120,0.1)', borderRadius: '12px', padding: 'clamp(16px, 3vw, 24px)', marginBottom: 'clamp(16px, 2vw, 20px)' }}>
                 <img
                   src={ceoImage}
@@ -134,11 +135,11 @@ export default function About() {
                 />
               </div>
               <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: '8px' }}>Mr. Prudvi Nayak</h3>
-              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#00A878', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Chief Executive Officer</p>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#008C86', marginBottom: 'clamp(12px, 2vw, 16px)', fontWeight: 600 }}>Chief Executive Officer</p>
               <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
                 Provides strategic leadership, driving engineering excellence, business growth, and operational performance across Engineering, Pharmaceutical, Biotechnology, and Life Sciences projects while ensuring innovation, quality, and client satisfaction through comprehensive project management and technical expertise in facility design and validation.
               </p>
-              <a href="https://www.linkedin.com/in/prudvi-nayak-gugulothu-77496513a/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: '24px', color: '#00A878', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
+              <a href="https://www.linkedin.com/in/prudvi-nayak-gugulothu-77496513a/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: '24px', color: '#008C86', fontWeight: 600, fontSize: 'clamp(14px, 2.5vw, 18px)' }}>
                 View LinkedIn Profile →
               </a>
             </div>
@@ -147,7 +148,7 @@ export default function About() {
       </section>
 
       {/* Mission / Vision */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(50px, 6vw, 60px) 0' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(40px, 5vw, 50px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <div className="gradient-border-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)' }}>
             <div
@@ -163,12 +164,12 @@ export default function About() {
                 marginBottom: 'clamp(16px, 2vw, 20px)',
               }}
             >
-              <Award size={22} style={{ color: '#0057FF' }} />
+              <Award size={22} style={{ color: '#0969E8' }} />
             </div>
             <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: '14px' }}>
               Our Mission
             </h3>
-            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>
+            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.7 }}>
               To provide consistently high quality services in an efficient and professional manner to ensure building/business safety, comfort and enhance productivity.
             </p>
           </div>
@@ -186,12 +187,12 @@ export default function About() {
                 marginBottom: 'clamp(16px, 2vw, 20px)',
               }}
             >
-              <Globe size={22} style={{ color: '#00A878' }} />
+              <Globe size={22} style={{ color: '#008C86' }} />
             </div>
             <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: '14px' }}>
               Our Vision
             </h3>
-            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>
+            <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.7 }}>
               To be the preferred facility management service provider, delivering effective, reliable and excellent services as a collaborative and valued partner.
             </p>
           </div>
@@ -199,7 +200,7 @@ export default function About() {
       </section>
 
       {/* Achievements */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div>
             <div className="section-label mb-4 sm:mb-5">Our Track Record</div>
@@ -210,8 +211,8 @@ export default function About() {
             <div className="flex flex-col gap-3 sm:gap-4">
               {achievements.map((a, i) => (
                 <div key={i} className="flex gap-3 items-start">
-                  <CheckCircle size={16} style={{ color: '#00A878', marginTop: '9px', flexShrink: 0 }} />
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{a}</p>
+                  <CheckCircle size={16} style={{ color: '#008C86', marginTop: '9px', flexShrink: 0 }} />
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6, marginTop: '0px' }}>{a}</p>
                 </div>
               ))}
             </div>
@@ -235,7 +236,7 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0 clamp(80px, 10vw, 120px) 0' }}>
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(40px, 6vw, 60px) 0 clamp(60px, 8vw, 100px) 0' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
             <div className="section-label mb-4 sm:mb-5" style={{ justifyContent: 'center' }}>Our History</div>
@@ -250,14 +251,14 @@ export default function About() {
                 <span className="number-text gradient-text" style={{ fontSize: 'clamp(16px, 3vw, 18px)' }}>{m.year}</span>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0, paddingTop: '8px' }}>
-                <div style={{ width: 'clamp(8px, 1.5vw, 10px)', height: 'clamp(8px, 1.5vw, 10px)', borderRadius: '50%', background: i % 2 === 0 ? '#0057FF' : '#00A878', flexShrink: 0 }} />
+                <div style={{ width: 'clamp(8px, 1.5vw, 10px)', height: 'clamp(8px, 1.5vw, 10px)', borderRadius: '50%', background: i % 2 === 0 ? '#0969E8' : '#008C86', flexShrink: 0 }} />
                 {i < milestones.length - 1 && <div style={{ width: 2, flex: 1, background: 'rgba(0,0,0,0.08)', minHeight: 'clamp(20px, 3vw, 24px)', marginTop: '6px' }} />}
               </div>
               <div className="glass-card" style={{ padding: 'clamp(14px, 2vw, 16px) clamp(16px, 2vw, 20px)', flex: 1 }}>
                 {m.events.map((e, j) => (
                   <div key={j} className="flex gap-2 items-start mb-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: i % 2 === 0 ? '#0057FF' : '#00A878', marginTop: '9px', flexShrink: 0 }} />
-                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{e}</p>
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: i % 2 === 0 ? '#0969E8' : '#008C86', marginTop: '9px', flexShrink: 0 }} />
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6, marginTop: '0px' }}>{e}</p>
                   </div>
                 ))}
               </div>
@@ -268,3 +269,6 @@ export default function About() {
     </div>
   )
 }
+
+
+

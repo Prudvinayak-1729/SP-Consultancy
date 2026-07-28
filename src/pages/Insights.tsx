@@ -1,4 +1,5 @@
 import { Clock, ArrowRight, BookOpen } from 'lucide-react'
+import featuredImage from '/assets/img/p2.jpeg'
 import { Link } from 'react-router-dom'
 
 const articles = [
@@ -16,7 +17,7 @@ const articles = [
       'Personnel qualification and gowning procedures are integral to the engineering design process',
       'RABS and isolator technology is increasingly mandated for aseptic filling operations',
     ],
-    img: 'https://images.unsplash.com/photo-1748000970909-845f4aa144d2?w=800&h=440&fit=crop&auto=format',
+    img: featuredImage,
     highlight: true,
   },
   {
@@ -165,7 +166,7 @@ export default function Insights() {
                 <h2 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(20px, 3vw, 26px)', color: '#111827', lineHeight: 1.25, marginBottom: '14px' }}>
                   {featured.title}
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.75, marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.75, marginBottom: '20px' }}>
                   {featured.intro}
                 </p>
                 <div className="divider-gradient" style={{ marginBottom: '20px' }} />
@@ -174,8 +175,8 @@ export default function Insights() {
                 </p>
                 {featured.keyTakeaways.slice(0, 3).map((kp, i) => (
                   <div key={i} className="flex gap-2 items-start mb-2">
-                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', marginTop: '10px', flexShrink: 0 }} />
-                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
+                    <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#008C86', marginTop: '10px', flexShrink: 0 }} />
+                    <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
                   </div>
                 ))}
               </div>
@@ -212,7 +213,7 @@ export default function Insights() {
                   <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: '#111827', lineHeight: 1.3, marginBottom: '10px' }}>
                     {a.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.65, marginBottom: '16px' }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.65, marginBottom: '16px' }}>
                     {a.excerpt}
                   </p>
                   <div className="divider-gradient" style={{ marginBottom: '14px' }} />
@@ -222,8 +223,8 @@ export default function Insights() {
                     </p>
                     {a.keyTakeaways.slice(0, 2).map((kp, j) => (
                       <div key={j} className="flex gap-2 items-start mb-2">
-                        <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#00A878', marginTop: '10px', flexShrink: 0 }} />
-                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
+                        <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#008C86', marginTop: '10px', flexShrink: 0 }} />
+                        <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6, marginTop: '0px' }}>{kp}</p>
                       </div>
                     ))}
                   </div>
@@ -231,7 +232,7 @@ export default function Insights() {
                     <BookOpen size={12} />
                     <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)' }}>{a.date}</span>
                     <div style={{ flex: 1 }} />
-                    <Link to="/contact" className="flex items-center gap-1" style={{ color: '#0057FF', textDecoration: 'none' }}>
+                    <Link to="/contact" className="flex items-center gap-1" style={{ color: '#0969E8', textDecoration: 'none' }}>
                       <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 12px)', fontWeight: 600 }}>Contact</span>
                       <ArrowRight size={12} />
                     </Link>
@@ -245,3 +246,8 @@ export default function Insights() {
     </div>
   )
 }
+
+
+
+
+

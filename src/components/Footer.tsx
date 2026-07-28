@@ -33,7 +33,7 @@ export default function Footer() {
           <div>
             <p
               className="section-label mb-3"
-              style={{ color: '#00A878', justifyContent: 'flex-start' }}
+              style={{ color: '#008C86', justifyContent: 'flex-start' }}
             >
               Ready to Build Excellence
             </p>
@@ -95,7 +95,7 @@ export default function Footer() {
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: '#4B5563',
+              color: '#475569',
               marginBottom: '20px',
             }}
           >
@@ -109,7 +109,7 @@ export default function Footer() {
                   style={{
                     fontFamily: 'Inter',
                     fontSize: 'clamp(12px, 2vw, 14px)',
-                    color: '#4B5563',
+                    color: '#475569',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
                     display: 'flex',
@@ -117,7 +117,7 @@ export default function Footer() {
                     gap: '6px',
                   }}
                   onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = '#111827')}
-                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = '#4B5563')}
+                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = '#475569')}
                 >
                   <span style={{ color: 'rgba(0,87,255,0.5)', fontSize: 'clamp(9px, 2vw, 10px)' }}>▸</span>
                   {s}
@@ -136,7 +136,7 @@ export default function Footer() {
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: '#4B5563',
+              color: '#475569',
               marginBottom: '20px',
             }}
           >
@@ -150,7 +150,7 @@ export default function Footer() {
                   style={{
                     fontFamily: 'Inter',
                     fontSize: 'clamp(12px, 2vw, 14px)',
-                    color: '#4B5563',
+                    color: '#475569',
                     textDecoration: 'none',
                     transition: 'color 0.2s',
                     display: 'flex',
@@ -158,7 +158,7 @@ export default function Footer() {
                     gap: '6px',
                   }}
                   onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = '#111827')}
-                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = '#4B5563')}
+                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = '#475569')}
                 >
                   <span style={{ color: 'rgba(0,168,120,0.5)', fontSize: 'clamp(9px, 2vw, 10px)' }}>▸</span>
                   {c.label}
@@ -177,7 +177,7 @@ export default function Footer() {
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: '#4B5563',
+              color: '#475569',
               marginBottom: '20px',
             }}
           >
@@ -187,7 +187,7 @@ export default function Footer() {
             {/* Address – now exactly 2 lines, with India on the second line beside the rest */}
             <div className="flex gap-3">
               <div className="icon-box" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0, marginTop: 2 }}>
-                <MapPin size={15} style={{ color: '#00A878' }} />
+                <MapPin size={15} style={{ color: '#008C86' }} />
               </div>
               <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827', lineHeight: 1.6 }}>
                 <div style={{ whiteSpace: 'nowrap' }}>#8-80/80NP, Ramidi Malla Reddy Nagar, Almasguda,</div>
@@ -198,7 +198,7 @@ export default function Footer() {
             {/* Phone */}
             <div className="flex gap-3 items-center">
               <div className="icon-box" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0 }}>
-                <Phone size={15} style={{ color: '#0057FF' }} />
+                <Phone size={15} style={{ color: '#0969E8' }} />
               </div>
               <div>
                 <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>+91 90008 77499</p>
@@ -210,7 +210,7 @@ export default function Footer() {
             {/* Email */}
             <div className="flex gap-3 items-center">
               <div className="icon-box" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0 }}>
-                <Mail size={15} style={{ color: '#00A878' }} />
+                <Mail size={15} style={{ color: '#008C86' }} />
               </div>
               <div>
                 <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>spconsultanancies@gmail.com</p>
@@ -227,14 +227,14 @@ export default function Footer() {
                 marginTop: '4px',
               }}
             >
-              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', fontWeight: 600, color: '#00A878', letterSpacing: '0.06em', marginBottom: '4px' }}>
+              <p style={{ fontFamily: 'Space Grotesk', fontSize: 'clamp(10px, 2vw, 12px)', fontWeight: 600, color: '#008C86', letterSpacing: '0.06em', marginBottom: '4px' }}>
                 WORKING HOURS
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: '#475569', whiteSpace: 'nowrap' }}>
                   Monday – Saturday: 9:00 AM – 7:00 PM
                 </span>
-                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: '#4B5563', whiteSpace: 'nowrap' }}>
+                <span style={{ fontFamily: 'Inter', fontSize: 'clamp(11px, 2vw, 13px)', color: '#475569', whiteSpace: 'nowrap' }}>
                   Sunday: Emergency Support Only
                 </span>
               </div>
@@ -257,3 +257,5 @@ export default function Footer() {
     </footer>
   )
 }
+
+

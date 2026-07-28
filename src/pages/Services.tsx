@@ -1,44 +1,45 @@
 import { Award, Shield, Users, Globe } from 'lucide-react'
+import servicesHeroImage from '/assets/img/S1.png'
 
 const services = [
-  { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0057FF' },
-  { title: 'HVAC Systems', desc: 'Precision HVAC design for cleanroom environments', color: '#00A878' },
-  { title: 'Cleanroom Engineering', desc: 'Cleanroom design and qualification', color: '#0057FF' },
-  { title: 'Utility Engineering', desc: 'Pharmaceutical-grade utility systems design', color: '#00A878' },
-  { title: 'CSV & Validation', desc: 'Computer system validation per GAMP 5 guidelines', color: '#0057FF' },
-  { title: 'Facility Audit Readiness', desc: 'GMP gap assessment and regulatory inspection support', color: '#00A878' },
-  { title: 'MES', desc: 'Manufacturing Execution System implementation and integration', color: '#0057FF' },
-  { title: 'Temperature Mapping', desc: 'Thermal validation and temperature mapping studies', color: '#00A878' },
-  { title: 'IQ / OQ / PQ', desc: 'Installation, operational, and performance qualification', color: '#0057FF' },
-  { title: 'Water Systems', desc: 'WFI, PW, and water for injection loop design', color: '#0057FF' },
-  { title: 'Automation & BMS', desc: 'Integrated building management and process automation', color: '#00A878' },
-  { title: 'Shutdown Services', desc: 'Planned maintenance shutdown and turnaround management', color: '#0057FF' },
-  { title: 'Energy Audits', desc: 'Energy efficiency assessment and decarbonization planning', color: '#00A878' },
-  { title: 'Documentation', desc: 'GMP documentation, SOPs, and validation protocols', color: '#0057FF' },
-  { title: 'Equipment Qualification', desc: 'Risk-based equipment qualification and requalification', color: '#00A878' },
-  { title: 'Process Engineering', desc: 'Process flow development, PFDs, P&IDs, equipment sizing, utility calculations, and process optimization.', color: '#0057FF' },
+  { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0969E8' },
+  { title: 'HVAC Systems', desc: 'Precision HVAC design for cleanroom environments', color: '#008C86' },
+  { title: 'Cleanroom Engineering', desc: 'Cleanroom design and qualification', color: '#0969E8' },
+  { title: 'Utility Engineering', desc: 'Pharmaceutical-grade utility systems design', color: '#008C86' },
+  { title: 'CSV & Validation', desc: 'Computer system validation per GAMP 5 guidelines', color: '#0969E8' },
+  { title: 'Facility Audit Readiness', desc: 'GMP gap assessment and regulatory inspection support', color: '#008C86' },
+  { title: 'MES', desc: 'Manufacturing Execution System implementation and integration', color: '#0969E8' },
+  { title: 'Temperature Mapping', desc: 'Thermal validation and temperature mapping studies', color: '#008C86' },
+  { title: 'IQ / OQ / PQ', desc: 'Installation, operational, and performance qualification', color: '#0969E8' },
+  { title: 'Water Systems', desc: 'WFI, PW, and water for injection loop design', color: '#0969E8' },
+  { title: 'Automation & BMS', desc: 'Integrated building management and process automation', color: '#008C86' },
+  { title: 'Shutdown Services', desc: 'Planned maintenance shutdown and turnaround management', color: '#0969E8' },
+  { title: 'Energy Audits', desc: 'Energy efficiency assessment and decarbonization planning', color: '#008C86' },
+  { title: 'Documentation', desc: 'GMP documentation, SOPs, and validation protocols', color: '#0969E8' },
+  { title: 'Equipment Qualification', desc: 'Risk-based equipment qualification and requalification', color: '#008C86' },
+  { title: 'Process Engineering', desc: 'Process flow development, PFDs, P&IDs, equipment sizing, utility calculations, and process optimization.', color: '#0969E8' },
   {
     title: 'CQV Services',
     desc: 'Commissioning, Qualification & Validation (CQV) for facilities, utilities, equipment, and manufacturing systems.',
-    color: '#00A878',
+    color: '#008C86',
   },
   {
     title: 'Project Management Consultancy',
     desc: 'End-to-end project planning, coordination, execution, monitoring, and successful delivery of pharmaceutical engineering projects.',
-    color: '#0057FF',
+    color: '#0969E8',
   },
   {
     title: 'Greenfield & Brownfield Projects',
     desc: 'Complete engineering, expansion, modernization, commissioning, and validation of pharmaceutical manufacturing facilities.',
-    color: '#00A878',
+    color: '#008C86',
   },
 ]
 
 const values = [
-  { icon: <Award size={20} style={{ color: '#0057FF' }} />, title: 'Engineering Excellence', desc: 'Rigorous technical standards in every deliverable, every time.' },
-  { icon: <Shield size={20} style={{ color: '#00A878' }} />, title: 'Regulatory Integrity', desc: 'Compliance is not an afterthought — it is the foundation of every design decision.' },
-  { icon: <Users size={20} style={{ color: '#0057FF' }} />, title: 'Client Partnership', desc: 'Long-term relationships built on transparency, responsiveness, and shared success.' },
-  { icon: <Globe size={20} style={{ color: '#00A878' }} />, title: 'Global Mindset', desc: 'World-class engineering practices applied to local market realities.' },
+  { icon: <Award size={20} style={{ color: '#0969E8' }} />, title: 'Engineering Excellence', desc: 'Rigorous technical standards in every deliverable, every time.' },
+  { icon: <Shield size={20} style={{ color: '#008C86' }} />, title: 'Regulatory Integrity', desc: 'Compliance is not an afterthought — it is the foundation of every design decision.' },
+  { icon: <Users size={20} style={{ color: '#0969E8' }} />, title: 'Client Partnership', desc: 'Long-term relationships built on transparency, responsiveness, and shared success.' },
+  { icon: <Globe size={20} style={{ color: '#008C86' }} />, title: 'Global Mindset', desc: 'World-class engineering practices applied to local market realities.' },
 ]
 
 export default function Services() {
@@ -48,17 +49,29 @@ export default function Services() {
       <section className="page-hero">
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
         <div className="max-w-7xl mx-auto px-6" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label mb-5">Our Services</div>
-          <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
-            End-to-End
-            <br />
-            <span className="gradient-text">Engineering Capabilities</span>
-          </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
-            Comprehensive pharmaceutical engineering services from concept to commissioning. 
-            We deliver regulatory-compliant solutions for cleanrooms, utilities, automation, 
-            validation, and complete facility projects across India and beyond.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="section-label mb-5">Our Services</div>
+              <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
+                End-to-End
+                <br />
+                <span className="gradient-text">Engineering Capabilities</span>
+              </h1>
+              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
+                Comprehensive pharmaceutical engineering services from concept to commissioning. 
+                We deliver regulatory-compliant solutions for cleanrooms, utilities, automation, 
+                validation, and complete facility projects across India and beyond.
+              </p>
+            </div>
+            <div style={{ position: 'relative' }}>
+              <img
+                src={servicesHeroImage}
+                alt="Engineering Services"
+                className="image-hover-effect"
+                style={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'cover', borderRadius: '20px', display: 'block', boxShadow: '0 24px 64px rgba(0,0,0,0.4)' }}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -85,7 +98,7 @@ export default function Services() {
                 <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(13px, 2vw, 15px)', color: '#111827', marginBottom: '8px', lineHeight: 1.3 }}>
                   {s.title}
                 </h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7, flex: 1 }}>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.7, flex: 1 }}>
                   {s.desc}
                 </p>
               </div>
@@ -98,7 +111,7 @@ export default function Services() {
       <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 80px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="glass-card" style={{ padding: 'clamp(20px, 3vw, 28px) clamp(16px, 2vw, 24px)' }}>
-            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: 'clamp(12px, 2vw, 16px)' }}>Industry Focus</h3>
+            <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 22px)', color: '#111827', marginBottom: 'clamp(12px, 2vw, 16px)', textAlign: 'center' }}>Industry Focus</h3>
             <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', lineHeight: 1.7, textAlign: 'justify' }}>
               We specialize in Life Sciences service verticals including pharmaceuticals, medical equipment manufacturing, genetics research, and biotechnology.
             </p>
@@ -121,7 +134,7 @@ export default function Services() {
               <div key={i} className="glass-card" style={{ padding: 'clamp(20px, 3vw, 32px) clamp(16px, 2vw, 24px)', textAlign: 'center' }}>
                 <div className="icon-box" style={{ margin: '0 auto clamp(12px, 2vw, 18px)' }}>{v.icon}</div>
                 <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(15px, 2vw, 17px)', color: '#111827', marginBottom: '10px' }}>{v.title}</h3>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>{v.desc}</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.7 }}>{v.desc}</p>
               </div>
             ))}
           </div>
@@ -130,3 +143,7 @@ export default function Services() {
     </div>
   )
 }
+
+
+
+

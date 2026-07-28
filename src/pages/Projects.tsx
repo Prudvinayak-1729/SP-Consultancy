@@ -173,7 +173,7 @@ export default function Projects() {
       </section>
 
       {/* Stats */}
-      <section className="mesh-bg" style={{ padding: '48px 0', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+      <section className="mesh-bg" style={{ padding: '40px 0', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
@@ -191,7 +191,7 @@ export default function Projects() {
       </section>
 
       {/* Filter */}
-      <section className="mesh-bg-alt" style={{ padding: '60px 0 40px' }}>
+      <section className="mesh-bg-alt" style={{ padding: '40px 0 30px' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap gap-3 mb-12">
             {categories.map(c => (
@@ -201,12 +201,12 @@ export default function Projects() {
                 style={{
                   padding: '8px 20px',
                   borderRadius: '999px',
-                  border: `1px solid ${active === c ? '#0057FF' : 'rgba(0,0,0,0.12)'}`,
+                  border: `1px solid ${active === c ? '#0969E8' : 'rgba(0,0,0,0.12)'}`,
                   background: active === c ? 'rgba(0,87,255,0.15)' : 'rgba(0,0,0,0.03)',
                   fontFamily: 'Space Grotesk',
                   fontSize: 'clamp(14px, 2.5vw, 18px)',
                   fontWeight: 600,
-                  color: active === c ? '#111827' : '#4B5563',
+                  color: active === c ? '#111827' : '#475569',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
                 }}
@@ -251,15 +251,15 @@ export default function Projects() {
                   <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#111827', marginBottom: '8px', lineHeight: 1.3 }}>
                     {p.title}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#0057FF', fontWeight: 500, marginBottom: '10px' }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#0969E8', fontWeight: 500, marginBottom: '10px' }}>
                     {p.location}
                   </p>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.65, marginBottom: '14px' }}>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.65, marginBottom: '14px' }}>
                     {p.desc}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-14px">
                     {p.tech.slice(0, 3).map(t => (
-                      <span key={t} style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(0,87,255,0.1)', border: '1px solid rgba(0,87,255,0.2)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 500, color: '#4B5563' }}>
+                      <span key={t} style={{ padding: '3px 10px', borderRadius: '4px', background: 'rgba(0,87,255,0.1)', border: '1px solid rgba(0,87,255,0.2)', fontFamily: 'Space Grotesk', fontSize: 'clamp(9px, 2vw, 10px)', fontWeight: 500, color: '#475569' }}>
                         {t}
                       </span>
                     ))}
@@ -278,3 +278,6 @@ export default function Projects() {
     </div>
   )
 }
+
+
+

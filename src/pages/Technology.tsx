@@ -2,10 +2,10 @@ import { Cpu, Globe, Shield, Zap } from 'lucide-react'
 import techImage from '/assets/img/Technology.png'
 
 const capabilities = [
-  { icon: <Globe size={24} style={{ color: '#0057FF' }} />, title: 'Digital Twin Development', desc: 'Creating virtual replicas of pharmaceutical facilities for predictive maintenance, operational optimization, and regulatory change assessment without production disruption.' },
-  { icon: <Cpu size={24} style={{ color: '#00A878' }} />, title: 'IoT & Industry 4.0 Integration', desc: 'Connecting facility systems — HVAC, utilities, equipment — into a unified digital intelligence layer for real-time visibility and predictive analytics.' },
-  { icon: <Shield size={24} style={{ color: '#0057FF' }} />, title: 'Cybersecurity for OT Systems', desc: 'Pharmaceutical-specific OT/ICS cybersecurity assessment and hardening to protect critical manufacturing infrastructure from digital threats.' },
-  { icon: <Zap size={24} style={{ color: '#00A878' }} />, title: 'AI-Assisted Engineering', desc: 'Leveraging artificial intelligence tools to accelerate drawing review, document QC, and design optimization — reducing engineering cycles by up to 25%.' },
+  { icon: <Globe size={24} style={{ color: '#0969E8' }} />, title: 'Digital Twin Development', desc: 'Creating virtual replicas of pharmaceutical facilities for predictive maintenance, operational optimization, and regulatory change assessment without production disruption.' },
+  { icon: <Cpu size={24} style={{ color: '#008C86' }} />, title: 'IoT & Industry 4.0 Integration', desc: 'Connecting facility systems — HVAC, utilities, equipment — into a unified digital intelligence layer for real-time visibility and predictive analytics.' },
+  { icon: <Shield size={24} style={{ color: '#0969E8' }} />, title: 'Cybersecurity for OT Systems', desc: 'Pharmaceutical-specific OT/ICS cybersecurity assessment and hardening to protect critical manufacturing infrastructure from digital threats.' },
+  { icon: <Zap size={24} style={{ color: '#008C86' }} />, title: 'AI-Assisted Engineering', desc: 'Leveraging artificial intelligence tools to accelerate drawing review, document QC, and design optimization — reducing engineering cycles by up to 25%.' },
 ]
 
 export default function Technology() {
@@ -74,7 +74,7 @@ export default function Technology() {
                 <br />
                 <span className="gradient-text">Engineering,</span>
                 <br />
-                <span className="gradient-text" style={{ background: 'linear-gradient(135deg, #00A878, #0057FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                <span className="gradient-text" style={{ background: 'linear-gradient(135deg, #008C86, #0969E8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   Available Today
                 </span>
               </h2>
@@ -82,7 +82,7 @@ export default function Technology() {
                 style={{
                   fontFamily: 'Inter',
                   fontSize: 'clamp(14px, 2vw, 18px)',
-                  color: '#4B5563',
+                  color: '#475569',
                   marginTop: '16px',
                   maxWidth: '500px',
                   lineHeight: 1.7,
@@ -132,7 +132,7 @@ export default function Technology() {
                 <div className="icon-box" style={{ flexShrink: 0 }}>{c.icon}</div>
                 <div>
                   <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#111827', marginBottom: '10px' }}>{c.title}</h3>
-                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7 }}>{c.desc}</p>
+                  <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.7 }}>{c.desc}</p>
                 </div>
               </div>
             ))}
@@ -162,8 +162,8 @@ export default function Technology() {
                 'Cost & Energy Saving Expertise'
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#0057FF', flexShrink: 0, marginTop: '10px' }} />
-                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7, marginTop: '0px' }}>{item}</span>
+                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#0969E8', flexShrink: 0, marginTop: '10px' }} />
+                  <span style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.7, marginTop: '0px' }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -173,3 +173,5 @@ export default function Technology() {
     </div>
   )
 }
+
+

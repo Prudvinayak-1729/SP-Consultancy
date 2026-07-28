@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -19,9 +19,24 @@ function ScrollToTop() {
   return null
 }
 
+function GitHubPagesRedirect() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search)
+    const redirectPath = params.get('redirect')
+    if (redirectPath) {
+      navigate(redirectPath, { replace: true })
+    }
+  }, [location, navigate])
+
+  return null
+}
+
 function Layout() {
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#071B3B' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: '#0B2545' }}>
       <Navbar />
       <main>
         <Routes>
@@ -45,8 +60,12 @@ function Layout() {
 export default function App() {
   return (
     <BrowserRouter>
+      <GitHubPagesRedirect />
       <ScrollToTop />
       <Layout />
     </BrowserRouter>
   )
 }
+
+
+
