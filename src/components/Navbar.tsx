@@ -6,6 +6,7 @@ import logo from '/assets/img/SPC Logo.png'
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
+  { label: 'Our Services', path: '/services' },
   { label: 'Industries', path: '/industries' },
   { label: 'Projects Delivered', path: '/projects' },
   { label: 'Quality', path: '/quality' },

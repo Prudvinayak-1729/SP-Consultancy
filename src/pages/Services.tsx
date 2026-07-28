@@ -1,0 +1,107 @@
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
+
+const services = [
+  { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0057FF' },
+  { title: 'HVAC Systems', desc: 'Precision HVAC design for cleanroom environments', color: '#00A878' },
+  { title: 'Cleanroom Engineering', desc: 'Cleanroom design and qualification', color: '#0057FF' },
+  { title: 'Utility Engineering', desc: 'Pharmaceutical-grade utility systems design', color: '#00A878' },
+  { title: 'CSV & Validation', desc: 'Computer system validation per GAMP 5 guidelines', color: '#0057FF' },
+  { title: 'IQ / OQ / PQ', desc: 'Installation, operational, and performance qualification', color: '#00A878' },
+  { title: 'Water Systems', desc: 'WFI, PW, and water for injection loop design', color: '#0057FF' },
+  { title: 'Automation & BMS', desc: 'Integrated building management and process automation', color: '#00A878' },
+  { title: 'Shutdown Services', desc: 'Planned maintenance shutdown and turnaround management', color: '#0057FF' },
+  { title: 'Energy Audits', desc: 'Energy efficiency assessment and decarbonization planning', color: '#00A878' },
+  { title: 'Documentation', desc: 'GMP documentation, SOPs, and validation protocols', color: '#0057FF' },
+  { title: 'Equipment Qualification', desc: 'Risk-based equipment qualification and requalification', color: '#00A878' },
+  { title: 'Process Engineering', desc: 'Process flow development, PFDs, P&IDs, equipment sizing, utility calculations, and process optimization.', color: '#0057FF' },
+  {
+    title: 'CQV Services',
+    desc: 'Commissioning, Qualification & Validation (CQV) for facilities, utilities, equipment, and manufacturing systems.',
+    color: '#00A878',
+  },
+  {
+    title: 'Project Management Consultancy',
+    desc: 'End-to-end project planning, coordination, execution, monitoring, and successful delivery of pharmaceutical engineering projects.',
+    color: '#0057FF',
+  },
+  {
+    title: 'Greenfield & Brownfield Projects',
+    desc: 'Complete engineering, expansion, modernization, commissioning, and validation of pharmaceutical manufacturing facilities.',
+    color: '#00A878',
+  },
+]
+
+export default function Services() {
+  return (
+    <div>
+      {/* Hero */}
+      <section className="page-hero">
+        <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
+        <div className="max-w-7xl mx-auto px-6" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="section-label mb-5">Our Services</div>
+          <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
+            End-to-End
+            <br />
+            <span className="gradient-text">Engineering Capabilities</span>
+          </h1>
+          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
+            Comprehensive pharmaceutical engineering services from concept to commissioning. 
+            We deliver regulatory-compliant solutions for cleanrooms, utilities, automation, 
+            validation, and complete facility projects across India and beyond.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
+            {services.map((s, i) => (
+              <div
+                key={i}
+                className="glass-card flex flex-col h-full"
+                style={{ padding: 'clamp(18px, 2vw, 22px) clamp(16px, 2vw, 20px)' }}
+              >
+                <div
+                  style={{
+                    width: 8,
+                    height: 8,
+                    borderRadius: '50%',
+                    background: s.color,
+                    marginBottom: 'clamp(10px, 2vw, 14px)',
+                    boxShadow: `0 0 12px ${s.color}`,
+                  }}
+                />
+                <h3 style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(13px, 2vw, 15px)', color: '#111827', marginBottom: '8px', lineHeight: 1.3 }}>
+                  {s.title}
+                </h3>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#4B5563', lineHeight: 1.7, flex: 1 }}>
+                  {s.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="mesh-bg-alt" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="section-heading mb-6" style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>
+            Ready to Discuss Your
+            <br />
+            <span className="gradient-text">Project Requirements?</span>
+          </h2>
+          <p className="body-text mb-8" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '500px', margin: '0 auto 32px' }}>
+            Our engineering team is ready to help you design, build, and qualify 
+            pharmaceutical facilities that meet global standards.
+          </p>
+          <Link to="/contact" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
+            Get In Touch <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}
