@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Link2, MessageCircle, Globe } from 'lucide-react'
+import contactImage from '/assets/img/contact.png'
 
 const offices = [
   {
@@ -74,16 +75,45 @@ export default function Contact() {
       <section className="page-hero">
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label mb-4 sm:mb-5">Contact Us</div>
-          <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
-            Let&apos;s Build Something
-            <br />
-            <span className="gradient-text">Exceptional Together.</span>
-          </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
-            Whether you have a fully scoped project or are exploring options for a new facility —
-            our team is ready to discuss your pharmaceutical engineering requirements.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <div className="section-label mb-4 sm:mb-5">Contact Us</div>
+              <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
+                Let&apos;s Build Something
+                <br />
+                <span className="gradient-text">Exceptional Together.</span>
+              </h1>
+              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'left' }}>
+                Whether you have a fully scoped project or are exploring options for a new facility —
+                our team is ready to discuss your pharmaceutical engineering requirements.
+              </p>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <div
+                className="gradient-border-card glass-card-hover"
+                style={{
+                  padding: '24px',
+                  borderRadius: '20px',
+                  background: 'rgba(255,255,255,0.9)',
+                  backdropFilter: 'blur(24px)',
+                  border: '1px solid rgba(0,0,0,0.08)',
+                  maxWidth: '100%',
+                }}
+              >
+                <img
+                  src={contactImage}
+                  alt="Contact Us"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    maxHeight: '350px',
+                    objectFit: 'contain',
+                    display: 'block',
+                  }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
