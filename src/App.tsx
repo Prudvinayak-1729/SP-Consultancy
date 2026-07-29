@@ -12,6 +12,7 @@ import Technology from './pages/Technology'
 import Insights from './pages/Insights'
 import Contact from './pages/Contact'
 import Services from './pages/Services'
+import SearchPage from './pages/Search'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -50,6 +51,7 @@ function Layout() {
           <Route path="/insights" element={<Insights />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/search" element={<SearchPage />} />
         </Routes>
       </main>
       <Footer />

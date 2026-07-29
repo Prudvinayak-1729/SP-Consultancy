@@ -1,0 +1,30 @@
+{
+  "name": "Sneha & Prahar Consultancy Services",
+  "short_name": "SP Consultancy",
+  "description": "Leading pharmaceutical engineering consultancy providing CQV, CSV, MES, facility audit readiness, temperature mapping, cleanroom engineering, and GMP compliance solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B2545",
+  "theme_color": "#0969E8",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/img/spfavicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/spfavicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "engineering", "consulting"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "related_applications": [],
+  "prefer_related_applications": false
+}
