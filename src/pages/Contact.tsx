@@ -104,29 +104,17 @@ export default function Contact() {
               </p>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <div
-                className="gradient-border-card glass-card-hover"
+              <img
+                src={contactImage}
+                alt="Contact Us"
                 style={{
-                  padding: '24px',
-                  borderRadius: '20px',
-                  background: 'rgba(255,255,255,0.9)',
-                  backdropFilter: 'blur(24px)',
-                  border: '1px solid rgba(0,0,0,0.08)',
-                  maxWidth: '100%',
+                  width: '100%',
+                  height: 'auto',
+                  maxHeight: '400px',
+                  objectFit: 'contain',
+                  display: 'block',
                 }}
-              >
-                <img
-                  src={contactImage}
-                  alt="Contact Us"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    maxHeight: '350px',
-                    objectFit: 'contain',
-                    display: 'block',
-                  }}
-                />
-              </div>
+              />
             </div>
           </div>
         </div>
