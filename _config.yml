@@ -1,0 +1,11 @@
+include:
+  - "dist/**/*"
+  - "dist"
+exclude:
+  - "src"
+  - "node_modules"
+  - ".github"
+  - ".gitignore"
+  - "package.json"
+  - "vite.config.ts"
+  - "index.html"
