@@ -8,7 +8,7 @@ const offices = [
     tag: 'Headquarters',
     address: '#8-80/80NP, Ramidi Malla Reddy Nagar, Almasguda, Badangpet, Hyderabad — 500081, Telangana, India',
     phone: ['+91 90008 77499', '+91 88014 11271', '+91 82962 76148'],
-    email: ['spconsultanancies@gmail.com'],
+    email: ['spconsultancies@gmail.com'],
     mapImg: 'https://images.unsplash.com/photo-1531972111231-7482a960e109?w=700&h=380&fit=crop&auto=format',
     color: '#0969E8',
   },
@@ -20,7 +20,7 @@ const contactMethods = [
     title: 'Call Us Directly',
     desc: 'Speak with a senior engineer about your project requirements.',
     value: '+91 88014 11271\n+91 90008 77499',
-    sub: 'Monday–Saturday, 9 AM – 7 PM IST',
+    sub: 'India',
     action: 'Call Now',
   },
   {
@@ -28,14 +28,14 @@ const contactMethods = [
     title: 'WhatsApp',
     desc: 'Quick project enquiries and instant communication.',
     value: '+65 9353 0873',
-    sub: 'Typically responds within 2 hours',
+    sub: 'Singapore',
     action: 'Start Chat',
   },
   {
     icon: <Mail size={22} style={{ color: '#0969E8' }} />,
     title: 'Email',
     desc: 'Send detailed project briefs and RFQ documents.',
-    value: 'spconsultanancies@gmail.com',
+    value: 'spconsultancies@gmail.com',
     sub: 'Response within 24 hours',
     action: 'Send Email',
   },
@@ -74,7 +74,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact Us - Pharmaceutical Engineering Consultancy"
-        description="Contact Sneha and Prahar Consultancy Services for pharmaceutical engineering, CQV, CSV, MES, and GMP compliance solutions. Call +91 90008 77499 or email spconsultanancies@gmail.com."
+        description="Contact Sneha and Prahar Consultancy Services for pharmaceutical engineering, CQV, CSV, MES, and GMP compliance solutions. Call +91 90008 77499 or email spconsultancies@gmail.com."
         canonical="/contact"
         keywords="contact SP Consultancies, pharmaceutical engineering contact, CQV services contact, CSV validation contact, Hyderabad pharmaceutical consultants, engineering consultancy contact"
         structuredData={{
@@ -158,7 +158,7 @@ export default function Contact() {
                   href={
                     c.title === 'Call Us Directly' ? 'tel:+918801411271' :
                     c.title === 'WhatsApp' ? 'https://wa.me/6593530873' :
-                    c.title === 'Email' ? 'mailto:spconsultanancies@gmail.com' :
+                    c.title === 'Email' ? 'mailto:spconsultancies@gmail.com' :
                     c.title === 'LinkedIn' ? 'https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/' : '#'
                   }
                   target={c.title === 'LinkedIn' ? '_blank' : undefined}
@@ -395,7 +395,7 @@ export default function Contact() {
             <a href="tel:+918801411271" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
               <Phone size={16} /> Call Now
             </a>
-            <a href="mailto:spconsultanancies@gmail.com" className="btn-secondary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
+            <a href="mailto:spconsultancies@gmail.com" className="btn-secondary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
               <Mail size={16} /> Send Email
             </a>
           </div>
