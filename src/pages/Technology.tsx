@@ -35,7 +35,7 @@ export default function Technology() {
               lineHeight: 1.2,
             }}
           >
-            <span style={{ whiteSpace: 'nowrap' }}>Engineering Software</span>
+            <span style={{ whiteSpace: 'nowrap' }}>Engineering Software</span>{' '}
             <span className="gradient-text" style={{ whiteSpace: 'nowrap' }}>at the Cutting Edge.</span>
           </h1>
           <p

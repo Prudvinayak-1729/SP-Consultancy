@@ -86,7 +86,7 @@ export default function Industries() {
               flexWrap: 'nowrap',
             }}
           >
-            <span style={{ whiteSpace: 'nowrap' }}>Engineering Excellence</span>
+            <span style={{ whiteSpace: 'nowrap' }}>Engineering Excellence</span>{' '}
             <span className="gradient-text" style={{ whiteSpace: 'nowrap' }}>Across Life Sciences & Beyond</span>
           </h1>
           <p
