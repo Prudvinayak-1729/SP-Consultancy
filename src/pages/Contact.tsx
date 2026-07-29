@@ -107,6 +107,7 @@ export default function Contact() {
               <img
                 src={contactImage}
                 alt="Contact Us"
+                className="image-hover-effect"
                 style={{
                   width: '100%',
                   height: 'auto',
