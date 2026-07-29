@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Award, Globe } from 'lucide-react'
 import ownerImage from '/assets/img/Rajendra.png'
 import ceoImage from '/assets/img/CEO.png'
 import Aboutimage from '/assets/img/A1.png'
+import SEO from '../components/SEO'
 
 const milestones = [
   { year: '2022', events: ['Company incorporated in Hyderabad, Telangana', 'First project: Oral Solid Dosage facility, Medak', 'Team of 8 core engineers at founding'] },
@@ -24,6 +25,13 @@ const achievements = [
 
 export default function About() {
   return (
+    <>
+      <SEO
+        title="About Us - Pharmaceutical Engineering Experts"
+        description="Founded in 2022, Sneha and Prahar Consultancy Services is a specialized pharmaceutical engineering consultancy with 35+ engineers delivering CQV, CSV, MES, and GMP compliance solutions across India and beyond."
+        canonical="/about"
+        keywords="pharmaceutical engineering consultancy, about SP Consultancies, pharmaceutical engineers, CQV experts, CSV consultants, GMP compliance, facility engineering, biotechnology engineering, pharmaceutical validation services"
+      />
     <div>
     {/* Hero */}
       <section className="page-hero">
@@ -267,6 +275,7 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

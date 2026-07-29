@@ -53,14 +53,14 @@ export default function Navbar() {
           boxShadow: scrolled ? '0 8px 32px rgba(0,0,0,0.1)' : '0 8px 32px rgba(0,0,0,0.1)',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center h-14 sm:h-16 md:h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16 md:h-20">
           {/* Logo */}
           <Link
             to="/"
             className="flex items-center gap-3 flex-shrink-0"
             style={{
               textDecoration: 'none',
-              width: '340px',
+              maxWidth: '300px',
             }}
           >
             <img
@@ -74,7 +74,7 @@ export default function Navbar() {
               }}
             />
             <div
-              className="hidden sm:flex flex-col"
+              className="hidden md:flex flex-col"
               style={{
                 whiteSpace: 'nowrap',
               }}
@@ -107,7 +107,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex flex-1 justify-center items-center gap-5 xl:gap-6">
+          <nav className="hidden lg:flex flex-1 justify-center items-center gap-6 xl:gap-8 ml-12">
             {navLinks.map(link => (
               <Link
                 key={link.path}
@@ -124,10 +124,10 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + search + hamburger */}
-          <div className="flex items-center gap-3 sm:gap-6 ml-8 flex-shrink-0">
+          <div className="flex items-center gap-4 sm:gap-6 ml-8 flex-shrink-0">
             <button
               onClick={handleSearchClick}
-              className="hidden md:flex p-2 rounded-lg transition-colors hover:bg-gray-100"
+              className="flex p-2 rounded-lg transition-colors hover:bg-gray-100"
               style={{ color: '#0B2545' }}
               aria-label="Search"
             >
@@ -135,7 +135,7 @@ export default function Navbar() {
             </button>
             <Link
               to="/contact"
-              className="hidden md:inline-flex btn-primary"
+              className="inline-flex btn-primary"
               style={{
                 padding: 'clamp(8px, 1.5vw, 10px) clamp(16px, 2vw, 22px)',
                 fontSize: 'clamp(11px, 2vw, 13px)',

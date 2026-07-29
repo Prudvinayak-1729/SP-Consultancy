@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock, Link2, MessageCircle, Globe } from 'lucide-react'
 import contactImage from '/assets/img/contact.png'
+import SEO from '../components/SEO'
 
 const offices = [
   {
@@ -70,6 +71,20 @@ const specialties = [
 
 export default function Contact() {
   return (
+    <>
+      <SEO
+        title="Contact Us - Pharmaceutical Engineering Consultancy"
+        description="Contact Sneha and Prahar Consultancy Services for pharmaceutical engineering, CQV, CSV, MES, and GMP compliance solutions. Call +91 90008 77499 or email spconsultanancies@gmail.com."
+        canonical="/contact"
+        keywords="contact SP Consultancies, pharmaceutical engineering contact, CQV services contact, CSV validation contact, Hyderabad pharmaceutical consultants, engineering consultancy contact"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Sneha & Prahar Consultancy Services",
+          "description": "Contact us for pharmaceutical engineering, CQV, CSV, MES, and GMP compliance solutions.",
+          "url": "https://spconsultancies.in/contact"
+        }}
+      />
     <div>
       {/* Hero */}
       <section className="page-hero">
@@ -387,6 +402,7 @@ export default function Contact() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

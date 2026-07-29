@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SEO from '../components/SEO'
 
 const categories = [
   'All',
@@ -155,6 +156,13 @@ export default function Projects() {
   const filtered = active === 'All' ? projects : projects.filter(p => p.category === active)
 
   return (
+    <>
+      <SEO
+        title="Projects - 100+ Pharmaceutical Engineering Deliveries"
+        description="100+ successfully delivered pharmaceutical engineering projects including CQV, CSV, cleanroom engineering, HVAC, utility systems, automation, and facility audit readiness for leading pharma companies across India."
+        canonical="/projects"
+        keywords="pharmaceutical engineering projects, CQV projects, CSV validation projects, cleanroom engineering projects, HVAC projects, pharmaceutical facility projects, engineering consultancy projects"
+      />
     <div>
       {/* Hero */}
       <section className="page-hero">
@@ -276,6 +284,7 @@ export default function Projects() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

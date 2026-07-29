@@ -1,5 +1,6 @@
 import { Cpu, Globe, Shield, Zap } from 'lucide-react'
 import techImage from '/assets/img/Technology.png'
+import SEO from '../components/SEO'
 
 const capabilities = [
   { icon: <Globe size={24} style={{ color: '#0969E8' }} />, title: 'Digital Twin Development', desc: 'Creating virtual replicas of pharmaceutical facilities for predictive maintenance, operational optimization, and regulatory change assessment without production disruption.' },
@@ -10,6 +11,13 @@ const capabilities = [
 
 export default function Technology() {
   return (
+    <>
+      <SEO
+        title="Technology - Digital Twin & Industry 4.0 Solutions"
+        description="Cutting-edge pharmaceutical engineering technology including digital twin development, IoT integration, cybersecurity for OT systems, and AI-assisted engineering for faster, more accurate facility projects."
+        canonical="/technology"
+        keywords="digital twin pharmaceutical, Industry 4.0 pharma, IoT pharmaceutical engineering, OT cybersecurity, AI pharmaceutical engineering, digital engineering tools, smart manufacturing"
+      />
     <div>
       {/* Hero */}
       <section className="page-hero">
@@ -171,6 +179,7 @@ export default function Technology() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

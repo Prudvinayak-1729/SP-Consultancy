@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import Biotech from '/assets/img/I1.jpeg'
+import SEO from '../components/SEO'
 
 const industries = [
   {
@@ -61,6 +62,13 @@ const industries = [
 
 export default function Industries() {
   return (
+    <>
+      <SEO
+        title="Industries Served - Pharmaceutical & Biotechnology"
+        description="Specialized engineering services for pharmaceutical manufacturing, biotechnology, vaccine production, API manufacturing, R&D laboratories, medical devices, and life sciences industries with deep regulatory expertise."
+        canonical="/industries"
+        keywords="pharmaceutical manufacturing, biotechnology engineering, vaccine production facilities, API manufacturing, pharmaceutical R&D, medical device manufacturing, life sciences engineering, GMP facility design"
+      />
     <div>
       {/* Hero */}
       <section className="page-hero">
@@ -174,6 +182,7 @@ export default function Industries() {
         </section>
       ))}
     </div>
+    </>
   )
 }
 

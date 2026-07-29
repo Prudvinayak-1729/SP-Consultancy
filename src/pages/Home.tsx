@@ -3,6 +3,7 @@ import {
   ArrowRight, CheckCircle, Shield, Zap, Users, Building2,
   FlaskConical, Award, Clock, ChevronRight, Star, Quote, Thermometer
 } from 'lucide-react'
+import SEO from '../components/SEO'
 
 const stats = [
   { number: '2022', label: 'Founded', suffix: '' },
@@ -114,6 +115,37 @@ const clients = [
 
 export default function Home() {
   return (
+    <>
+      <SEO
+        title="Pharmaceutical Engineering & CQV Services"
+        description="Sneha And Prahar Consultancy Services delivers world-class engineering, CQV, CSV, MES, facility audit readiness, temperature mapping, cleanroom, utility, compliance, and project execution solutions for pharmaceutical and biotechnology companies."
+        canonical="/"
+        keywords="pharmaceutical engineering, CQV services, CSV, MES, facility audit readiness, temperature mapping, cleanroom engineering, GMP compliance, WHO GMP, US FDA, EU GMP, pharmaceutical facility design"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Sneha & Prahar Consultancy Services",
+          "url": "https://spconsultancies.in",
+          "logo": "https://spconsultancies.in/assets/img/spfavicon.png",
+          "description": "Leading pharmaceutical engineering consultancy providing CQV, CSV, MES, facility audit readiness, temperature mapping, cleanroom engineering, and GMP compliance solutions since 2022.",
+          "foundingDate": "2022",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9000877499",
+            "contactType": "sales",
+            "availableLanguage": "English"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/sneha-prahar-consultancy-services"
+          ]
+        }}
+      />
     <div>
             {/* ─── HERO ────────────────────────────────────────────────────────── */}
       <section
@@ -750,6 +782,7 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

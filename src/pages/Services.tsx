@@ -1,5 +1,6 @@
 import { Award, Shield, Users, Globe } from 'lucide-react'
 import servicesHeroImage from '/assets/img/S1.png'
+import SEO from '../components/SEO'
 
 const services = [
   { title: 'Engineering Consultancy', desc: 'Concept to commissioning engineering for GMP facilities', color: '#0969E8' },
@@ -44,6 +45,13 @@ const values = [
 
 export default function Services() {
   return (
+    <>
+      <SEO
+        title="Pharmaceutical Engineering & CQV Services"
+        description="Comprehensive pharmaceutical engineering services including CQV, CSV, MES, HVAC, cleanroom engineering, utility systems, facility audit readiness, temperature mapping, and GMP compliance solutions for life sciences facilities."
+        canonical="/services"
+        keywords="pharmaceutical engineering services, CQV services, CSV validation, MES solutions, HVAC design, cleanroom engineering, utility engineering, facility audit readiness, temperature mapping, GMP compliance, pharmaceutical facility design"
+      />
     <div>
       {/* Hero */}
       <section className="page-hero">
@@ -141,6 +149,7 @@ export default function Services() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 
