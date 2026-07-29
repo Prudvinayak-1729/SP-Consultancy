@@ -53,7 +53,7 @@ export default function SearchPage() {
   }, [query])
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#0B2545' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: '#FFFFFF' }}>
       <Navbar />
       <main style={{ paddingTop: '80px' }}>
         <Search isModal={false} autoFocus={true} />

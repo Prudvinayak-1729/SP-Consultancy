@@ -205,7 +205,10 @@ export default function Search({ isModal = false, onClose, autoFocus = true }: S
           style={{
             padding: isModal ? '24px' : '20px',
             margin: isModal ? '0 20px' : '0 auto',
-            maxWidth: '800px'
+            maxWidth: '800px',
+            border: '2px solid #0969E8',
+            borderRadius: '12px',
+            boxShadow: '0 4px 12px rgba(9, 105, 232, 0.15)'
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
