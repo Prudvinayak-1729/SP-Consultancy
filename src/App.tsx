@@ -13,6 +13,7 @@ import Insights from './pages/Insights'
 import Contact from './pages/Contact'
 import Services from './pages/Services'
 import SearchPage from './pages/Search'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -52,6 +53,7 @@ function Layout() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </main>
       <Footer />

@@ -16,6 +16,7 @@ const company = [
   { label: 'Technology', path: '/technology' },
   { label: 'Insights', path: '/insights' },
   { label: 'Contact', path: '/contact' },
+  { label: 'Privacy Policy', path: '/privacy-policy' },
 ]
 
 export default function Footer() {
