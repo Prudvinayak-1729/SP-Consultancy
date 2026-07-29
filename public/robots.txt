@@ -1,0 +1,18 @@
+# robots.txt for Sneha & Prahar Consultancy Services
+# Allow search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow search pages to prevent indexing of internal search results
+Disallow: /search
+
+# Disallow specific directories if any
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://sp-consultancy.com/sitemap.xml
+
+# Crawl delay (optional)
+# Crawl-delay: 1

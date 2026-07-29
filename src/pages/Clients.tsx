@@ -1,5 +1,6 @@
 
 import { Star, Quote } from 'lucide-react'
+import SEO from '../components/SEO'
 
 const clients = [
   { name: 'Hetero Drugs', sector: 'Generics Manufacturing', city: 'Hyderabad' },
@@ -66,6 +67,13 @@ const caseStudies = [
 
 export default function Clients() {
   return (
+    <>
+      <SEO
+        title="Our Clients - Leading Pharmaceutical Companies"
+        description="Trusted by India's leading pharmaceutical companies including Dr. Reddy's, Biological E, Aurobindo Pharma, Bharat Biotech, and more. 100+ projects delivered with 99% client satisfaction."
+        canonical="/clients"
+        keywords="pharmaceutical clients, SP Consultancies clients, Dr. Reddy's, Biological E, Aurobindo Pharma, Bharat Biotech, pharmaceutical engineering projects, client testimonials"
+      />
     <div>
       {/* Hero */}
       <section className="page-hero">
@@ -217,6 +225,7 @@ export default function Clients() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

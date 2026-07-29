@@ -16,6 +16,7 @@ const company = [
   { label: 'Technology', path: '/technology' },
   { label: 'Insights', path: '/insights' },
   { label: 'Contact', path: '/contact' },
+  { label: 'Privacy Policy', path: '/privacy-policy' },
 ]
 
 export default function Footer() {
@@ -56,9 +57,9 @@ export default function Footer() {
       </div>
 
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8" style={{ width: '100%' }}>
         {/* Brand column */}
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-3" style={{ minWidth: 0 }}>
           <div className="flex items-center gap-3 mb-5">
             <img
               src={logo}
@@ -80,14 +81,14 @@ export default function Footer() {
             </div>
           </div>
           <p className="body-text text-sm leading-relaxed mb-6">
-            World-class pharmaceutical engineering consultancy delivering regulatory-compliant,
+            World-class Pharmaceutical Engineering Consultancy delivering regulatory-compliant,
             technically advanced solutions since 2022.
           </p>
           {/* Compliance Standards section removed */}
         </div>
 
         {/* Projects */}
-        <div>
+        <div className="lg:col-span-3" style={{ minWidth: 0 }}>
           <h4
             style={{
               fontFamily: 'Space Grotesk',
@@ -128,7 +129,7 @@ export default function Footer() {
         </div>
 
         {/* Company */}
-        <div>
+        <div className="lg:col-span-2" style={{ minWidth: 0 }}>
           <h4
             style={{
               fontFamily: 'Space Grotesk',
@@ -169,7 +170,7 @@ export default function Footer() {
         </div>
 
         {/* Contact */}
-        <div>
+        <div className="lg:col-span-4" style={{ minWidth: 0 }}>
           <h4
             style={{
               fontFamily: 'Space Grotesk',
@@ -184,15 +185,36 @@ export default function Footer() {
             Get In Touch
           </h4>
           <div className="flex flex-col gap-5">
-            {/* Address – now exactly 2 lines, with India on the second line beside the rest */}
-            <div className="flex gap-3">
-              <div className="icon-box" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0, marginTop: 2 }}>
+            {/* Address – now exactly 3 lines for better readability */}
+            <div className="flex gap-3 items-start">
+              <div
+                className="icon-box"
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: 8,
+                  flexShrink: 0,
+                  marginTop: 2,
+                }}
+              >
                 <MapPin size={15} style={{ color: '#008C86' }} />
               </div>
-              <div style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827', lineHeight: 1.6 }}>
-                <div style={{ whiteSpace: 'nowrap' }}>#8-80/80NP, Ramidi Malla Reddy Nagar, Almasguda,</div>
-                <div style={{ whiteSpace: 'nowrap' }}>Badangpet, Hyderabad, Telangana 500081, India</div>
-              </div>
+
+              <p
+                style={{
+                  fontFamily: 'Inter',
+                  fontSize: 'clamp(12px, 2vw, 14px)',
+                  color: '#111827',
+                  lineHeight: 1.7,
+                  margin: 0,
+                  flex: 1,
+                  minWidth: 0,
+                }}
+              >
+                #8-80/80NP, Ramidi Malla Reddy Nagar,<br />
+                Almasguda, Badangpet, Hyderabad,<br />
+                Telangana 500081, India
+              </p>
             </div>
 
             {/* Phone */}
@@ -213,7 +235,7 @@ export default function Footer() {
                 <Mail size={15} style={{ color: '#008C86' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>spconsultanancies@gmail.com</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>spconsultancies@gmail.com</p>
               </div>
             </div>
 

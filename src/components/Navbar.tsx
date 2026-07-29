@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Menu, X, Search } from 'lucide-react'
 import logo from '/assets/img/SPC Logo.png'
 
 const navLinks = [
@@ -18,6 +18,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const { pathname } = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -33,6 +34,10 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
+
+  const handleSearchClick = () => {
+    navigate('/search')
+  }
 
   return (
     <>
@@ -50,7 +55,14 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-4 group" style={{ textDecoration: 'none' }}>
+          <Link
+            to="/"
+            className="flex items-center gap-3 flex-shrink-0"
+            style={{
+              textDecoration: 'none',
+              maxWidth: '300px',
+            }}
+          >
             <img
               src={logo}
               alt="Sneha and Prahar Consultancy Services Logo"
@@ -61,7 +73,12 @@ export default function Navbar() {
                 maxWidth: '91px',
               }}
             />
-            <div className="hidden sm:flex flex-col">
+            <div
+              className="hidden md:flex flex-col"
+              style={{
+                whiteSpace: 'nowrap',
+              }}
+            >
               <span
                 className="font-bold leading-none"
                 style={{
@@ -90,23 +107,35 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex flex-1 justify-center items-center gap-6 xl:gap-8 ml-12">
             {navLinks.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={`nav-link ${pathname === link.path ? 'active' : ''}`}
+                style={{
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          {/* CTA + hamburger */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          {/* CTA + search + hamburger */}
+          <div className="flex items-center gap-4 sm:gap-6 ml-8 flex-shrink-0">
+            <button
+              onClick={handleSearchClick}
+              className="flex p-2 rounded-lg transition-colors hover:bg-gray-100"
+              style={{ color: '#0B2545' }}
+              aria-label="Search"
+            >
+              <Search size={20} />
+            </button>
             <Link
               to="/contact"
-              className="hidden md:inline-flex btn-primary"
+              className="inline-flex btn-primary"
               style={{
                 padding: 'clamp(8px, 1.5vw, 10px) clamp(16px, 2vw, 22px)',
                 fontSize: 'clamp(11px, 2vw, 13px)',
@@ -157,6 +186,27 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <button
+            onClick={handleSearchClick}
+            className="py-4 border-b flex items-center gap-3"
+            style={{
+              borderColor: 'rgba(255,255,255,0.07)',
+              fontFamily: 'Satoshi, sans-serif',
+              fontSize: 'clamp(18px, 3vw, 22px)',
+              fontWeight: '700',
+              color: '#0B2545',
+              background: 'none',
+              border: 'none',
+              width: '100%',
+              textAlign: 'left',
+              opacity: mobileOpen ? 1 : 0,
+              transform: mobileOpen ? 'translateX(0)' : 'translateX(-20px)',
+              transition: `all 0.35s cubic-bezier(0.22,1,0.36,1) ${navLinks.length * 50}ms`,
+            }}
+          >
+            <Search size={22} />
+            Search
+          </button>
           <Link
             to="/contact"
             className="btn-primary mt-6 justify-center"

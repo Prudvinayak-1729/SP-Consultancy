@@ -1,4 +1,5 @@
 import { Shield, CheckCircle, Award, FileText } from 'lucide-react'
+import SEO from '../components/SEO'
 
 const standards = [
   {
@@ -49,6 +50,13 @@ const qmsElements = [
 
 export default function Quality() {
   return (
+    <>
+      <SEO
+        title="Quality & Compliance - GMP Standards Expertise"
+        description="Zero regulatory non-conformances across all client facilities. Expert in WHO GMP, US FDA 21 CFR, EU GMP Annex 1, Schedule M, ISPE GAMP 5, and ICH guidelines for pharmaceutical engineering."
+        canonical="/quality"
+        keywords="GMP compliance, WHO GMP, US FDA 21 CFR, EU GMP Annex 1, Schedule M, ISPE GAMP 5, pharmaceutical quality management, regulatory compliance, quality assurance pharmaceutical"
+      />
     <div>
       {/* Hero */}
       <section className="page-hero">
@@ -167,6 +175,7 @@ export default function Quality() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

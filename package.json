@@ -15,6 +15,7 @@
     "lucide-react": "^1.25.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^7.18.1"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "@types/react-helmet": "^6.1.11",
     "@vitejs/plugin-react": "^6.0.0",
     "gh-pages": "^6.3.0",
     "oxfmt": "^0.2.0",

@@ -1,6 +1,7 @@
 import { Clock, ArrowRight, BookOpen } from 'lucide-react'
 import featuredImage from '/assets/img/p2.jpeg'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 const articles = [
   {
@@ -112,6 +113,13 @@ export default function Insights() {
   const rest = articles.slice(1)
 
   return (
+    <>
+      <SEO
+        title="Engineering Insights - Pharmaceutical Technical Articles"
+        description="Technical articles, regulatory guidance summaries, and engineering best practices for pharmaceutical industry professionals. Topics include GMP compliance, HVAC design, cleanroom classification, and validation."
+        canonical="/insights"
+        keywords="pharmaceutical engineering articles, GMP compliance articles, HVAC design pharmaceutical, cleanroom classification, CSV validation articles, pharmaceutical technical insights, regulatory guidance"
+      />
     <div>
       {/* Hero */}
       <section className="page-hero">
@@ -244,6 +252,7 @@ export default function Insights() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

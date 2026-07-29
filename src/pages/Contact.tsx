@@ -1,4 +1,6 @@
 import { Phone, Mail, MapPin, Clock, Link2, MessageCircle, Globe } from 'lucide-react'
+import contactImage from '/assets/img/contact.png'
+import SEO from '../components/SEO'
 
 const offices = [
   {
@@ -6,7 +8,7 @@ const offices = [
     tag: 'Headquarters',
     address: '#8-80/80NP, Ramidi Malla Reddy Nagar, Almasguda, Badangpet, Hyderabad — 500081, Telangana, India',
     phone: ['+91 90008 77499', '+91 88014 11271', '+91 82962 76148'],
-    email: ['spconsultanancies@gmail.com'],
+    email: ['spconsultancies@gmail.com'],
     mapImg: 'https://images.unsplash.com/photo-1531972111231-7482a960e109?w=700&h=380&fit=crop&auto=format',
     color: '#0969E8',
   },
@@ -18,7 +20,7 @@ const contactMethods = [
     title: 'Call Us Directly',
     desc: 'Speak with a senior engineer about your project requirements.',
     value: '+91 88014 11271\n+91 90008 77499',
-    sub: 'Monday–Saturday, 9 AM – 7 PM IST',
+    sub: 'India',
     action: 'Call Now',
   },
   {
@@ -26,14 +28,14 @@ const contactMethods = [
     title: 'WhatsApp',
     desc: 'Quick project enquiries and instant communication.',
     value: '+65 9353 0873',
-    sub: 'Typically responds within 2 hours',
+    sub: 'Singapore',
     action: 'Start Chat',
   },
   {
     icon: <Mail size={22} style={{ color: '#0969E8' }} />,
     title: 'Email',
     desc: 'Send detailed project briefs and RFQ documents.',
-    value: 'spconsultanancies@gmail.com',
+    value: 'spconsultancies@gmail.com',
     sub: 'Response within 24 hours',
     action: 'Send Email',
   },
@@ -69,21 +71,64 @@ const specialties = [
 
 export default function Contact() {
   return (
+    <>
+      <SEO
+        title="Contact Us - Pharmaceutical Engineering Consultancy"
+        description="Contact Sneha and Prahar Consultancy Services for pharmaceutical engineering, CQV, CSV, MES, and GMP compliance solutions. Call +91 90008 77499 or email spconsultancies@gmail.com."
+        canonical="/contact"
+        keywords="contact SP Consultancies, pharmaceutical engineering contact, CQV services contact, CSV validation contact, Hyderabad pharmaceutical consultants, engineering consultancy contact"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Sneha & Prahar Consultancy Services",
+          "description": "Contact us for pharmaceutical engineering, CQV, CSV, MES, and GMP compliance solutions.",
+          "url": "https://spconsultancies.in/contact"
+        }}
+      />
     <div>
       {/* Hero */}
       <section className="page-hero">
         <div className="grid-overlay" style={{ position: 'absolute', inset: 0 }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label mb-4 sm:mb-5">Contact Us</div>
-          <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
-            Let&apos;s Build Something
-            <br />
-            <span className="gradient-text">Exceptional Together.</span>
-          </h1>
-          <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'justify' }}>
-            Whether you have a fully scoped project or are exploring options for a new facility —
-            our team is ready to discuss your pharmaceutical engineering requirements.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <div className="section-label mb-4 sm:mb-5">Contact Us</div>
+              <h1 className="section-heading mb-6" style={{ fontSize: 'clamp(44px, 5vw, 72px)', maxWidth: '700px' }}>
+                Let&apos;s Build Something
+                <br />
+                <span className="gradient-text">Exceptional Together.</span>
+              </h1>
+              <p className="body-text" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', maxWidth: '560px', textAlign: 'left' }}>
+                Whether you have a fully scoped project or are exploring options for a new facility —
+                our team is ready to discuss your pharmaceutical engineering requirements.
+              </p>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <div
+                className="gradient-border-card glass-card-hover"
+                style={{
+                  padding: '24px',
+                  borderRadius: '20px',
+                  background: 'rgba(255,255,255,0.9)',
+                  backdropFilter: 'blur(24px)',
+                  border: '1px solid rgba(0,0,0,0.08)',
+                  maxWidth: '100%',
+                }}
+              >
+                <img
+                  src={contactImage}
+                  alt="Contact Us"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    maxHeight: '350px',
+                    objectFit: 'contain',
+                    display: 'block',
+                  }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -113,7 +158,7 @@ export default function Contact() {
                   href={
                     c.title === 'Call Us Directly' ? 'tel:+918801411271' :
                     c.title === 'WhatsApp' ? 'https://wa.me/6593530873' :
-                    c.title === 'Email' ? 'mailto:spconsultanancies@gmail.com' :
+                    c.title === 'Email' ? 'mailto:spconsultancies@gmail.com' :
                     c.title === 'LinkedIn' ? 'https://www.linkedin.com/in/rajendra-prasad-gugulothu-b36499b7/' : '#'
                   }
                   target={c.title === 'LinkedIn' ? '_blank' : undefined}
@@ -350,13 +395,14 @@ export default function Contact() {
             <a href="tel:+918801411271" className="btn-primary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
               <Phone size={16} /> Call Now
             </a>
-            <a href="mailto:spconsultanancies@gmail.com" className="btn-secondary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
+            <a href="mailto:spconsultancies@gmail.com" className="btn-secondary" style={{ padding: 'clamp(12px, 2vw, 16px) clamp(28px, 4vw, 36px)', fontSize: 'clamp(13px, 2vw, 15px)' }}>
               <Mail size={16} /> Send Email
             </a>
           </div>
         </div>
       </section>
     </div>
+    </>
   )
 }
 
