@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Clock, Link2, MessageCircle, Globe } from 'lucide-react'
+import { useState } from 'react'
+import { Phone, Mail, MapPin, Clock, Link2, MessageCircle, Globe, CheckCircle, Loader2, User, Building, Mail as MailIcon, Phone as PhoneIcon, Globe as GlobeIcon, Briefcase, MapPin as LocationIcon, FileText } from 'lucide-react'
 import contactImage from '/assets/img/contact.png'
 import SEO from '../components/SEO'
 
@@ -70,6 +71,62 @@ const specialties = [
 ]
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setErrorMessage('')
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    // Email validation
+    const email = formData.get('email') as string
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      setErrorMessage('Please enter a valid email address.')
+      setIsSubmitting(false)
+      return
+    }
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: JSON.stringify({
+          access_key: 'c8060850-061c-4fea-8250-4c27215e82d6',
+          name: formData.get('name'),
+          company: formData.get('company'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          country: formData.get('country'),
+          service: formData.get('service'),
+          location: formData.get('location'),
+          description: formData.get('description'),
+          consent: formData.get('consent'),
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setIsSuccess(true)
+        form.reset()
+      } else {
+        setErrorMessage('Something went wrong. Please try again.')
+      }
+    } catch (error) {
+      setErrorMessage('Something went wrong. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <>
       <SEO
@@ -174,6 +231,345 @@ export default function Contact() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── ENQUIRY FORM ────────────────────────────────────────────────────── */}
+      <section className="mesh-bg-alt" style={{ padding: '100px 0' }}>
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="section-label mb-5">Send Enquiry</div>
+          <h2 className="section-heading mb-12" style={{ fontSize: 'clamp(32px, 3vw, 48px)' }}>
+            Contact
+            <span className="gradient-text"> Us</span>
+          </h2>
+
+          {isSuccess ? (
+            <div className="glass-card" style={{ padding: '48px', textAlign: 'center' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+                <CheckCircle size={64} style={{ color: '#008C86' }} />
+              </div>
+              <h3 style={{ fontFamily: 'Satoshi', fontWeight: 700, fontSize: 'clamp(24px, 3vw, 32px)', color: '#111827', marginBottom: '12px' }}>
+                Thank You!
+              </h3>
+              <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#475569', lineHeight: 1.6, marginBottom: '24px' }}>
+                Your enquiry has been submitted successfully.<br />
+                Our engineering team will contact you shortly.
+              </p>
+              <button
+                type="button"
+                onClick={() => setIsSuccess(false)}
+                className="btn-secondary"
+                style={{ padding: '12px 28px', fontSize: 'clamp(13px, 2vw, 15px)' }}
+              >
+                Send Another Enquiry
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="glass-card" style={{ padding: '40px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+              {/* Error Message */}
+              {errorMessage && (
+                <div style={{ padding: '14px 18px', borderRadius: '10px', background: 'rgba(220, 38, 38, 0.08)', border: '1px solid rgba(220, 38, 38, 0.25)', color: '#DC2626', fontFamily: 'Inter', fontSize: 'clamp(13px, 2vw, 14px)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span style={{ fontSize: '18px' }}>⚠️</span>
+                  {errorMessage}
+                </div>
+              )}
+
+              {/* Two Column Grid for Contact Info */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Name */}
+                <div>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 600, fontSize: 'clamp(13px, 2vw, 14px)', color: '#111827', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <User size={16} style={{ color: '#0969E8' }} />
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your full name"
+                    style={{
+                      width: '100%',
+                      padding: '14px 16px',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(0,0,0,0.12)',
+                      fontFamily: 'Inter',
+                      fontSize: 'clamp(14px, 2.5vw, 15px)',
+                      background: '#FFFFFF',
+                      transition: 'all 0.25s ease',
+                      outline: 'none',
+                    }}
+                    onFocus={e => { e.currentTarget.style.borderColor = '#0969E8'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(9,105,232,0.1)' }}
+                    onBlur={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.12)'; e.currentTarget.style.boxShadow = 'none' }}
+                  />
+                </div>
+
+                {/* Company */}
+                <div>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 600, fontSize: 'clamp(13px, 2vw, 14px)', color: '#111827', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Building size={16} style={{ color: '#0969E8' }} />
+                    Company *
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    required
+                    placeholder="Company name"
+                    style={{
+                      width: '100%',
+                      padding: '14px 16px',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(0,0,0,0.12)',
+                      fontFamily: 'Inter',
+                      fontSize: 'clamp(14px, 2.5vw, 15px)',
+                      background: '#FFFFFF',
+                      transition: 'all 0.25s ease',
+                      outline: 'none',
+                    }}
+                    onFocus={e => { e.currentTarget.style.borderColor = '#0969E8'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(9,105,232,0.1)' }}
+                    onBlur={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.12)'; e.currentTarget.style.boxShadow = 'none' }}
+                  />
+                </div>
+
+                {/* Business Email */}
+                <div>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 600, fontSize: 'clamp(13px, 2vw, 14px)', color: '#111827', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <MailIcon size={16} style={{ color: '#0969E8' }} />
+                    Business Email *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="your@company.com"
+                    style={{
+                      width: '100%',
+                      padding: '14px 16px',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(0,0,0,0.12)',
+                      fontFamily: 'Inter',
+                      fontSize: 'clamp(14px, 2.5vw, 15px)',
+                      background: '#FFFFFF',
+                      transition: 'all 0.25s ease',
+                      outline: 'none',
+                    }}
+                    onFocus={e => { e.currentTarget.style.borderColor = '#0969E8'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(9,105,232,0.1)' }}
+                    onBlur={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.12)'; e.currentTarget.style.boxShadow = 'none' }}
+                  />
+                </div>
+
+                {/* Telephone */}
+                <div>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 600, fontSize: 'clamp(13px, 2vw, 14px)', color: '#111827', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <PhoneIcon size={16} style={{ color: '#0969E8' }} />
+                    Telephone *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    placeholder="+91 90000 00000"
+                    style={{
+                      width: '100%',
+                      padding: '14px 16px',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(0,0,0,0.12)',
+                      fontFamily: 'Inter',
+                      fontSize: 'clamp(14px, 2.5vw, 15px)',
+                      background: '#FFFFFF',
+                      transition: 'all 0.25s ease',
+                      outline: 'none',
+                    }}
+                    onFocus={e => { e.currentTarget.style.borderColor = '#0969E8'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(9,105,232,0.1)' }}
+                    onBlur={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.12)'; e.currentTarget.style.boxShadow = 'none' }}
+                  />
+                </div>
+
+                {/* Country */}
+                <div>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 600, fontSize: 'clamp(13px, 2vw, 14px)', color: '#111827', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <GlobeIcon size={16} style={{ color: '#0969E8' }} />
+                    Country *
+                  </label>
+                  <input
+                    type="text"
+                    name="country"
+                    required
+                    placeholder="India"
+                    style={{
+                      width: '100%',
+                      padding: '14px 16px',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(0,0,0,0.12)',
+                      fontFamily: 'Inter',
+                      fontSize: 'clamp(14px, 2.5vw, 15px)',
+                      background: '#FFFFFF',
+                      transition: 'all 0.25s ease',
+                      outline: 'none',
+                    }}
+                    onFocus={e => { e.currentTarget.style.borderColor = '#0969E8'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(9,105,232,0.1)' }}
+                    onBlur={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.12)'; e.currentTarget.style.boxShadow = 'none' }}
+                  />
+                </div>
+
+                {/* Service Required */}
+                <div>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 600, fontSize: 'clamp(13px, 2vw, 14px)', color: '#111827', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Briefcase size={16} style={{ color: '#0969E8' }} />
+                    Service Required *
+                  </label>
+                  <select
+                    name="service"
+                    required
+                    style={{
+                      width: '100%',
+                      padding: '14px 16px',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(0,0,0,0.12)',
+                      fontFamily: 'Inter',
+                      fontSize: 'clamp(14px, 2.5vw, 15px)',
+                      background: '#FFFFFF',
+                      transition: 'all 0.25s ease',
+                      cursor: 'pointer',
+                      outline: 'none',
+                    }}
+                    onFocus={e => { e.currentTarget.style.borderColor = '#0969E8'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(9,105,232,0.1)' }}
+                    onBlur={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.12)'; e.currentTarget.style.boxShadow = 'none' }}
+                  >
+                    <option value="">Select a service</option>
+                    <option value="Computer System Validation (CSV)">Computer System Validation (CSV)</option>
+                    <option value="Manufacturing Execution Systems (MES)">Manufacturing Execution Systems (MES)</option>
+                    <option value="Facility Audit Readiness">Facility Audit Readiness</option>
+                    <option value="Temperature Mapping Studies">Temperature Mapping Studies</option>
+                    <option value="New Pharmaceutical Facility Projects">New Pharmaceutical Facility Projects</option>
+                    <option value="Cleanroom Design & Engineering">Cleanroom Design & Engineering</option>
+                    <option value="HVAC System Design & Upgrade">HVAC System Design & Upgrade</option>
+                    <option value="Validation & Qualification Services">Validation & Qualification Services</option>
+                    <option value="Regulatory Compliance Gap Assessment">Regulatory Compliance Gap Assessment</option>
+                    <option value="Shutdown Planning & Management">Shutdown Planning & Management</option>
+                    <option value="Energy Audits & Optimization">Energy Audits & Optimization</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Project Location - Full Width */}
+              <div>
+                <label style={{ fontFamily: 'Inter', fontWeight: 600, fontSize: 'clamp(13px, 2vw, 14px)', color: '#111827', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <LocationIcon size={16} style={{ color: '#0969E8' }} />
+                  Project Location *
+                </label>
+                <input
+                  type="text"
+                  name="location"
+                  required
+                  placeholder="City, State, Country"
+                  style={{
+                    width: '100%',
+                    padding: '14px 16px',
+                    borderRadius: '10px',
+                    border: '1px solid rgba(0,0,0,0.12)',
+                    fontFamily: 'Inter',
+                    fontSize: 'clamp(14px, 2.5vw, 15px)',
+                    background: '#FFFFFF',
+                    transition: 'all 0.25s ease',
+                    outline: 'none',
+                  }}
+                  onFocus={e => { e.currentTarget.style.borderColor = '#0969E8'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(9,105,232,0.1)' }}
+                  onBlur={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.12)'; e.currentTarget.style.boxShadow = 'none' }}
+                />
+              </div>
+
+              {/* Project Description - Full Width */}
+              <div>
+                <label style={{ fontFamily: 'Inter', fontWeight: 600, fontSize: 'clamp(13px, 2vw, 14px)', color: '#111827', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <FileText size={16} style={{ color: '#0969E8' }} />
+                  Project Description *
+                </label>
+                <textarea
+                  name="description"
+                  required
+                  rows={5}
+                  placeholder="Please describe your project requirements, timeline, and any specific details..."
+                  style={{
+                    width: '100%',
+                    padding: '14px 16px',
+                    borderRadius: '10px',
+                    border: '1px solid rgba(0,0,0,0.12)',
+                    fontFamily: 'Inter',
+                    fontSize: 'clamp(14px, 2.5vw, 15px)',
+                    background: '#FFFFFF',
+                    transition: 'all 0.25s ease',
+                    resize: 'vertical',
+                    minHeight: '120px',
+                    outline: 'none',
+                  }}
+                  onFocus={e => { e.currentTarget.style.borderColor = '#0969E8'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(9,105,232,0.1)' }}
+                  onBlur={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.12)'; e.currentTarget.style.boxShadow = 'none' }}
+                />
+              </div>
+
+              {/* Privacy Policy Checkbox */}
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '16px', borderRadius: '10px', background: 'rgba(0,87,255,0.04)', border: '1px solid rgba(0,87,255,0.12)' }}>
+                <input
+                  type="checkbox"
+                  name="consent"
+                  required
+                  id="privacy-consent"
+                  style={{
+                    width: '20px',
+                    height: '20px',
+                    marginTop: '2px',
+                    cursor: 'pointer',
+                    accentColor: '#0969E8',
+                  }}
+                />
+                <label
+                  htmlFor="privacy-consent"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontSize: 'clamp(13px, 2vw, 14px)',
+                    color: '#475569',
+                    lineHeight: 1.6,
+                    cursor: 'pointer',
+                  }}
+                >
+                  I agree to the <span style={{ color: '#0969E8', fontWeight: 600 }}>Privacy Policy</span> and consent to the processing of my personal data for enquiry purposes. *
+                </label>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="btn-primary"
+                style={{
+                  padding: '16px 40px',
+                  fontSize: 'clamp(15px, 2vw, 16px)',
+                  fontWeight: 600,
+                  alignSelf: 'flex-start',
+                  marginTop: '8px',
+                  opacity: isSubmitting ? 0.7 : 1,
+                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                }}
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 size={18} style={{ animation: 'spin 1s linear infinite' }} />
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    Submit Enquiry
+                    <Mail size={18} />
+                  </>
+                )}
+              </button>
+            </form>
+          )}
         </div>
       </section>
 
