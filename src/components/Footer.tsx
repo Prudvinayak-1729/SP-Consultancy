@@ -235,7 +235,7 @@ export default function Footer() {
                 <Mail size={15} style={{ color: '#008C86' }} />
               </div>
               <div>
-                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>spconsultancies@gmail.com</p>
+                <p style={{ fontFamily: 'Inter', fontSize: 'clamp(12px, 2vw, 14px)', color: '#111827' }}>spconsultanancies@gmail.com</p>
               </div>
             </div>
 

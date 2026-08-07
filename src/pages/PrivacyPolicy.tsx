@@ -85,7 +85,7 @@ export default function PrivacyPolicy() {
               <p style={{ marginBottom: '16px', fontWeight: 600 }}>
                 Sneha & Prahar Consultancy Services
               </p>
-              <p style={{ marginBottom: '8px' }}><strong>Email:</strong> spconsultancies@gmail.com</p>
+              <p style={{ marginBottom: '8px' }}><strong>Email:</strong> spconsultanancies@gmail.com</p>
               <p style={{ marginBottom: '8px' }}><strong>Phone:</strong> +91 90008 77499</p>
               <p style={{ marginBottom: '8px' }}><strong>Address:</strong></p>
               <p style={{ marginBottom: '24px' }}>
