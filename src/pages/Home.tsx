@@ -110,7 +110,7 @@ const milestones = [
 ]
 
 const clients = [
-  "Dr. Reddy's", 'Biological E', 'Divi\'s Laboratories', 'Ichor Biologics', 'Amneal',
+  "Dr. Reddy's", 'Biological E', 'Divi\'s Laboratories', 'Ichor Biologics', 'Amneal', 'PI Health Sciences Ltd',
 ]
 
 export default function Home() {
@@ -343,6 +343,58 @@ export default function Home() {
               background: 'linear-gradient(to bottom, #111827, transparent)',
             }}
           />
+        </div>
+      </section>
+
+      {/* ─── TRUSTED BY CLIENTS ────────────────────────────────────────────── */}
+      <section className="mesh-bg" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
+              Trusted by India&apos;s Leading
+              <span className="gradient-text"> Pharmaceutical Companies</span>
+            </h2>
+            <div className="divider-gradient" style={{ maxWidth: '120px', margin: '16px auto 0' }} />
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            {clients.map((c, i) => (
+              <div
+                key={c}
+                className="glass-card"
+                style={{
+                  padding: 'clamp(16px, 2.5vw, 24px) clamp(24px, 4vw, 36px)',
+                  borderRadius: '16px',
+                  border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'}`,
+                  background: i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)',
+                  fontFamily: 'Satoshi',
+                  fontSize: 'clamp(14px, 2.5vw, 18px)',
+                  fontWeight: 700,
+                  color: '#111827',
+                  transition: 'all 0.3s cubic-bezier(0.22,1,0.36,1)',
+                  cursor: 'default',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget as HTMLElement
+                  el.style.transform = 'translateY(-4px)'
+                  el.style.color = i % 2 === 0 ? '#0969E8' : '#008C86'
+                  el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'
+                  el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.08)' : 'rgba(0,168,120,0.08)'
+                  el.style.boxShadow = i % 2 === 0 ? '0 12px 40px rgba(0,87,255,0.15)' : '0 12px 40px rgba(0,168,120,0.15)'
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget as HTMLElement
+                  el.style.transform = ''
+                  el.style.color = '#111827'
+                  el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'
+                  el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)'
+                  el.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)'
+                }}
+              >
+                {c}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -671,58 +723,6 @@ export default function Home() {
               <p style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 22px)', color: '#111827', marginBottom: '4px' }}>R. Dinagaran</p>
               <p style={{ fontFamily: 'Inter', fontSize: 'clamp(14px, 2vw, 16px)', color: '#475569' }}>Engineering Head</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── CLIENT LOGOS ────────────────────────────────────────────────── */}
-      <section className="mesh-bg" style={{ padding: 'clamp(40px, 6vw, 60px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="section-heading" style={{ fontSize: 'clamp(24px, 4vw, 52px)' }}>
-              Trusted by India&apos;s Leading
-              <span className="gradient-text"> Pharmaceutical Companies</span>
-            </h2>
-            <div className="divider-gradient" style={{ maxWidth: '120px', margin: '16px auto 0' }} />
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {clients.map((c, i) => (
-              <div
-                key={c}
-                className="glass-card"
-                style={{
-                  padding: 'clamp(16px, 2.5vw, 24px) clamp(24px, 4vw, 36px)',
-                  borderRadius: '16px',
-                  border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'}`,
-                  background: i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)',
-                  fontFamily: 'Satoshi',
-                  fontSize: 'clamp(14px, 2.5vw, 18px)',
-                  fontWeight: 700,
-                  color: '#111827',
-                  transition: 'all 0.3s cubic-bezier(0.22,1,0.36,1)',
-                  cursor: 'default',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
-                }}
-                onMouseEnter={e => {
-                  const el = e.currentTarget as HTMLElement
-                  el.style.transform = 'translateY(-4px)'
-                  el.style.color = i % 2 === 0 ? '#0969E8' : '#008C86'
-                  el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'
-                  el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.08)' : 'rgba(0,168,120,0.08)'
-                  el.style.boxShadow = i % 2 === 0 ? '0 12px 40px rgba(0,87,255,0.15)' : '0 12px 40px rgba(0,168,120,0.15)'
-                }}
-                onMouseLeave={e => {
-                  const el = e.currentTarget as HTMLElement
-                  el.style.transform = ''
-                  el.style.color = '#111827'
-                  el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'
-                  el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)'
-                  el.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)'
-                }}
-              >
-                {c}
-              </div>
-            ))}
           </div>
         </div>
       </section>
