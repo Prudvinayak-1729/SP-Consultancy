@@ -4,6 +4,14 @@ import {
   FlaskConical, Award, Clock, ChevronRight, Star, Quote, Thermometer
 } from 'lucide-react'
 import SEO from '../components/SEO'
+import drReddy from '/assets/img/Dr reddy.jpg'
+import biological from '/assets/img/Biological.png'
+import divis from '/assets/img/Divis.png'
+import ichor from '/assets/img/ICHOR-BIOLOGICS.webp'
+import amneal from '/assets/img/Amneal1.jpg'
+import piHealth from '/assets/img/Pi Health science.png'
+import zenotech from '/assets/img/Zenotech.png'
+import sunpharma from '/assets/img/Sunpharma.jpg'
 
 const stats = [
   { number: '2022', label: 'Founded', suffix: '' },
@@ -110,14 +118,14 @@ const milestones = [
 ]
 
 const clients = [
-  { name: "Dr. Reddy's", logo: '/assets/img/Dr reddy.jpg' },
-  { name: 'Biological E', logo: '/assets/img/Biological.png' },
-  { name: 'Divi\'s Laboratories', logo: '/assets/img/Divis.png' },
-  { name: 'Ichor Biologics', logo: '/assets/img/ICHOR-BIOLOGICS.webp' },
-  { name: 'Amneal', logo: '/assets/img/Amneal1.jpg' },
-  { name: 'PI Health Sciences Ltd', logo: '/assets/img/Pi Health science.png' },
-  { name: 'Zenotech', logo: '/assets/img/Zenotech.png' },
-  { name: 'Sun Pharma', logo: '/assets/img/Sunpharma.jpg' },
+  { name: "Dr. Reddy's", logo: drReddy },
+  { name: 'Biological E', logo: biological },
+  { name: 'Divi\'s Laboratories', logo: divis },
+  { name: 'Ichor Biologics', logo: ichor },
+  { name: 'Amneal', logo: amneal },
+  { name: 'PI Health Sciences Ltd', logo: piHealth },
+  { name: 'Zenotech', logo: zenotech },
+  { name: 'Sun Pharma', logo: sunpharma },
 ]
 
 export default function Home() {
