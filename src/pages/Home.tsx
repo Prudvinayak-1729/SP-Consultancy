@@ -110,7 +110,14 @@ const milestones = [
 ]
 
 const clients = [
-  "Dr. Reddy's", 'Biological E', 'Divi\'s Laboratories', 'Ichor Biologics', 'Amneal', 'PI Health Sciences Ltd',
+  { name: "Dr. Reddy's", logo: '/assets/img/Dr reddy.jpg' },
+  { name: 'Biological E', logo: '/assets/img/Biological.png' },
+  { name: 'Divi\'s Laboratories', logo: '/assets/img/Divis.png' },
+  { name: 'Ichor Biologics', logo: '/assets/img/ICHOR-BIOLOGICS.webp' },
+  { name: 'Amneal', logo: '/assets/img/Amneal1.jpg' },
+  { name: 'PI Health Sciences Ltd', logo: '/assets/img/Pi Health science.png' },
+  { name: 'Zenotech', logo: '/assets/img/Zenotech.png' },
+  { name: 'Sun Pharma', logo: '/assets/img/Sunpharma.jpg' },
 ]
 
 export default function Home() {
@@ -359,25 +366,25 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {clients.map((c, i) => (
               <div
-                key={c}
+                key={c.name}
                 className="glass-card"
                 style={{
                   padding: 'clamp(16px, 2.5vw, 24px) clamp(24px, 4vw, 36px)',
                   borderRadius: '16px',
                   border: `1px solid ${i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'}`,
                   background: i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)',
-                  fontFamily: 'Satoshi',
-                  fontSize: 'clamp(14px, 2.5vw, 18px)',
-                  fontWeight: 700,
-                  color: '#111827',
                   transition: 'all 0.3s cubic-bezier(0.22,1,0.36,1)',
                   cursor: 'default',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minWidth: 'clamp(120px, 15vw, 180px)',
+                  minHeight: 'clamp(80px, 10vw, 120px)',
                 }}
                 onMouseEnter={e => {
                   const el = e.currentTarget as HTMLElement
                   el.style.transform = 'translateY(-4px)'
-                  el.style.color = i % 2 === 0 ? '#0969E8' : '#008C86'
                   el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.4)' : 'rgba(0,168,120,0.4)'
                   el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.08)' : 'rgba(0,168,120,0.08)'
                   el.style.boxShadow = i % 2 === 0 ? '0 12px 40px rgba(0,87,255,0.15)' : '0 12px 40px rgba(0,168,120,0.15)'
@@ -385,13 +392,20 @@ export default function Home() {
                 onMouseLeave={e => {
                   const el = e.currentTarget as HTMLElement
                   el.style.transform = ''
-                  el.style.color = '#111827'
                   el.style.borderColor = i % 2 === 0 ? 'rgba(0,87,255,0.2)' : 'rgba(0,168,120,0.2)'
                   el.style.background = i % 2 === 0 ? 'rgba(0,87,255,0.04)' : 'rgba(0,168,120,0.04)'
                   el.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)'
                 }}
               >
-                {c}
+                <img
+                  src={c.logo}
+                  alt={c.name}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: 'clamp(60px, 8vw, 100px)',
+                    objectFit: 'contain',
+                  }}
+                />
               </div>
             ))}
           </div>
