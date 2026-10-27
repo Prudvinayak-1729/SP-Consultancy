@@ -10,6 +10,7 @@ const projectCategories = [
 
 const company = [
   { label: 'About Us', path: '/about' },
+  { label: 'IT Services (AI & Cloud)', path: '/it-services' },
   { label: 'Industries', path: '/industries' },
   { label: 'Projects', path: '/projects' },
   { label: 'Quality & Compliance', path: '/quality' },

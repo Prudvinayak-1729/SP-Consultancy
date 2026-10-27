@@ -697,6 +697,37 @@ export const searchIndex: SearchResult[] = [
     path: '/contact',
     priority: 8
   },
+  // IT Services & AI Engineering
+  {
+    id: 'it-services-main',
+    title: 'IT Services & AI Engineering',
+    section: 'IT Services',
+    description: 'Production AI and IT systems engineered by Sneha & Prahar Consultancy Services: LLM agents, RAG, voice AI, document intelligence, fine-tuning, and robust cloud infrastructure.',
+    keywords: ['it services', 'ai services', 'artificial intelligence', 'ai agents', 'rag', 'voice ai', 'llm', 'machine learning', 'cloud', 'aws', 'azure'],
+    page: 'IT Services',
+    path: '/it-services',
+    priority: 10
+  },
+  {
+    id: 'it-services-agents',
+    title: 'Autonomous LLM Agents & Workflow Automation',
+    section: 'IT Services',
+    description: 'Intelligent multi-agent architectures using LangGraph, CrewAI, and Model Context Protocol (MCP) for support ticket triage and business process automation.',
+    keywords: ['agents', 'ai agents', 'langgraph', 'crewai', 'mcp', 'workflow automation', 'ticket automation'],
+    page: 'IT Services',
+    path: '/it-services#services',
+    priority: 9
+  },
+  {
+    id: 'it-services-voice',
+    title: 'Real-Time Voice AI Agents',
+    section: 'IT Services',
+    description: 'Outbound and inbound telephone agents built on Twilio and OpenAI Realtime API with natural speech, barge-in support, and low-latency response.',
+    keywords: ['voice ai', 'twilio', 'realtime api', 'phone agents', 'speech', 'call automation'],
+    page: 'IT Services',
+    path: '/it-services#work',
+    priority: 9
+  },
 ]
 
 // Helper function to get all unique keywords for suggestions
