@@ -406,7 +406,7 @@ export default function ITServices() {
   return (
     <>
       <SEO
-        title="Senior AI Engineer · IIT Madras · Hyderabad, India"
+        title="Senior AI Engineer · B.Tech Mechanical · Hyderabad, India"
         description="I design, build and run AI for teams that need it to hold up in daily use: the model and its guardrails, the backend, the cloud, and the dashboard that shows what it costs."
         canonical="/it-services"
         keywords="enterprise IT services, AI agents, production LLMs, LangGraph, RAG architecture, voice AI, document intelligence, fine-tuning, AWS cloud, Azure, FastAPI, Sneha Prahar Consultancy IT"
@@ -432,7 +432,7 @@ export default function ITServices() {
               <div className="lg:col-span-7">
                 <p className="text-xs font-mono font-bold tracking-widest text-gray-500 uppercase mb-4 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                  SENIOR AI ENGINEER · IIT MADRAS · HYDERABAD, INDIA
+                  SENIOR AI ENGINEER · B.TECH MECHANICAL · HYDERABAD, INDIA
                 </p>
 
                 <h1
@@ -1044,18 +1044,27 @@ export default function ITServices() {
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
                         Client &amp; vendor onboarding
                       </div>
+                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
                         Job requirements
                       </div>
+                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
                         Candidate onboarding · documents
                       </div>
+                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
                       <div className="p-2.5 rounded bg-blue-950 border border-blue-500 font-bold text-blue-200">
                         AI résumé screening
                       </div>
+                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        Application · interview scheduling
+                        Application submission
                       </div>
+                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
+                      <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
+                        Interview scheduling
+                      </div>
+                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
                         Candidate onboarded
                       </div>
@@ -1969,32 +1978,32 @@ export default function ITServices() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 text-base" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                      Sneha &amp; Prahar Consultancy Services
+                      Engineering profile
                     </h3>
-                    <p className="text-xs text-gray-500">IT &amp; Enterprise AI Solutions</p>
+                    <p className="text-xs text-gray-500">IT &amp; AI engineering</p>
                   </div>
                 </div>
 
                 <div className="space-y-3 font-mono text-xs">
                   <div className="flex justify-between py-1.5 border-b border-gray-100">
-                    <span className="text-gray-500">Headquarters:</span>
-                    <span className="font-bold text-gray-800">Hyderabad, India (IST)</span>
+                    <span className="text-gray-500">Based in</span>
+                    <span className="font-bold text-gray-800">Hyderabad, India · IST (UTC+5:30)</span>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-gray-100">
-                    <span className="text-gray-500">Core Specialty:</span>
-                    <span className="font-bold text-gray-800">LLM Agents, RAG &amp; Voice AI</span>
+                    <span className="text-gray-500">Education</span>
+                    <span className="font-bold text-gray-800">B.Tech Mechanical</span>
                   </div>
                   <div className="flex justify-between py-1.5 border-b border-gray-100">
-                    <span className="text-gray-500">Global Delivery:</span>
-                    <span className="font-bold text-gray-800">India, US, UK, EU, Gulf</span>
-                  </div>
-                  <div className="flex justify-between py-1.5 border-b border-gray-100">
-                    <span className="text-gray-500">Cloud Standards:</span>
-                    <span className="font-bold text-gray-800">AWS &amp; Azure Cloud</span>
+                    <span className="text-gray-500">Working with</span>
+                    <span className="font-bold text-right text-gray-800">India, US, UK, Europe, Gulf and Singapore</span>
                   </div>
                   <div className="flex justify-between py-1.5">
-                    <span className="text-gray-500">Engagement:</span>
-                    <span className="font-bold text-blue-600">Fixed-scope &amp; Fractional</span>
+                    <span className="text-gray-500">Elsewhere</span>
+                    <span className="flex flex-wrap justify-end gap-x-2 font-bold">
+                      <a href="https://www.linkedin.com/in/srinivas77777" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>
+                      <a href="https://github.com/Cnu-srinivas" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub</a>
+                      <a href="https://www.mentionnow.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">MentionNow</a>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -2020,7 +2029,7 @@ export default function ITServices() {
                               alt=""
                               loading="lazy"
                               decoding="async"
-                              className="h-full w-full object-contain"
+                              className="h-8 w-8 object-contain"
                             />
                           </span>
                           <span className="max-w-full break-words leading-tight">{tech.name}</span>
