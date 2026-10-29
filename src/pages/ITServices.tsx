@@ -26,6 +26,8 @@ import {
 } from 'lucide-react'
 import SEO from '../components/SEO'
 
+const calendlyUrl = 'https://calendly.com/spconsultanancies/30min'
+
 // Industry filter types
 type IndustryFilter = 'all' | 'sales' | 'healthcare' | 'finance' | 'insurance' | 'legal' | 'saas' | 'support' | 'real-estate' | 'recruitment' | 'agencies'
 
@@ -41,7 +43,7 @@ interface SystemService {
 const aiSystems: SystemService[] = [
   {
     id: 'email-ticket',
-    title: 'Email & Ticket Automation',
+    title: 'Email & ticket automation',
     proof: 'Agents that read incoming messages, file them, catch duplicates and draft replies. ~70% less manual work in production.',
     fits: ['support', 'it-services', 'logistics', 'insurance', 'saas'],
     fitsText: 'Support, IT services, logistics, insurance, SaaS',
@@ -49,56 +51,56 @@ const aiSystems: SystemService[] = [
   },
   {
     id: 'doc-intelligence',
-    title: 'Document Intelligence',
-    proof: 'Pull structured data out of PDFs, spreadsheets, scans and handwriting, across 10+ file formats with high confidence.',
+    title: 'Document intelligence',
+    proof: 'Pull structured data out of PDFs, spreadsheets, scans and handwriting, across 10+ file formats.',
     fits: ['finance', 'insurance', 'legal', 'healthcare', 'real-estate'],
     fitsText: 'Finance, insurance, legal, healthcare admin, real estate',
     icon: FileCheck,
   },
   {
     id: 'knowledge-assistants',
-    title: 'Knowledge Assistants',
-    proof: 'Chat with your organization\'s documents, segregated by department, with grounded source citations and strict access controls.',
+    title: 'Knowledge assistants',
+    proof: 'Chat with your company\'s documents, organized by department, with answers grounded in the source files.',
     fits: ['agencies', 'legal', 'saas', 'finance'],
     fitsText: 'Agencies, consulting, legal, any document-heavy team',
     icon: Search,
   },
   {
     id: 'voice-agents',
-    title: 'Real-Time Voice Agents',
-    proof: 'Outbound and inbound telephone calls that hold natural conversations, cope with interruptions and log structured CRM records.',
+    title: 'Voice agents',
+    proof: 'Outbound and inbound calls that hold a natural conversation, cope with interruptions and log every answer.',
     fits: ['sales', 'healthcare', 'recruitment', 'real-estate'],
     fitsText: 'Sales & CRM, healthcare, recruitment, real estate, hospitality',
     icon: PhoneCall,
   },
   {
     id: 'guardrails-products',
-    title: 'AI Products with Guardrails',
-    proof: 'Customer-facing assistants with strict output schemas, guardrails that escalate instead of hallucinating, and per-token telemetry.',
+    title: 'AI products with guardrails',
+    proof: 'Customer-facing assistants with strict output contracts, guardrails that escalate instead of guessing, failover when a model fails, and cost tracking per conversation.',
     fits: ['healthcare', 'finance', 'saas'],
     fitsText: 'Healthtech, wellness, edtech, fintech applications',
     icon: ShieldCheck,
   },
   {
     id: 'risk-compliance',
-    title: 'Risk & Compliance Review',
-    proof: 'Agent crews that execute multi-stage compliance reviews, with a designated checking agent validating each milestone.',
+    title: 'Risk & compliance review',
+    proof: 'Agent teams that run multi-stage reviews, with a checking agent that validates each stage before the next.',
     fits: ['finance', 'saas', 'legal'],
     fitsText: 'Fintech, banks, enterprise SaaS vendors, procurement',
     icon: Workflow,
   },
   {
     id: 'recruitment-hr',
-    title: 'Recruitment & HR Automation',
-    proof: 'An ATS carrying client onboarding through AI résumé scoring to hire for 60 recruiters, and an HRMS for 600 employees with AI attendance.',
+    title: 'Recruitment & HR automation',
+    proof: 'An ATS that runs from client and vendor onboarding through AI résumé screening to hiring, used by 60 people, and an HRMS for 600 employees with per-unit access control and AI attendance reports.',
     fits: ['recruitment', 'saas'],
     fitsText: 'Staffing and recruitment firms, HR teams, multi-entity groups',
     icon: Building2,
   },
   {
     id: 'ai-visibility',
-    title: 'AI Visibility & GEO Engine',
-    proof: 'Measure, evaluate and systematically optimize how ChatGPT, Claude and Perplexity cite and recommend your brand.',
+    title: 'AI visibility',
+    proof: 'Measure and improve how ChatGPT, Claude and Perplexity describe your brand, with MentionNow, which I co-founded.',
     fits: ['all', 'sales', 'healthcare', 'finance', 'insurance', 'legal', 'saas', 'support', 'real-estate', 'recruitment', 'agencies'],
     fitsText: 'Any enterprise brand in any competitive market',
     icon: Sparkles,
@@ -125,27 +127,29 @@ interface SimScenario {
 const simulatorScenarios: Record<SimScenarioKey, SimScenario> = {
   normal: {
     key: 'normal',
-    label: 'Normal Question',
+    label: 'Normal question',
     tag: 'Clean Path',
     color: '#008C86',
     activeStages: ['req', 'guard', 'ctx', 'route', 'm1', 'json', 'out'],
     latency: '1.46 s',
     tokens: '1,184',
     cost: '$0.0049',
-    outcome: 'Answered (200 OK)',
+    outcome: 'Answered',
     outcomeClass: 'good',
     logs: [
-      '00:00.000 — [R1] User question received and tokenized',
-      '00:00.045 — [R3] Guardrails check passed: domain scope verified',
-      '00:00.090 — [R4] Rolling session memory fetched (budget: 1,500 tokens)',
-      '00:00.120 — [R2] Router selected Primary model: Gemini 2.5 Flash',
-      '00:01.350 — [R3] Output validated against strict JSON schema',
-      '00:01.460 — [R6] Response streamed to client; cost & latency logged',
+      '00.000 request · "Knee still sore after squats, what should I change?" · 38 tokens',
+      '00.260 guardrail · in scope: self-managed physio',
+      '00.480 context · rolling summary 612 / 1,200 token budget',
+      '00.640 router → primary model',
+      '00.760 gemini-2.5-flash · streaming…',
+      '01.460 first token at 1.46 s',
+      '02.050 JSON contract · schema valid',
+      '02.250 response delivered · logged 1,184 tokens · $0.0049',
     ],
   },
   outage: {
     key: 'outage',
-    label: 'Primary Model Times Out',
+    label: 'Primary model times out',
     tag: 'Auto Failover',
     color: '#0969E8',
     activeStages: ['req', 'guard', 'ctx', 'route', 'm2', 'json', 'out'],
@@ -166,7 +170,7 @@ const simulatorScenarios: Record<SimScenarioKey, SimScenario> = {
   },
   down: {
     key: 'down',
-    label: 'Every Model Is Down',
+    label: 'Every model is down',
     tag: 'Deterministic Fallback',
     color: '#64748B',
     activeStages: ['req', 'guard', 'ctx', 'route', 'kw', 'out'],
@@ -185,7 +189,7 @@ const simulatorScenarios: Record<SimScenarioKey, SimScenario> = {
   },
   flag: {
     key: 'flag',
-    label: 'Red-Flag Symptom',
+    label: 'Red-flag symptom',
     tag: 'Clinical Escalation',
     color: '#EF4444',
     activeStages: ['req', 'guard', 'esc', 'out'],
@@ -206,67 +210,67 @@ const simulatorScenarios: Record<SimScenarioKey, SimScenario> = {
 
 // Client company logos & names
 const clientLogos = [
-  { name: 'Atlas Systems',             src: '/assets/img/Atlas.png' },
-  { name: 'Balihans',                  src: '/assets/img/Balihans.png' },
-  { name: 'Bridgetown Consulting',     src: '/assets/img/Bridettown.png' },
-  { name: 'MedTourEasy',              src: '/assets/img/MTE.png' },
-  { name: 'Bluekyte.AI',              src: '/assets/img/blukeyte.png' },
-  { name: 'HMD',                       src: '/assets/img/hmd.png' },
-  { name: 'Masai School',             src: '/assets/img/masai.png' },
-  { name: 'MentionNow',               src: '/assets/img/mentionnow.png' },
-  { name: 'Open Data Fabric',         src: '/assets/img/open data.png' },
-  { name: 'ShaktyAI',                 src: '/assets/img/shaktyai.png' },
-  { name: 'Statinfer',                src: '/assets/img/statinfer.png' },
-  { name: 'Villageagro',              src: '/assets/img/villageagro.png' },
-  { name: 'Walker Sands',             src: '/assets/img/wlker soun.png' },
+  { name: 'Bridgetown Consulting Group', src: 'https://www.srinivasdharavath.com/logos/companies/bridgetown-consulting-group.png' },
+  { name: 'Atlas Systems', src: 'https://www.srinivasdharavath.com/logos/companies/atlas-systems.png' },
+  { name: 'Bluekyte.AI (Counsello AI)', src: 'https://www.srinivasdharavath.com/logos/companies/counsello-ai.jpg' },
+  { name: 'Open Data Fabric', src: 'https://www.srinivasdharavath.com/logos/companies/open-data-fabric.png' },
+  { name: 'Walker Sands', src: 'https://www.srinivasdharavath.com/logos/companies/walker-sands.svg' },
+  { name: 'Balihans', src: 'https://www.srinivasdharavath.com/logos/companies/balihans-navy.jpg' },
+  { name: 'ShaktyAI', src: 'https://www.srinivasdharavath.com/logos/companies/shakty-ai.png' },
+  { name: 'MentionNow', src: 'https://www.srinivasdharavath.com/logos/companies/mentionnow.svg' },
+  { name: 'Masai School', src: 'https://www.srinivasdharavath.com/logos/companies/masai-school.png' },
+  { name: 'Statinfer', src: 'https://www.srinivasdharavath.com/logos/companies/statinfer.png' },
+  { name: 'MedTourEasy', src: 'https://www.srinivasdharavath.com/logos/companies/medtoureasy.jpg' },
+  { name: 'Villageagro', src: 'https://www.srinivasdharavath.com/logos/companies/villageagro.jpg' },
+  { name: 'Mazagon Dock Shipbuilders', src: 'https://www.srinivasdharavath.com/logos/companies/mazagon-dock-shipbuilders.svg' },
 ]
 
-// Tech Stack Groups for "Tools We Build With"
+// Tech Stack Groups
 const techGroups = [
   {
-    title: 'Agents & Models',
+    title: 'Agents & models',
     items: [
-      { name: 'LangGraph',   logo: 'https://avatars.githubusercontent.com/u/139558948?s=48&v=4' },
-      { name: 'LangChain',   logo: 'https://avatars.githubusercontent.com/u/126733545?s=48&v=4' },
-      { name: 'CrewAI',      logo: 'https://avatars.githubusercontent.com/u/170677839?s=48&v=4' },
-      { name: 'MCP',         logo: 'https://avatars.githubusercontent.com/u/182288589?s=48&v=4' },
-      { name: 'OpenAI',      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/48px-OpenAI_Logo.svg.png' },
-      { name: 'Claude',      logo: 'https://avatars.githubusercontent.com/u/76263028?s=48&v=4' },
-      { name: 'Gemini',      logo: 'https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg' },
-      { name: 'Llama',       logo: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png' },
-      { name: 'Hugging Face',logo: 'https://huggingface.co/front/assets/huggingface_logo-noborder.svg' },
+      { name: 'LangGraph', logo: new URL('../../assets/img/LangGraph.png', import.meta.url).href },
+      { name: 'LangChain', logo: new URL('../../assets/img/langchain.png', import.meta.url).href },
+      { name: 'CrewAI', logo: new URL('../../assets/img/CrewAI.png', import.meta.url).href },
+      { name: 'MCP', logo: new URL('../../assets/img/MCP.png', import.meta.url).href },
+      { name: 'OpenAI', logo: new URL('../../assets/img/Openai.png', import.meta.url).href },
+      { name: 'Claude', logo: new URL('../../assets/img/claude.png', import.meta.url).href },
+      { name: 'Gemini', logo: new URL('../../assets/img/Gemini.png', import.meta.url).href },
+      { name: 'Llama', logo: new URL('../../assets/img/Llama.png', import.meta.url).href },
+      { name: 'Hugging Face', logo: new URL('../../assets/img/Hugging Face.png', import.meta.url).href },
     ],
   },
   {
-    title: 'Backend & Data',
+    title: 'Backend & data',
     items: [
-      { name: 'Python',      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-      { name: 'FastAPI',     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg' },
-      { name: 'Django',      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' },
-      { name: 'PostgreSQL',  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-      { name: 'MongoDB',     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
-      { name: 'Supabase',    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg' },
-      { name: 'ChromaDB',    logo: 'https://avatars.githubusercontent.com/u/107077818?s=48&v=4' },
+      { name: 'Python', logo: new URL('../../assets/img/Python.png', import.meta.url).href },
+      { name: 'FastAPI', logo: new URL('../../assets/img/Fast Api.png', import.meta.url).href },
+      { name: 'Django', logo: new URL('../../assets/img/Django.png', import.meta.url).href },
+      { name: 'PostgreSQL', logo: new URL('../../assets/img/Postgresql.png', import.meta.url).href },
+      { name: 'MongoDB', logo: new URL('../../assets/img/MongoDb.png', import.meta.url).href },
+      { name: 'Supabase', logo: new URL('../../assets/img/supabase.png', import.meta.url).href },
+      { name: 'ChromaDB', logo: new URL('../../assets/img/chroma db.png', import.meta.url).href },
     ],
   },
   {
-    title: 'Cloud & Ops',
+    title: 'Cloud & ops',
     items: [
-      { name: 'AWS',         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg' },
-      { name: 'Azure',       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
-      { name: 'Docker',      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-      { name: 'Kubernetes',  logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' },
-      { name: 'Terraform',   logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg' },
+      { name: 'AWS', logo: new URL('../../assets/img/aws.png', import.meta.url).href },
+      { name: 'Azure', logo: new URL('../../assets/img/azure.png', import.meta.url).href },
+      { name: 'Docker', logo: new URL('../../assets/img/docker.png', import.meta.url).href },
+      { name: 'Kubernetes', logo: new URL('../../assets/img/Kubernates.png', import.meta.url).href },
+      { name: 'Terraform', logo: new URL('../../assets/img/teraform.png', import.meta.url).href },
     ],
   },
   {
-    title: 'Channels & Product',
+    title: 'Channels & product',
     items: [
-      { name: 'Twilio',      logo: 'https://avatars.githubusercontent.com/u/109142?s=48&v=4' },
-      { name: 'WhatsApp',    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg' },
-      { name: 'Stripe',      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stripe/stripe-original.svg' },
-      { name: 'React',       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-      { name: 'Next.js',     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+      { name: 'Twilio', logo: new URL('../../assets/img/twilio.png', import.meta.url).href },
+      { name: 'WhatsApp', logo: new URL('../../assets/img/whatsapp.png', import.meta.url).href },
+      { name: 'Stripe', logo: new URL('../../assets/img/stripe.png', import.meta.url).href },
+      { name: 'React', logo: new URL('../../assets/img/react.png', import.meta.url).href },
+      { name: 'Next.js', logo: new URL('../../assets/img/nextjs.png', import.meta.url).href },
     ],
   },
 ]
@@ -274,32 +278,32 @@ const techGroups = [
 // FAQ Items
 const faqs = [
   {
-    q: 'Do you work with enterprise companies outside India?',
-    a: 'Yes. We work remotely and collaboratively with teams across India, the US, the UK, Europe, and the Gulf. Indian and Gulf teams share our entire working day, European clients overlap throughout the afternoon, and US project syncs fit into our evening hours. Invoicing is seamlessly processed in INR, USD, GBP, EUR, or AED.',
+    q: 'Do you work with companies outside India?',
+    a: 'Yes. I work remotely with teams in India, the US, the UK, Europe and the Gulf. Indian and Gulf teams share my whole working day, Europe most of the afternoon, and US calls fit my evening. Invoices go out in INR, USD, GBP, EUR or AED.',
   },
   {
-    q: 'Where does the system run, and who owns the source code and IP?',
-    a: 'Everything is deployed directly in your own AWS or Azure cloud account and chosen regional infrastructure. The source code, schemas, documentation, and operational monitoring dashboards are 100% yours upon milestone completion. We provide a full recorded walkthrough, and our administrative credentials are fully relinquished at handover.',
+    q: 'Where does the system run, and who owns the code?',
+    a: 'In your own AWS or Azure account and region. The code, documentation and dashboards are yours once paid, with a recorded walkthrough for your team, and my access is removed at the end.',
   },
   {
-    q: 'Will our proprietary enterprise data ever be used to train AI models?',
-    a: 'Never. Every foundational model provider is documented up front, and all enterprise agreements utilize zero-data-retention APIs where provider training is contractually barred. For regulated and sensitive industries, we execute DPAs with Standard Contractual Clauses (SCCs), UK IDTAs, or HIPAA Business Associate Agreements (BAAs), backed by strict bilateral NDAs before architecture details are shared.',
+    q: 'Will my data be used to train AI models?',
+    a: 'No. Every model provider is listed up front and none of them trains on your data. Where it is needed I sign a DPA with SCCs for the EU, a UK IDTA or a HIPAA BAA, and an NDA before you share any details.',
   },
   {
-    q: 'How does a typical IT & AI engagement kick off?',
-    a: 'We begin with a focused 30-minute scoping call and supply a comprehensive written technical proposal within two business days. Most organizations launch with a two-week, fixed-price AI Opportunity Sprint or Production-Readiness Audit. This delivers a working prototype or ranked defect analysis, precise cost telemetry, and an unambiguous go/no-go build plan. Production rollouts proceed in structured two-week sprints with working software each time.',
+    q: 'How does an engagement start?',
+    a: 'With a 30-minute call and a written proposal within two business days. Most teams then run a two-week, fixed-price Sprint or Audit, which ends in a prototype or a ranked list of fixes, a cost model and a clear go/no-go. Builds run in two-week loops with working software each time.',
   },
   {
-    q: 'Which LLMs, agent frameworks, and backend tools do you build with?',
-    a: 'We use state-of-the-art closed models (OpenAI, Anthropic Claude, Google Gemini) via low-latency API contracts, as well as open weights (LLaMA 3, Qwen 2.5, Mistral) where fine-tuning, on-prem hosting, or regulatory air-gapping is mandatory. For orchestration: LangGraph, LangChain, CrewAI, and the Model Context Protocol (MCP). For backends: Python, FastAPI, and PostgreSQL with vector search. Each component gets the simplest, most resilient architecture that solves the problem.',
+    q: 'Which models and tools do you work with?',
+    a: 'OpenAI, Claude and Gemini models through their APIs, and open models such as LLaMA and Qwen where fine-tuning or self-hosting makes sense. LangGraph, LangChain, CrewAI and the Model Context Protocol for agents; Python, FastAPI and PostgreSQL for the backend; AWS and Azure for the cloud. Each step gets the simplest thing that works.',
   },
   {
-    q: 'Can you fix, harden, or audit an AI system that already exists?',
-    a: 'Yes. Our Production-Readiness Audit is explicitly designed for AI solutions that suffer from flakiness, excessive latency, unexpected cost spikes, or unpredictable hallucinations. We extract failure distributions from actual production logs, implement deterministic evaluation test suites, reinforce failovers and guardrails, and rank optimizations by cost and speed.',
+    q: 'Can you fix an AI system that already exists?',
+    a: 'Yes. The Production-Readiness Audit is for AI that is flaky, slow or expensive: I pull failure patterns from real conversations, set up an eval baseline with pass/fail checks, review failover and guardrails, and rank the cost and latency fixes.',
   },
   {
-    q: 'Are you available for fractional engineering or long-term advisory?',
-    a: 'Yes. Through our Fractional AI & IT Advisory model, our senior engineering leads partner with founders, CTOs, and technical directors (typically 1–2 days per week) to provide architectural reviews, latency/cost telemetry governance, model selection benchmarks, and interview vetting for internal engineering hires.',
+    q: 'Are you available part-time or as a fractional AI engineer?',
+    a: 'Yes. As a fractional AI engineer I give a founder about a day a week for roadmap and architecture reviews, eval and cost monitoring, and help hiring an AI team.',
   },
 ]
 
@@ -318,6 +322,7 @@ export default function ITServices() {
   const [formNeed, setFormNeed] = useState('')
   const [formBudget, setFormBudget] = useState('')
   const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formError, setFormError] = useState('')
 
   // Clock effect for Hyderabad (IST)
   useEffect(() => {
@@ -345,10 +350,36 @@ export default function ITServices() {
 
   const currentScenarioData = simulatorScenarios[activeScenario]
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!formName || !formEmail) return
-    setFormSubmitted(true)
+    setFormError('')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'c8060850-061c-4fea-8250-4c27215e82d6',
+          subject: `AI & IT project brief from ${formName}`,
+          name: formName,
+          email: formEmail,
+          company: formCompany,
+          request_type: 'Project brief',
+          requirements: formNeed,
+          budget_scope: formBudget,
+        }),
+      })
+      const result = await response.json()
+
+      if (result.success) {
+        setFormSubmitted(true)
+      } else {
+        setFormError('Your request could not be sent. Please try again or email spconsultanancies@gmail.com.')
+      }
+    } catch {
+      setFormError('Your request could not be sent. Please try again or email spconsultanancies@gmail.com.')
+    }
   }
 
   // Handle scroll on the graph area
@@ -359,7 +390,7 @@ export default function ITServices() {
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault()
       e.stopPropagation()
-      setLoadPercentage(prev => Math.min(90, Math.max(20, prev - Math.sign(e.deltaY) * 3)))
+      setLoadPercentage(prev => Math.min(90, Math.max(20, prev - Math.sign(e.deltaY) * 10)))
     }
 
     element.addEventListener('wheel', handleWheel, { passive: false })
@@ -375,8 +406,8 @@ export default function ITServices() {
   return (
     <>
       <SEO
-        title="Enterprise IT & AI Services · Production Agents, RAG & Cloud"
-        description="Production AI and enterprise IT systems engineered by Sneha & Prahar Consultancy Services. We design, build and run LLM agents, document intelligence, voice AI, fine-tuning, and robust cloud backends that work reliably in daily production."
+        title="Senior AI Engineer · IIT Madras · Hyderabad, India"
+        description="I design, build and run AI for teams that need it to hold up in daily use: the model and its guardrails, the backend, the cloud, and the dashboard that shows what it costs."
         canonical="/it-services"
         keywords="enterprise IT services, AI agents, production LLMs, LangGraph, RAG architecture, voice AI, document intelligence, fine-tuning, AWS cloud, Azure, FastAPI, Sneha Prahar Consultancy IT"
       />
@@ -401,7 +432,7 @@ export default function ITServices() {
               <div className="lg:col-span-7">
                 <p className="text-xs font-mono font-bold tracking-widest text-gray-500 uppercase mb-4 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                  ENTERPRISE AI &amp; IT SERVICES · HYDERABAD, INDIA
+                  SENIOR AI ENGINEER · IIT MADRAS · HYDERABAD, INDIA
                 </p>
 
                 <h1
@@ -413,7 +444,7 @@ export default function ITServices() {
                 </h1>
 
                 <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
-                  We design, build and run AI for teams that need it to hold up in daily use:{' '}
+                  I design, build and run AI for teams that need it to hold up in daily use:{' '}
                   <strong className="text-gray-900 font-semibold">
                     the model and its guardrails, the backend, the cloud, and the dashboard that shows what it costs
                   </strong>
@@ -435,7 +466,9 @@ export default function ITServices() {
                 {/* Hero CTAs */}
                 <div className="flex flex-wrap items-center gap-3">
                   <a
-                    href="/contact"
+                    href={calendlyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white shadow-sm transition-all hover:opacity-90 hover:scale-[1.03]"
                     style={{ background: '#0B2545' }}
                   >
@@ -462,7 +495,12 @@ export default function ITServices() {
                   <div
                     ref={scrollableRef}
                     className="relative w-full overflow-hidden select-none"
-                    style={{ height: '220px', cursor: 'ns-resize' }}
+                    onPointerMove={(e) => {
+                      const bounds = e.currentTarget.getBoundingClientRect()
+                      const position = (e.clientY - bounds.top) / bounds.height
+                      setLoadPercentage(Math.round(Math.min(90, Math.max(20, 90 - position * 70))))
+                    }}
+                    style={{ height: '220px', cursor: 'crosshair', touchAction: 'none' }}
                   >
                     <svg
                       className="w-full h-full"
@@ -480,7 +518,7 @@ export default function ITServices() {
                         </clipPath>
                       </defs>
                       <g clipPath={`url(#${bpClipId})`}>
-                        <g transform={`translate(0, ${190 - (loadPercentage / 100) * 130})`}>
+                        <g transform={`translate(0, ${190 - (loadPercentage / 100) * 150})`}>
                           <rect x="40" y="0" width="520" height="210" fill="rgba(9, 105, 232, 0.08)" />
                           <path
                             d="M40 0 C 80 -6, 120 6, 160 0 C 200 -6, 240 6, 280 0 C 320 -6, 360 6, 400 0 C 440 -6, 480 6, 520 0 C 540 -3, 550 3, 560 0"
@@ -529,7 +567,7 @@ export default function ITServices() {
                   ~70%
                 </div>
                 <div className="text-xs sm:text-sm text-gray-600 font-medium leading-snug">
-                  less manual ticket triage for a B2B support team, active in daily production
+                  less manual ticket work for a B2B support team, in production
                 </div>
               </div>
               <div className="glass-card p-5">
@@ -537,7 +575,7 @@ export default function ITServices() {
                   600
                 </div>
                 <div className="text-xs sm:text-sm text-gray-600 font-medium leading-snug">
-                  employees active on an enterprise HR platform we designed, built and deployed
+                  employees on an HR platform I designed, built and deployed
                 </div>
               </div>
               <div className="glass-card p-5">
@@ -545,7 +583,7 @@ export default function ITServices() {
                   60
                 </div>
                 <div className="text-xs sm:text-sm text-gray-600 font-medium leading-snug">
-                  recruiters work daily in an ATS we built, featuring AI résumé screening
+                  recruiters work every day in an ATS I built, with AI résumé screening
                 </div>
               </div>
               <div className="glass-card p-5">
@@ -553,7 +591,7 @@ export default function ITServices() {
                   800+
                 </div>
                 <div className="text-xs sm:text-sm text-gray-600 font-medium leading-snug">
-                  engineers trained in enterprise AI/ML engineering and model deployment
+                  engineers taught AI/ML at Masai School
                 </div>
               </div>
             </div>
@@ -574,7 +612,7 @@ export default function ITServices() {
         <section className="py-12 bg-gray-50/70 border-y border-gray-200/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <p className="text-xs font-mono font-bold tracking-widest text-gray-500 uppercase text-center mb-6">
-              ENGINEERED &amp; DELIVERED SOLUTIONS FOR ENTERPRISES WORLDWIDE
+              WORKED WITH
             </p>
 
             {/* Client Logo Marquee */}
@@ -606,19 +644,19 @@ export default function ITServices() {
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Cloud size={16} className="text-blue-600 flex-shrink-0" />
-                <span>In your cloud account</span>
+                <span>Built in your cloud account</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Code2 size={16} className="text-teal-600 flex-shrink-0" />
-                <span>Code &amp; IP are 100% yours</span>
+                <span>Code and IP are yours</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Activity size={16} className="text-purple-600 flex-shrink-0" />
-                <span>Evals &amp; cost dashboards</span>
+                <span>Evals and a cost dashboard in every build</span>
               </div>
               <div className="flex items-center justify-center gap-2 col-span-2 md:col-span-1">
                 <Globe2 size={16} className="text-blue-600 flex-shrink-0" />
-                <span>INR, USD, GBP, EUR, AED</span>
+                <span>Invoices in INR, USD, GBP, EUR or AED</span>
               </div>
             </div>
           </div>
@@ -630,18 +668,18 @@ export default function ITServices() {
         <section id="services" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-10">
-              <div className="section-label mb-3">SERVICES · PRODUCTION CAPABILITIES</div>
+              <div className="section-label mb-3">SERVICES · WHAT I HAVE BUILT</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                Eight kinds of AI systems we build
+                Eight kinds of AI systems I&apos;ve built
               </h2>
               <p className="text-gray-600 text-base sm:text-lg">
-                Each one solves an operational bottleneck common across modern industries, equipped with the robust backend plumbing, cloud autoscaling, guardrails and telemetry around it. Filter by industry to see relevant fits.
+                Each one solves a problem most industries share, and each one comes with the backend, the cloud and the monitoring around it. Pick your industry to see which ones fit your team&apos;s week.
               </p>
             </div>
 
             {/* Industry Filter Buttons */}
             <div className="flex flex-wrap gap-2 mb-8 items-center">
-              <span className="text-xs font-bold text-gray-500 uppercase mr-1">Your Industry:</span>
+              <span className="text-xs font-bold text-gray-500 uppercase mr-1">Your industry</span>
               {[
                 { key: 'all', label: 'All' },
                 { key: 'sales', label: 'Sales & CRM' },
@@ -651,7 +689,7 @@ export default function ITServices() {
                 { key: 'legal', label: 'Legal' },
                 { key: 'saas', label: 'SaaS' },
                 { key: 'support', label: 'Support' },
-                { key: 'real-estate', label: 'Real Estate' },
+                { key: 'real-estate', label: 'Real estate' },
                 { key: 'recruitment', label: 'Recruitment' },
                 { key: 'agencies', label: 'Agencies' },
               ].map(f => (
@@ -710,12 +748,12 @@ export default function ITServices() {
         <section id="work" className="py-20 bg-gray-50/70 border-t border-gray-200/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-12">
-              <div className="section-label mb-3">SELECTED WORK · ARCHITECTURE BLUEPRINTS</div>
+              <div className="section-label mb-3">SELECTED WORK</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 What changed first, then what&apos;s under the hood
               </h2>
               <p className="text-gray-600 text-base sm:text-lg">
-                Five production systems built end to end. The measurable outcome is up front for decision-makers, the flow drawing and design trade-offs are documented for engineers, and every case details how we verify correctness.
+                Five systems I built end to end. The outcome is up front for founders, the drawing and the decisions are there for engineers, and each card says how I know it works.
               </p>
             </div>
 
@@ -726,9 +764,9 @@ export default function ITServices() {
                   <div className="lg:col-span-7">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-blue-600 px-2 py-0.5 rounded bg-blue-50">DWG 01</span>
-                      <span>B2B Support Automation</span>
-                      <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">● Production Live</span>
-                      <span>Atlas Systems</span>
+                      <span>B2B support</span>
+                      <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">● Live</span>
+                      <span>Atlas Systems · 2024–26</span>
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Satoshi, sans-serif' }}>
@@ -736,7 +774,7 @@ export default function ITServices() {
                     </h3>
 
                     <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                      The support operations team previously read every email and call transcript by hand to create tickets within SLA. Now, an intelligent agent workflow ingests each inbound message, classifies it, spots duplicates, links related child tickets and drafts contextual replies. Human engineers review and approve instead of retyping.
+                      The team read every email and call transcript by hand to open tickets under SLA. Now an AI workflow reads each message, files it, spots duplicates, links related tickets and drafts the reply. People review instead of retyping.
                     </p>
 
                     <div className="grid grid-cols-2 gap-4 mb-6">
@@ -744,38 +782,38 @@ export default function ITServices() {
                         <div className="text-2xl sm:text-3xl font-bold text-blue-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           ~70%
                         </div>
-                        <div className="text-xs text-gray-600">less manual review and ticket creation effort</div>
+                        <div className="text-xs text-gray-600">less manual review and ticket creation</div>
                       </div>
                       <div className="p-4 rounded-xl bg-teal-50/70 border border-teal-100">
                         <div className="text-2xl sm:text-3xl font-bold text-teal-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           ~40%
                         </div>
-                        <div className="text-xs text-gray-600">less code required per new CRM integration</div>
+                        <div className="text-xs text-gray-600">less code per new integration</div>
                       </div>
                     </div>
 
                     <div className="space-y-2 mb-6 text-xs sm:text-sm text-gray-700">
                       <div className="flex items-start gap-2">
                         <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
-                        <span>MCP tools over Outlook and SharePoint, fully reusable across client integrations</span>
+                        <span>MCP tools over Outlook and SharePoint, reusable across integrations</span>
                       </div>
                       <div className="flex items-start gap-2">
                         <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
-                        <span>Automated semantic deduplication and parent/child linking prevents queue flooding</span>
+                        <span>Deduplication and parent/child links so automation doesn&apos;t flood the queue</span>
                       </div>
                       <div className="flex items-start gap-2">
                         <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
-                        <span>Drafted replies stay with human agents for review and one-click dispatch</span>
+                        <span>Drafted replies stay with a person for review</span>
                       </div>
                     </div>
 
                     <div className="p-3.5 rounded-lg bg-gray-50 border border-gray-200 text-xs text-gray-600 mb-4">
-                      <strong className="text-gray-900">How we know: </strong>
-                      The ~70% reduction reflects tracked operational time recorded in Jira/ServiceNow post-rollout; the ~40% drop in code was measured across successive API integrations using standardized MCP tool servers.
+                      <strong className="text-gray-900">How I know </strong>
+                      The ~70% is the reduction in manual review and ticket-creation effort the support team reported after rollout; the ~40% is the drop in integration code once the MCP tools were reused.
                     </div>
 
                     <div className="flex flex-wrap gap-2">
-                      {['Model Context Protocol (MCP)', 'LangGraph', 'LangChain', 'Outlook API', 'SharePoint', 'FastAPI'].map((t, idx) => (
+                      {['MCP', 'LangGraph', 'LangChain', 'Outlook', 'SharePoint'].map((t, idx) => (
                         <span key={idx} className="text-xs px-2.5 py-1 rounded bg-gray-100 text-gray-700 font-mono font-medium">
                           {t}
                         </span>
@@ -792,24 +830,24 @@ export default function ITServices() {
 
                     <div className="space-y-3">
                       <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center font-bold text-slate-200">
-                        Inbound Email / Call Transcript
+                        Email · call transcript
                       </div>
                       <div className="text-center text-teal-400 font-bold">↓ MCP Adapter</div>
                       <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center text-slate-300">
-                        MCP Tools: Outlook &amp; SharePoint
+                        MCP tools: Outlook, SharePoint
                       </div>
                       <div className="text-center text-teal-400 font-bold">↓ Streaming Input</div>
                       <div className="p-3 rounded bg-blue-950/80 border border-blue-500 text-center font-bold text-blue-200">
-                        LangGraph Deterministic Workflow
+                        LangGraph workflow
                         <div className="grid grid-cols-3 gap-1 mt-2 text-[10px] font-normal text-slate-300">
                           <span className="bg-slate-800 py-1 rounded">Categorize</span>
                           <span className="bg-slate-800 py-1 rounded">Deduplicate</span>
-                          <span className="bg-slate-800 py-1 rounded">Link Parent</span>
+                          <span className="bg-slate-800 py-1 rounded">Link parent / child</span>
                         </div>
                       </div>
                       <div className="text-center text-teal-400 font-bold">↓ Verified Output</div>
                       <div className="p-2.5 rounded bg-emerald-950/70 border border-emerald-500 text-center font-bold text-emerald-200">
-                        Formatted Ticket + Drafted Reply
+                        Ticket + drafted reply
                       </div>
                     </div>
                   </div>
@@ -822,9 +860,9 @@ export default function ITServices() {
                   <div className="lg:col-span-7">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-teal-600 px-2 py-0.5 rounded bg-teal-50">DWG 02</span>
-                      <span>Healthcare &amp; Clinical AI</span>
-                      <span className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold">● In Clinical Testing</span>
-                      <span>Bridgetown Consulting Group</span>
+                      <span>Healthcare</span>
+                      <span className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-semibold">● In testing with doctors</span>
+                      <span>Bridgetown Consulting Group · 2026</span>
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Satoshi, sans-serif' }}>
@@ -832,7 +870,7 @@ export default function ITServices() {
                     </h3>
 
                     <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                      PTBuddy helps patients in the US manage rehabilitation exercises between physician visits. Users complete structured pain intake assessments, receive an adaptive exercise regimen, and record weekly trajectory. Anya, the embedded AI assistant, remembers full historical context while adhering to rigorous clinical guardrails: any acute or out-of-scope symptom instantly triggers an escalation to a licensed doctor.
+                      PTBuddy helps people in the US manage physiotherapy between doctor visits. New users answer questions about their pain and habits, get a weekly exercise program built from a physiotherapist&apos;s video library, then log how the pain changes. The next week&apos;s program is re-ranked from what they report. Inside the app, an assistant called Anya already knows their history, so they can just ask. Its first rule is to escalate: anything beyond self-managed physio goes to a doctor, not a home remedy.
                     </p>
 
                     <div className="grid grid-cols-3 gap-3 mb-6">
@@ -840,44 +878,52 @@ export default function ITServices() {
                         <div className="text-xl sm:text-2xl font-bold text-blue-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           ~1.5 s
                         </div>
-                        <div className="text-xs text-gray-600">p95 time to first token (streaming)</div>
+                        <div className="text-xs text-gray-600">time to first token (p95)</div>
                       </div>
                       <div className="p-3.5 rounded-xl bg-teal-50/70 border border-teal-100">
                         <div className="text-xl sm:text-2xl font-bold text-teal-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           ~$0.005
                         </div>
-                        <div className="text-xs text-gray-600">average cost per conversation</div>
+                        <div className="text-xs text-gray-600">cost per conversation</div>
                       </div>
                       <div className="p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-100">
                         <div className="text-xl sm:text-2xl font-bold text-emerald-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           ~98%
                         </div>
-                        <div className="text-xs text-gray-600">replies passing strict JSON contract</div>
+                        <div className="text-xs text-gray-600">replies passing the JSON contract</div>
                       </div>
                     </div>
 
                     <div className="space-y-2 mb-6 text-xs sm:text-sm text-gray-700">
                       <div className="flex items-start gap-2">
                         <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
-                        <span>Clinical rule guardrails: hard escalation to a human physician rather than hallucinating</span>
+                        <span>Clinical guardrails: escalate to a doctor instead of guessing</span>
                       </div>
                       <div className="flex items-start gap-2">
                         <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
-                        <span>Strict JSON schema response contracts that the React Native mobile client verifies</span>
+                        <span>A strict JSON response contract the app can trust</span>
                       </div>
                       <div className="flex items-start gap-2">
                         <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
-                        <span>Rolling semantic summaries maintain conversation memory inside a strict token budget</span>
+                        <span>Rolling summaries keep memory inside a fixed token budget</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
+                        <span>Model failover that ends in a deterministic keyword fallback</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
+                        <span>Tokens, latency and cost logged for every call</span>
                       </div>
                     </div>
 
                     <div className="p-3.5 rounded-lg bg-gray-50 border border-gray-200 text-xs text-gray-600 mb-4">
-                      <strong className="text-gray-900">How we know: </strong>
-                      Every LLM payload is automatically validated against Pydantic schema parsers; tokens, latency and cost per call are monitored live in AWS CloudWatch.
+                      <strong className="text-gray-900">How I know </strong>
+                      Every reply is checked against the JSON contract before the app renders it, and tokens, latency and cost are logged per call in CloudWatch, so quality and spend are visible for each conversation.
                     </div>
 
                     <div className="flex flex-wrap gap-2">
-                      {['LangGraph', 'Gemini 2.5 Flash', 'Server-Sent Events (SSE)', 'AWS Lambda', 'PostgreSQL', 'Stripe'].map((t, idx) => (
+                      {['LangGraph', 'Gemini 2.5 Flash', 'SSE streaming', 'AWS', 'PostgreSQL', 'Stripe'].map((t, idx) => (
                         <span key={idx} className="text-xs px-2.5 py-1 rounded bg-gray-100 text-gray-700 font-mono font-medium">
                           {t}
                         </span>
@@ -924,53 +970,62 @@ export default function ITServices() {
                   <div className="lg:col-span-7">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-blue-600 px-2 py-0.5 rounded bg-blue-50">DWG 03</span>
-                      <span>Recruitment &amp; HR Tech</span>
-                      <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">● Production Live</span>
-                      <span>Bridgetown Consulting Group</span>
+                      <span>Recruitment</span>
+                      <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">● Live</span>
+                      <span>Bridgetown Consulting Group · 2026</span>
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                      One unified system that carries a recruitment firm from client to hire
+                      One system that carries a recruitment firm from client to hire
                     </h3>
 
                     <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                      The recruitment agency previously juggled separate spreadsheets, email inboxes and portal tools across candidate pipelines. We engineered a single cohesive platform: client and vendor contracts feed live open requisitions, candidate profiles are ingested with documents, AI parses and scores résumés against exact job specifications, interviews are scheduled, and selected candidates are onboarded.
+                      The recruitment teams worked across separate tools from the first client conversation to a candidate&apos;s first day. Now one system runs the whole pipeline: clients and vendors are onboarded, their requirements become open jobs, candidates are onboarded and their documents collected, AI screens résumés against each requirement, applications are submitted and tracked, interviews are scheduled, and the hired candidate is onboarded. Sixty people across the teams work in the same place instead of chasing each other for status.
                     </p>
 
                     <div className="grid grid-cols-3 gap-3 mb-6">
                       <div className="p-3.5 rounded-xl bg-blue-50/70 border border-blue-100 text-center">
                         <div className="text-2xl sm:text-3xl font-bold text-blue-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
-                          200+
+                          200
                         </div>
-                        <div className="text-xs text-gray-600">candidates actively tracked</div>
+                        <div className="text-xs text-gray-600">candidates tracked</div>
                       </div>
                       <div className="p-3.5 rounded-xl bg-teal-50/70 border border-teal-100 text-center">
                         <div className="text-2xl sm:text-3xl font-bold text-teal-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           60
                         </div>
-                        <div className="text-xs text-gray-600">recruiters working daily in ATS</div>
+                        <div className="text-xs text-gray-600">people across the teams work in it</div>
                       </div>
                       <div className="p-3.5 rounded-xl bg-purple-50/70 border border-purple-100 text-center">
                         <div className="text-2xl sm:text-3xl font-bold text-purple-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           7
                         </div>
-                        <div className="text-xs text-gray-600">lifecycle stages in one platform</div>
+                        <div className="text-xs text-gray-600">stages, one system</div>
                       </div>
                     </div>
 
                     <div className="space-y-2 mb-6 text-xs sm:text-sm text-gray-700">
                       <div className="flex items-start gap-2">
                         <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
-                        <span>AI résumé screening matches and ranks applicants against verified technical criteria</span>
+                        <span>AI résumé screening ranks candidates against each job&apos;s requirements</span>
                       </div>
                       <div className="flex items-start gap-2">
                         <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
-                        <span>Automated vendor onboarding feeds open roles immediately into the active funnel</span>
+                        <span>Client and vendor onboarding feeds requirements straight into the pipeline</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" />
+                        <span>Document collection and interview scheduling live in the same flow</span>
                       </div>
                     </div>
 
+                    <div className="p-3.5 rounded-lg bg-gray-50 border border-gray-200 text-xs text-gray-600 mb-4">
+                      <strong className="text-gray-900">How I know </strong>
+                      In daily use by 60 people across the recruitment teams, with 200 candidates tracked through all seven stages in the system itself.
+                    </div>
+
                     <div className="flex flex-wrap gap-2">
-                      {['FastAPI', 'PostgreSQL', 'AWS ECS', 'GPT-4o', 'Tailwind', 'Docker'].map((t, idx) => (
+                      {['FastAPI', 'PostgreSQL', 'AWS', 'GPT-4o'].map((t, idx) => (
                         <span key={idx} className="text-xs px-2.5 py-1 rounded bg-gray-100 text-gray-700 font-mono font-medium">
                           {t}
                         </span>
@@ -987,25 +1042,22 @@ export default function ITServices() {
 
                     <div className="space-y-2 text-center">
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        1. Client &amp; Vendor Onboarding
+                        Client &amp; vendor onboarding
                       </div>
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        2. Job Requirements &amp; SOW Generation
+                        Job requirements
                       </div>
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        3. Candidate Intake &amp; Document Extraction
+                        Candidate onboarding · documents
                       </div>
                       <div className="p-2.5 rounded bg-blue-950 border border-blue-500 font-bold text-blue-200">
-                        4. AI Résumé Scoring &amp; Ranking
+                        AI résumé screening
                       </div>
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        5. Application Submission &amp; Client Review
+                        Application · interview scheduling
                       </div>
                       <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        6. Automated Interview Scheduling
-                      </div>
-                      <div className="p-2.5 rounded bg-emerald-950/70 border border-emerald-500 font-bold text-emerald-200">
-                        7. Candidate Onboarded &amp; Contracted
+                        Candidate onboarded
                       </div>
                     </div>
                   </div>
@@ -1018,17 +1070,17 @@ export default function ITServices() {
                   <div className="lg:col-span-7">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-blue-600 px-2 py-0.5 rounded bg-blue-50">DWG 04</span>
-                      <span>Real-Time Voice AI</span>
+                      <span>Voice AI</span>
                       <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">● Delivered</span>
-                      <span>Atlas Systems</span>
+                      <span>Atlas Systems · 2024–26</span>
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                      A survey caller that sounds like a conversation, not a robotic phone menu
+                      A survey caller that sounds like a conversation, not a phone menu
                     </h3>
 
                     <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                      An outbound telephone agent that carries out survey questions with fluid natural speech, validates every answer against dynamic schemas, and seamlessly copes when live human respondents interrupt or talk over the bot. Tuned specifically for low-latency turn detection and accent resilience.
+                      An outbound caller that asks survey questions in natural conversation, checks each answer, and copes when people interrupt or talk over it. The hard part was live-call behavior, so I tuned turn detection, interruption handling and transcription for real callers.
                     </p>
 
                     <div className="grid grid-cols-2 gap-4 mb-6">
@@ -1042,12 +1094,23 @@ export default function ITServices() {
                         <div className="text-2xl sm:text-3xl font-bold text-teal-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           ~800 ms
                         </div>
-                        <div className="text-xs text-gray-600">median conversational response latency</div>
+                        <div className="text-xs text-gray-600">median response time</div>
                       </div>
                     </div>
 
+                    <div className="space-y-2 mb-6 text-xs sm:text-sm text-gray-700">
+                      <div className="flex items-start gap-2"><Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" /><span>Twilio streams call audio over WebSockets to OpenAI Realtime</span></div>
+                      <div className="flex items-start gap-2"><Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" /><span>Prompt-driven questions, with every answer validated</span></div>
+                      <div className="flex items-start gap-2"><Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" /><span>Turn detection, voice and language tuned for live calls</span></div>
+                    </div>
+
+                    <div className="p-3.5 rounded-lg bg-gray-50 border border-gray-200 text-xs text-gray-600 mb-4">
+                      <strong className="text-gray-900">How I know </strong>
+                      Every answer is validated before the next question is asked, and turn detection, interruption handling and transcription were tuned on real calls rather than test audio.
+                    </div>
+
                     <div className="flex flex-wrap gap-2">
-                      {['Twilio Voice', 'OpenAI Realtime API', 'WebSockets', 'Python Asyncio', 'Redis'].map((t, idx) => (
+                      {['Twilio', 'OpenAI Realtime API', 'WebSockets', 'Python'].map((t, idx) => (
                         <span key={idx} className="text-xs px-2.5 py-1 rounded bg-gray-100 text-gray-700 font-mono font-medium">
                           {t}
                         </span>
@@ -1063,24 +1126,24 @@ export default function ITServices() {
 
                     <div className="space-y-3">
                       <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center font-bold text-slate-200">
-                        Twilio Outbound PSTN Call
+                        Twilio outbound call
                       </div>
                       <div className="text-center text-teal-400 font-bold">↓ Bi-directional Audio</div>
                       <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center text-slate-300">
-                        Raw WebSocket μ-law Audio Stream
+                        WebSocket audio stream
                       </div>
                       <div className="text-center text-teal-400 font-bold">↓ Realtime Inference</div>
                       <div className="p-3 rounded bg-blue-950/80 border border-blue-500 text-center font-bold text-blue-200">
                         OpenAI Realtime API
                         <div className="grid grid-cols-3 gap-1 mt-2 text-[10px] font-normal text-slate-300">
                           <span className="bg-slate-800 py-1 rounded">Turn Detection</span>
-                          <span className="bg-slate-800 py-1 rounded">Barge-in / Cut</span>
+                          <span className="bg-slate-800 py-1 rounded">Interruptions</span>
                           <span className="bg-slate-800 py-1 rounded">Answer Check</span>
                         </div>
                       </div>
                       <div className="text-center text-teal-400 font-bold">↓ Structured Record</div>
                       <div className="p-2.5 rounded bg-emerald-950/70 border border-emerald-500 text-center font-bold text-emerald-200">
-                        Dynamic Next Question · CRM Record
+                        Next question · survey record
                       </div>
                     </div>
                   </div>
@@ -1090,35 +1153,35 @@ export default function ITServices() {
                 <div className="pt-6 border-t border-gray-200">
                   <div className="mb-4">
                     <span className="text-xs font-mono font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
-                      DWG 04 A–C · SAME VOICE ENGINE IN THREE MORE INDUSTRIES
+                      DWG 04 A–C · VOICE AI PROTOTYPES
                     </span>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="p-4 rounded-xl bg-gray-50 border border-gray-200 text-xs">
-                      <div className="font-bold text-gray-900 mb-1 text-sm">04 A · Lead Generation</div>
+                      <div className="font-bold text-gray-900 mb-1 text-sm">04 A · Lead generation</div>
                       <p className="text-gray-600 mb-3">
-                        Asks about company requirements, budget, timeline, and decision-maker; hands qualified prospects straight to sales with call transcripts.
+                        Qualifies the lead before sales calls. Asks about need, budget, timeline and who decides, then hands qualified leads to sales with a call summary.
                       </p>
                       <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded">
-                        Result: Qualified lead ➔ Account Executive
+                        Ends in: Qualified lead → sales
                       </div>
                     </div>
                     <div className="p-4 rounded-xl bg-gray-50 border border-gray-200 text-xs">
-                      <div className="font-bold text-gray-900 mb-1 text-sm">04 B · Healthcare &amp; Clinic Reminders</div>
+                      <div className="font-bold text-gray-900 mb-1 text-sm">04 B · Healthcare &amp; services</div>
                       <p className="text-gray-600 mb-3">
-                        Appointment reminders and pre-op check-ins where patients verbally confirm, reschedule, or cancel in their own natural words.
+                        Reminders patients answer in their own words. Appointment reminders and check-ins where callers confirm, cancel or reschedule by speaking. Missed calls are flagged for follow-up.
                       </p>
                       <div className="text-[11px] font-semibold text-teal-700 bg-teal-50 px-2 py-1 rounded">
-                        Result: Confirm · Reschedule · EMR Updated
+                        Ends in: Confirm · cancel · reschedule
                       </div>
                     </div>
                     <div className="p-4 rounded-xl bg-gray-50 border border-gray-200 text-xs">
-                      <div className="font-bold text-gray-900 mb-1 text-sm">04 C · HR First-Round Screening</div>
+                      <div className="font-bold text-gray-900 mb-1 text-sm">04 C · Recruitment &amp; HR</div>
                       <p className="text-gray-600 mb-3">
-                        Asks role-specific technical questions, probes deeper when candidate answers are ambiguous, and compiles an automated scorecard.
+                        First-round screening, scored. Role-specific questions from the job requirements, follow-ups on vague answers, and transcription tuned for accents.
                       </p>
                       <div className="text-[11px] font-semibold text-purple-700 bg-purple-50 px-2 py-1 rounded">
-                        Result: Scored Interview Summary ➔ Recruiter
+                        Ends in: Screening scorecard → recruiter
                       </div>
                     </div>
                   </div>
@@ -1131,17 +1194,17 @@ export default function ITServices() {
                   <div className="lg:col-span-7">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-blue-600 px-2 py-0.5 rounded bg-blue-50">DWG 05</span>
-                      <span>Legal Tech &amp; Domain Fine-Tuning</span>
+                      <span>Legal</span>
                       <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">● Delivered</span>
-                      <span>Bluekyte.AI (Counsello AI)</span>
+                      <span>Bluekyte.AI (Counsello AI) · 2024</span>
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                      Teaching LLaMA 3 Indian law: 9.75M tokens, one NVIDIA A100 GPU
+                      Teaching LLaMA 3 Indian law: 9.75M tokens, one A100
                     </h3>
 
                     <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                      Generic LLMs stumble on archaic jurisprudence phrasing, complex statutory citations, and Indian court procedural vocabulary. We adapted Meta&apos;s LLaMA 3 8B using Parameter-Efficient LoRA continual pre-training across 15 authoritative Indian law treatises, taking the pipeline from raw OCR cleaning through tokenization to a domain-adapted model.
+                      General models stumble on Indian legal language. I adapted LLaMA 3 8B with LoRA continual pre-training on 15 Indian law textbooks, from cleaning the text to a domain-adapted model.
                     </p>
 
                     <div className="grid grid-cols-3 gap-3 mb-6">
@@ -1149,24 +1212,29 @@ export default function ITServices() {
                         <div className="text-xl sm:text-2xl font-bold text-blue-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           9.75M
                         </div>
-                        <div className="text-xs text-gray-600">curated training tokens</div>
+                        <div className="text-xs text-gray-600">training tokens</div>
                       </div>
                       <div className="p-3.5 rounded-xl bg-teal-50/70 border border-teal-100 text-center">
                         <div className="text-xl sm:text-2xl font-bold text-teal-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           15
                         </div>
-                        <div className="text-xs text-gray-600">Indian legal textbooks</div>
+                        <div className="text-xs text-gray-600">Indian law textbooks</div>
                       </div>
                       <div className="p-3.5 rounded-xl bg-purple-50/70 border border-purple-100 text-center">
                         <div className="text-xl sm:text-2xl font-bold text-purple-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           20+ h
                         </div>
-                        <div className="text-xs text-gray-600">training on single A100</div>
+                        <div className="text-xs text-gray-600">training on one A100</div>
                       </div>
                     </div>
 
+                    <div className="space-y-2 mb-6 text-xs sm:text-sm text-gray-700">
+                      <div className="flex items-start gap-2"><Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" /><span>Continual pre-training with LoRA instead of full fine-tuning</span></div>
+                      <div className="flex items-start gap-2"><Check size={16} className="text-emerald-600 mt-0.5 flex-shrink-0" /><span>Corpus cleaned and tokenized in-house</span></div>
+                    </div>
+
                     <div className="flex flex-wrap gap-2">
-                      {['LLaMA 3 8B', 'LoRA', 'PEFT', 'Hugging Face Transformers', 'PyTorch', 'NVIDIA A100'].map((t, idx) => (
+                      {['LLaMA 3 8B', 'LoRA', 'Hugging Face', 'NVIDIA A100'].map((t, idx) => (
                         <span key={idx} className="text-xs px-2.5 py-1 rounded bg-gray-100 text-gray-700 font-mono font-medium">
                           {t}
                         </span>
@@ -1210,44 +1278,51 @@ export default function ITServices() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="p-5 rounded-xl bg-white border border-gray-200">
                   <span className="text-xs font-semibold text-blue-600 block mb-1">HR Tech</span>
-                  <div className="font-bold text-gray-900 mb-1">Multi-Entity Enterprise HRMS</div>
+                  <div className="font-bold text-gray-900 mb-1">Multi-entity HRMS</div>
                   <p className="text-xs text-gray-600">
-                    600 employees across 5 business units: attendance, leave, strict data tenancy isolation, and automated AI attendance analytics.
+                    600 employees across five business units: attendance, leave and administration, with role-based access, strict data isolation, AI-assisted leave and AI attendance reports.
                   </p>
                 </div>
                 <div className="p-5 rounded-xl bg-white border border-gray-200">
                   <span className="text-xs font-semibold text-teal-600 block mb-1">Risk &amp; Compliance</span>
-                  <div className="font-bold text-gray-900 mb-1">Multi-Agent Vendor Risk Review</div>
+                  <div className="font-bold text-gray-900 mb-1">Multi-agent vendor risk review</div>
                   <p className="text-xs text-gray-600">
-                    A six-stage compliance assessment executed by autonomous CrewAI agents with a dedicated QA auditor agent enforcing regulatory checks.
+                    A six-stage review run by a CrewAI crew, with a QA agent checking each stage.
                   </p>
                 </div>
                 <div className="p-5 rounded-xl bg-white border border-gray-200">
                   <span className="text-xs font-semibold text-purple-600 block mb-1">Enterprise Cloud</span>
-                  <div className="font-bold text-gray-900 mb-1">Multimodal Enterprise RAG Platform</div>
+                  <div className="font-bold text-gray-900 mb-1">Multimodal RAG platform</div>
                   <p className="text-xs text-gray-600">
-                    Ingests 10+ file formats (PDFs, PPTX, XLSX, audio), dynamic agent routing and automated RAG triaging deployed on Azure Container Apps.
+                    10+ file formats, agent routing and QA evaluation, deployed on Azure Container Apps.
                   </p>
                 </div>
                 <div className="p-5 rounded-xl bg-white border border-gray-200">
                   <span className="text-xs font-semibold text-blue-600 block mb-1">Marketing Agency</span>
-                  <div className="font-bold text-gray-900 mb-1">Department Knowledge Base Platform</div>
+                  <div className="font-bold text-gray-900 mb-1">Department knowledge platform</div>
                   <p className="text-xs text-gray-600">
-                    Google Drive semantic RAG across individual agency departments for Walker Sands, delivered through Balihans consulting.
+                    Google Drive RAG per department for Walker Sands, delivered through Balihans.
                   </p>
                 </div>
                 <div className="p-5 rounded-xl bg-white border border-gray-200">
                   <span className="text-xs font-semibold text-teal-600 block mb-1">Computer Vision &amp; OCR</span>
-                  <div className="font-bold text-gray-900 mb-1">Document Intelligence Pipeline</div>
+                  <div className="font-bold text-gray-900 mb-1">Document intelligence pipeline</div>
                   <p className="text-xs text-gray-600">
-                    High-throughput OCR, Azure Document Intelligence, and visual model understanding for handwritten documents and invoice parsing.
+                    OCR, Azure Document Intelligence and image understanding for documents and handwriting.
                   </p>
                 </div>
                 <div className="p-5 rounded-xl bg-white border border-gray-200">
                   <span className="text-xs font-semibold text-purple-600 block mb-1">Open Weights &amp; Ops</span>
-                  <div className="font-bold text-gray-900 mb-1">Qwen 2.5 7B Autoscaled in Production</div>
+                  <div className="font-bold text-gray-900 mb-1">Qwen 2.5 7B in production</div>
                   <p className="text-xs text-gray-600">
-                    Autoscaled high-concurrency model inference endpoints configured on AWS SageMaker and EC2 with vLLM acceleration.
+                    Autoscaled inference on SageMaker and EC2.
+                  </p>
+                </div>
+                <div className="p-5 rounded-xl bg-white border border-gray-200">
+                  <span className="text-xs font-semibold text-blue-600 block mb-1">Customer engagement</span>
+                  <div className="font-bold text-gray-900 mb-1">Kollect AI</div>
+                  <p className="text-xs text-gray-600">
+                    SMS, WhatsApp, email and IVR on AWS serverless, ~30% more responsive after load testing.
                   </p>
                 </div>
               </div>
@@ -1261,12 +1336,12 @@ export default function ITServices() {
         <section id="principles" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-12">
-              <div className="section-label mb-3">HOW WE BUILD · RESILIENCE TESTED</div>
+              <div className="section-label mb-3">HOW I BUILD</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 Watch a production agent handle a bad day
               </h2>
               <p className="text-gray-600 text-base sm:text-lg">
-                Any demo looks great on a sunny day. A production AI system is judged by how it handles unexpected outages, latency spikes, and edge cases. Select a scenario below to see which component of our architecture steps in.
+                A hull is judged in a storm, not on the slipway. Run the same assistant through four situations and see which part of the system does the work. The R-tags point to the six rules below.
               </p>
             </div>
 
@@ -1275,7 +1350,7 @@ export default function ITServices() {
               <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-800">
                 <div className="flex items-center gap-2">
                   <Terminal size={18} className="text-blue-400" />
-                  <span className="font-mono font-bold text-sm text-slate-200">RUN SCENARIO TEST:</span>
+                  <span className="font-mono font-bold text-sm text-slate-200">RUN SCENARIO</span>
                 </div>
                 {/* Scenario Selectors */}
                 <div className="flex flex-wrap gap-2">
@@ -1315,7 +1390,7 @@ export default function ITServices() {
                 >
                   <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 font-bold block mb-1">R1</span>
                   <div className="font-bold">Request</div>
-                  <div className="text-[10px] opacity-75">User Message</div>
+                  <div className="text-[10px] opacity-75">user message</div>
                 </div>
 
                 {/* Col 2: Guardrails or Escalate */}
@@ -1329,6 +1404,7 @@ export default function ITServices() {
                   >
                     <span className="text-[9px] px-1 py-0.2 rounded bg-teal-500/20 text-teal-300 font-bold block">R3</span>
                     <div className="font-bold text-[11px]">Guardrails</div>
+                    <div className="text-[9px] text-teal-300">scope check</div>
                   </div>
                   <div
                     className={`p-2 rounded-lg border text-center transition-all ${
@@ -1338,7 +1414,7 @@ export default function ITServices() {
                     }`}
                   >
                     <div className="font-bold text-[11px] text-red-400">Escalate</div>
-                    <div className="text-[9px] text-red-300">See a Doctor</div>
+                    <div className="text-[9px] text-red-300">see a doctor</div>
                   </div>
                 </div>
 
@@ -1352,7 +1428,7 @@ export default function ITServices() {
                 >
                   <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 font-bold block mb-1">R4</span>
                   <div className="font-bold">Context</div>
-                  <div className="text-[10px] opacity-75">Rolling Memory</div>
+                  <div className="text-[10px] opacity-75">rolling summary</div>
                 </div>
 
                 {/* Col 4: Router */}
@@ -1365,7 +1441,7 @@ export default function ITServices() {
                 >
                   <span className="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold block mb-1">R2</span>
                   <div className="font-bold">Router</div>
-                  <div className="text-[10px] opacity-75">Pick Model</div>
+                  <div className="text-[10px] opacity-75">pick a model</div>
                 </div>
 
                 {/* Col 5: Models (Primary / Secondary / Fallback) */}
@@ -1377,7 +1453,7 @@ export default function ITServices() {
                         : 'bg-slate-800/40 border-slate-700/60 text-slate-500'
                     }`}
                   >
-                    <div className="text-[10px]">Primary (Gemini)</div>
+                    <div className="text-[10px]">Primary · Gemini 2.5 Flash</div>
                   </div>
                   <div
                     className={`p-1.5 rounded border text-center transition-all ${
@@ -1386,7 +1462,7 @@ export default function ITServices() {
                         : 'bg-slate-800/40 border-slate-700/60 text-slate-500'
                     }`}
                   >
-                    <div className="text-[10px]">Secondary (Claude)</div>
+                    <div className="text-[10px]">Secondary · failover model</div>
                   </div>
                   <div
                     className={`p-1.5 rounded border text-center transition-all ${
@@ -1395,7 +1471,7 @@ export default function ITServices() {
                         : 'bg-slate-800/40 border-slate-700/60 text-slate-500'
                     }`}
                   >
-                    <div className="text-[10px]">Keyword Fallback</div>
+                    <div className="text-[10px]">Keyword fallback · deterministic</div>
                   </div>
                 </div>
 
@@ -1409,7 +1485,7 @@ export default function ITServices() {
                 >
                   <span className="text-[10px] px-1.5 py-0.5 rounded bg-teal-500/20 text-teal-300 font-bold block mb-1">R3</span>
                   <div className="font-bold">JSON Contract</div>
-                  <div className="text-[10px] opacity-75">Schema Verify</div>
+                  <div className="text-[10px] opacity-75">schema check</div>
                 </div>
 
                 {/* Col 7: Response */}
@@ -1434,11 +1510,11 @@ export default function ITServices() {
                     <span className="text-lg font-bold text-blue-400">{currentScenarioData.latency}</span>
                   </div>
                   <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
-                    <span className="text-[10px] text-slate-400 uppercase block">TOKENS USED</span>
+                    <span className="text-[10px] text-slate-400 uppercase block">TOKENS</span>
                     <span className="text-lg font-bold text-teal-400">{currentScenarioData.tokens}</span>
                   </div>
                   <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
-                    <span className="text-[10px] text-slate-400 uppercase block">ESTIMATED COST</span>
+                    <span className="text-[10px] text-slate-400 uppercase block">COST</span>
                     <span className="text-lg font-bold text-purple-400">{currentScenarioData.cost}</span>
                   </div>
                   <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
@@ -1472,12 +1548,12 @@ export default function ITServices() {
             {/* 6 Engineering Principles (R1 to R6) */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { r: 'R1', title: 'Start with the business problem', desc: 'Focus on a measurable efficiency improvement, revenue acceleration, or defect reduction—never a vanity technology demo.' },
-                { r: 'R2', title: 'Use the simplest thing that works', desc: 'One deterministic model call, indexed RAG, a directed workflow, or multi-agent crew—selected strictly by necessity.' },
-                { r: 'R3', title: 'Architect for systemic failure', desc: 'Strict JSON schema contracts, multi-tier validation, automatic failover routes, and deterministic emergency fallbacks.' },
-                { r: 'R4', title: 'Control context and token spend', desc: 'Rolling summaries, bounded memory windows, token usage instrumentation, and routing each subtask to the most cost-efficient LLM.' },
-                { r: 'R5', title: 'Engineer the core plumbing', desc: 'Industrial-grade APIs, async queues, vector stores, robust CI/CD, structured observability, and CloudWatch alerts.' },
-                { r: 'R6', title: 'Measure what actually changed', desc: 'Instrument hours saved, p95 latency, model accuracy, and token spend per completed transaction before and after launch.' },
+                { r: 'R1', title: 'Start with the business problem', desc: 'A measurable result, not a technology demo.' },
+                { r: 'R2', title: 'Use the simplest thing that works', desc: 'One model call, RAG, a workflow, an agent or several, chosen on purpose.' },
+                { r: 'R3', title: 'Build for failure', desc: 'Structured outputs, validation, retries, failover and fallbacks.' },
+                { r: 'R4', title: 'Control context and cost', desc: 'Summaries, bounded memory, token tracking and the right model for each step.' },
+                { r: 'R5', title: 'Engineer the plumbing', desc: 'APIs, queues, storage, CI/CD, logs and monitoring.' },
+                { r: 'R6', title: 'Measure what changed', desc: 'Time saved, speed, reliability and cost, before and after.' },
               ].map(item => (
                 <div key={item.r} className="p-6 rounded-2xl bg-gray-50 border border-gray-200 flex gap-4">
                   <div className="w-9 h-9 rounded-lg bg-blue-600 text-white font-mono font-bold text-sm flex items-center justify-center flex-shrink-0">
@@ -1503,12 +1579,12 @@ export default function ITServices() {
         <section id="engagements" className="py-20 bg-gray-50/70 border-t border-gray-200/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-12">
-              <div className="section-label mb-3">ENGAGEMENTS · HOW WE PARTNER</div>
+              <div className="section-label mb-3">ENGAGEMENTS · WAYS TO WORK TOGETHER</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                Start small. Build once we both know it works.
+                Start small. Build once we both know it will work.
               </h2>
               <p className="text-gray-600 text-base sm:text-lg">
-                Most client partnerships begin with a short, fixed-scope Sprint or Audit. The concrete data from that phase determines whether full-scale production build-out is warranted.
+                Most engagements start with a short, fixed-scope Sprint or Audit. What it finds decides whether there is anything worth building, and we scope the build from there.
               </p>
             </div>
 
@@ -1516,14 +1592,14 @@ export default function ITServices() {
             <div className="mb-10 p-5 rounded-2xl bg-blue-50/80 border border-blue-200">
               <div className="text-xs font-mono font-bold text-blue-900 uppercase mb-3 flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-blue-700" />
-                EVERY PRODUCTION BUILD SHIPS COMPLETE WITH:
+                EVERY BUILD SHIPS WITH
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-xs font-semibold text-gray-800">
                 <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> Structured outputs &amp; validation</span>
-                <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> Evals with pass/fail checks</span>
-                <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> Failover &amp; safe fallbacks</span>
-                <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> Cost tracking per invocation</span>
-                <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> Cloud dashboards &amp; alerts</span>
+                <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> An eval set with pass/fail checks</span>
+                <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> Failover and fallbacks</span>
+                <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> Token and cost tracking per call</span>
+                <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> Logs, dashboards and alerts</span>
                 <span className="flex items-center gap-1.5"><Check size={14} className="text-emerald-600" /> Docs &amp; recorded handover</span>
               </div>
             </div>
@@ -1534,17 +1610,17 @@ export default function ITServices() {
               <div className="glass-card p-6 bg-white border border-gray-200 rounded-2xl flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-gray-100 text-gray-700 block w-max mb-3">
-                    2 WEEKS · FIXED SCOPE
+                    2 WEEKS · FIXED
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                     AI Opportunity Sprint
                   </h3>
-                  <p className="text-xs text-gray-500 mb-4">For teams who know AI could help but need clarity on where to start.</p>
+                  <p className="text-xs text-gray-500 mb-4">For teams who know AI could help but not where to start.</p>
                   <ul className="space-y-2 text-xs text-gray-600 mb-6">
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Map one core workflow &amp; current costs</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Rapid prototype of the riskiest component</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Precise cost-per-task economic model</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Definite go/no-go roadmap</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Map one workflow and what it costs today</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Prototype the riskiest part</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Cost per task or conversation</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> A go/no-go and a build plan</li>
                   </ul>
                 </div>
                 <a href="#contact" className="btn-secondary w-full justify-center text-xs py-2.5">
@@ -1559,20 +1635,20 @@ export default function ITServices() {
                 </div>
                 <div>
                   <span className="text-xs font-mono font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800 block w-max mb-3 mt-1">
-                    2 WEEKS · FIXED SCOPE
+                    2 WEEKS · FIXED
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                     Production-Readiness Audit
                   </h3>
-                  <p className="text-xs text-gray-500 mb-4">For AI that already exists but is flaky, slow, or burning budget.</p>
+                  <p className="text-xs text-gray-500 mb-4">For AI that already exists but is flaky, slow or expensive.</p>
                   <ul className="space-y-2 text-xs text-gray-600 mb-6">
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Failure pattern extraction from real chats</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Evaluation suite with pass/fail benchmarks</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Guardrails, timeouts &amp; failovers review</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Ranked latency &amp; cost fixes</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Failure patterns from real conversations</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> An eval baseline with pass/fail checks</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Failover and guardrail review</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Cost and latency fixes, ranked</li>
                   </ul>
                 </div>
-                <a href="#contact" className="btn-primary w-full justify-center text-xs py-2.5">
+                <a href={calendlyUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-xs py-2.5">
                   Book an Audit Call
                 </a>
               </div>
@@ -1589,9 +1665,9 @@ export default function ITServices() {
                   <p className="text-xs text-gray-500 mb-4">For one priority workflow, taken all the way to a live monitored pilot.</p>
                   <ul className="space-y-2 text-xs text-gray-600 mb-6">
                     <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> One agent taken into monitored pilot</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Tested working software every 2 weeks</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Live evals &amp; telemetry dashboards</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Runs in your cloud; 100% handover</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Working software every two weeks</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Evals and a cost dashboard included</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Runs in your cloud; full handover</li>
                   </ul>
                 </div>
                 <a href="#contact" className="btn-secondary w-full justify-center text-xs py-2.5">
@@ -1608,16 +1684,15 @@ export default function ITServices() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                     Fractional AI / IT Advisory
                   </h3>
-                  <p className="text-xs text-gray-500 mb-4">For leadership teams needing a senior AI engineer ~1 day per week.</p>
+                  <p className="text-xs text-gray-500 mb-4">For founders who need a senior AI engineer, about a day a week.</p>
                   <ul className="space-y-2 text-xs text-gray-600 mb-6">
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Roadmap &amp; architectural reviews</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Model evaluation &amp; spend oversight</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Technical interview vetting for AI hires</li>
-                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Emerging model &amp; MCP guidance</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Roadmap and architecture reviews</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Eval and cost monitoring</li>
+                    <li className="flex items-start gap-1.5"><Check size={14} className="text-blue-600 mt-0.5" /> Help hiring your AI team</li>
                   </ul>
                 </div>
                 <a href="#contact" className="btn-secondary w-full justify-center text-xs py-2.5">
-                  Ask About Availability
+                  Ask about availability
                 </a>
               </div>
             </div>
@@ -1626,13 +1701,13 @@ export default function ITServices() {
             <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-900 to-indigo-950 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
               <div>
                 <span className="text-xs font-mono px-2 py-0.5 rounded bg-blue-700/60 text-blue-200 font-bold uppercase mb-2 inline-block">
-                  COMPLIMENTARY BENCHMARK
+                  FREE · AI VISIBILITY SNAPSHOT
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold mb-1" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                  Free: AI &amp; Tech Visibility Snapshot for your organization
+                  Free: an AI Visibility Snapshot for your brand
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
-                  A comprehensive one-page audit showing how ChatGPT, Claude, and Perplexity describe your brand against competitors. No sales pitch required.
+                  A one-page report showing how ChatGPT, Claude and Perplexity describe your company next to your competitors. No call needed.
                 </p>
               </div>
               <a
@@ -1640,7 +1715,7 @@ export default function ITServices() {
                 className="btn-primary whitespace-nowrap bg-white text-blue-900 hover:bg-slate-100 flex-shrink-0"
                 style={{ background: '#FFFFFF', color: '#0969E8' }}
               >
-                Request Free Snapshot <ArrowRight size={14} />
+                Request a snapshot <ArrowRight size={14} />
               </a>
             </div>
           </div>
@@ -1652,7 +1727,7 @@ export default function ITServices() {
         <section id="terms" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-12">
-              <div className="section-label mb-3">TERMS &amp; GOVERNANCE</div>
+              <div className="section-label mb-3">TERMS · HOW I WORK</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 Clear steps, written terms, and your data stays yours
               </h2>
@@ -1662,23 +1737,23 @@ export default function ITServices() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200">
                 <div className="text-2xl font-bold text-blue-600 mb-2 font-mono">01</div>
-                <h3 className="font-bold text-gray-900 mb-2 text-base">30-Minute Scoping Call</h3>
+                <h3 className="font-bold text-gray-900 mb-2 text-base">A 30-minute call</h3>
                 <p className="text-xs sm:text-sm text-gray-600">
-                  We talk through the operational workflow and what &quot;working&quot; means for your team. You receive a structured technical proposal within two business days.
+                  We talk through the workflow and what &quot;working&quot; means for you. You get a written proposal within two business days.
                 </p>
               </div>
               <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200">
                 <div className="text-2xl font-bold text-teal-600 mb-2 font-mono">02</div>
-                <h3 className="font-bold text-gray-900 mb-2 text-base">Sprint or Audit Phase</h3>
+                <h3 className="font-bold text-gray-900 mb-2 text-base">A Sprint or an Audit</h3>
                 <p className="text-xs sm:text-sm text-gray-600">
-                  Two weeks, fixed price. You receive a working prototype or ranked list of code defect fixes, a cost telemetry model, and an unambiguous go/no-go.
+                  Two weeks, fixed price. You get a prototype or a ranked list of fixes, a cost model, and a clear go/no-go.
                 </p>
               </div>
               <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200">
                 <div className="text-2xl font-bold text-purple-600 mb-2 font-mono">03</div>
-                <h3 className="font-bold text-gray-900 mb-2 text-base">Build in 2-Week Loops</h3>
+                <h3 className="font-bold text-gray-900 mb-2 text-base">Build in two-week loops</h3>
                 <p className="text-xs sm:text-sm text-gray-600">
-                  Shippable software and demo every two weeks, with continuous evals and cost dashboards. Complete recorded knowledge transfer at handover.
+                  Working software and a demo every two weeks, with evals and a cost dashboard. Full handover at the end.
                 </p>
               </div>
             </div>
@@ -1690,9 +1765,9 @@ export default function ITServices() {
                   <Mail size={16} className="text-blue-600" /> Communication
                 </h3>
                 <ul className="text-xs text-gray-600 space-y-1.5">
-                  <li>• Replies within one business day guaranteed</li>
-                  <li>• Written progress update every single Friday</li>
-                  <li>• Over your preferred channels: Slack, Teams, or WhatsApp</li>
+                  <li>• Replies within one business day</li>
+                  <li>• A written update every week</li>
+                  <li>• Your tools: Slack, Teams, email, or WhatsApp</li>
                 </ul>
               </div>
 
@@ -1701,9 +1776,9 @@ export default function ITServices() {
                   <FileCheck size={16} className="text-teal-600" /> Contracts &amp; IP
                 </h3>
                 <ul className="text-xs text-gray-600 space-y-1.5">
-                  <li>• Mutual <strong>NDA</strong> executed before any details are shared</li>
-                  <li>• Master Services Agreement (MSA) and Statement of Work</li>
-                  <li>• 100% of code, weights, and IP are <strong>yours</strong> upon payment</li>
+                  <li>• <strong>NDA</strong> before you share details</li>
+                  <li>• MSA and a statement of work, or your own paper</li>
+                  <li>• Code and IP are <strong>yours</strong> once paid</li>
                 </ul>
               </div>
 
@@ -1712,9 +1787,9 @@ export default function ITServices() {
                   <Cloud size={16} className="text-blue-600" /> Your Data Privacy
                 </h3>
                 <ul className="text-xs text-gray-600 space-y-1.5">
-                  <li>• Deployed exclusively in <strong>your</strong> AWS or Azure account</li>
-                  <li>• Zero training on customer data across all LLM endpoints</li>
-                  <li>• Complete credential teardown and data deletion upon exit</li>
+                  <li>• Built in <strong>your</strong> AWS or Azure account and region</li>
+                  <li>• Model providers listed; no training on your data</li>
+                  <li>• Access removed and data deleted at the end</li>
                 </ul>
               </div>
 
@@ -1723,9 +1798,9 @@ export default function ITServices() {
                   <ShieldCheck size={16} className="text-emerald-600" /> Compliance-Aware
                 </h3>
                 <ul className="text-xs text-gray-600 space-y-1.5">
-                  <li>• DPA with SCCs (EU), UK IDTA, or HIPAA BAA when required</li>
-                  <li>• AI disclosure built directly into chat and voice agents</li>
-                  <li>• Fast, transparent completion of your security questionnaires</li>
+                  <li>• DPA with SCCs (EU), UK IDTA, or a HIPAA BAA where needed</li>
+                  <li>• AI disclosure built into chatbots and voice agents</li>
+                  <li>• Your security questionnaire, answered honestly</li>
                 </ul>
               </div>
 
@@ -1734,20 +1809,20 @@ export default function ITServices() {
                   <Globe2 size={16} className="text-purple-600" /> Multi-Currency Billing
                 </h3>
                 <ul className="text-xs text-gray-600 space-y-1.5">
-                  <li>• Invoices in INR, USD, GBP, EUR, or AED</li>
-                  <li>• 50% to start a Sprint/Audit; milestone releases for builds</li>
-                  <li>• Direct bank wire transfer or international Wise payments</li>
+                  <li>• Invoices in INR, USD, GBP, EUR or AED</li>
+                  <li>• 50% to start a Sprint or Audit; milestones for builds</li>
+                  <li>• Bank transfer or Wise</li>
                 </ul>
               </div>
 
               <div className="p-5 rounded-xl border border-gray-200 bg-white">
-                <h3 className="font-bold text-gray-900 mb-2 text-sm flex items-center gap-2">
-                  <Code2 size={16} className="text-rose-600" /> Zero Vendor Lock-In
+                  <h3 className="font-bold text-gray-900 mb-2 text-sm flex items-center gap-2">
+                    <Code2 size={16} className="text-rose-600" /> No lock-in
                 </h3>
                 <ul className="text-xs text-gray-600 space-y-1.5">
-                  <li>• Full Git repositories, infrastructure scripts, and docs</li>
-                  <li>• Recorded video architecture walkthrough for your engineers</li>
-                  <li>• Optional monthly SLA support, never mandatory</li>
+                  <li>• You get the code, docs and dashboards</li>
+                  <li>• A recorded walkthrough for your team</li>
+                  <li>• Optional monthly support, never required</li>
                 </ul>
               </div>
             </div>
@@ -1801,12 +1876,12 @@ export default function ITServices() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-10">
-              <div className="section-label mb-3">GLOBAL WORKING HOURS</div>
+              <div className="section-label mb-3">WORKING HOURS</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                Where your working day meets ours
+                Where your working day meets mine
               </h2>
               <p className="text-gray-600 text-sm sm:text-base">
-                Our core engineering hub is based in Hyderabad (IST, UTC+5:30). Indian and Gulf teams share our entire working day, Europe overlaps throughout the afternoon, and US timezones connect with our evening hours.
+                I&apos;m in Hyderabad (IST, UTC+5:30). Indian and Gulf teams share my whole day, Europe most of the afternoon, and US calls fit my evening.
               </p>
             </div>
 
@@ -1814,14 +1889,14 @@ export default function ITServices() {
             <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200 overflow-x-auto">
               <div className="min-w-[650px] space-y-3 font-mono text-xs">
                 {[
-                  { region: 'India (HQ)', city: 'Hyderabad · Bengaluru · Mumbai', hours: '09:00 – 17:00 IST', left: '37.5%', width: '33.3%' },
-                  { region: 'UAE / Gulf', city: 'Dubai · Abu Dhabi (Mon–Fri)', hours: '10:30 – 18:30 IST', left: '43.7%', width: '33.3%' },
-                  { region: 'Saudi Arabia', city: 'Riyadh (Sun–Thu)', hours: '11:30 – 19:30 IST', left: '47.9%', width: '33.3%' },
-                  { region: 'Europe', city: 'Berlin · Paris · Amsterdam', hours: '12:30 – 20:30 IST', left: '52.0%', width: '33.3%' },
-                  { region: 'United Kingdom', city: 'London', hours: '13:30 – 21:30 IST', left: '56.2%', width: '33.3%' },
-                  { region: 'US East', city: 'New York · Boston · Atlanta', hours: '18:30 – 02:30 IST', left: '77.0%', width: '23.0%' },
-                  { region: 'US West', city: 'San Francisco · Seattle', hours: '21:30 – 05:30 IST', left: '89.5%', width: '10.5%' },
-                  { region: 'Singapore', city: 'Singapore (UTC+8)', hours: '06:30 – 14:30 IST', left: '27.0%', width: '33.3%' },
+                  { region: 'India', city: 'Hyderabad · Bengaluru · Mumbai', hours: '09:00–17:00 IST', left: '37.5%', width: '33.3%' },
+                  { region: 'UAE', city: 'Dubai · Mon–Fri', hours: '10:30–18:30 IST', left: '43.7%', width: '33.3%' },
+                  { region: 'Saudi Arabia', city: 'Riyadh · Sun–Thu', hours: '11:30–19:30 IST', left: '47.9%', width: '33.3%' },
+                  { region: 'Europe', city: 'Berlin · Amsterdam', hours: '12:30–20:30 IST', left: '52.0%', width: '33.3%' },
+                  { region: 'United Kingdom', city: 'London', hours: '13:30–21:30 IST', left: '56.2%', width: '33.3%' },
+                  { region: 'US East', city: 'New York', hours: '18:30–02:30 IST', left: '77.0%', width: '23.0%' },
+                  { region: 'US West', city: 'San Francisco', hours: '21:30–05:30 IST', left: '89.5%', width: '10.5%' },
+                  { region: 'Singapore', city: 'UTC+8', hours: '06:30–14:30 IST', left: '27.0%', width: '33.3%' },
                 ].map((row, i) => (
                   <div key={i} className="flex items-center gap-4 py-2 border-b border-gray-200/80">
                     <div className="w-44 flex-shrink-0">
@@ -1846,7 +1921,7 @@ export default function ITServices() {
                 <div className="flex items-center gap-4">
                   <span className="flex items-center gap-1.5">
                     <span className="w-3 h-3 rounded bg-blue-600 inline-block"></span>
-                    Your 9:00–17:00 workday in IST
+                    Your 9:00–17:00, in IST
                   </span>
                 </div>
                 <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-gray-200 shadow-xs">
@@ -1855,6 +1930,9 @@ export default function ITServices() {
                   <span className="font-bold text-blue-600">{currentTime || 'Loading...'}</span>
                 </div>
               </div>
+              <p className="mt-3 text-[11px] text-gray-500">
+                Times as of early October 2026; US and European clocks change in late October and early November.
+              </p>
             </div>
           </div>
         </section>
@@ -1925,19 +2003,27 @@ export default function ITServices() {
             {/* Categorized Tech Stack Grid */}
             <div>
               <p className="text-xs font-mono font-bold tracking-widest text-gray-500 uppercase mb-6">
-                TOOLS &amp; INFRASTRUCTURE WE SHIP WITH
+                TOOLS I SHIP WITH
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {techGroups.map((group, idx) => (
-                  <div key={idx} className="p-6 rounded-2xl bg-white border border-gray-200">
+                      <div key={idx} className="p-6 rounded-2xl bg-white border border-gray-200">
                     <h3 className="font-bold text-gray-900 mb-4 text-base" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                       {group.title}
                     </h3>
-                    <ul className="space-y-2">
+                    <ul className="grid grid-cols-3 gap-x-2 gap-y-4">
                       {group.items.map((tech, i) => (
-                        <li key={i} className="text-xs font-mono text-gray-700 flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-                          <span>{tech.name}</span>
+                        <li key={i} className="flex min-w-0 flex-col items-center gap-1.5 text-center text-xs text-gray-700">
+                          <span className="flex h-14 w-14 items-center justify-center rounded-xl border border-gray-200 bg-white p-3">
+                            <img
+                              src={tech.logo}
+                              alt=""
+                              loading="lazy"
+                              decoding="async"
+                              className="h-full w-full object-contain"
+                            />
+                          </span>
+                          <span className="max-w-full break-words leading-tight">{tech.name}</span>
                         </li>
                       ))}
                     </ul>
@@ -1955,13 +2041,22 @@ export default function ITServices() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-6">
-                <div className="section-label mb-3">GET IN TOUCH · START A PROJECT</div>
+                <div className="section-label mb-3">GET IN TOUCH</div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                  Tell us which workflow should work better.
+                  Tell me which workflow should work better.
                 </h2>
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8">
-                  Submit a brief below or schedule an engineering consultation. We reply within one business day with questions or an initial architecture plan. We are glad to sign a mutual NDA first.
+                  Pick a 30-minute slot on my calendar, or send a short brief. I reply within one business day with questions or a rough plan. Happy to sign an NDA first.
                 </p>
+
+                <a
+                  href={calendlyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary mb-8 text-sm"
+                >
+                  Book a 30-min call <ArrowRight size={15} />
+                </a>
 
                 <div className="space-y-4 text-sm font-medium text-gray-700 mb-8">
                   <div className="flex items-center gap-3">
@@ -2020,6 +2115,11 @@ export default function ITServices() {
                   </div>
                 ) : (
                   <form onSubmit={handleFormSubmit} className="space-y-4">
+                    {formError && (
+                      <p role="alert" className="rounded-lg border border-red-200 bg-red-50 px-3.5 py-2.5 text-sm text-red-700">
+                        {formError}
+                      </p>
+                    )}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-gray-700 mb-1">Your Name *</label>

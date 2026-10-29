@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X, Search } from 'lucide-react'
 import logo from '/assets/img/SPC Logo.png'
 
+const calendlyUrl = 'https://calendly.com/spconsultanancies/30min'
+
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
@@ -27,6 +29,7 @@ const itServicesLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [activeITSection, setActiveITSection] = useState('#services')
   const { pathname } = useLocation()
   const navigate = useNavigate()
   const isITServices = pathname === '/it-services'
@@ -40,6 +43,29 @@ export default function Navbar() {
   useEffect(() => {
     setMobileOpen(false)
   }, [pathname])
+
+  useEffect(() => {
+    if (!isITServices) return
+
+    const sections = itServicesLinks
+      .map(link => document.getElementById(link.href.slice(1)))
+      .filter((section): section is HTMLElement => section !== null)
+    const observer = new IntersectionObserver((entries) => {
+      const visibleSections = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+
+      if (visibleSections[0]) {
+        setActiveITSection(`#${visibleSections[0].target.id}`)
+      }
+    }, {
+      rootMargin: '-88px 0px -65% 0px',
+      threshold: 0,
+    })
+
+    sections.forEach(section => observer.observe(section))
+    return () => observer.disconnect()
+  }, [isITServices])
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
@@ -114,7 +140,8 @@ export default function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="nav-link text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+                  aria-current={activeITSection === link.href ? 'location' : undefined}
+                  className={`nav-link text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors ${activeITSection === link.href ? 'active font-semibold' : ''}`}
                 >
                   {link.label}
                 </a>
@@ -145,7 +172,9 @@ export default function Navbar() {
           <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
             {isITServices ? (
               <a
-                href="#contact"
+                href={calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden sm:inline-flex items-center justify-center font-semibold text-xs sm:text-sm text-white px-5 py-2.5 rounded-full transition-all duration-300 hover:opacity-90 shadow-sm"
                 style={{ background: '#111827' }}
               >
@@ -205,7 +234,8 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="py-3.5 border-b border-gray-100 text-lg font-bold text-gray-800"
+                  aria-current={activeITSection === link.href ? 'location' : undefined}
+                  className={`py-3.5 border-b border-gray-100 text-lg font-bold ${activeITSection === link.href ? 'text-blue-600 border-blue-600' : 'text-gray-800'}`}
                   style={{ fontFamily: 'Satoshi, sans-serif' }}
                 >
                   {link.label}
@@ -219,7 +249,9 @@ export default function Navbar() {
                 ← Return to SPC Main Site
               </Link>
               <a
-                href="#contact"
+                href={calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="btn-primary mt-4 justify-center py-3 text-sm rounded-full"
                 style={{ background: '#111827' }}
