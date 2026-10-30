@@ -432,7 +432,7 @@ export default function ITServices() {
               <div className="lg:col-span-7">
                 <p className="text-xs font-mono font-bold tracking-widest text-gray-500 uppercase mb-4 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                  SENIOR AI ENGINEER · B.TECH MECHANICAL · HYDERABAD, INDIA
+                  SENIOR AI ENGINEER · IIT Madras · HYDERABAD, INDIA
                 </p>
 
                 <h1
@@ -1996,14 +1996,6 @@ export default function ITServices() {
                   <div className="flex justify-between py-1.5 border-b border-gray-100">
                     <span className="text-gray-500">Working with</span>
                     <span className="font-bold text-right text-gray-800">India, US, UK, Europe, Gulf and Singapore</span>
-                  </div>
-                  <div className="flex justify-between py-1.5">
-                    <span className="text-gray-500">Elsewhere</span>
-                    <span className="flex flex-wrap justify-end gap-x-2 font-bold">
-                      <a href="https://www.linkedin.com/in/srinivas77777" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>
-                      <a href="https://github.com/Cnu-srinivas" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub</a>
-                      <a href="https://www.mentionnow.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">MentionNow</a>
-                    </span>
                   </div>
                 </div>
               </div>
