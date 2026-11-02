@@ -707,7 +707,7 @@ export default function ITServices() {
         <section id="services" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-10">
-              <div className="section-label mb-3">SERVICES · WHAT I HAVE BUILT</div>
+              <div className="section-label mb-3">SERVICES · WHAT WE HAVE BUILT</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 Eight kinds of AI systems I&apos;ve built
               </h2>

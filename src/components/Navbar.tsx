@@ -8,7 +8,7 @@ const calendlyUrl = 'https://calendly.com/spconsultanancies/30min'
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
-  { label: 'Our Services', path: '/services' },
+  { label: 'Pharma Services', path: '/services' },
   { label: 'IT Services', path: '/it-services' },
   { label: 'Industries', path: '/industries' },
   { label: 'Projects Delivered', path: '/projects' },
@@ -293,5 +293,4 @@ export default function Navbar() {
     </>
   )
 }
-
 
