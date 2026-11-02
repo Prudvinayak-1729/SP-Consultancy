@@ -649,3 +649,113 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ========================================================
+   IT Services & AI Engineering Section Styles
+   ======================================================== */
+@keyframes marqueeLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.marquee-container::before,
+.marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(90deg, #FFFFFF 0%, transparent 100%);
+}
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(270deg, #FFFFFF 0%, transparent 100%);
+}
+
+.marquee-content {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: marqueeLeft 30s linear infinite;
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* Blueprint Flow Diagram Elements */
+.blueprint-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  background: #F8FAFC;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px dashed rgba(9, 105, 232, 0.25);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+}
+.blueprint-node {
+  background: #FFFFFF;
+  border: 1px solid rgba(9, 105, 232, 0.2);
+  color: #0B2545;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+.blueprint-node.key {
+  background: linear-gradient(135deg, rgba(9, 105, 232, 0.12) 0%, rgba(0, 140, 134, 0.12) 100%);
+  border-color: #0969E8;
+  color: #0969E8;
+}
+.blueprint-node.alt {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #DC2626;
+}
+.blueprint-arrow {
+  color: #008C86;
+  font-weight: 700;
+}
+
+/* Simulator Pipeline Components */
+.sim-stage-box {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sim-stage-box.active {
+  background: #FFFFFF !important;
+  border-color: #0969E8 !important;
+  box-shadow: 0 0 20px rgba(9, 105, 232, 0.35) !important;
+  transform: translateY(-2px);
+}
+.sim-stage-box.active-alt {
+  background: #FEF2F2 !important;
+  border-color: #EF4444 !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.35) !important;
+  transform: translateY(-2px);
+}
+
+/* IT Services — Scrolling Status Ticker Bar */
+@keyframes itTickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.it-ticker-track {
+  animation: itTickerScroll 28s linear infinite;
+  will-change: transform;
+}
+.it-ticker-track:hover {
+  animation-play-state: paused;
+}
