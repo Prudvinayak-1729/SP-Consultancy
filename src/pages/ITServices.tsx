@@ -1,4 +1,43 @@
 import { useState, useEffect, useId, useRef } from 'react'
+import bridgetownLogo from '../../assets/img/Bridettown.png'
+import atlasLogo from '../../assets/img/Atlas.png'
+import bluekyteLogo from '../../assets/img/blukeyte.png'
+import openDataLogo from '../../assets/img/open data.png'
+import walkerSandsLogo from '../../assets/img/wlker soun.png'
+import balihansLogo from '../../assets/img/Balihans.png'
+import shaktyAiLogo from '../../assets/img/shaktyai.png'
+import mentionNowLogo from '../../assets/img/mentionnow.png'
+import masaiLogo from '../../assets/img/masai.png'
+import statinferLogo from '../../assets/img/statinfer.png'
+import medTourEasyLogo from '../../assets/img/MTE.png'
+import villageAgroLogo from '../../assets/img/villageagro.png'
+import mazagonDockLogo from '../../assets/img/hmd.png'
+import langGraphLogo from '../../assets/img/LangGraph.png'
+import langChainLogo from '../../assets/img/langchain.png'
+import crewAiLogo from '../../assets/img/CrewAI.png'
+import mcpLogo from '../../assets/img/MCP.png'
+import openAiLogo from '../../assets/img/Openai.png'
+import claudeLogo from '../../assets/img/claude.png'
+import geminiLogo from '../../assets/img/Gemini.png'
+import llamaLogo from '../../assets/img/Llama.png'
+import huggingFaceLogo from '../../assets/img/Hugging Face.png'
+import pythonLogo from '../../assets/img/Python.png'
+import fastApiLogo from '../../assets/img/Fast Api.png'
+import djangoLogo from '../../assets/img/Django.png'
+import postgresqlLogo from '../../assets/img/Postgresql.png'
+import mongoDbLogo from '../../assets/img/MongoDb.png'
+import supabaseLogo from '../../assets/img/supabase.png'
+import chromaDbLogo from '../../assets/img/chroma db.png'
+import awsLogo from '../../assets/img/aws.png'
+import azureLogo from '../../assets/img/azure.png'
+import dockerLogo from '../../assets/img/docker.png'
+import kubernetesLogo from '../../assets/img/Kubernates.png'
+import terraformLogo from '../../assets/img/teraform.png'
+import twilioLogo from '../../assets/img/twilio.png'
+import whatsappLogo from '../../assets/img/whatsapp.png'
+import stripeLogo from '../../assets/img/stripe.png'
+import reactLogo from '../../assets/img/react.png'
+import nextJsLogo from '../../assets/img/nextjs.png'
 import {
   Bot,
   Cloud,
@@ -210,19 +249,19 @@ const simulatorScenarios: Record<SimScenarioKey, SimScenario> = {
 
 // Client company logos & names
 const clientLogos = [
-  { name: 'Bridgetown Consulting Group', src: 'https://www.srinivasdharavath.com/logos/companies/bridgetown-consulting-group.png' },
-  { name: 'Atlas Systems', src: 'https://www.srinivasdharavath.com/logos/companies/atlas-systems.png' },
-  { name: 'Bluekyte.AI (Counsello AI)', src: 'https://www.srinivasdharavath.com/logos/companies/counsello-ai.jpg' },
-  { name: 'Open Data Fabric', src: 'https://www.srinivasdharavath.com/logos/companies/open-data-fabric.png' },
-  { name: 'Walker Sands', src: 'https://www.srinivasdharavath.com/logos/companies/walker-sands.svg' },
-  { name: 'Balihans', src: 'https://www.srinivasdharavath.com/logos/companies/balihans-navy.jpg' },
-  { name: 'ShaktyAI', src: 'https://www.srinivasdharavath.com/logos/companies/shakty-ai.png' },
-  { name: 'MentionNow', src: 'https://www.srinivasdharavath.com/logos/companies/mentionnow.svg' },
-  { name: 'Masai School', src: 'https://www.srinivasdharavath.com/logos/companies/masai-school.png' },
-  { name: 'Statinfer', src: 'https://www.srinivasdharavath.com/logos/companies/statinfer.png' },
-  { name: 'MedTourEasy', src: 'https://www.srinivasdharavath.com/logos/companies/medtoureasy.jpg' },
-  { name: 'Villageagro', src: 'https://www.srinivasdharavath.com/logos/companies/villageagro.jpg' },
-  { name: 'Mazagon Dock Shipbuilders', src: 'https://www.srinivasdharavath.com/logos/companies/mazagon-dock-shipbuilders.svg' },
+  { name: 'Bridgetown Consulting Group', src: bridgetownLogo },
+  { name: 'Atlas Systems', src: atlasLogo },
+  { name: 'Bluekyte.AI (Counsello AI)', src: bluekyteLogo },
+  { name: 'Open Data Fabric', src: openDataLogo },
+  { name: 'Walker Sands', src: walkerSandsLogo },
+  { name: 'Balihans', src: balihansLogo },
+  { name: 'ShaktyAI', src: shaktyAiLogo },
+  { name: 'MentionNow', src: mentionNowLogo },
+  { name: 'Masai School', src: masaiLogo },
+  { name: 'Statinfer', src: statinferLogo },
+  { name: 'MedTourEasy', src: medTourEasyLogo },
+  { name: 'Villageagro', src: villageAgroLogo },
+  { name: 'Mazagon Dock Shipbuilders', src: mazagonDockLogo },
 ]
 
 // Tech Stack Groups
@@ -230,47 +269,47 @@ const techGroups = [
   {
     title: 'Agents & models',
     items: [
-      { name: 'LangGraph', logo: new URL('../../assets/img/LangGraph.png', import.meta.url).href },
-      { name: 'LangChain', logo: new URL('../../assets/img/langchain.png', import.meta.url).href },
-      { name: 'CrewAI', logo: new URL('../../assets/img/CrewAI.png', import.meta.url).href },
-      { name: 'MCP', logo: new URL('../../assets/img/MCP.png', import.meta.url).href },
-      { name: 'OpenAI', logo: new URL('../../assets/img/Openai.png', import.meta.url).href },
-      { name: 'Claude', logo: new URL('../../assets/img/claude.png', import.meta.url).href },
-      { name: 'Gemini', logo: new URL('../../assets/img/Gemini.png', import.meta.url).href },
-      { name: 'Llama', logo: new URL('../../assets/img/Llama.png', import.meta.url).href },
-      { name: 'Hugging Face', logo: new URL('../../assets/img/Hugging Face.png', import.meta.url).href },
+      { name: 'LangGraph', logo: langGraphLogo },
+      { name: 'LangChain', logo: langChainLogo },
+      { name: 'CrewAI', logo: crewAiLogo },
+      { name: 'MCP', logo: mcpLogo },
+      { name: 'OpenAI', logo: openAiLogo },
+      { name: 'Claude', logo: claudeLogo },
+      { name: 'Gemini', logo: geminiLogo },
+      { name: 'Llama', logo: llamaLogo },
+      { name: 'Hugging Face', logo: huggingFaceLogo },
     ],
   },
   {
     title: 'Backend & data',
     items: [
-      { name: 'Python', logo: new URL('../../assets/img/Python.png', import.meta.url).href },
-      { name: 'FastAPI', logo: new URL('../../assets/img/Fast Api.png', import.meta.url).href },
-      { name: 'Django', logo: new URL('../../assets/img/Django.png', import.meta.url).href },
-      { name: 'PostgreSQL', logo: new URL('../../assets/img/Postgresql.png', import.meta.url).href },
-      { name: 'MongoDB', logo: new URL('../../assets/img/MongoDb.png', import.meta.url).href },
-      { name: 'Supabase', logo: new URL('../../assets/img/supabase.png', import.meta.url).href },
-      { name: 'ChromaDB', logo: new URL('../../assets/img/chroma db.png', import.meta.url).href },
+      { name: 'Python', logo: pythonLogo },
+      { name: 'FastAPI', logo: fastApiLogo },
+      { name: 'Django', logo: djangoLogo },
+      { name: 'PostgreSQL', logo: postgresqlLogo },
+      { name: 'MongoDB', logo: mongoDbLogo },
+      { name: 'Supabase', logo: supabaseLogo },
+      { name: 'ChromaDB', logo: chromaDbLogo },
     ],
   },
   {
     title: 'Cloud & ops',
     items: [
-      { name: 'AWS', logo: new URL('../../assets/img/aws.png', import.meta.url).href },
-      { name: 'Azure', logo: new URL('../../assets/img/azure.png', import.meta.url).href },
-      { name: 'Docker', logo: new URL('../../assets/img/docker.png', import.meta.url).href },
-      { name: 'Kubernetes', logo: new URL('../../assets/img/Kubernates.png', import.meta.url).href },
-      { name: 'Terraform', logo: new URL('../../assets/img/teraform.png', import.meta.url).href },
+      { name: 'AWS', logo: awsLogo },
+      { name: 'Azure', logo: azureLogo },
+      { name: 'Docker', logo: dockerLogo },
+      { name: 'Kubernetes', logo: kubernetesLogo },
+      { name: 'Terraform', logo: terraformLogo },
     ],
   },
   {
     title: 'Channels & product',
     items: [
-      { name: 'Twilio', logo: new URL('../../assets/img/twilio.png', import.meta.url).href },
-      { name: 'WhatsApp', logo: new URL('../../assets/img/whatsapp.png', import.meta.url).href },
-      { name: 'Stripe', logo: new URL('../../assets/img/stripe.png', import.meta.url).href },
-      { name: 'React', logo: new URL('../../assets/img/react.png', import.meta.url).href },
-      { name: 'Next.js', logo: new URL('../../assets/img/nextjs.png', import.meta.url).href },
+      { name: 'Twilio', logo: twilioLogo },
+      { name: 'WhatsApp', logo: whatsappLogo },
+      { name: 'Stripe', logo: stripeLogo },
+      { name: 'React', logo: reactLogo },
+      { name: 'Next.js', logo: nextJsLogo },
     ],
   },
 ]
@@ -486,11 +525,6 @@ export default function ITServices() {
               {/* Right Column: Interactive Blueprint SVG Drawing */}
               <div className="lg:col-span-5 relative">
                 <div className="p-4 sm:p-5 rounded-2xl bg-white/90 border border-blue-200/70 shadow-lg shadow-blue-500/5 relative overflow-hidden">
-                  <div className="flex items-center justify-between mb-2 text-[11px] font-mono text-gray-500 border-b border-gray-100 pb-2">
-                    <span className="font-bold text-blue-700">DWG: SPC-IT-01</span>
-                    <span className="text-emerald-600 font-semibold">● ACTIVE DISCIPLINE</span>
-                  </div>
-
                   {/* SVG Drawing — scroll ↕ to change load */}
                   <div
                     ref={scrollableRef}
@@ -550,11 +584,6 @@ export default function ITServices() {
                       <path d="M300 210 C151.8 210, 88 161, 88 120 S79.5 60, 75.3 40" fill="none" stroke="#0969E8" strokeWidth="1.2" opacity="0.4" />
                     </svg>
 
-                    {/* Scroll hint label */}
-                    <div className="absolute bottom-2 right-2 flex items-center gap-1.5 bg-white/95 border border-gray-200 px-2.5 py-1 rounded-lg shadow-sm text-[11px] font-mono text-gray-500 pointer-events-none">
-                      <span style={{ fontSize: '14px', lineHeight: 1 }}>↕</span>
-                      <span>SCROLL TO CHANGE THE LOAD</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -597,12 +626,22 @@ export default function ITServices() {
             </div>
 
             {/* DWG Titleblock */}
-            <div className="flex flex-wrap items-center justify-between text-[11px] font-mono text-gray-400 pt-6 mt-4 border-t border-gray-100">
-              <span className="font-semibold text-gray-600">DWG: SPC-IT-01</span>
-              <span>HOME · SHEET 01</span>
-              <span>SCALE: 1 : 1</span>
-              <span>REV: 2026.10</span>
-            </div>
+            <table className="ml-auto mt-4 w-fit overflow-hidden rounded-lg border border-blue-200/80 bg-white/90 text-[11px] font-mono text-gray-600">
+              <tbody>
+                <tr className="border-b border-blue-100">
+                  <th scope="row" className="border-r border-blue-100 px-2.5 py-1 text-left font-semibold">DWG</th>
+                  <td className="px-2.5 py-1">HOME · SHEET 01</td>
+                </tr>
+                <tr className="border-b border-blue-100">
+                  <th scope="row" className="border-r border-blue-100 px-2.5 py-1 text-left font-semibold">SCALE</th>
+                  <td className="px-2.5 py-1">1 : 1</td>
+                </tr>
+                <tr>
+                  <th scope="row" className="border-r border-blue-100 px-2.5 py-1 text-left font-semibold">REV</th>
+                  <td className="px-2.5 py-1">2026.10</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
@@ -759,9 +798,9 @@ export default function ITServices() {
 
             <div className="space-y-12">
               {/* DWG 01: B2B Support */}
-              <div className="glass-card p-6 sm:p-8 bg-white border border-gray-200/90 rounded-2xl shadow-sm">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                  <div className="lg:col-span-7">
+              <div className="overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-sm">
+                <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                  <div className="lg:col-span-7 p-6 sm:p-8">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-blue-600 px-2 py-0.5 rounded bg-blue-50">DWG 01</span>
                       <span>B2B support</span>
@@ -819,35 +858,40 @@ export default function ITServices() {
                         </span>
                       ))}
                     </div>
+                    <div className="mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-dashed border-gray-200 pt-4 text-xs text-gray-600">
+                      <span>Full case study: next step</span>
+                      <span>Role: AI/ML Engineer</span>
+                    </div>
                   </div>
 
                   {/* Architecture Diagram */}
-                  <div className="lg:col-span-5 bg-slate-900 text-slate-100 p-6 rounded-xl font-mono text-xs shadow-md">
-                    <div className="flex items-center justify-between border-b border-slate-700 pb-2 mb-4 text-slate-400">
-                      <span>SHEET 01 · MESSAGE PATH</span>
-                      <span className="text-blue-400">LANGGRAPH PIPELINE</span>
-                    </div>
-
-                    <div className="space-y-3">
-                      <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center font-bold text-slate-200">
-                        Email · call transcript
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ MCP Adapter</div>
-                      <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center text-slate-300">
-                        MCP tools: Outlook, SharePoint
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Streaming Input</div>
-                      <div className="p-3 rounded bg-blue-950/80 border border-blue-500 text-center font-bold text-blue-200">
-                        LangGraph workflow
-                        <div className="grid grid-cols-3 gap-1 mt-2 text-[10px] font-normal text-slate-300">
-                          <span className="bg-slate-800 py-1 rounded">Categorize</span>
-                          <span className="bg-slate-800 py-1 rounded">Deduplicate</span>
-                          <span className="bg-slate-800 py-1 rounded">Link parent / child</span>
+                  <div
+                    className="relative flex min-h-[460px] flex-col justify-center overflow-hidden border-t border-gray-200 p-5 font-mono text-xs text-gray-700 lg:col-span-5 lg:border-l lg:border-t-0 sm:p-8"
+                    style={{ backgroundColor: '#F5F8FA', backgroundImage: 'linear-gradient(rgba(9, 105, 232, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(9, 105, 232, 0.06) 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+                  >
+                    <div className="mx-auto w-full max-w-sm">
+                      <div className="space-y-2.5 text-center">
+                        <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">
+                          Email · call transcript
                         </div>
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Verified Output</div>
-                      <div className="p-2.5 rounded bg-emerald-950/70 border border-emerald-500 text-center font-bold text-emerald-200">
-                        Ticket + drafted reply
+                        <div className="text-teal-600" aria-hidden="true">↓</div>
+                        <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">
+                          MCP tools: Outlook, SharePoint
+                        </div>
+                        <div className="text-teal-600" aria-hidden="true">↓</div>
+                        <div className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-2.5 text-blue-800 shadow-sm">
+                          LangGraph workflow
+                        </div>
+                        <div className="grid grid-cols-3 gap-2">
+                          <div className="rounded-lg border border-gray-200 bg-white px-2 py-2">Categorize</div>
+                          <div className="rounded-lg border border-gray-200 bg-white px-2 py-2">Deduplicate</div>
+                          <div className="rounded-lg border border-gray-200 bg-white px-2 py-2">Link parent / child</div>
+                        </div>
+                        <div className="text-teal-600" aria-hidden="true">↓</div>
+                        <div className="rounded-lg border border-teal-300 bg-teal-50 px-3 py-2.5 text-teal-800 shadow-sm">
+                          Ticket + drafted reply
+                        </div>
+                        <p className="pt-1 text-[10px] tracking-[0.16em] text-gray-500">SHEET 01 · MESSAGE PATH</p>
                       </div>
                     </div>
                   </div>
@@ -855,9 +899,9 @@ export default function ITServices() {
               </div>
 
               {/* DWG 02: Healthcare & Guardrails */}
-              <div className="glass-card p-6 sm:p-8 bg-white border border-gray-200/90 rounded-2xl shadow-sm">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                  <div className="lg:col-span-7">
+              <div className="overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-sm">
+                <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                  <div className="lg:col-span-7 p-6 sm:p-8">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-teal-600 px-2 py-0.5 rounded bg-teal-50">DWG 02</span>
                       <span>Healthcare</span>
@@ -929,35 +973,47 @@ export default function ITServices() {
                         </span>
                       ))}
                     </div>
+                    <div className="mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-dashed border-gray-200 pt-4 text-xs text-gray-600">
+                      <span>Full case study: next step</span>
+                      <span>Role: AI, backend and infrastructure</span>
+                    </div>
                   </div>
 
                   {/* Architecture Diagram */}
-                  <div className="lg:col-span-5 bg-slate-900 text-slate-100 p-6 rounded-xl font-mono text-xs shadow-md">
-                    <div className="flex items-center justify-between border-b border-slate-700 pb-2 mb-4 text-slate-400">
-                      <span>SHEET 02 · WEEKLY LOOP</span>
-                      <span className="text-teal-400">CLINICAL SAFETY</span>
-                    </div>
-
-                    <div className="space-y-3">
-                      <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center font-bold text-slate-200">
-                        Intake Questionnaire &amp; Pain Baseline
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Generates</div>
-                      <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center text-slate-300">
-                        Weekly Video Exercise Program
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Active Guidance</div>
-                      <div className="grid grid-cols-2 gap-2">
-                        <div className="p-2.5 rounded bg-blue-950 border border-blue-500 text-center text-blue-200 font-bold">
-                          Anya AI Assistant
+                  <div
+                    className="relative flex min-h-[460px] flex-col justify-center overflow-hidden border-t border-gray-200 p-5 font-mono text-xs text-gray-700 lg:col-span-5 lg:border-l lg:border-t-0 sm:p-8"
+                    style={{ backgroundColor: '#F5F8FA', backgroundImage: 'linear-gradient(rgba(9, 105, 232, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(9, 105, 232, 0.06) 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+                  >
+                    <div className="mx-auto w-full max-w-sm">
+                      <div className="space-y-2.5 text-center">
+                        <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">
+                          Onboarding questionnaire
                         </div>
-                        <div className="p-2.5 rounded bg-red-950 border border-red-500 text-center text-red-200 font-bold">
-                          Escalate to Doctor
+                        <div className="text-teal-600" aria-hidden="true">↓</div>
+                        <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">
+                          Weekly exercise program
                         </div>
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Feedback Loop</div>
-                      <div className="p-2.5 rounded bg-emerald-950/70 border border-emerald-500 text-center font-bold text-emerald-200">
-                        Weekly Check-in &amp; Next Routine Re-ranked
+                        <div className="relative h-5">
+                          <span className="absolute left-1/2 top-0 h-full border-l border-teal-500" aria-hidden="true" />
+                          <span className="absolute left-[16.5%] right-[16.5%] top-1/2 border-t border-teal-500" aria-hidden="true" />
+                          <span className="absolute left-[16.5%] top-1/2 h-2.5 border-l border-teal-500" aria-hidden="true" />
+                          <span className="absolute left-1/2 top-1/2 h-2.5 border-l border-teal-500" aria-hidden="true" />
+                          <span className="absolute right-[16.5%] top-1/2 h-2.5 border-l border-teal-500" aria-hidden="true" />
+                        </div>
+                        <div className="grid grid-cols-3 gap-2">
+                          <div className="rounded-lg border border-gray-200 bg-white px-2 py-2">Exercise videos</div>
+                          <div className="rounded-lg border border-blue-300 bg-blue-50 px-2 py-2 text-blue-800">Anya assistant</div>
+                          <div className="rounded-lg border border-dashed border-teal-400 bg-teal-50 px-2 py-2 text-teal-800">Escalate to doctor</div>
+                        </div>
+                        <div className="text-teal-600" aria-hidden="true">↓</div>
+                        <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">
+                          Weekly pain check-in
+                        </div>
+                        <div className="text-teal-600" aria-hidden="true">↓</div>
+                        <div className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-2.5 text-blue-800 shadow-sm">
+                          Next program re-ranked
+                        </div>
+                        <p className="pt-1 text-[10px] tracking-[0.16em] text-gray-500">SHEET 02 · WEEKLY LOOP</p>
                       </div>
                     </div>
                   </div>
@@ -965,9 +1021,9 @@ export default function ITServices() {
               </div>
 
               {/* DWG 03: Recruitment End-to-End Pipeline */}
-              <div className="glass-card p-6 sm:p-8 bg-white border border-gray-200/90 rounded-2xl shadow-sm">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                  <div className="lg:col-span-7">
+              <div className="overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-sm">
+                <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                  <div className="lg:col-span-7 p-6 sm:p-8">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-blue-600 px-2 py-0.5 rounded bg-blue-50">DWG 03</span>
                       <span>Recruitment</span>
@@ -1031,52 +1087,39 @@ export default function ITServices() {
                         </span>
                       ))}
                     </div>
+                    <div className="mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-dashed border-gray-200 pt-4 text-xs text-gray-600">
+                      <span>Full case study: next step</span>
+                      <span>Role: design, database, backend, deployment</span>
+                    </div>
                   </div>
 
                   {/* Architecture Diagram */}
-                  <div className="lg:col-span-5 bg-slate-900 text-slate-100 p-6 rounded-xl font-mono text-xs shadow-md">
-                    <div className="flex items-center justify-between border-b border-slate-700 pb-2 mb-4 text-slate-400">
-                      <span>SHEET 03 · HIRING PATH</span>
-                      <span className="text-purple-400">7-STAGE ATS</span>
-                    </div>
-
-                    <div className="space-y-2 text-center">
-                      <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        Client &amp; vendor onboarding
-                      </div>
-                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
-                      <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        Job requirements
-                      </div>
-                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
-                      <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        Candidate onboarding · documents
-                      </div>
-                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
-                      <div className="p-2.5 rounded bg-blue-950 border border-blue-500 font-bold text-blue-200">
-                        AI résumé screening
-                      </div>
-                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
-                      <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        Application submission
-                      </div>
-                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
-                      <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        Interview scheduling
-                      </div>
-                      <div className="text-center text-teal-400 font-bold" aria-hidden="true">↓</div>
-                      <div className="p-2 rounded bg-slate-800 border border-slate-700 text-slate-300">
-                        Candidate onboarded
-                      </div>
+                  <div
+                    className="relative flex min-h-[460px] flex-col justify-center overflow-hidden border-t border-gray-200 p-5 font-mono text-xs text-gray-700 lg:col-span-5 lg:border-l lg:border-t-0 sm:p-8"
+                    style={{ backgroundColor: '#F5F8FA', backgroundImage: 'linear-gradient(rgba(9, 105, 232, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(9, 105, 232, 0.06) 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+                  >
+                    <div className="mx-auto w-full max-w-sm space-y-2.5 text-center">
+                      <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">Client &amp; vendor onboarding</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">Job requirements</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">Candidate onboarding · documents</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-2.5 text-blue-800 shadow-sm">AI résumé screening</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">Application · interview scheduling</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-2.5 text-blue-800 shadow-sm">Candidate onboarded</div>
+                      <p className="pt-1 text-[10px] tracking-[0.16em] text-gray-500">SHEET 03 · HIRING PATH</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* DWG 04: Voice AI + 3 Variants */}
-              <div className="glass-card p-6 sm:p-8 bg-white border border-gray-200/90 rounded-2xl shadow-sm">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
-                  <div className="lg:col-span-7">
+              <div className="overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-sm">
+                <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                  <div className="lg:col-span-7 p-6 sm:p-8">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-blue-600 px-2 py-0.5 rounded bg-blue-50">DWG 04</span>
                       <span>Voice AI</span>
@@ -1097,7 +1140,7 @@ export default function ITServices() {
                         <div className="text-2xl sm:text-3xl font-bold text-blue-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                           ~60%
                         </div>
-                        <div className="text-xs text-gray-600">of answered calls complete the full survey</div>
+                        <div className="text-xs text-gray-600">of answered calls finish the survey</div>
                       </div>
                       <div className="p-4 rounded-xl bg-teal-50/70 border border-teal-100">
                         <div className="text-2xl sm:text-3xl font-bold text-teal-700" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
@@ -1125,72 +1168,83 @@ export default function ITServices() {
                         </span>
                       ))}
                     </div>
+                    <div className="mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-dashed border-gray-200 pt-4 text-xs text-gray-600">
+                      <span>Full case study: next step</span>
+                      <span>Role: AI/ML Engineer</span>
+                    </div>
                   </div>
 
-                  <div className="lg:col-span-5 bg-slate-900 text-slate-100 p-6 rounded-xl font-mono text-xs shadow-md">
-                    <div className="flex items-center justify-between border-b border-slate-700 pb-2 mb-4 text-slate-400">
-                      <span>SHEET 04 · CALL PATH</span>
-                      <span className="text-teal-400">LOW LATENCY AUDIO</span>
-                    </div>
-
-                    <div className="space-y-3">
-                      <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center font-bold text-slate-200">
-                        Twilio outbound call
+                  <div
+                    className="relative flex min-h-[460px] flex-col justify-center overflow-hidden border-t border-gray-200 p-5 font-mono text-xs text-gray-700 lg:col-span-5 lg:border-l lg:border-t-0 sm:p-8"
+                    style={{ backgroundColor: '#F5F8FA', backgroundImage: 'linear-gradient(rgba(9, 105, 232, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(9, 105, 232, 0.06) 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+                  >
+                    <div className="mx-auto w-full max-w-sm space-y-2.5 text-center">
+                      <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">Twilio outbound call</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">WebSocket audio stream</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-2.5 text-blue-800 shadow-sm">OpenAI Realtime</div>
+                      <div className="relative h-5">
+                        <span className="absolute left-1/2 top-0 h-full border-l border-teal-500" aria-hidden="true" />
+                        <span className="absolute left-[16.5%] right-[16.5%] top-1/2 border-t border-teal-500" aria-hidden="true" />
+                        <span className="absolute left-[16.5%] top-1/2 h-2.5 border-l border-teal-500" aria-hidden="true" />
+                        <span className="absolute left-1/2 top-1/2 h-2.5 border-l border-teal-500" aria-hidden="true" />
+                        <span className="absolute right-[16.5%] top-1/2 h-2.5 border-l border-teal-500" aria-hidden="true" />
                       </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Bi-directional Audio</div>
-                      <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center text-slate-300">
-                        WebSocket audio stream
+                      <div className="grid grid-cols-3 gap-2">
+                        <div className="rounded-lg border border-gray-200 bg-white px-2 py-2">Turn detection</div>
+                        <div className="rounded-lg border border-gray-200 bg-white px-2 py-2">Interruptions</div>
+                        <div className="rounded-lg border border-gray-200 bg-white px-2 py-2">Answer check</div>
                       </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Realtime Inference</div>
-                      <div className="p-3 rounded bg-blue-950/80 border border-blue-500 text-center font-bold text-blue-200">
-                        OpenAI Realtime API
-                        <div className="grid grid-cols-3 gap-1 mt-2 text-[10px] font-normal text-slate-300">
-                          <span className="bg-slate-800 py-1 rounded">Turn Detection</span>
-                          <span className="bg-slate-800 py-1 rounded">Interruptions</span>
-                          <span className="bg-slate-800 py-1 rounded">Answer Check</span>
-                        </div>
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Structured Record</div>
-                      <div className="p-2.5 rounded bg-emerald-950/70 border border-emerald-500 text-center font-bold text-emerald-200">
-                        Next question · survey record
-                      </div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-teal-300 bg-teal-50 px-3 py-2.5 text-teal-800 shadow-sm">Next question · survey record</div>
+                      <p className="pt-1 text-[10px] tracking-[0.16em] text-gray-500">SHEET 04 · CALL PATH</p>
                     </div>
                   </div>
                 </div>
 
                 {/* 3 Call Engine Variants */}
-                <div className="pt-6 border-t border-gray-200">
-                  <div className="mb-4">
+                <div className="border-t border-dashed border-gray-200 bg-gray-50/70 p-6 sm:p-8">
+                  <div className="mb-5 max-w-3xl">
                     <span className="text-xs font-mono font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
                       DWG 04 A–C · VOICE AI PROTOTYPES
                     </span>
+                    <h4 className="mt-3 text-xl font-bold text-gray-900" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+                      The same call engine, three more industries
+                    </h4>
+                    <p className="mt-2 text-sm text-gray-600">
+                      Each one runs on the survey caller&apos;s call path above. Only the prompts, the answer checks and where the call ends up change.
+                    </p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="p-4 rounded-xl bg-gray-50 border border-gray-200 text-xs">
-                      <div className="font-bold text-gray-900 mb-1 text-sm">04 A · Lead generation</div>
+                    <div className="p-4 rounded-xl bg-white border border-gray-200 text-xs">
+                      <div className="mb-1 font-mono text-[11px] tracking-widest text-gray-500">04 A · LEAD GENERATION</div>
+                      <div className="font-bold text-gray-900 mb-2 text-sm">Qualifies the lead before sales calls</div>
                       <p className="text-gray-600 mb-3">
-                        Qualifies the lead before sales calls. Asks about need, budget, timeline and who decides, then hands qualified leads to sales with a call summary.
+                        Asks about need, budget, timeline and who decides, then hands qualified leads to sales with a call summary.
                       </p>
-                      <div className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded">
-                        Ends in: Qualified lead → sales
+                      <div className="border-t border-dashed border-gray-200 pt-2 text-[11px] font-mono text-gray-700">
+                        ENDS IN&nbsp; Qualified lead → sales
                       </div>
                     </div>
-                    <div className="p-4 rounded-xl bg-gray-50 border border-gray-200 text-xs">
-                      <div className="font-bold text-gray-900 mb-1 text-sm">04 B · Healthcare &amp; services</div>
+                    <div className="p-4 rounded-xl bg-white border border-gray-200 text-xs">
+                      <div className="mb-1 font-mono text-[11px] tracking-widest text-gray-500">04 B · HEALTHCARE &amp; SERVICES</div>
+                      <div className="font-bold text-gray-900 mb-2 text-sm">Reminders patients answer in their own words</div>
                       <p className="text-gray-600 mb-3">
-                        Reminders patients answer in their own words. Appointment reminders and check-ins where callers confirm, cancel or reschedule by speaking. Missed calls are flagged for follow-up.
+                        Appointment reminders and check-ins where callers confirm, cancel or reschedule by speaking. Missed calls are flagged for follow-up.
                       </p>
-                      <div className="text-[11px] font-semibold text-teal-700 bg-teal-50 px-2 py-1 rounded">
-                        Ends in: Confirm · cancel · reschedule
+                      <div className="border-t border-dashed border-gray-200 pt-2 text-[11px] font-mono text-gray-700">
+                        ENDS IN&nbsp; Confirm · cancel · reschedule
                       </div>
                     </div>
-                    <div className="p-4 rounded-xl bg-gray-50 border border-gray-200 text-xs">
-                      <div className="font-bold text-gray-900 mb-1 text-sm">04 C · Recruitment &amp; HR</div>
+                    <div className="p-4 rounded-xl bg-white border border-gray-200 text-xs">
+                      <div className="mb-1 font-mono text-[11px] tracking-widest text-gray-500">04 C · RECRUITMENT &amp; HR</div>
+                      <div className="font-bold text-gray-900 mb-2 text-sm">First-round screening, scored</div>
                       <p className="text-gray-600 mb-3">
-                        First-round screening, scored. Role-specific questions from the job requirements, follow-ups on vague answers, and transcription tuned for accents.
+                        Role-specific questions from the job requirements, follow-ups on vague answers, and transcription tuned for accents.
                       </p>
-                      <div className="text-[11px] font-semibold text-purple-700 bg-purple-50 px-2 py-1 rounded">
-                        Ends in: Screening scorecard → recruiter
+                      <div className="border-t border-dashed border-gray-200 pt-2 text-[11px] font-mono text-gray-700">
+                        ENDS IN&nbsp; Screening scorecard → recruiter
                       </div>
                     </div>
                   </div>
@@ -1198,9 +1252,9 @@ export default function ITServices() {
               </div>
 
               {/* DWG 05: Legal Domain Adaptation */}
-              <div className="glass-card p-6 sm:p-8 bg-white border border-gray-200/90 rounded-2xl shadow-sm">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                  <div className="lg:col-span-7">
+              <div className="overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-sm">
+                <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                  <div className="lg:col-span-7 p-6 sm:p-8">
                     <div className="flex flex-wrap items-center gap-2 mb-3 text-xs font-mono text-gray-500">
                       <span className="font-bold text-blue-600 px-2 py-0.5 rounded bg-blue-50">DWG 05</span>
                       <span>Legal</span>
@@ -1249,30 +1303,27 @@ export default function ITServices() {
                         </span>
                       ))}
                     </div>
+                    <div className="mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-dashed border-gray-200 pt-4 text-xs text-gray-600">
+                      <span>Full case study: next step</span>
+                      <span>Role: AI Engineer</span>
+                    </div>
                   </div>
 
-                  <div className="lg:col-span-5 bg-slate-900 text-slate-100 p-6 rounded-xl font-mono text-xs shadow-md">
-                    <div className="flex items-center justify-between border-b border-slate-700 pb-2 mb-4 text-slate-400">
-                      <span>SHEET 05 · TRAINING PATH</span>
-                      <span className="text-purple-400">LoRA PRE-TRAINING</span>
-                    </div>
-
-                    <div className="space-y-3">
-                      <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center font-bold text-slate-200">
-                        15 Indian Law Treatises &amp; Case Judgments
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Custom Tokenizer Pipeline</div>
-                      <div className="p-2.5 rounded bg-slate-800 border border-slate-700 text-center text-slate-300">
-                        Cleaned + Tokenized → 9.75M Tokens
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ LoRA Adapters</div>
-                      <div className="p-3 rounded bg-blue-950/80 border border-blue-500 text-center font-bold text-blue-200">
-                        Continual Pre-Training on 1x A100 (80GB)
-                      </div>
-                      <div className="text-center text-teal-400 font-bold">↓ Evaluation Suite</div>
-                      <div className="p-2.5 rounded bg-emerald-950/70 border border-emerald-500 text-center font-bold text-emerald-200">
-                        Domain-Adapted LLaMA 3 Legal Engine
-                      </div>
+                  <div
+                    className="relative flex min-h-[460px] flex-col justify-center overflow-hidden border-t border-gray-200 p-5 font-mono text-xs text-gray-700 lg:col-span-5 lg:border-l lg:border-t-0 sm:p-8"
+                    style={{ backgroundColor: '#F5F8FA', backgroundImage: 'linear-gradient(rgba(9, 105, 232, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(9, 105, 232, 0.06) 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+                  >
+                    <div className="mx-auto w-full max-w-sm space-y-2.5 text-center">
+                      <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">15 Indian law textbooks</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-gray-200 bg-white px-3 py-2.5 shadow-sm">Clean + tokenize → 9.75M tokens</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-2.5 text-blue-800 shadow-sm">LoRA continual pre-training · A100</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-blue-300 bg-blue-50 px-3 py-2.5 text-blue-800 shadow-sm">LLaMA 3 8B, legal domain</div>
+                      <div className="text-teal-600" aria-hidden="true">↓</div>
+                      <div className="rounded-lg border border-dashed border-teal-400 bg-teal-50 px-3 py-2.5 text-teal-800 shadow-sm">Eval: base vs tuned</div>
+                      <p className="pt-1 text-[10px] tracking-[0.16em] text-gray-500">SHEET 05 · TRAINING PATH</p>
                     </div>
                   </div>
                 </div>
@@ -1282,7 +1333,7 @@ export default function ITServices() {
             {/* Also Built Portfolio Grid */}
             <div className="mt-16 pt-12 border-t border-gray-200">
               <p className="text-xs font-mono font-bold tracking-widest text-gray-500 uppercase mb-6">
-                ADDITIONAL PRODUCTION DEPLOYMENTS
+                ALSO BUILT
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="p-5 rounded-xl bg-white border border-gray-200">
