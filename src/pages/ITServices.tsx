@@ -709,7 +709,7 @@ export default function ITServices() {
             <div className="max-w-3xl mb-10">
               <div className="section-label mb-3">SERVICES · WHAT WE HAVE BUILT</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-                Eight kinds of AI systems I&apos;ve built
+                Eight kinds of AI systems we have built
               </h2>
               <p className="text-gray-600 text-base sm:text-lg">
                 Each one solves a problem most industries share, and each one comes with the backend, the cloud and the monitoring around it. Pick your industry to see which ones fit your team&apos;s week.
@@ -1396,7 +1396,7 @@ export default function ITServices() {
         <section id="principles" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-12">
-              <div className="section-label mb-3">HOW I BUILD</div>
+              <div className="section-label mb-3">HOW WE BUILD</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 Watch a production agent handle a bad day
               </h2>
@@ -1787,7 +1787,7 @@ export default function ITServices() {
         <section id="terms" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-12">
-              <div className="section-label mb-3">TERMS · HOW I WORK</div>
+              <div className="section-label mb-3">TERMS · HOW WE WORK</div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 Clear steps, written terms, and your data stays yours
               </h2>
