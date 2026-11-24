@@ -12,6 +12,7 @@ import Technology from './pages/Technology'
 import Insights from './pages/Insights'
 import Contact from './pages/Contact'
 import Services from './pages/Services'
+import ITServices from './pages/ITServices'
 import SearchPage from './pages/Search'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 
@@ -51,6 +52,7 @@ function Layout() {
           <Route path="/technology" element={<Technology />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/it-services" element={<ITServices />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

@@ -1,4 +1,5 @@
-import { Award, Shield, Users, Globe } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Award, Shield, Users, Globe, ArrowRight, Sparkles } from 'lucide-react'
 import servicesHeroImage from '/assets/img/S1.png'
 import SEO from '../components/SEO'
 
@@ -86,6 +87,29 @@ export default function Services() {
       {/* Services Grid */}
       <section className="mesh-bg" style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          {/* IT & AI Featured Services Banner */}
+          <div className="mb-10 p-6 rounded-2xl bg-gradient-to-r from-blue-900 via-indigo-950 to-slate-900 text-white shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono font-bold mb-2">
+                <Sparkles size={14} className="text-blue-400" />
+                NEW DIVISION · ENTERPRISE IT &amp; AI
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold mb-1" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+                Production LLM Agents, Real-Time Voice AI &amp; Cloud Infrastructure
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
+                Explore our full-stack enterprise IT services: intelligent ticket triage, document intelligence, healthcare clinical guardrails, legal fine-tuning, and scalable cloud engineering.
+              </p>
+            </div>
+            <Link
+              to="/it-services"
+              className="btn-primary flex-shrink-0"
+              style={{ padding: '12px 24px', fontSize: '14px', background: 'linear-gradient(135deg, #0969E8 0%, #008C86 100%)' }}
+            >
+              Explore IT Services <ArrowRight size={16} />
+            </Link>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
             {services.map((s, i) => (
               <div
